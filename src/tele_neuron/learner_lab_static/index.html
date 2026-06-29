@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TeleNeuron Learner Lab</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --line: #d7dee8;
+      --line-strong: #b9c4d2;
+      --text: #18202d;
+      --muted: #627084;
+      --teal: #008f8a;
+      --blue: #1266f1;
+      --orange: #f08a1a;
+      --red: #d93025;
+      --green: #137333;
+      --shadow: 0 14px 34px rgba(26, 40, 58, 0.09);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 1160px;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button {
+      height: 34px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    button.primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+    }
+
+    input, select {
+      width: 100%;
+      height: 32px;
+      padding: 0 8px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 250px;
+      padding: 10px 12px;
+      resize: vertical;
+      font-family: "Cascadia Code", Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    label {
+      display: grid;
+      gap: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .topbar {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .menu {
+      width: 28px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: 22px;
+    }
+
+    .title {
+      margin-right: auto;
+      font-size: 20px;
+      font-weight: 760;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 68px 330px minmax(520px, 1fr) 360px;
+      grid-template-rows: calc(100vh - 56px);
+    }
+
+    .rail {
+      background: #fbfcfe;
+      border-right: 1px solid var(--line);
+      padding-top: 6px;
+    }
+
+    .rail button {
+      width: 100%;
+      height: 68px;
+      border: 0;
+      border-radius: 0;
+      display: grid;
+      place-items: center;
+      gap: 3px;
+      color: var(--muted);
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .rail button.active {
+      color: var(--teal);
+      border-left: 3px solid var(--teal);
+      background: #eefaf8;
+    }
+
+    .icon { font-size: 20px; }
+
+    .left, .center, .right {
+      overflow: auto;
+      background: var(--surface);
+    }
+
+    .left {
+      border-right: 1px solid var(--line);
+      padding: 18px;
+    }
+
+    .center {
+      padding: 18px;
+    }
+
+    .right {
+      border-left: 1px solid var(--line);
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    h3 {
+      margin: 20px 0 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .stack { display: grid; gap: 10px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+    .section {
+      padding-top: 14px;
+      margin-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .metric-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 30px;
+    }
+
+    .metric {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfe;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 25px;
+      color: var(--teal);
+    }
+
+    .status {
+      min-height: 24px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status.ok { color: var(--green); }
+    .status.bad { color: var(--red); }
+
+    .mono {
+      font-family: "Cascadia Code", Consolas, monospace;
+      font-size: 12px;
+      color: var(--muted);
+      white-space: pre-wrap;
+    }
+
+    .history {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .history th, .history td {
+      padding: 6px 4px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .bar {
+      height: 9px;
+      border-radius: 999px;
+      background: #e7edf5;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu" title="Menu">=</button>
+    <div class="title">TeleNeuron Learner Lab</div>
+    <button id="trainBtn" class="primary">Run Training</button>
+  </header>
+
+  <main class="app">
+    <nav class="rail">
+      <button class="active"><span class="icon">M</span><span>Model</span></button>
+      <button><span class="icon">A</span><span>Algo</span></button>
+      <button><span class="icon">R</span><span>Result</span></button>
+    </nav>
+
+    <aside class="left">
+      <h2>Training Setup</h2>
+      <div class="stack">
+        <label>Config
+          <select id="configSelect"></select>
+        </label>
+        <button id="loadConfig">Load Config</button>
+        <label>Algorithm
+          <select id="algorithmSelect"></select>
+        </label>
+      </div>
+
+      <div class="section stack">
+        <h3>Model Input</h3>
+        <label>Existing Model
+          <select id="modelSelect"></select>
+        </label>
+        <button id="loadModel">Load Model</button>
+        <label>Upload/Paste Model JSON
+          <input id="modelFile" type="file" accept="application/json,.json">
+        </label>
+        <textarea id="modelJson" placeholder="Optional existing model JSON. Leave empty to create random masses."></textarea>
+      </div>
+
+      <div class="section stack">
+        <h3>Settings</h3>
+        <div class="grid-2">
+          <label>iterations<input id="iterations" type="number" min="1" step="1" value="20"></label>
+          <label>population<input id="population" type="number" min="1" step="1" value="12"></label>
+        </div>
+        <div class="grid-2">
+          <label>seed<input id="seed" type="number" step="1" value="1"></label>
+          <label>mutation_scale<input id="mutationScale" type="number" step="0.01" value="0.15"></label>
+        </div>
+        <div class="grid-2">
+          <label>min_mass<input id="minMass" type="number" step="0.01" value="0.5"></label>
+          <label>max_mass<input id="maxMass" type="number" step="0.01" value="1.5"></label>
+        </div>
+      </div>
+    </aside>
+
+    <section class="center">
+      <h2>Config JSON</h2>
+      <textarea id="configJson" spellcheck="false"></textarea>
+      <div class="section">
+        <div class="grid-3">
+          <div class="metric"><span>Emitters</span><strong id="metricEmitters">-</strong></div>
+          <div class="metric"><span>Readouts</span><strong id="metricReadouts">-</strong></div>
+          <div class="metric"><span>Balls</span><strong id="metricBalls">-</strong></div>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Training History</h3>
+        <table class="history">
+          <thead><tr><th>iter</th><th>score</th><th>accuracy</th><th>progress</th></tr></thead>
+          <tbody id="historyRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="right">
+      <h2>Training Result</h2>
+      <div class="stack">
+        <div class="metric-row"><span>Status</span><strong id="status" class="status">Loading...</strong></div>
+        <div class="metric-row"><span>Saved Model</span><span id="modelPath" class="mono">-</span></div>
+        <div class="metric">
+          <span>Best Accuracy</span>
+          <strong id="bestAccuracy">-</strong>
+        </div>
+        <div class="metric">
+          <span>Score</span>
+          <strong id="bestScore">-</strong>
+        </div>
+        <h3>Case Outputs</h3>
+        <pre id="caseOutput" class="mono"></pre>
+        <h3>Output Model JSON</h3>
+        <textarea id="outputModel" spellcheck="false"></textarea>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    let config = null;
+
+    async function loadLists() {
+      const [configs, models, algorithms] = await Promise.all([
+        fetch("/api/configs").then((r) => r.json()),
+        fetch("/api/models").then((r) => r.json()),
+        fetch("/api/algorithms").then((r) => r.json())
+      ]);
+      fillSelect("configSelect", configs.configs);
+      fillSelect("modelSelect", [{ name: "None - random masses", path: "" }, ...models.models]);
+      fillSelect("algorithmSelect", algorithms.algorithms.map((item) => ({ name: item.label, path: item.name })));
+      if (configs.configs.length) await loadConfig();
+      setStatus("Ready", true);
+    }
+
+    function fillSelect(id, rows) {
+      const select = $(id);
+      select.innerHTML = "";
+      rows.forEach((row) => {
+        const option = document.createElement("option");
+        option.value = row.path;
+        option.textContent = row.path || row.name;
+        select.appendChild(option);
+      });
+    }
+
+    async function loadConfig() {
+      const path = $("configSelect").value;
+      const payload = await fetch(`/api/config?path=${encodeURIComponent(path)}`).then((r) => r.json());
+      config = payload.config;
+      $("configJson").value = JSON.stringify(config, null, 2);
+      renderConfigMetrics();
+    }
+
+    async function loadModel() {
+      const path = $("modelSelect").value;
+      if (!path) {
+        $("modelJson").value = "";
+        return;
+      }
+      const payload = await fetch(`/api/model?path=${encodeURIComponent(path)}`).then((r) => r.json());
+      $("modelJson").value = JSON.stringify(payload.model, null, 2);
+    }
+
+    function renderConfigMetrics() {
+      try {
+        const parsed = JSON.parse($("configJson").value);
+        $("metricEmitters").textContent = parsed.input?.points?.length ?? "-";
+        $("metricReadouts").textContent = parsed.readout?.length ?? "-";
+        $("metricBalls").textContent = parsed.balls?.count ?? "-";
+      } catch {
+        $("metricEmitters").textContent = "-";
+        $("metricReadouts").textContent = "-";
+        $("metricBalls").textContent = "-";
+      }
+    }
+
+    function settings() {
+      return {
+        iterations: Number($("iterations").value),
+        population: Number($("population").value),
+        seed: Number($("seed").value),
+        min_mass: Number($("minMass").value),
+        max_mass: Number($("maxMass").value),
+        mutation_scale: Number($("mutationScale").value)
+      };
+    }
+
+    async function train() {
+      setStatus("Training...", true);
+      $("historyRows").innerHTML = "";
+      $("caseOutput").textContent = "";
+      $("outputModel").value = "";
+      let model = null;
+      const modelText = $("modelJson").value.trim();
+      if (modelText) model = JSON.parse(modelText);
+
+      const response = await fetch("/api/train", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          config: JSON.parse($("configJson").value),
+          model,
+          algorithm: $("algorithmSelect").value,
+          settings: settings()
+        })
+      });
+      const payload = await response.json();
+      if (!payload.ok) {
+        setStatus(payload.errors.join("; "), false);
+        return;
+      }
+      renderResult(payload.training);
+      setStatus("Training complete", true);
+    }
+
+    function renderResult(training) {
+      const result = training.result;
+      $("modelPath").textContent = training.path;
+      $("bestAccuracy").textContent = `${(result.accuracy * 100).toFixed(1)}%`;
+      $("bestScore").textContent = `${result.score}/${result.total}`;
+      $("outputModel").value = JSON.stringify(training.model, null, 2);
+      $("caseOutput").textContent = result.cases.map((row) =>
+        `bits=${row.bits.join("")} target=${row.target.join("")} out=${row.output.join("")} counts=${row.counts.join(",")} ${row.correct ? "ok" : "miss"}`
+      ).join("\n");
+
+      const rows = $("historyRows");
+      rows.innerHTML = "";
+      training.history.forEach((row) => {
+        const tr = document.createElement("tr");
+        const pct = Math.round((row.accuracy ?? 0) * 100);
+        tr.innerHTML = `<td>${row.iteration}</td><td>${row.score}</td><td>${pct}%</td><td><div class="bar"><span style="width:${pct}%"></span></div></td>`;
+        rows.appendChild(tr);
+      });
+    }
+
+    function setStatus(text, ok) {
+      $("status").textContent = text;
+      $("status").className = ok ? "status ok" : "status bad";
+    }
+
+    $("loadConfig").onclick = loadConfig;
+    $("loadModel").onclick = loadModel;
+    $("trainBtn").onclick = () => train().catch((error) => setStatus(error.message, false));
+    $("configJson").oninput = renderConfigMetrics;
+    $("modelFile").onchange = async () => {
+      const file = $("modelFile").files[0];
+      if (file) $("modelJson").value = await file.text();
+    };
+
+    loadLists().catch((error) => setStatus(error.message, false));
+  </script>
+</body>
+</html>

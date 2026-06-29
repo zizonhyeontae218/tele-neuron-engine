@@ -1,0 +1,14 @@
+{
+  "model_id": "tele_neuron_001",
+  "name": "TeleNeuron-001 XOR",
+  "config": "configs/xor_first_model.json",
+  "task": "XOR",
+  "seed": 1,
+  "readout_threshold": 3,
+  "score": "4/4",
+  "accuracy": 1.0,
+  "notes": [
+    "First reproducible Phase 1 model found by seed and threshold search.",
+    "This is a physical reservoir computing prototype, not a practical LLM replacement."
+  ]
+}

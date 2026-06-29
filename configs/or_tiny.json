@@ -1,0 +1,40 @@
+{
+  "name": "or_tiny",
+  "task": "OR",
+  "space": {
+    "size": [4.0, 4.0, 3.0]
+  },
+  "simulation": {
+    "steps": 20,
+    "dt": 1.0,
+    "damping": 0.99,
+    "restitution": 0.9,
+    "cell_size": 0.5,
+    "seed": 70
+  },
+  "balls": {
+    "count": 80,
+    "mass": 1.0,
+    "radius": 0.08,
+    "initial_speed": 0.05
+  },
+  "input": {
+    "points": [[0.75, 0.75, 1.5], [3.25, 0.75, 1.5]],
+    "strength": 0.08,
+    "epsilon": 0.000001
+  },
+  "readout": [
+    {
+      "name": "out",
+      "center": [2.0, 3.25, 1.5],
+      "half_extents": [0.5, 0.5, 1.5],
+      "threshold": 1
+    }
+  ],
+  "cases": [
+    {"bits": [0, 0], "target": 0},
+    {"bits": [0, 1], "target": 1},
+    {"bits": [1, 0], "target": 1},
+    {"bits": [1, 1], "target": 1}
+  ]
+}
