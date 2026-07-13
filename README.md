@@ -1,5 +1,7 @@
 # Tele-Neuron Engine
 
+> **한국어:** [README.ko.md](README.ko.md)
+
 Phase 1 single-PC prototype for a physical reservoir computing experiment.
 Input bits inject force into virtual balls in a 3D space, the balls move and
 collide for K steps, and readout zones convert the final distribution into
