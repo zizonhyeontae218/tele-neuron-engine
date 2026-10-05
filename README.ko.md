@@ -104,6 +104,16 @@ bits=10 target=1 output=1 count=8 collisions=34
 bits=11 target=0 output=0 count=2 collisions=28
 ```
 
+## Teleneuron-Endophalon
+
+001의 다음 버전이 아니라 핵심 아이디어가 다른 별도 계열입니다. 물리계는 고정된 저수지(reservoir)로 두고, 여러 시점의 복셀별 입자 분포를 특징 벡터로 삼아 선형 판독기만 닫힌 형태 리지 회귀로 학습합니다. 학습에 쓰지 않은 잡음 섞인 초기 상태에서 3비트 패리티와 전가산기(합 + 자리올림)를 약 96% 맞히며, 입력 비트에 바로 선형 판독기를 붙인 기준선은 50%에 머뭅니다.
+
+```bash
+python -m tele_neuron.endophalon --config configs/endophalon/full_adder.json
+```
+
+자세한 내용은 [docs/endophalon.md](docs/endophalon.md), 모델 카드는 `models/endophalon/`에 있습니다.
+
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.
