@@ -116,6 +116,21 @@ bits=10 target=1 output=1 count=8 collisions=34
 bits=11 target=0 output=0 count=2 collisions=28
 ```
 
+## Teleneuron-Endophalon
+
+A separate model family, not a successor to 001. The physics is kept fixed as a
+reservoir, voxel occupancy at several time steps becomes a feature vector, and
+only a linear readout is fitted with closed-form ridge regression. It solves
+3-bit parity and the full adder (sum + carry) at ~96% on held-out jittered
+initial states, where a linear readout on the raw bits stays at 50%.
+
+```bash
+python -m tele_neuron.endophalon --config configs/endophalon/full_adder.json
+```
+
+Details: [docs/endophalon.md](docs/endophalon.md). Model cards:
+`models/endophalon/`.
+
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary
