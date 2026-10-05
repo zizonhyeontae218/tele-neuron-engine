@@ -21,16 +21,6 @@ class RidgeReadout:
         self.mean = features.mean(axis=0)
         std = features.std(axis=0)
         self.scale = np.where(std > 1e-12, std, 1.0)
-        if self.alpha > 0 and features.shape[1] > features.shape[0]:
-            # More features than samples: solve the n x n dual system instead.
-            # Standardized features are centered, so the unpenalized bias is
-            # exactly the target mean and the rest is the same ridge solution.
-            normalized = (features - self.mean) / self.scale
-            offset = targets.mean(axis=0)
-            gram = normalized @ normalized.T + self.alpha * np.eye(len(features))
-            coefficients = normalized.T @ np.linalg.solve(gram, targets - offset)
-            self.weights = np.vstack([coefficients, offset])
-            return self
         design = self._design(features)
         penalty = self.alpha * np.eye(design.shape[1])
         penalty[-1, -1] = 0.0  # never shrink the bias

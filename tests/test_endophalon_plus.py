@@ -4,8 +4,8 @@ import json
 import numpy as np
 import pytest
 
-from tele_neuron.endophalon.readout import RidgeReadout
-from tele_neuron.endophalon.tasks import task_cases
+from tele_neuron.endophalon_plus.readout import WideRidgeReadout
+from tele_neuron.endophalon_plus.tasks import task_cases
 from tele_neuron.endophalon_plus.config import load_config, parse_config
 from tele_neuron.endophalon_plus.gate import LinearGate
 from tele_neuron.endophalon_plus.model import load_model, model_from_report, save_model
@@ -72,8 +72,8 @@ def test_dual_ridge_matches_primal() -> None:
     features = rng.normal(size=(20, 50))
     targets = (rng.normal(size=(20, 2)) > 0).astype(float)
 
-    dual = RidgeReadout(alpha=2.0).fit(features, targets)
-    primal = RidgeReadout(alpha=2.0)
+    dual = WideRidgeReadout(alpha=2.0).fit(features, targets)
+    primal = WideRidgeReadout(alpha=2.0)
     primal.mean = features.mean(axis=0)
     primal.scale = features.std(axis=0)
     design = np.hstack([(features - primal.mean) / primal.scale, np.ones((20, 1))])

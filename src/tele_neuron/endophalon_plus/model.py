@@ -7,7 +7,7 @@ from typing import Any
 
 import numpy as np
 
-from tele_neuron.endophalon.readout import RidgeReadout
+from tele_neuron.endophalon_plus.readout import WideRidgeReadout as RidgeReadout
 from tele_neuron.endophalon_plus import FAMILY
 from tele_neuron.endophalon_plus.config import PlusConfig
 from tele_neuron.endophalon_plus.gate import LinearGate

@@ -4,8 +4,9 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from tele_neuron.endophalon.readout import RidgeReadout
-from tele_neuron.endophalon.tasks import Case, output_names
+from tele_neuron.endophalon.tasks import Case
+from tele_neuron.endophalon_plus.readout import WideRidgeReadout as RidgeReadout
+from tele_neuron.endophalon_plus.tasks import output_names
 from tele_neuron.endophalon_plus.config import PlusConfig
 from tele_neuron.endophalon_plus.gate import LinearGate
 from tele_neuron.plus.observe import MultiScaleObserver

@@ -133,9 +133,12 @@ Details: [docs/endophalon.md](docs/endophalon.md). Model cards:
 
 ## Teleneuron-Endophalon-Plus
 
-Endophalon moved onto the **Plus physics base**. This is a batched engine that
-runs many simulations as one `(B, N, 3)` array and splits them across worker
-processes: about 9.5× faster per core, about 37× faster on 4 cores. The world
+A separate version that sits next to Endophalon. It is not a replacement:
+both are kept and both are run. Endophalon asks whether a small, fully fixed
+reservoir can compute at all. Plus asks what scale and partial learning add.
+Plus runs on its own **Plus physics base**, a batched engine that runs many
+simulations as one `(B, N, 3)` array and splits them across worker processes:
+about 9.5× faster per core, about 37× faster on 4 cores. The world
 has 768 balls, and each tap is observed with 1156 features per preset.
 Half-learning: three fixed physics presets, and a learned *linear* gate that
 picks one preset per input. On 4-bit parity at jitter 1.0, routing reaches

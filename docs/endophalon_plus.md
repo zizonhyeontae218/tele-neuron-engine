@@ -1,5 +1,18 @@
 # Plus physics base and Teleneuron-Endophalon-Plus
 
+**Endophalon and Endophalon-Plus are separate versions, and both are kept.**
+They answer different questions:
+
+- **Endophalon** (`docs/endophalon.md`): can a small reservoir that is fully
+  fixed, read only by a linear readout, compute nonlinear functions at all?
+  96 balls, 48 features, no learning in the physics.
+- **Endophalon-Plus** (this page): what do scale and *partial* learning in
+  the physics add on top of that?
+
+Plus does not change Endophalon. The Endophalon package, configs and model
+cards are exactly as they were merged. Plus-only pieces (4-input tasks, the
+dual-form ridge solve) live in `src/tele_neuron/endophalon_plus/`.
+
 Two pieces:
 
 1. **Plus base** (`src/tele_neuron/plus/`) — a larger, batched ball-physics
@@ -125,8 +138,9 @@ Model cards:
 
 ## Reading the results honestly
 
-- **Most of the gain over Endophalon comes from scale, not routing.** A single
-  Plus preset already beats Endophalon in every row. Plus has 8× more balls
+- **The two columns are different experiments, not before and after.** A
+  single Plus preset already beats Endophalon in every row, and most of that
+  gap comes from scale, not routing. Plus has 8× more balls
   and 24× more features. Its box is also 2× wider, so the same absolute jitter
   is *smaller relative noise* than in Endophalon's `4 × 4 × 3` box. The
   Endophalon column is a reference point, not a matched comparison.

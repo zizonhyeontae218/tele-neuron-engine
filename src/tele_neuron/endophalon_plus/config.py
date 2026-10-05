@@ -5,8 +5,9 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tele_neuron.endophalon.config import _parse_cases, _require, _triple
+from tele_neuron.endophalon.config import _parse_cases as _parse_explicit_cases, _require, _triple
 from tele_neuron.endophalon.tasks import Case
+from tele_neuron.endophalon_plus.tasks import task_cases
 from tele_neuron.plus.world import Preset, WorldSpec, preset_from_payload
 
 
@@ -100,6 +101,12 @@ def parse_config(raw: dict[str, Any]) -> PlusConfig:
     if config.gate.mode == "fixed" and config.train_realizations <= 0:
         raise ValueError("noise.train_realizations must be positive")
     return config
+
+
+def _parse_cases(raw: dict[str, Any]) -> tuple[Case, ...]:
+    if "cases" in raw:
+        return _parse_explicit_cases(raw)
+    return task_cases(str(raw["task"]))
 
 
 def _parse_world(raw: dict[str, Any], noise: dict[str, Any]) -> WorldSpec:

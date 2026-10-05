@@ -15,6 +15,7 @@ from typing import Any
 from tele_neuron.endophalon.config import parse_config as parse_endophalon
 from tele_neuron.endophalon.train import train as train_endophalon
 from tele_neuron.endophalon_plus.config import load_config as load_plus
+from tele_neuron.endophalon_plus.tasks import task_cases
 from tele_neuron.endophalon_plus.train import train as train_plus
 
 
@@ -32,7 +33,8 @@ def run_endophalon(task: str, position_jitter: float, velocity_jitter: float) ->
     raw = copy.deepcopy(raw)
     raw["name"] = f"endophalon_{task}"
     raw["task"] = task
-    raw.pop("cases", None)
+    # Endophalon itself is left unchanged; Plus-only tasks are passed as explicit cases.
+    raw["cases"] = [{"bits": list(bits), "target": list(target)} for bits, target in task_cases(task)]
     inputs = 4 if task in {"parity4", "adder2", "mult2"} else 3
     raw["reservoir"]["input"]["points"] = ENDOPHALON_POINTS[inputs]
     raw["noise"]["position_jitter"] = position_jitter
