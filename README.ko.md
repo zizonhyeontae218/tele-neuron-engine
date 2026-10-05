@@ -114,6 +114,16 @@ python -m tele_neuron.endophalon --config configs/endophalon/full_adder.json
 
 자세한 내용은 [docs/endophalon.md](docs/endophalon.md), 모델 카드는 `models/endophalon/`에 있습니다.
 
+## Teleneuron-Endophalon-Plus
+
+Endophalon과 나란히 두는 별도 버전입니다. Endophalon을 대체하지 않으며, 두 버전 모두 유지하고 실행합니다. Endophalon은 작고 완전히 고정된 저수지만으로도 계산이 되는지를 보고, Plus는 규모와 부분 학습이 무엇을 더하는지를 봅니다. Plus는 자체 **Plus 물리 베이스** 위에서 돌아갑니다. Plus 베이스는 여러 시뮬레이션을 하나의 `(B, N, 3)` 배열로 묶어 함께 돌리고, 작업 프로세스 여러 개에 나눠 처리합니다. 속도는 코어 1개 기준 약 9.5배, 4코어 기준 약 37배입니다. 입자는 768개이고, 시점마다 프리셋당 1156개의 특징을 관측합니다. 하프-학습 방식으로, 고정된 물리 프리셋 3개 가운데 하나를 학습된 *선형* 게이트가 입력마다 골라줍니다. 잡음 1.0의 4비트 패리티에서 프리셋을 골라 쓴 경우는 100%, 가장 좋은 단일 프리셋은 96.5%가 나왔습니다. 게이트가 어떤 프리셋을 골랐는지만 보는 판독기는 50%에 머뭅니다.
+
+```bash
+python -m tele_neuron.endophalon_plus --config configs/endophalon_plus/parity4_stress.json --workers 4
+```
+
+자세한 내용과 전체 결과표는 [docs/endophalon_plus.md](docs/endophalon_plus.md)에 있습니다.
+
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.
