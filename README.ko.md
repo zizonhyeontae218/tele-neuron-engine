@@ -124,6 +124,18 @@ python -m tele_neuron.endophalon_plus --config configs/endophalon_plus/parity4_s
 
 자세한 내용과 전체 결과표는 [docs/endophalon_plus.md](docs/endophalon_plus.md)에 있습니다.
 
+## Teleneuron-Endophalon-Pro
+
+세 번째 별도 버전입니다. 차세대 아키텍처를 미리 시험해 보는 버전으로, 물리계 자체를 학습해서 *작은* 선형 판독기만으로도 충분하게 만드는 것이 목표입니다. 학습되는 물리계는 입자 144개짜리 하나입니다. 바깥 루프는 물리 파라미터 θ(감쇠, 반발, 입력 세기, 초기 속도, 질량 분포, 자극점 위치)를 탐색합니다. 안쪽 루프는 후보 θ마다 선형 판독기를 닫힌 형태로 정확히 풉니다. θ의 점수는 검증용 잡음 상태에서 `J = L_val + λ1·R_noise + λ2·R_stability + λ3·R_complexity`로 매깁니다.
+
+3비트 패리티에서, 학습된 물리계는 **특징 4개짜리** 판독기로 처음 보는 잡음 상태를 96.9% 맞힙니다. 학습 전 물리계는 판독기 특징을 144개까지 늘려도 최고 90.1%에 그칩니다.
+
+```bash
+python -m tele_neuron.endophalon_pro --config configs/endophalon_pro/parity3.json --grid 2x2x1
+```
+
+자세한 설정, 전체 결과, 주의할 점은 [docs/endophalon_pro.md](docs/endophalon_pro.md)에 있습니다.
+
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.

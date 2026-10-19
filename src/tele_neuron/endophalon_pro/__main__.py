@@ -18,6 +18,7 @@ def main() -> None:
     parser.add_argument("--workers", type=int, help="Override runtime.workers (parallel processes).")
     parser.add_argument("--generations", type=int, help="Override outer.generations.")
     parser.add_argument("--jitter", type=float, nargs=2, metavar=("POSITION", "VELOCITY"), help="Override noise jitters.")
+    parser.add_argument("--grid", help="Override readout.grid, for example 2x2x1.")
     parser.add_argument("--random-baseline", action="store_true", help="Also run random search with the same budget.")
     args = parser.parse_args()
 
@@ -28,6 +29,11 @@ def main() -> None:
         config = replace(config, outer=replace(config.outer, generations=max(0, args.generations)))
     if args.jitter:
         config = config.with_noise(*args.jitter)
+    if args.grid:
+        grid = tuple(int(v) for v in args.grid.split("x"))
+        if len(grid) != 3 or min(grid) <= 0:
+            parser.error("--grid must look like 2x2x1")
+        config = replace(config, readout=replace(config.readout, grid=grid))
     print(
         f"{FAMILY} {config.name}: task={config.task}, balls={config.world.ball_count}, "
         f"readout grid={config.readout.grid} at step {config.readout.step}, theta dim={config.space.dim}"

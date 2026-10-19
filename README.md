@@ -151,6 +151,27 @@ python -m tele_neuron.endophalon_plus --config configs/endophalon_plus/parity4_s
 
 Details and the full results table: [docs/endophalon_plus.md](docs/endophalon_plus.md).
 
+## Teleneuron-Endophalon-Pro
+
+A third, separate version, and a first test of a next-generation idea: train
+the physics itself so that a *small* linear readout is enough. There is one
+trainable physics system with 144 balls. An outer loop searches over its
+parameters θ (damping, restitution, input strength, initial speed, mass
+spread, stimulus point positions). For each candidate, an inner loop solves
+the linear readout exactly. θ is scored by
+`J = L_val + λ1·R_noise + λ2·R_stability + λ3·R_complexity` on validation
+noise realizations.
+
+On 3-bit parity, trained physics with a **4-feature** readout scores 96.9% on
+held-out noise. Untrained physics stays at or below 90.1% at every readout
+size up to 144 features.
+
+```bash
+python -m tele_neuron.endophalon_pro --config configs/endophalon_pro/parity3.json --grid 2x2x1
+```
+
+Details, the full results and caveats: [docs/endophalon_pro.md](docs/endophalon_pro.md).
+
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary
