@@ -131,6 +131,26 @@ python -m tele_neuron.endophalon --config configs/endophalon/full_adder.json
 Details: [docs/endophalon.md](docs/endophalon.md). Model cards:
 `models/endophalon/`.
 
+## Teleneuron-Endophalon-Plus
+
+A separate version that sits next to Endophalon. It is not a replacement:
+both are kept and both are run. Endophalon asks whether a small, fully fixed
+reservoir can compute at all. Plus asks what scale and partial learning add.
+Plus runs on its own **Plus physics base**, a batched engine that runs many
+simulations as one `(B, N, 3)` array and splits them across worker processes:
+about 9.5× faster per core, about 37× faster on 4 cores. The world
+has 768 balls, and each tap is observed with 1156 features per preset.
+Half-learning: three fixed physics presets, and a learned *linear* gate that
+picks one preset per input. On 4-bit parity at jitter 1.0, routing reaches
+100% versus 96.5% for the best single preset. A readout that sees only the
+gate's choice stays at 50%.
+
+```bash
+python -m tele_neuron.endophalon_plus --config configs/endophalon_plus/parity4_stress.json --workers 4
+```
+
+Details and the full results table: [docs/endophalon_plus.md](docs/endophalon_plus.md).
+
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary
