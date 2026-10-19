@@ -62,7 +62,7 @@
     ]
   },
   "objective": {
-    "lambda_noise": 0.5,
+    "lambda_noise": 0.05,
     "lambda_stability": 0.1,
     "lambda_complexity": 0.01
   },

@@ -29,7 +29,7 @@ def run(task: str, grid: tuple[int, int, int], *, regularized: bool, workers: in
     if workers:
         config = replace(config, workers=workers)
     start = time.perf_counter()
-    report = train(config, random_baseline=True)
+    report = train(config, random_baseline=regularized)
     return {
         "task": task,
         "readout_grid": list(grid),
@@ -51,12 +51,14 @@ def main() -> None:
     parser.add_argument("--output", default="outputs/endophalon_pro_matrix.json")
     parser.add_argument("--tasks", nargs="*", default=list(TASKS))
     parser.add_argument("--workers", type=int)
-    parser.add_argument("--ablation", action="store_true", help="Also run full_adder with all lambdas set to 0.")
+    parser.add_argument("--grids", nargs="*", help="Readout grids like 2x2x1 3x3x1 (default: both).")
+    parser.add_argument("--ablation", action="store_true", help="Also run every cell with all lambdas set to 0.")
     args = parser.parse_args()
 
-    plan = [(task, grid, True) for task in args.tasks for grid in READOUT_GRIDS]
+    grids = [tuple(int(v) for v in item.split("x")) for item in args.grids] if args.grids else list(READOUT_GRIDS)
+    plan = [(task, grid, True) for task in args.tasks for grid in grids]
     if args.ablation:
-        plan += [("full_adder", grid, False) for grid in READOUT_GRIDS]
+        plan += [(task, grid, False) for task in args.tasks for grid in grids]
     rows: list[dict[str, Any]] = []
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -66,7 +68,7 @@ def main() -> None:
         test = row["test"]
         print(
             f"{task:<10} k={row['readout_features']:<3} reg={regularized!s:<5} "
-            f"initial={test['initial']:.3f} random={test['random_search']:.3f} trained={test['trained']:.3f} "
+            f"initial={test['initial']:.3f} random={test.get('random_search', float('nan')):.3f} trained={test['trained']:.3f} "
             f"bits={test['bits_linear']:.3f} J {row['fitness_initial']['j']:.3f}->{row['fitness_trained']['j']:.3f} "
             f"({row['seconds']:.0f}s)",
             flush=True,

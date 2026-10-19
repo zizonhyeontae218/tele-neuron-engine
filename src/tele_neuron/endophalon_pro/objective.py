@@ -16,7 +16,7 @@ class Fitness:
 
     j: float
     l_val: float  # mean squared error of W* scores on validation realizations
-    r_noise: float  # spread of W* scores across realizations of the same input
+    r_noise: float  # within-case spread of W* scores / spread between case means (scale-free)
     r_stability: float  # share of balls pinned against walls at readout time
     r_complexity: float  # mean squared readout weight (standardized features)
     val_accuracy: float  # every output bit right
@@ -51,7 +51,13 @@ def fitness(config: ProConfig, data: CaseFeatures, train: range, val: range) -> 
     scores = readout.scores(vx)
     l_val = float(np.mean((scores - vy) ** 2))
     per_case = scores.reshape(len(val), len(config.cases), -1)
-    r_noise = float(per_case.std(axis=0).mean())
+    # Noise-to-signal ratio: how much the same input wobbles across noise
+    # realizations, relative to how far apart different inputs land. Dividing
+    # by the signal keeps the readout from lowering R_noise by just shrinking
+    # every score toward a constant.
+    within = per_case.std(axis=0).mean(axis=0)
+    between = per_case.mean(axis=0).std(axis=0)
+    r_noise = float(np.mean(within / (between + 1e-6)))
     r_stability = float(data.wall_fraction[train.start : val.stop].mean())
     assert readout.weights is not None
     r_complexity = float(np.mean(readout.weights[:-1] ** 2))
