@@ -21,7 +21,8 @@ def _config(**stream):
     world = replace(config.world, ball_count=40)
     spec = replace(config.stream, **({"pulses": 6, "interval": 6, "pulse_steps": 2, "warmup": 4} | stream))
     return replace(
-        config, world=world, stream=spec, washout=1, train_streams=4, val_streams=2, test_streams=2, workers=1
+        config, world=world, stream=spec, washout=1, train_streams=4, val_streams=2, test_streams=2, workers=1,
+        readout_delay=min(config.readout_delay, spec.interval),
     )
 
 
@@ -116,3 +117,20 @@ def test_reset_mode_runs_each_pulse_alone_and_scores() -> None:
     assert np.array_equal(continuous.bits, reset.bits)
     accuracy, mse, _ = fit_score(config, continuous, "xor", range(0, 4), range(6, 8), 4)
     assert 0.0 <= accuracy <= 1.0 and mse >= 0.0
+
+
+def test_stage2_training_never_worsens_j_and_reports_controls(tmp_path) -> None:
+    from tele_neuron.endophalon2.model import save_model
+    from tele_neuron.endophalon2.train import train
+
+    config = replace(_config(), outer={"generations": 1, "population": 3, "elite": 2, "seed": 1})
+
+    report = train(config, tasks=("xor", "recall1"), random_baseline=True)
+    save_model("tiny", "inline", config, report, ("xor", "recall1"), tmp_path / "card.json")
+
+    assert report.fitness.j <= report.fitness_init.j
+    assert report.evaluations == 1 + 3
+    for key in ("trained/continuous", "initial/continuous", "trained/reset", "history_baseline"):
+        assert set(report.test[key]) == set(config.tasks)
+    assert set(report.random_search["test"]) == set(config.tasks)
+    assert (tmp_path / "card.json").exists()
