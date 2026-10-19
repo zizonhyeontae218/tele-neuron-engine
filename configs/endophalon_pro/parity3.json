@@ -1,0 +1,117 @@
+{
+  "name": "endophalon_pro_parity3",
+  "task": "parity3",
+  "world": {
+    "space": {
+      "size": [
+        5.0,
+        5.0,
+        3.0
+      ]
+    },
+    "balls": {
+      "count": 144,
+      "radius": 0.08
+    },
+    "input": {
+      "epsilon": 1e-06
+    },
+    "simulation": {
+      "steps": 32,
+      "dt": 1.0,
+      "cell_size": 0.5,
+      "seed": 1
+    }
+  },
+  "readout": {
+    "step": 32,
+    "grid": [
+      3,
+      3,
+      1
+    ],
+    "ridge_alpha": 1.0
+  },
+  "theta_init": {
+    "damping": 0.99,
+    "restitution": 0.9,
+    "input_strength": 0.08,
+    "initial_speed": 0.05,
+    "mass_spread": 0.0,
+    "stimulus_points": [
+      [
+        1.0,
+        1.0,
+        1.5
+      ],
+      [
+        4.0,
+        1.0,
+        1.5
+      ],
+      [
+        2.5,
+        4.0,
+        1.5
+      ]
+    ]
+  },
+  "objective": {
+    "lambda_noise": 0.5,
+    "lambda_stability": 0.1,
+    "lambda_complexity": 0.01
+  },
+  "outer": {
+    "generations": 30,
+    "population": 16,
+    "elite": 4,
+    "init_sigma": 0.8,
+    "min_sigma": 0.05,
+    "seed": 1
+  },
+  "noise": {
+    "position_jitter": 0.1,
+    "velocity_jitter": 0.02,
+    "train_realizations": 24,
+    "val_realizations": 12,
+    "test_realizations": 24
+  },
+  "sweep": {
+    "grids": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        3,
+        3,
+        1
+      ],
+      [
+        4,
+        4,
+        1
+      ],
+      [
+        6,
+        6,
+        1
+      ],
+      [
+        12,
+        12,
+        1
+      ]
+    ]
+  },
+  "runtime": {
+    "workers": 4,
+    "chunk_size": 256
+  }
+}
