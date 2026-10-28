@@ -1,0 +1,22 @@
+{
+  "name": "endophalon2_base",
+  "tasks": ["and", "xor", "recall1", "recall2", "xor_mem", "parity3w"],
+  "world": {
+    "space": {"size": [5.0, 5.0, 3.0]},
+    "balls": {"count": 144, "radius": 0.08},
+    "simulation": {"dt": 1.0, "cell_size": 0.5, "seed": 1},
+    "noise": {"position_jitter": 0.1, "velocity_jitter": 0.02}
+  },
+  "stream": {"pulses": 64, "interval": 16, "pulse_steps": 4, "warmup": 32},
+  "readout": {"delay": 12, "ridge_alpha": 1.0},
+  "theta_init": {
+    "damping": 0.99, "restitution": 0.9, "pulse_strength": 0.08, "mass_spread": 0.0,
+    "anchor": 0.002, "bath": 0.002, "readout_width": 0.6,
+    "stimulus_points": [[1.0, 1.0, 1.5], [4.0, 1.0, 1.5]],
+    "readout_centers": [[1.25, 3.75, 1.5], [3.75, 3.75, 1.5], [2.5, 2.5, 1.5], [2.5, 4.5, 1.5]]
+  },
+  "split": {"washout": 4, "train_streams": 16, "val_streams": 8, "test_streams": 16},
+  "objective": {"lambda_noise": 0.05, "lambda_drift": 0.1, "lambda_complexity": 0.01},
+  "outer": {"generations": 30, "population": 16, "elite": 4, "init_sigma": 0.8, "min_sigma": 0.05, "seed": 1},
+  "runtime": {"workers": 4, "chunk_size": 64}
+}

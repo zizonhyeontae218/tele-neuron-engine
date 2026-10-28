@@ -136,6 +136,19 @@ python -m tele_neuron.endophalon_pro --config configs/endophalon_pro/parity3.jso
 
 자세한 설정, 전체 결과, 주의할 점은 [docs/endophalon_pro.md](docs/endophalon_pro.md)에 있습니다.
 
+## Teleneuron-Endophalon-2
+
+네 번째 별도 버전으로, 목표 아키텍처인 **비선형 지속 연산**을 향한 첫 단계입니다. 입자 144개짜리 물리계를 한 번도 리셋하지 않고 계속 돌립니다. 16스텝마다 학습된 자극점에 입력 펄스를 주고, 각 펄스 12스텝 뒤 학습된 부드러운 판독 영역 4개를 선형 판독기로 읽습니다. 앵커 스프링과 열욕이 긴 실행을 안정적으로 유지합니다.
+
+- **학습 전:** 같은 물리계가 펄스마다 리셋하면 XOR을 99% 맞히지만, 계속 돌리는 동안에는 55~70%에 그칩니다.
+- **이중 루프로 학습한 뒤:** 계속 돌리는 동안에도 XOR 99%이고, 스트림 앞부분과 뒷부분 모두 유지됩니다. 리셋 방식으로는 아예 불가능한 과제도 됩니다. 현재 펄스와 이전 펄스의 XOR은 84%, 이전 펄스 기억은 86%입니다.
+
+```bash
+python -m tele_neuron.endophalon2 --config configs/endophalon2/base.json --tasks xor recall1 xor_mem
+```
+
+자세한 설계, 결과, 주의할 점은 [docs/endophalon2.md](docs/endophalon2.md)에 있습니다.
+
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.

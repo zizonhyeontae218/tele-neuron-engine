@@ -1,0 +1,40 @@
+Teleneuron-Endophalon-2 endophalon2_base: train tasks=('xor', 'recall1', 'xor_mem'), zones=4, delay n=12, interval=16, pulses/stream=64, theta dim=25
+  gen   0 best J=0.4664 [xor=0.57 recall1=0.69 xor_mem=0.59] center J=0.4664 sigma=0.800
+  gen   1 best J=0.3454 [xor=0.54 recall1=0.72 xor_mem=0.62] center J=0.4664 sigma=0.800
+  gen   2 best J=0.2893 [xor=0.71 recall1=0.78 xor_mem=0.65] center J=0.7731 sigma=0.643
+  gen   3 best J=0.2605 [xor=0.69 recall1=0.76 xor_mem=0.69] center J=0.2762 sigma=0.538
+  gen   4 best J=0.2509 [xor=0.83 recall1=0.76 xor_mem=0.64] center J=0.3704 sigma=0.488
+  gen   5 best J=0.1904 [xor=0.93 recall1=0.73 xor_mem=0.78] center J=0.2225 sigma=0.506
+  gen   6 best J=0.1607 [xor=0.98 recall1=0.78 xor_mem=0.69] center J=0.1816 sigma=0.453
+  gen   7 best J=0.1607 [xor=0.98 recall1=0.78 xor_mem=0.69] center J=0.1975 sigma=0.375
+  gen   8 best J=0.1559 [xor=0.95 recall1=0.74 xor_mem=0.80] center J=0.2162 sigma=0.322
+  gen   9 best J=0.1500 [xor=0.93 recall1=0.78 xor_mem=0.81] center J=0.1500 sigma=0.259
+  gen  10 best J=0.1426 [xor=0.98 recall1=0.86 xor_mem=0.69] center J=0.1553 sigma=0.196
+  gen  11 best J=0.1330 [xor=0.98 recall1=0.68 xor_mem=0.82] center J=0.1593 sigma=0.170
+  gen  12 best J=0.1330 [xor=0.98 recall1=0.68 xor_mem=0.82] center J=0.1358 sigma=0.164
+  gen  13 best J=0.1330 [xor=0.98 recall1=0.68 xor_mem=0.82] center J=0.1333 sigma=0.118
+  gen  14 best J=0.1330 [xor=0.98 recall1=0.68 xor_mem=0.82] center J=0.2159 sigma=0.091
+  gen  15 best J=0.1284 [xor=0.98 recall1=0.86 xor_mem=0.80] center J=0.1360 sigma=0.095
+  gen  16 best J=0.1278 [xor=0.99 recall1=0.93 xor_mem=0.76] center J=0.1512 sigma=0.088
+  gen  17 best J=0.1260 [xor=0.97 recall1=0.89 xor_mem=0.78] center J=0.1290 sigma=0.080
+  gen  18 best J=0.1215 [xor=0.98 recall1=0.90 xor_mem=0.80] center J=0.1271 sigma=0.075
+  gen  19 best J=0.1215 [xor=0.98 recall1=0.90 xor_mem=0.80] center J=0.1262 sigma=0.071
+  gen  20 best J=0.1215 [xor=0.98 recall1=0.90 xor_mem=0.80] center J=0.1258 sigma=0.067
+  gen  21 best J=0.1215 [xor=0.98 recall1=0.90 xor_mem=0.80] center J=0.1236 sigma=0.071
+  gen  22 best J=0.1192 [xor=0.97 recall1=0.89 xor_mem=0.81] center J=0.1199 sigma=0.070
+  gen  23 best J=0.1192 [xor=0.97 recall1=0.89 xor_mem=0.81] center J=0.1208 sigma=0.064
+  gen  24 best J=0.1192 [xor=0.97 recall1=0.89 xor_mem=0.81] center J=0.1265 sigma=0.062
+  gen  25 best J=0.1184 [xor=0.98 recall1=0.86 xor_mem=0.83] center J=0.1184 sigma=0.063
+  gen  26 best J=0.1171 [xor=0.99 recall1=0.85 xor_mem=0.84] center J=0.1183 sigma=0.058
+  gen  27 best J=0.1171 [xor=0.99 recall1=0.85 xor_mem=0.84] center J=0.1310 sigma=0.054
+  gen  28 best J=0.1156 [xor=0.99 recall1=0.81 xor_mem=0.85] center J=0.1171 sigma=0.054
+  gen  29 best J=0.1148 [xor=0.99 recall1=0.84 xor_mem=0.85] center J=0.1148 sigma=0.055
+  gen  30 best J=0.1145 [xor=0.99 recall1=0.86 xor_mem=0.82] center J=0.1145 sigma=0.052
+  J 0.4664 -> 0.1145 (481 thetas)
+  trained/continuous   and=1.00 xor=0.99 recall1=0.86 recall2=0.48 xor_mem=0.84 parity3w=0.49
+  initial/continuous   and=0.76 xor=0.55 recall1=0.72 recall2=0.59 xor_mem=0.57 parity3w=0.48
+  trained/reset        and=1.00 xor=1.00 recall1=0.51 recall2=0.51 xor_mem=0.49 parity3w=0.47
+  initial/reset        and=0.86 xor=0.81 recall1=0.52 recall2=0.54 xor_mem=0.51 parity3w=0.46
+  history_baseline     and=1.00 xor=0.48 recall1=1.00 recall2=1.00 xor_mem=0.56 parity3w=0.48
+  random search        and=0.78 xor=0.60 recall1=0.67 recall2=0.56 xor_mem=0.55 parity3w=0.54
+Saved model card to models/endophalon2/teleneuron_endophalon2_multi_k4.json

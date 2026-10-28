@@ -172,6 +172,28 @@ python -m tele_neuron.endophalon_pro --config configs/endophalon_pro/parity3.jso
 
 Details, the full results and caveats: [docs/endophalon_pro.md](docs/endophalon_pro.md).
 
+## Teleneuron-Endophalon-2
+
+The fourth, separate version, and the first step toward the target
+architecture: **continuous nonlinear computation**. The 144-ball physics is
+never reset. Input pulses hit learned stimulus points every 16 steps on top
+of the running state, and a linear readout reads 4 learned soft readout zones
+12 steps after each pulse. An anchor spring and a heat bath keep the long run
+stable.
+
+- **Untrained:** the physics does XOR at 99% when reset per pulse, but only
+  55–70% while running.
+- **Trained** with the bilevel loop: 99% while running, steady from the first
+  half of each stream to the second. Tasks a reset system cannot do at all
+  also work: current pulse XOR previous pulse at 84%, recall of the previous
+  pulse at 86%.
+
+```bash
+python -m tele_neuron.endophalon2 --config configs/endophalon2/base.json --tasks xor recall1 xor_mem
+```
+
+Details, results and caveats: [docs/endophalon2.md](docs/endophalon2.md).
+
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary
