@@ -194,6 +194,36 @@ python -m tele_neuron.endophalon2 --config configs/endophalon2/base.json --tasks
 
 Details, results and caveats: [docs/endophalon2.md](docs/endophalon2.md).
 
+## Teleneuron-Endophalon-2-Pro
+
+The fifth, separate version. It keeps Endophalon-2's protocol (the physics
+keeps running, each input pushes it, the readout reads 12 steps later), with
+two changes:
+
+- **New physics:** a **nonlinear spring network**. 144 nodes, 506 springs,
+  no collision detection.
+- **Irregular input timing:** inputs can arrive at uneven gaps of 12–24
+  steps.
+
+Results with 4 readout zones:
+
+| Timing | xor | recall1 | xor_mem |
+|---|---|---|---|
+| Regular, best seed | **100%** | **100%** | **100%** |
+| Irregular | 90–95% | 86–94% | 83–84% |
+
+- The ball version (Endophalon-2) reached 99 / 86 / 84 on the same tasks.
+- A purely linear readout of the trained network's state does XOR at 100% and
+  3-input parity at about 100%. So the nonlinearity and memory are in the
+  physics, and the small readout is now the limit. With 8 zones, deep-memory
+  training reaches recall2 97% and 3-input parity 80%.
+
+```bash
+python -m tele_neuron.endophalon2_pro --config configs/endophalon2_pro/regular.json --tasks xor recall1 xor_mem
+```
+
+Details, results and caveats: [docs/endophalon2_pro.md](docs/endophalon2_pro.md).
+
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary

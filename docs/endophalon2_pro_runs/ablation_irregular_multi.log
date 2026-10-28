@@ -1,0 +1,8 @@
+trained/continuous/soft_zones              and=0.97 xor=0.90 recall1=0.86 recall2=0.58 xor_mem=0.83 parity3w=0.57
+trained/continuous/linear_nodes            and=0.99 xor=0.93 recall1=0.97 recall2=0.87 xor_mem=0.89 parity3w=0.70
+trained/reset/soft_zones                   and=1.00 xor=1.00 recall1=0.49 recall2=0.50 xor_mem=0.49 parity3w=0.47
+trained/reset/linear_nodes                 and=1.00 xor=1.00 recall1=0.49 recall2=0.49 xor_mem=0.50 parity3w=0.49
+trained_no_cubic/continuous/soft_zones     and=0.97 xor=0.92 recall1=0.88 recall2=0.58 xor_mem=0.86 parity3w=0.56
+trained_no_cubic/continuous/linear_nodes   and=0.97 xor=0.90 recall1=0.97 recall2=0.87 xor_mem=0.89 parity3w=0.71
+trained_no_cubic/reset/soft_zones          and=1.00 xor=1.00 recall1=0.49 recall2=0.50 xor_mem=0.50 parity3w=0.48
+trained_no_cubic/reset/linear_nodes        and=1.00 xor=1.00 recall1=0.50 recall2=0.49 xor_mem=0.51 parity3w=0.49
