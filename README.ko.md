@@ -149,6 +149,29 @@ python -m tele_neuron.endophalon2 --config configs/endophalon2/base.json --tasks
 
 자세한 설계, 결과, 주의할 점은 [docs/endophalon2.md](docs/endophalon2.md)에 있습니다.
 
+## Teleneuron-Endophalon-2-Pro
+
+다섯 번째 별도 버전입니다. Endophalon-2의 방식은 그대로입니다. 물리계는 계속 돌아가고, 입력이 들어올 때마다 물리계를 밀어주고, 12스텝 뒤에 판독합니다. 바뀐 점은 두 가지입니다.
+
+- **물리계 교체:** 공 대신 **비선형 스프링 네트워크**를 씁니다. 노드 144개와 스프링 506개로 이루어져 있고, 충돌 계산이 없습니다.
+- **불규칙한 입력 간격:** 입력이 12~24스텝 사이의 고르지 않은 간격으로 들어올 수 있습니다.
+
+판독 영역 4개 기준 결과입니다.
+
+| 입력 간격 | xor | recall1 | xor_mem |
+|---|---|---|---|
+| 규칙 간격, 가장 좋은 시드 | **100%** | **100%** | **100%** |
+| 불규칙 간격 | 90~95% | 86~94% | 83~84% |
+
+- 같은 과제에서 공 버전(Endophalon-2)은 99 / 86 / 84%였습니다.
+- 학습된 네트워크의 상태를 순수 선형으로만 읽어도 XOR 100%, 3입력 패리티 약 100%가 나옵니다. 비선형성과 기억이 물리계 안에 있고, 이제 한계는 작은 판독기 쪽이라는 뜻입니다. 판독 영역을 8개로 늘려 깊은 기억 과제로 학습하면 recall2 97%, 3입력 패리티 80%까지 올라갑니다.
+
+```bash
+python -m tele_neuron.endophalon2_pro --config configs/endophalon2_pro/regular.json --tasks xor recall1 xor_mem
+```
+
+자세한 설계, 결과, 주의할 점은 [docs/endophalon2_pro.md](docs/endophalon2_pro.md)에 있습니다.
+
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.
