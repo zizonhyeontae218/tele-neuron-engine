@@ -69,6 +69,7 @@ class EventRecord:
     energy: np.ndarray  # (rows, pulses): kinetic energy just before each event
     stretch: np.ndarray  # (rows, pulses): mean |extension| / rest length just before each event
     finite: np.ndarray  # (rows,) False if the integration blew up
+    nodes: np.ndarray | None = None  # (rows, pulses, N, 3) displacement from home at ``record_nodes`` delay
 
 
 def masses_for(network: Network, spread: float, seed: int) -> np.ndarray:
@@ -121,15 +122,19 @@ def run_events(
     *,
     workers: int = 1,
     chunk_size: int = 128,
+    record_nodes: int | None = None,
 ) -> EventRecord:
+    """Run every row. ``record_nodes=n`` also returns node displacements n steps after each event."""
     chunks = [rows[start : start + chunk_size] for start in range(0, len(rows), chunk_size)]
-    args = [(network, physics, thetas, chunk, spec) for chunk in chunks]
+    args = [(network, physics, thetas, chunk, spec, record_nodes) for chunk in chunks]
     if workers > 1 and len(chunks) > 1:
         with ProcessPoolExecutor(max_workers=workers) as pool:
             parts = list(pool.map(_run_chunk, args))
     else:
         parts = [_run_chunk(item) for item in args]
-    return EventRecord(*(np.concatenate([part[i] for part in parts]) for i in range(4)))
+    fields = [np.concatenate([part[i] for part in parts]) for i in range(4)]
+    nodes = np.concatenate([part[4] for part in parts]) if record_nodes else None
+    return EventRecord(*fields, nodes=nodes)
 
 
 def _run_chunk(args: tuple) -> tuple[np.ndarray, ...]:
@@ -138,7 +143,14 @@ def _run_chunk(args: tuple) -> tuple[np.ndarray, ...]:
         return _simulate(*args)
 
 
-def _simulate(network: Network, physics: PhysicsSpec, thetas: list[SpringTheta], rows: list[EventRow], spec: EventSpec) -> tuple[np.ndarray, ...]:
+def _simulate(
+    network: Network,
+    physics: PhysicsSpec,
+    thetas: list[SpringTheta],
+    rows: list[EventRow],
+    spec: EventSpec,
+    record_nodes: int | None = None,
+) -> tuple[np.ndarray, ...]:
     count, nodes = len(rows), network.nodes
 
     def per_row(name: str) -> np.ndarray:
@@ -170,6 +182,7 @@ def _simulate(network: Network, physics: PhysicsSpec, thetas: list[SpringTheta],
     scatter = SpringScatter(network, count)
     window = spec.interval
     zones = np.zeros((count, spec.pulses, window, centers.shape[1]))
+    nodes_out = np.zeros((count, spec.pulses, nodes, 3)) if record_nodes else np.zeros((count, 0))
     energy = np.zeros((count, spec.pulses))
     stretch = np.zeros((count, spec.pulses))
     h = physics.dt / physics.substeps
@@ -215,7 +228,10 @@ def _simulate(network: Network, physics: PhysicsSpec, thetas: list[SpringTheta],
         if np.any(recording):
             r = all_rows[recording]
             zones[r, current[r], delay_after[r]] = soft_zones(positions[r], centers[r], read_width[r])
+            if record_nodes:
+                hit = r[delay_after[r] == record_nodes - 1]
+                nodes_out[hit, current[hit]] = positions[hit] - network.home[None]
 
     finite = np.isfinite(zones).all(axis=(1, 2, 3)) & np.isfinite(positions).all(axis=(1, 2))
     zones = np.nan_to_num(zones, nan=0.0, posinf=0.0, neginf=0.0)
-    return zones, energy, stretch, finite
+    return zones, energy, stretch, finite, np.nan_to_num(nodes_out)

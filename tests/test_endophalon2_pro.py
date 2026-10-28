@@ -109,3 +109,21 @@ def test_training_never_worsens_j_and_reports_controls(tmp_path) -> None:
         assert set(report.test[key]) == set(config.tasks)
     card = json.loads((tmp_path / "card.json").read_text())
     assert card["family"] == "Teleneuron-Endophalon-2-Pro"
+
+
+def test_ablation_observes_zones_and_linear_node_displacements() -> None:
+    from tele_neuron.endophalon2_pro.ablation import ablate, observe_both
+
+    config = _config()
+    zones, nodes, finite = observe_both(config, config.theta_init, range(0, 3))
+
+    assert finite
+    assert zones.features.shape == (3, 6, 1, config.zones)
+    assert nodes.features.shape == (3, 6, 1, config.network.nodes * 3)
+    result = ablate(config, config.theta_init)
+    assert set(result) == {
+        f"{label}/{mode}/{obs}"
+        for label in ("trained", "trained_no_cubic")
+        for mode in ("continuous", "reset")
+        for obs in ("soft_zones", "linear_nodes")
+    }
