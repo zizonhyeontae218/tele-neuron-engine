@@ -1,0 +1,53 @@
+Teleneuron-Endophalon-2-ProMax16: ops=('xor', 'recall1', 'xor_mem'), zones=16, delay n=12, theta dim=72, seed=2
+  gen   0 best J=0.2680 val=0.669 [xor=0.67 recall1=0.84 xor_mem=0.54] sigma=0.500
+  gen   1 best J=0.2388 val=0.735 [xor=0.78 recall1=0.83 xor_mem=0.62] sigma=0.500
+  gen   2 best J=0.2202 val=0.733 [xor=0.80 recall1=0.94 xor_mem=0.52] sigma=0.485
+  gen   3 best J=0.2028 val=0.781 [xor=0.84 recall1=0.78 xor_mem=0.73] sigma=0.406
+  gen   4 best J=0.1912 val=0.798 [xor=0.89 recall1=0.85 xor_mem=0.68] sigma=0.326
+  gen   5 best J=0.1912 val=0.798 [xor=0.89 recall1=0.85 xor_mem=0.68] sigma=0.298
+  gen   6 best J=0.1795 val=0.787 [xor=0.79 recall1=0.88 xor_mem=0.71] sigma=0.273
+  gen   7 best J=0.1765 val=0.817 [xor=0.91 recall1=0.89 xor_mem=0.68] sigma=0.251
+  gen   8 best J=0.1747 val=0.800 [xor=0.80 recall1=0.88 xor_mem=0.74] sigma=0.213
+  gen   9 best J=0.1706 val=0.815 [xor=0.83 recall1=0.85 xor_mem=0.77] sigma=0.165
+  gen  10 best J=0.1630 val=0.838 [xor=0.86 recall1=0.85 xor_mem=0.81] sigma=0.133
+  gen  11 best J=0.1590 val=0.867 [xor=0.95 recall1=0.76 xor_mem=0.87] sigma=0.123
+  gen  12 best J=0.1545 val=0.863 [xor=0.92 recall1=0.86 xor_mem=0.81] sigma=0.115
+  gen  13 best J=0.1497 val=0.854 [xor=0.91 recall1=0.80 xor_mem=0.84] sigma=0.097
+  gen  14 best J=0.1472 val=0.863 [xor=0.95 recall1=0.77 xor_mem=0.85] sigma=0.092
+  gen  15 best J=0.1433 val=0.877 [xor=0.96 recall1=0.76 xor_mem=0.88] sigma=0.079
+  gen  16 best J=0.1403 val=0.873 [xor=0.92 recall1=0.81 xor_mem=0.88] sigma=0.076
+  gen  17 best J=0.1403 val=0.873 [xor=0.92 recall1=0.81 xor_mem=0.88] sigma=0.072
+  gen  18 best J=0.1345 val=0.902 [xor=0.94 recall1=0.85 xor_mem=0.90] sigma=0.065
+  gen  19 best J=0.1312 val=0.908 [xor=0.98 recall1=0.83 xor_mem=0.90] sigma=0.063
+  gen  20 best J=0.1290 val=0.902 [xor=0.96 recall1=0.82 xor_mem=0.91] sigma=0.060
+  gen  21 best J=0.1269 val=0.896 [xor=0.93 recall1=0.87 xor_mem=0.89] sigma=0.054
+  gen  22 best J=0.1246 val=0.908 [xor=0.96 recall1=0.84 xor_mem=0.92] sigma=0.055
+  gen  23 best J=0.1239 val=0.904 [xor=0.96 recall1=0.82 xor_mem=0.92] sigma=0.053
+  gen  24 best J=0.1230 val=0.912 [xor=0.95 recall1=0.85 xor_mem=0.92] sigma=0.051
+  gen  25 best J=0.1208 val=0.925 [xor=0.95 recall1=0.88 xor_mem=0.94] sigma=0.051
+  gen  26 best J=0.1204 val=0.931 [xor=0.96 recall1=0.88 xor_mem=0.95] sigma=0.051
+  gen  27 best J=0.1188 val=0.921 [xor=0.94 recall1=0.85 xor_mem=0.95] sigma=0.051
+  gen  28 best J=0.1170 val=0.921 [xor=0.95 recall1=0.85 xor_mem=0.95] sigma=0.051
+  gen  29 best J=0.1159 val=0.925 [xor=0.95 recall1=0.86 xor_mem=0.95] sigma=0.051
+  gen  30 best J=0.1147 val=0.927 [xor=0.94 recall1=0.88 xor_mem=0.95] sigma=0.051
+  gen  31 best J=0.1137 val=0.927 [xor=0.94 recall1=0.87 xor_mem=0.96] sigma=0.051
+  gen  32 best J=0.1131 val=0.919 [xor=0.95 recall1=0.82 xor_mem=0.96] sigma=0.051
+  gen  33 best J=0.1127 val=0.933 [xor=0.96 recall1=0.87 xor_mem=0.96] sigma=0.053
+  gen  34 best J=0.1111 val=0.929 [xor=0.96 recall1=0.86 xor_mem=0.96] sigma=0.052
+  gen  35 best J=0.1105 val=0.931 [xor=0.95 recall1=0.88 xor_mem=0.96] sigma=0.052
+  gen  36 best J=0.1081 val=0.942 [xor=0.95 recall1=0.89 xor_mem=0.97] sigma=0.053
+  gen  37 best J=0.1059 val=0.944 [xor=0.96 recall1=0.91 xor_mem=0.96] sigma=0.053
+  gen  38 best J=0.1039 val=0.948 [xor=0.96 recall1=0.90 xor_mem=0.97] sigma=0.054
+  gen  39 best J=0.1031 val=0.948 [xor=0.96 recall1=0.91 xor_mem=0.97] sigma=0.052
+  gen  40 best J=0.1020 val=0.948 [xor=0.96 recall1=0.91 xor_mem=0.96] sigma=0.052
+  J 0.2680 -> 0.1020 (961 thetas)
+  trained  single_readout              0.919 [xor=0.94 recall1=0.89 xor_mem=0.93] (first half 0.92 / second half 0.91)
+  trained  single_readout_plus_opcode  0.926 [xor=0.96 recall1=0.89 xor_mem=0.93]
+  trained  separate_readouts           0.978 [xor=1.00 recall1=0.96 xor_mem=0.98]
+  trained  linear_nodes                0.966 [xor=0.96 recall1=0.99 xor_mem=0.95]
+  initial  single_readout              0.710 [xor=0.72 recall1=0.79 xor_mem=0.61] (first half 0.71 / second half 0.71)
+  initial  single_readout_plus_opcode  0.721 [xor=0.74 recall1=0.83 xor_mem=0.58]
+  initial  separate_readouts           0.969 [xor=1.00 recall1=1.00 xor_mem=0.90]
+  initial  linear_nodes                0.942 [xor=0.95 recall1=0.95 xor_mem=0.92]
+  history baseline           0.667
+Saved model card to models/endophalon2_promax/teleneuron_endophalon2_promax16_seed2.json

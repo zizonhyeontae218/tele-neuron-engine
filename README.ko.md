@@ -172,6 +172,19 @@ python -m tele_neuron.endophalon2_pro --config configs/endophalon2_pro/regular.j
 
 자세한 설계, 결과, 주의할 점은 [docs/endophalon2_pro.md](docs/endophalon2_pro.md)에 있습니다.
 
+## Teleneuron-Endophalon-2-ProMax8 / ProMax16
+
+여섯 번째 별도 버전입니다. **물리계 하나와 판독기 하나**로 여러 연산을 하고, 어떤 연산을 할지는 입력으로 고릅니다. 각 입력에는 데이터 비트 2개와 연산 코드(`xor`, `recall1`, `xor_mem`)가 함께 들어가고, 연산 코드는 입력마다 바뀔 수 있습니다. 연산 코드는 스프링 네트워크의 전용 자극점을 밀어주고, 판독 영역 8개(ProMax8) 또는 16개(ProMax16)를 읽는 선형 판독기 하나가 요청된 연산의 답을 내야 합니다.
+
+- **결과:** 학습 후 판독기 하나로 91~97%를 맞힙니다. 학습 전은 67~71%, 같은 예산의 무작위 탐색은 78~81%였습니다.
+- **연산 선택은 물리계 안에서 일어납니다:** 판독기에 연산 코드를 직접 알려줘도 결과가 거의 바뀌지 않습니다.
+
+```bash
+python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/promax16.json
+```
+
+자세한 결과와 주의할 점은 [docs/endophalon2_promax.md](docs/endophalon2_promax.md)에 있습니다.
+
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.

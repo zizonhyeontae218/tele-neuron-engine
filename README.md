@@ -224,6 +224,25 @@ python -m tele_neuron.endophalon2_pro --config configs/endophalon2_pro/regular.j
 
 Details, results and caveats: [docs/endophalon2_pro.md](docs/endophalon2_pro.md).
 
+## Teleneuron-Endophalon-2-ProMax8 / ProMax16
+
+The sixth, separate version: **one physics system and one readout**, with the
+operation chosen by input. Each event carries two bits and an opcode (`xor`,
+`recall1` or `xor_mem`), which can change on every event. The opcode pushes
+the spring network at its own stimulus point, and a single linear readout
+over 8 (ProMax8) or 16 (ProMax16) zones must give that operation's answer.
+
+- **Results:** after training, the single readout is right on 91–97% of
+  events, against 67–71% untrained and 78–81% for random search.
+- **The routing happens in the physics:** giving the opcode to the readout
+  as well changes almost nothing.
+
+```bash
+python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/promax16.json
+```
+
+Details and caveats: [docs/endophalon2_promax.md](docs/endophalon2_promax.md).
+
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary
