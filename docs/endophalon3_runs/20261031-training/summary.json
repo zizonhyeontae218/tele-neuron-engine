@@ -1,0 +1,136 @@
+{
+  "completed": [
+    {
+      "run": "a_binary_s1",
+      "level": "A",
+      "encoding": "binary",
+      "slow_region": true,
+      "search_seed": 1,
+      "train_accuracy": 0.7916666666666666,
+      "validation_accuracy": 0.79375,
+      "test_accuracy": 0.7885416666666667,
+      "per_op": {
+        "xor": 0.7322175732217573,
+        "recall1": 0.8149606299212598,
+        "recall2": 0.7350427350427351,
+        "xor_mem": 0.871244635193133
+      },
+      "a_accuracy_gate": false,
+      "seconds": 1875.929311455,
+      "failed_candidates": 0
+    },
+    {
+      "run": "a_binary_s2",
+      "level": "A",
+      "encoding": "binary",
+      "slow_region": true,
+      "search_seed": 2,
+      "train_accuracy": 0.8802083333333334,
+      "validation_accuracy": 0.8875,
+      "test_accuracy": 0.8833333333333333,
+      "per_op": {
+        "xor": 0.9707112970711297,
+        "recall1": 0.9448818897637795,
+        "recall2": 0.6709401709401709,
+        "xor_mem": 0.9399141630901288
+      },
+      "a_accuracy_gate": false,
+      "seconds": 929.3537182959999,
+      "failed_candidates": 0
+    },
+    {
+      "run": "a_no_regions_s1",
+      "level": "A",
+      "encoding": "binary",
+      "slow_region": false,
+      "search_seed": 1,
+      "train_accuracy": 0.8135416666666667,
+      "validation_accuracy": 0.8520833333333333,
+      "test_accuracy": 0.8072916666666666,
+      "per_op": {
+        "xor": 0.9163179916317992,
+        "recall1": 0.7755905511811023,
+        "recall2": 0.6837606837606838,
+        "xor_mem": 0.8540772532188842
+      },
+      "a_accuracy_gate": false,
+      "seconds": 934.1414129169998,
+      "failed_candidates": 0
+    },
+    {
+      "run": "a_no_regions_s2",
+      "level": "A",
+      "encoding": "binary",
+      "slow_region": false,
+      "search_seed": 2,
+      "train_accuracy": 0.8479166666666667,
+      "validation_accuracy": 0.8875,
+      "test_accuracy": 0.8541666666666666,
+      "per_op": {
+        "xor": 0.9330543933054394,
+        "recall1": 0.905511811023622,
+        "recall2": 0.7393162393162394,
+        "xor_mem": 0.8326180257510729
+      },
+      "a_accuracy_gate": false,
+      "seconds": 963.4844993810002,
+      "failed_candidates": 0
+    },
+    {
+      "run": "a_onehot_s1",
+      "level": "A",
+      "encoding": "onehot",
+      "slow_region": true,
+      "search_seed": 1,
+      "train_accuracy": 0.865625,
+      "validation_accuracy": 0.8958333333333334,
+      "test_accuracy": 0.8770833333333333,
+      "per_op": {
+        "xor": 0.9205020920502092,
+        "recall1": 0.9330708661417323,
+        "recall2": 0.7777777777777778,
+        "xor_mem": 0.871244635193133
+      },
+      "a_accuracy_gate": false,
+      "seconds": 857.9618014170001,
+      "failed_candidates": 0
+    }
+  ],
+  "missing": [
+    "b_binary_s1",
+    "b_binary_s2",
+    "b_onehot_s1",
+    "b_onehot_s2"
+  ],
+  "ablation": {
+    "1": {
+      "recall2_delta": 0.05128205128205132,
+      "conditional_paired_stream_bootstrap_95ci": [
+        0.008264462809917328,
+        0.09251101321585908
+      ],
+      "test_streams": 16,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261032
+    },
+    "2": {
+      "recall2_delta": -0.06837606837606847,
+      "conditional_paired_stream_bootstrap_95ci": [
+        -0.11304757998359312,
+        -0.02145693481530394
+      ],
+      "test_streams": 16,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261033
+    },
+    "mean": {
+      "recall2_delta": -0.008547008547008572,
+      "conditional_paired_stream_bootstrap_95ci": [
+        -0.036586679983179174,
+        0.0200892857142857
+      ],
+      "both_seeds_positive": false,
+      "interpretation": "CI conditions on these two optimizer seeds and fixed data/physics generator; does not establish general seed-level significance."
+    }
+  }
+}

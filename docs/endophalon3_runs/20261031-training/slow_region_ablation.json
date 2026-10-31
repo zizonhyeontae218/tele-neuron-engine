@@ -1,0 +1,31 @@
+{
+  "1": {
+    "recall2_delta": 0.05128205128205132,
+    "conditional_paired_stream_bootstrap_95ci": [
+      0.008264462809917328,
+      0.09251101321585908
+    ],
+    "test_streams": 16,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261032
+  },
+  "2": {
+    "recall2_delta": -0.06837606837606847,
+    "conditional_paired_stream_bootstrap_95ci": [
+      -0.11304757998359312,
+      -0.02145693481530394
+    ],
+    "test_streams": 16,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261033
+  },
+  "mean": {
+    "recall2_delta": -0.008547008547008572,
+    "conditional_paired_stream_bootstrap_95ci": [
+      -0.036586679983179174,
+      0.0200892857142857
+    ],
+    "both_seeds_positive": false,
+    "interpretation": "CI conditions on these two optimizer seeds and fixed data/physics generator; does not establish general seed-level significance."
+  }
+}
