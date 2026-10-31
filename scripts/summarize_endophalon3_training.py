@@ -77,7 +77,7 @@ def main():
         '- A: train 0–15 / validation 16–23 / test 24–39. B: train 0–23 / validation 24–31 / test 32–47. 스트림 단위로 분리.',
         '- 모든 E3 설정은 기존 ProMax16 Seed-1 물리를 warm start로 사용한다. A/B를 따로 학습하며, B를 이번 A 결과에서 시작하지 않는다.',
         '- Seed 1/2는 **outer search seed**다. 물리, network jitter, 데이터 생성 seed는 모두 기존 config의 1로 고정된다. 독립 데이터 생성 반복은 아니다.',
-        '- Python 3.12.14, NumPy 2.3.5, Linux, CPU quota 8 cores. CLI당 workers=4, 최대 2개 독립 탐색 동시 실행. BLAS/OMP/MKL 스레드는 1.',
+        '- 최초 7개 모델은 Python 3.12.14, NumPy 2.3.5, Linux, CPU quota 8 cores에서 실행했다. 복구된 B One-hot 두 모델의 runner·Python·CPU·wall time은 각 .run.json에 별도 기록했다. 모든 CLI는 workers=4, BLAS/OMP/MKL=1을 사용한다. 하드웨어가 달라 wall time의 직접적인 구조 비교에는 한계가 있다.',
         '- 환경에 pytest가 없어 최초 명령은 실패했다. 패키지 설치 후 전체 테스트가 통과했으며 최초 실패 로그도 보존했다.','',
         '## 2. 연산별 정확도','',
         table(['미학습 기준','Single zones','Single nodes','Per-op nodes'],[[p.stem,pct(json.loads(p.read_text())['zones_single']['accuracy']),pct(json.loads(p.read_text())['nodes_single']['accuracy']),', '.join(op+' '+pct(v) for op,v in json.loads(p.read_text())['nodes_separate_per_op'].items())] for p in sorted((RUN/'probes').glob('*.json'))]),'',
