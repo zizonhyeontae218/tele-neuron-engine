@@ -17,7 +17,7 @@
 - A: train 0–15 / validation 16–23 / test 24–39. B: train 0–23 / validation 24–31 / test 32–47. 스트림 단위로 분리.
 - 모든 E3 설정은 기존 ProMax16 Seed-1 물리를 warm start로 사용한다. A/B를 따로 학습하며, B를 이번 A 결과에서 시작하지 않는다.
 - Seed 1/2는 **outer search seed**다. 물리, network jitter, 데이터 생성 seed는 모두 기존 config의 1로 고정된다. 독립 데이터 생성 반복은 아니다.
-- Python 3.12.14, NumPy 2.3.5, Linux, CPU quota 8 cores. CLI당 workers=4, 최대 2개 독립 탐색 동시 실행. BLAS/OMP/MKL 스레드는 1.
+- 최초 7개 모델은 Python 3.12.14, NumPy 2.3.5, Linux, CPU quota 8 cores에서 실행했다. 복구된 B One-hot 두 모델의 runner·Python·CPU·wall time은 각 .run.json에 별도 기록했다. 모든 CLI는 workers=4, BLAS/OMP/MKL=1을 사용한다. 하드웨어가 달라 wall time의 직접적인 구조 비교에는 한계가 있다.
 - 환경에 pytest가 없어 최초 명령은 실패했다. 패키지 설치 후 전체 테스트가 통과했으며 최초 실패 로그도 보존했다.
 
 ## 2. 연산별 정확도
@@ -234,3 +234,12 @@ readout routing gap, parity3w, recall2는 표의 실제 값으로 평가한다. 
 - 모든 설정·기존 모델·기존 로그·src/tests가 기준 commit과 동일한지는 `preservation.json`으로 검증한다.
 
 자동 병합하지 않는다. 결과가 기준 미달이어도 그대로 보고하고, 기존 설계를 바꾸지 않는다.
+
+## 실행 환경 중단과 복구
+
+원래 Work 실행기가 연결 해제되어 B One-hot Seed 1·2의 최종 모델을 회수하지 못했다. 마지막 직접 확인은 양쪽 25/40세대다. 부분 실행을 성공으로 계산하지 않았다.
+각 중단 실행은 최소 601 theta 평가를 사용했다(초기 1 + 25×24). 정확한 최종 진행률·전체 원본 로그·wall time은 회수하지 못했으며, 관측한 tail 발췌만 interrupted_runs.json에 보존했다.
+복구 실행은 GitHub Actions에서 기존 theta_init과 같은 탐색 시드 1·2로 처음부터 수행했다. 중간 theta를 넘기거나 시드를 바꾸지 않았고, 각 완료 실행은 기존 CLI의 40×24 예산을 유지했다. 복구 환경·실제 argv·시간은 각 .run.json에 기록했다.
+원래 실행기와 복구 runner의 하드웨어가 다르므로 마지막 두 실행의 wall time을 모델 구조 차이 하나로 해석할 수 없다. 폐기된 부분 실행 비용은 완료 모델 학습 비용과 별개로 존재한다.
+Filetree 스킬의 updater/linter는 실행기 손실 뒤 사용할 수 없어 마지막 재생성·lint를 수행하지 못했다. 기존 생성 인덱스와 ledger는 보존했으며, 검증된 신규/기존 증거의 실제 SHA-256은 artifact_manifest.json과 preservation.json에 기록했다.
+복구 audit return code: 1. 완료 7/9; 미완료: b_onehot_s1, b_onehot_s2.

@@ -1,0 +1,156 @@
+{
+  "a_binary_s1": {
+    "models/endophalon3/20261031_a_binary_s1.json": {
+      "bytes": 30589,
+      "sha256": "5ab5fd3f99ea8fbab753debe39575e0197a37e0fd55a7818b51b80ad6a5a5b62"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s1.log": {
+      "bytes": 4682,
+      "sha256": "8faa4ca65154b36e7c710967212e2548fd2fc090bc5e1358beac9a2715d80c1b"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s1.run.json": {
+      "bytes": 792,
+      "sha256": "02be5967497ca8d13f3a554c6941ae5d71f023767444199e5e1ee4b007da94ff"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s1.audit.json": {
+      "bytes": 20965,
+      "sha256": "bd4738c1b91546648e6509942b22fff06e32a9e427e2b91a49c43220a51b2055"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s1.predictions.csv": {
+      "bytes": 45384,
+      "sha256": "ccf482b566cf8abf920999b337d5aa0115c719b7f09d19ebf11abdfc8bf274e9"
+    }
+  },
+  "a_binary_s2": {
+    "models/endophalon3/20261031_a_binary_s2.json": {
+      "bytes": 27152,
+      "sha256": "e8f929e5b04236239095a28146fe8a443b7f9ed3f5480dd1062de5da72ca98b4"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s2.log": {
+      "bytes": 4664,
+      "sha256": "7053ac62c1377025ea48717bc17c4de03ac5143b4851d8fcde5bf2562472e199"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s2.run.json": {
+      "bytes": 770,
+      "sha256": "8706ae0137f5bb6c4e0fab75922f8bf6593fa41f0505cd42b5f931bfc37dcb06"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s2.audit.json": {
+      "bytes": 16980,
+      "sha256": "61be01f69390893ea385403cfbacd0eac7ebef74d918356187f1a14705fe69eb"
+    },
+    "docs/endophalon3_runs/20261031-training/a_binary_s2.predictions.csv": {
+      "bytes": 45429,
+      "sha256": "1d2611c9b7239b0b4fde993ee473ab318a2ee32e17b0580b92037835b1c14cf1"
+    }
+  },
+  "a_no_regions_s1": {
+    "models/endophalon3/20261031_a_no_regions_s1.json": {
+      "bytes": 27187,
+      "sha256": "b054f26bb0fd7ba91710233816bde87b7dc3862f5114621fc04d256c62185503"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s1.log": {
+      "bytes": 4684,
+      "sha256": "23e8a05f0881303ccf9a3872e0f638893e420928eb45eccbb363fd8100d164cc"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s1.run.json": {
+      "bytes": 864,
+      "sha256": "05fac6f77fe5cccd916265bdf8ea2b210751d6f0a7f10ef044a12628686eef11"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s1.audit.json": {
+      "bytes": 17137,
+      "sha256": "3f113322d8e6b25f6ee630feeb6080729fb0e6c4383df1ef6c5c81316a4b52d6"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s1.predictions.csv": {
+      "bytes": 45338,
+      "sha256": "9e0d1f1c35ba6c648ea736ff90ca63eb9e1bfb520bb55d1b383b075bcc435276"
+    }
+  },
+  "a_no_regions_s2": {
+    "models/endophalon3/20261031_a_no_regions_s2.json": {
+      "bytes": 27043,
+      "sha256": "07080b574b607511b6c190a7200fdb5847d1b68dcbb3dc17f1df1216547301d1"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s2.log": {
+      "bytes": 4684,
+      "sha256": "052177a2b5d16511e6b916335bb38bc26eddeaeb19fcff20689d00f11daa5944"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s2.run.json": {
+      "bytes": 864,
+      "sha256": "e3a8630797602d15da3acfb9c360bd2b86a3af5990bdb2b3400d6fc86d4744f7"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s2.audit.json": {
+      "bytes": 17072,
+      "sha256": "767424d64872406756ddaf7dfe0827d039fcdc96e90da26f0044fdb1b25ae0bb"
+    },
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s2.predictions.csv": {
+      "bytes": 45377,
+      "sha256": "b4f44f2416e03ac00bc75d5c66deb73b56e8267c6c1991c613a30c2b97173083"
+    }
+  },
+  "a_onehot_s1": {
+    "models/endophalon3/20261031_a_onehot_s1.json": {
+      "bytes": 27960,
+      "sha256": "3dcd8434f7de2fa0fbd1a65b1384cbb93c9695ee3accc54f87eb58c85a4af7b2"
+    },
+    "docs/endophalon3_runs/20261031-training/a_onehot_s1.log": {
+      "bytes": 4738,
+      "sha256": "49ecee983584529df6c4ba1a3f8bad87d4cba12b43f27d51498784e7576fa7b8"
+    },
+    "docs/endophalon3_runs/20261031-training/a_onehot_s1.run.json": {
+      "bytes": 839,
+      "sha256": "a2903be5ab49502105b7b7037cabf5179dec009b0fc3e53fcd0b8a8a2cd76569"
+    },
+    "docs/endophalon3_runs/20261031-training/a_onehot_s1.audit.json": {
+      "bytes": 17053,
+      "sha256": "481f191bcb9c1e8a68fcd69b3f82d342e9a3249e5a613564baaf3e60d30a6292"
+    },
+    "docs/endophalon3_runs/20261031-training/a_onehot_s1.predictions.csv": {
+      "bytes": 45364,
+      "sha256": "a13f2d554cb2d341d2186a4f3f5295fbf459fe03816ae8038985e36506714dc6"
+    }
+  },
+  "b_binary_s1": {
+    "models/endophalon3/20261031_b_binary_s1.json": {
+      "bytes": 34705,
+      "sha256": "42cb43569797306fa806618ce1aa19f357442279369b4c5b44fb014d73cfd3a8"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s1.log": {
+      "bytes": 6856,
+      "sha256": "4dbb16eb92f04e50e25ed135497cca8cdbc54a146367ca6235d5c860de99befa"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s1.run.json": {
+      "bytes": 832,
+      "sha256": "5b3ac9726226b84b220bb57ff1932da7f68d2ba2d37c25f27a3a60113a9b517e"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s1.audit.json": {
+      "bytes": 25048,
+      "sha256": "37de46133f15379dce15e080870e1e03ee5ae77f7227bfe16f8a140f342fd138"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s1.predictions.csv": {
+      "bytes": 44946,
+      "sha256": "3eccbf5119544f46b3dce0ac407b7db209f035eea5c7551a4a7399a8d4cb20ad"
+    }
+  },
+  "b_binary_s2": {
+    "models/endophalon3/20261031_b_binary_s2.json": {
+      "bytes": 35054,
+      "sha256": "05c8817392077364fbdd7d53432e39ba18efe0b523c77fa482528741cfcd6bb5"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s2.log": {
+      "bytes": 6856,
+      "sha256": "aa3f669f48418583512fc54838ebebe10e632334e546fa9bd0d819a05aab8730"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s2.run.json": {
+      "bytes": 829,
+      "sha256": "3f6537fa900ac56aefe1484a2c13408c8f555d743977954e5a579d7648f732b3"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s2.audit.json": {
+      "bytes": 25125,
+      "sha256": "4300bb18e0bcda16b3dd4847285c5c6a5249ad634f43a941d60fae8917dc1bc3"
+    },
+    "docs/endophalon3_runs/20261031-training/b_binary_s2.predictions.csv": {
+      "bytes": 44936,
+      "sha256": "fec6b82dc71a118c58742fe4bfe2cb7218800d777db2083cd4aff9509468fcf3"
+    }
+  }
+}

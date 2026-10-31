@@ -29,3 +29,7 @@ New artifacts: `models/endophalon3/20261031_*.json` (trained CLI cards),
 `docs/endophalon3_runs/20261031-training/` (raw logs and validation evidence),
 `scripts/run_endophalon3_training.py` (bounded, non-overwriting CLI runner),
 and a final research report linked from `docs/endophalon3.md`.
+
+## Experiment evidence
+
+Completed/audited 7/9 models. A accuracy gates 0/3. See docs/endophalon3_training_report.ko.md; original source and evidence preserved. Infrastructure-interrupted attempts are recorded separately. No master merge.

@@ -264,7 +264,7 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 
 Details and caveats: [docs/endophalon2_promax.md](docs/endophalon2_promax.md).
 
-## Teleneuron-Endophalon-3 (base, untrained)
+## Teleneuron-Endophalon-3 (training experiments)
 
 The next generation, built on the Endophalon-2-Pro / ProMax spring physics.
 It is an instruction-driven physical computer: one physics system, one
@@ -273,8 +273,8 @@ readout, and every input event is an instruction `LEVEL OP a b`, for example
 the opcode picks the operation, and a, b are the data. A slow region adds a
 second timescale for recall.
 
-The base and tests are in place. **No model has been trained yet.**
-Start at [docs/endophalon3_handoff.md](docs/endophalon3_handoff.md).
+7 fixed-budget models have been trained and audited; A accuracy gates 0/3. All seeds and negative results are reported.
+[Results](docs/endophalon3.md) · [research report](docs/endophalon3_training_report.ko.md).
 
 ```bash
 python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe

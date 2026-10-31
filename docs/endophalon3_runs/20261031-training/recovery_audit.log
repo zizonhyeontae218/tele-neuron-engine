@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/runner/work/tele-neuron-engine/tele-neuron-engine/scripts/audit_endophalon3_training.py", line 133, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/runner/work/tele-neuron-engine/tele-neuron-engine/scripts/audit_endophalon3_training.py", line 131, in main
+    if not (RUN/(name+'.audit.json')).exists():audit(path)
+                                               ^^^^^^^^^^^
+  File "/home/runner/work/tele-neuron-engine/tele-neuron-engine/scripts/audit_endophalon3_training.py", line 70, in audit
+    assert np.array_equal(readout.mean,refit.mean) and np.array_equal(readout.scale,refit.scale)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

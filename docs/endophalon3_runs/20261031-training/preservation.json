@@ -1,12 +1,88 @@
 {
   "base_sha": "1425d63fafee8a3ab5127b59a51324600fed00e3",
   "files": {
+    ".filetree.json": {
+      "sha256": "3c75788c97e6891b5f6692aadbd864780fe5b8104b888f2597ed23ab7f15ff88",
+      "unchanged": true
+    },
+    ".github/workflows/archive-endophalon.yml": {
+      "sha256": "4f8e81ad6389ca25bad9793f01a317c59157ddcc8a2d704f9445b09e81951645",
+      "unchanged": true
+    },
+    ".github/workflows/tests.yml": {
+      "sha256": "72392818fe5c40d1c5b52dc4e9af32bf5c9c922b956bbdb2d79d0021e2acf622",
+      "unchanged": true
+    },
+    ".gitignore": {
+      "sha256": "e436ed833312608896f5a91cc19db7f5d974abff8af6ac1c3687db7ffc4e0981",
+      "unchanged": true
+    },
     "AGENTS.md": {
       "sha256": "30fb74615bd2181b33fa46f7270dc96d87c2ab08081db59acf3401b687801c1d",
       "unchanged": true
     },
     "CLAUDE.md": {
       "sha256": "1cead88686802ad8784f393da394ec2d573a9a344a0d66a71d9afdd06e2026de",
+      "unchanged": true
+    },
+    "CODE_OF_CONDUCT.md": {
+      "sha256": "893ee30415e60f429575447274d6f6e2b309fbaf9d3c1b15c28eda51beeada08",
+      "unchanged": true
+    },
+    "CONTRIBUTING.md": {
+      "sha256": "faf5b4315277e2776a719c7a7455c781b73d24401c066961a3f2e7f8e9c11eda",
+      "unchanged": true
+    },
+    "FILETREE.hash.json": {
+      "sha256": "85de68fc94e8f8cc590e9f423fcf5a3a1f355f30e5aba0218d2f492787b0b26c",
+      "unchanged": true
+    },
+    "FileTree.md": {
+      "sha256": "db6b8cb70a22e5788a61dfde4b47422fd70cef85117e3136f5f6f089c94bf461",
+      "unchanged": true
+    },
+    "LICENSE": {
+      "sha256": "2cc1fdfb858a8703de4905087cda0bc35bdad7e69b5a8db2e4e0933ec07066cd",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/bayesian_optimization.py": {
+      "sha256": "11b8cd6245380fbb96287504ac5ce1f6d19a69a9182d952b2592da0af191d36a",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/differentiable_physics_approximation.py": {
+      "sha256": "915bbff4c397907036fb3a8a23e5eb92cb0ff7fdd2f6b4fca413ad52c6e2e889",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/evolution_strategy.py": {
+      "sha256": "f51ab70229c622c4f460ae0454dfed0d880685a9aaa1bcbeb7674ff642f26ffe",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/genetic_algorithm.py": {
+      "sha256": "efa2ee86cc98b7f9b142849ece851c4bfdfca45b01a2fe0fc4008ba6eff24ed3",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/hill_climbing.py": {
+      "sha256": "20b1b2c77287c3cf973e4ac46df22a684b93f4814e199ba51b94690e7bfefed1",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/linear_regression.py": {
+      "sha256": "4ca51ec12ba7acad9cc68b9e0ddc8dc6462177dff69113ad63a14658412bce69",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/logistic_regression.py": {
+      "sha256": "0567c531adc73b186b4bd4d7c921ccd35dc153289c2d903102cc97459faa2c12",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/novelity_search.py": {
+      "sha256": "e4bdc02317959889d66e884949d77cc7c303a860688f03640c78d668a7e31e2a",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/novelty_search.py": {
+      "sha256": "1fcf8f0d9df5934f7e5d1a3f506649e6f6bc0ab959b72fef193640c70627ab14",
+      "unchanged": true
+    },
+    "Vanila_learner/Algorithm/random_search.py": {
+      "sha256": "0bdf669e5e361f0c3db82929d3240a9b564b4a0049be71d31858c27ce879d011",
       "unchanged": true
     },
     "configs/and_tiny.json": {
@@ -121,6 +197,26 @@
       "sha256": "4e8421b0221b489bfe0f5793dfa4f78a74bb9d5a406037d21bbcb0343ab35349",
       "unchanged": true
     },
+    "docs/endophalon.md": {
+      "sha256": "47c7a3f5a5b3706a031fc78d2d95fa4c374ed3b747db3cb85da98134b8aea893",
+      "unchanged": true
+    },
+    "docs/endophalon2.md": {
+      "sha256": "9a4b5caf4d091ae60d4ba327c92cff1dc2e89ac819f24904dc062051adeb1b81",
+      "unchanged": true
+    },
+    "docs/endophalon2_feasibility.json": {
+      "sha256": "522efccda6b13770358dcf7277856227fcf642cbef49bfb46adcaecd6d0f6c79",
+      "unchanged": true
+    },
+    "docs/endophalon2_pro.md": {
+      "sha256": "a300cfc1869c04eb4174102c8e49f741ed58a3c8de79cadf5fca596e78eb1eb3",
+      "unchanged": true
+    },
+    "docs/endophalon2_pro_ablation.json": {
+      "sha256": "0f99b32d861b35d602c4398eacb61a7303296d80451ba54c8f231cf26c6b40db",
+      "unchanged": true
+    },
     "docs/endophalon2_pro_runs/ablation_irregular_multi.log": {
       "sha256": "d01a09f9d2dbb99d3b5e12f0005cbe7143b7350a8620b48aae0961a0e42d4f94",
       "unchanged": true
@@ -147,6 +243,10 @@
     },
     "docs/endophalon2_pro_runs/e2p_regular_multi_s2.log": {
       "sha256": "05088ebb7f78f0a1203e9dcd355e418e29450d59303a2dc50b28fefe39efc5a4",
+      "unchanged": true
+    },
+    "docs/endophalon2_promax.md": {
+      "sha256": "94af762025c5709dae790ac9fbe4c47884ff5f07b7c0b5517950795b709ac85a",
       "unchanged": true
     },
     "docs/endophalon2_promax_runs/promax16_s1.log": {
@@ -195,6 +295,42 @@
     },
     "docs/endophalon3_probes/level_b_onehot.json": {
       "sha256": "3237b0a9ef37c850432562370410d0481f51e1465fb6fa435bac4c478d4c7dc0",
+      "unchanged": true
+    },
+    "docs/endophalon_plus.md": {
+      "sha256": "88e68b527670f959623c8f2d9279637fbd62750f3a6e5d0b9398949e2a14b264",
+      "unchanged": true
+    },
+    "docs/endophalon_plus_matrix.json": {
+      "sha256": "05457c08ba921ffab3d366b194bbeed58bb171f0c34188ee58bd4ea36444c698",
+      "unchanged": true
+    },
+    "docs/endophalon_pro.md": {
+      "sha256": "eccb37a5a709b87dfce728486fb0bec5fbe7b256a5d4302acb2b1dfc425f467e",
+      "unchanged": true
+    },
+    "docs/endophalon_pro_matrix.json": {
+      "sha256": "552306181073df5857194e0de98eb30f2afe310413847570c82c324c77f43118",
+      "unchanged": true
+    },
+    "docs/experiment_design.md": {
+      "sha256": "1d8ec8e3c2cac49b35099ab8812c2fe657630136f4d2739fe679a058de683222",
+      "unchanged": true
+    },
+    "docs/integration/2026-10-31.md": {
+      "sha256": "12af992dbdcd3fce4d8a9caad14cfb58488bc5492ecfa8eb681208372d8cb264",
+      "unchanged": true
+    },
+    "docs/integration/original-heads.json": {
+      "sha256": "524a4e8e3b4650366fe57c3e88d9aad55d95c7261bc339ba6b4a3ff2e3846cf7",
+      "unchanged": true
+    },
+    "docs/integration/promax-replay.jsonl": {
+      "sha256": "baabab59b9a8351ba1df4a1fb6ca785ccea10ca792ac8802233972eaf7f3a65a",
+      "unchanged": true
+    },
+    "docs/integration/xor-replay.txt": {
+      "sha256": "6722e343ccb2e1711847b821c73aa77ebe0bc8f0429307d41b11795bd22a7b45",
       "unchanged": true
     },
     "models/endophalon/teleneuron_endophalon_full_adder.json": {
@@ -287,6 +423,30 @@
     },
     "models/tele_neuron_001.json": {
       "sha256": "f45f3222f6c72fd0766e078107950f46d001a91a6565f7293389025cee7ec135",
+      "unchanged": true
+    },
+    "outputs/.gitkeep": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "unchanged": true
+    },
+    "pyproject.toml": {
+      "sha256": "17b552387c88878e104f958adf13e6a47c6cb73a3779cf41d72152f14cf5cc12",
+      "unchanged": true
+    },
+    "requirements.txt": {
+      "sha256": "40838cc0be4149bd8933c5974618c21fc20e2140ebed63ba51e15efee37fef27",
+      "unchanged": true
+    },
+    "scripts/archive_endophalon.py": {
+      "sha256": "2f357f8405971ef3313836db9787728d5975ca0a08447f5033b972b4d2e15499",
+      "unchanged": true
+    },
+    "scripts/replay_promax.py": {
+      "sha256": "51814ff69084d544325199c3dbe418069ee945b6c28455a11db02ba63e481dd0",
+      "unchanged": true
+    },
+    "scripts/smoke_models.py": {
+      "sha256": "102b13bd1c27fc368fe179669248dbfaf43dd4591e2b346f8b4d7f7edcaa3fe8",
       "unchanged": true
     },
     "src/tele_neuron/__init__.py": {
@@ -690,5 +850,12 @@
       "unchanged": true
     }
   },
-  "all_unchanged": true
+  "all_unchanged": true,
+  "allowed_updated_documents": [
+    "GOAL.md",
+    "README.ko.md",
+    "README.md",
+    "docs/endophalon3.md",
+    "docs/model_commands.md"
+  ]
 }
