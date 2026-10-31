@@ -1,0 +1,26 @@
+{
+  "manifest_path": "FileTree.md",
+  "hash_path": "FILETREE.hash.json",
+  "language": "en",
+  "include": [],
+  "exclude": [
+    ".git/**",
+    ".dart_tool/**",
+    ".idea/**",
+    ".vscode/**",
+    ".venv/**",
+    "venv/**",
+    "node_modules/**",
+    "build/**",
+    "dist/**",
+    "coverage/**",
+    "__pycache__/**",
+    "*.lock",
+    "*.tmp",
+    "*.bak",
+    "*.swp",
+    ".DS_Store"
+  ],
+  "max_summary_bytes": 131072,
+  "commit_guard": true
+}

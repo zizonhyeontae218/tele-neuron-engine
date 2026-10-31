@@ -1,0 +1,614 @@
+[
+  {
+    "task": "parity3",
+    "position_jitter": 0.1,
+    "velocity_jitter": 0.02,
+    "endophalon": {
+      "seconds": 15.141890591999982,
+      "features": 48,
+      "train": 0.9869791666666666,
+      "test": 0.9609375,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 19.89652682300016,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic"
+      ],
+      "presets_used": 2,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.5,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 1.0
+      }
+    }
+  },
+  {
+    "task": "parity3",
+    "position_jitter": 0.4,
+    "velocity_jitter": 0.05,
+    "endophalon": {
+      "seconds": 14.910666014999833,
+      "features": 48,
+      "train": 0.9036458333333334,
+      "test": 0.859375,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 18.83702469900004,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "viscous",
+        "elastic",
+        "viscous",
+        "elastic"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.5,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 1.0
+      }
+    }
+  },
+  {
+    "task": "parity3",
+    "position_jitter": 1.0,
+    "velocity_jitter": 0.1,
+    "endophalon": {
+      "seconds": 14.39264865600012,
+      "features": 48,
+      "train": 0.7578125,
+      "test": 0.703125,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 19.134244309999985,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "viscous",
+        "elastic",
+        "viscous",
+        "elastic"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.5,
+        "fixed_elastic": 0.9921875,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 1.0
+      }
+    }
+  },
+  {
+    "task": "full_adder",
+    "position_jitter": 0.1,
+    "velocity_jitter": 0.02,
+    "endophalon": {
+      "seconds": 15.05589686799999,
+      "features": 48,
+      "train": 0.9869791666666666,
+      "test": 0.9609375,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 19.074617673000148,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "elastic",
+        "viscous",
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous"
+      ],
+      "presets_used": 2,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.125,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 1.0
+      }
+    }
+  },
+  {
+    "task": "full_adder",
+    "position_jitter": 0.4,
+    "velocity_jitter": 0.05,
+    "endophalon": {
+      "seconds": 14.790897739999991,
+      "features": 48,
+      "train": 0.890625,
+      "test": 0.84375,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 18.62052191900011,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "viscous",
+        "elastic",
+        "viscous"
+      ],
+      "presets_used": 2,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.125,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 1.0
+      }
+    }
+  },
+  {
+    "task": "full_adder",
+    "position_jitter": 1.0,
+    "velocity_jitter": 0.1,
+    "endophalon": {
+      "seconds": 14.690820419000147,
+      "features": 48,
+      "train": 0.7473958333333334,
+      "test": 0.6796875,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 18.624397748000092,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "viscous",
+        "elastic",
+        "viscous"
+      ],
+      "presets_used": 2,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.125,
+        "fixed_elastic": 0.9921875,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 1.0
+      }
+    }
+  },
+  {
+    "task": "parity4",
+    "position_jitter": 0.1,
+    "velocity_jitter": 0.02,
+    "endophalon": {
+      "seconds": 31.193806399000096,
+      "features": 48,
+      "train": 0.85546875,
+      "test": 0.8203125,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 56.10028775799992,
+      "features_per_preset": 1156,
+      "assignment": [
+        "heavy_mix",
+        "viscous",
+        "heavy_mix",
+        "viscous",
+        "elastic",
+        "elastic",
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "elastic",
+        "elastic",
+        "viscous"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.5,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 0.99609375
+      }
+    }
+  },
+  {
+    "task": "parity4",
+    "position_jitter": 0.4,
+    "velocity_jitter": 0.05,
+    "endophalon": {
+      "seconds": 29.70675302099994,
+      "features": 48,
+      "train": 0.7630208333333334,
+      "test": 0.63671875,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 58.687396498,
+      "features_per_preset": 1156,
+      "assignment": [
+        "heavy_mix",
+        "elastic",
+        "viscous",
+        "elastic",
+        "heavy_mix",
+        "heavy_mix",
+        "viscous",
+        "heavy_mix",
+        "viscous",
+        "elastic",
+        "viscous",
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.5,
+        "fixed_elastic": 0.96875,
+        "fixed_viscous": 0.99609375,
+        "fixed_heavy_mix": 0.91796875
+      }
+    }
+  },
+  {
+    "task": "parity4",
+    "position_jitter": 1.0,
+    "velocity_jitter": 0.1,
+    "endophalon": {
+      "seconds": 29.2208903369999,
+      "features": 48,
+      "train": 0.6471354166666666,
+      "test": 0.55078125,
+      "baseline_bits_test": 0.5
+    },
+    "plus": {
+      "seconds": 59.03910328200004,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "viscous",
+        "elastic",
+        "elastic",
+        "elastic",
+        "elastic",
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "heavy_mix",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.5,
+        "gate_only": 0.5,
+        "fixed_elastic": 0.76171875,
+        "fixed_viscous": 0.96484375,
+        "fixed_heavy_mix": 0.83203125
+      }
+    }
+  },
+  {
+    "task": "adder2",
+    "position_jitter": 0.1,
+    "velocity_jitter": 0.02,
+    "endophalon": {
+      "seconds": 31.313171701999863,
+      "features": 48,
+      "train": 0.7955729166666666,
+      "test": 0.77734375,
+      "baseline_bits_test": 0.25
+    },
+    "plus": {
+      "seconds": 58.77743986299993,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "elastic",
+        "elastic",
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "elastic",
+        "viscous",
+        "viscous"
+      ],
+      "presets_used": 2,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.25,
+        "gate_only": 0.25,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 0.98828125
+      }
+    }
+  },
+  {
+    "task": "adder2",
+    "position_jitter": 0.4,
+    "velocity_jitter": 0.05,
+    "endophalon": {
+      "seconds": 35.00304237799992,
+      "features": 48,
+      "train": 0.6640625,
+      "test": 0.64453125,
+      "baseline_bits_test": 0.25
+    },
+    "plus": {
+      "seconds": 58.66025046200002,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "heavy_mix",
+        "heavy_mix",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "elastic",
+        "viscous",
+        "viscous"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.25,
+        "gate_only": 0.25,
+        "fixed_elastic": 0.96484375,
+        "fixed_viscous": 0.99609375,
+        "fixed_heavy_mix": 0.90625
+      }
+    }
+  },
+  {
+    "task": "adder2",
+    "position_jitter": 1.0,
+    "velocity_jitter": 0.1,
+    "endophalon": {
+      "seconds": 31.896815090000246,
+      "features": 48,
+      "train": 0.5625,
+      "test": 0.4765625,
+      "baseline_bits_test": 0.25
+    },
+    "plus": {
+      "seconds": 62.190541335000034,
+      "features_per_preset": 1156,
+      "assignment": [
+        "heavy_mix",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "viscous",
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous"
+      ],
+      "presets_used": 2,
+      "train": 1.0,
+      "test": 0.99609375,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.25,
+        "gate_only": 0.25,
+        "fixed_elastic": 0.796875,
+        "fixed_viscous": 0.97265625,
+        "fixed_heavy_mix": 0.8203125
+      }
+    }
+  },
+  {
+    "task": "mult2",
+    "position_jitter": 0.1,
+    "velocity_jitter": 0.02,
+    "endophalon": {
+      "seconds": 34.93702266499986,
+      "features": 48,
+      "train": 0.953125,
+      "test": 0.91796875,
+      "baseline_bits_test": 0.8125
+    },
+    "plus": {
+      "seconds": 63.50094447399988,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "elastic",
+        "elastic",
+        "heavy_mix",
+        "viscous",
+        "heavy_mix",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.8125,
+        "gate_only": 0.4375,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 1.0
+      }
+    }
+  },
+  {
+    "task": "mult2",
+    "position_jitter": 0.4,
+    "velocity_jitter": 0.05,
+    "endophalon": {
+      "seconds": 33.723504063999826,
+      "features": 48,
+      "train": 0.8723958333333334,
+      "test": 0.8125,
+      "baseline_bits_test": 0.8125
+    },
+    "plus": {
+      "seconds": 66.55959853000013,
+      "features_per_preset": 1156,
+      "assignment": [
+        "viscous",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "heavy_mix",
+        "heavy_mix",
+        "elastic",
+        "viscous",
+        "elastic",
+        "viscous"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 1.0,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.8125,
+        "gate_only": 0.4375,
+        "fixed_elastic": 1.0,
+        "fixed_viscous": 1.0,
+        "fixed_heavy_mix": 0.9921875
+      }
+    }
+  },
+  {
+    "task": "mult2",
+    "position_jitter": 1.0,
+    "velocity_jitter": 0.1,
+    "endophalon": {
+      "seconds": 32.153883511000004,
+      "features": 48,
+      "train": 0.7760416666666666,
+      "test": 0.70703125,
+      "baseline_bits_test": 0.8125
+    },
+    "plus": {
+      "seconds": 63.24718877500027,
+      "features_per_preset": 1156,
+      "assignment": [
+        "elastic",
+        "viscous",
+        "viscous",
+        "viscous",
+        "elastic",
+        "viscous",
+        "elastic",
+        "viscous",
+        "heavy_mix",
+        "heavy_mix",
+        "heavy_mix",
+        "heavy_mix",
+        "elastic",
+        "viscous",
+        "elastic",
+        "viscous"
+      ],
+      "presets_used": 3,
+      "train": 1.0,
+      "test": 0.99609375,
+      "controls_test": {
+        "baseline_linear_on_bits": 0.8125,
+        "gate_only": 0.3125,
+        "fixed_elastic": 0.92578125,
+        "fixed_viscous": 0.98828125,
+        "fixed_heavy_mix": 0.96484375
+      }
+    }
+  }
+]

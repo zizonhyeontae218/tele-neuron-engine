@@ -1,0 +1,416 @@
+{
+  "family": "Teleneuron-Endophalon-Pro",
+  "model_id": "teleneuron_endophalon_pro_parity3_k4",
+  "config": "configs/endophalon_pro/parity3.json",
+  "task": "parity3",
+  "theta": {
+    "damping": 0.997032823209482,
+    "restitution": 0.905691717061285,
+    "input_strength": 0.08499941125260489,
+    "initial_speed": 0.004891372283309309,
+    "mass_spread": 0.0004856902869783345,
+    "stimulus_points": [
+      [
+        2.34609464370424,
+        0.5920772225183677,
+        1.5828055448191631
+      ],
+      [
+        4.74919753569423,
+        0.5434665265877843,
+        1.2876087739153554
+      ],
+      [
+        4.714146605540924,
+        2.816874838230232,
+        1.3678471077416403
+      ]
+    ]
+  },
+  "theta_init": {
+    "damping": 0.99,
+    "restitution": 0.9,
+    "input_strength": 0.08,
+    "initial_speed": 0.05,
+    "mass_spread": 0.0,
+    "stimulus_points": [
+      [
+        1.0,
+        1.0,
+        1.5
+      ],
+      [
+        4.0,
+        1.0,
+        1.5
+      ],
+      [
+        2.5,
+        4.0,
+        1.5
+      ]
+    ]
+  },
+  "metrics": {
+    "readout_grid": [
+      2,
+      2,
+      1
+    ],
+    "readout_features": 4,
+    "readout_step": 32,
+    "noise": {
+      "position_jitter": 0.1,
+      "velocity_jitter": 0.02,
+      "train": 24,
+      "val": 12,
+      "test": 24
+    },
+    "objective": {
+      "lambda_noise": 0.05,
+      "lambda_stability": 0.1,
+      "lambda_complexity": 0.01
+    },
+    "evaluations": 481,
+    "fitness_trained": {
+      "j": 0.07407662336009785,
+      "l_val": 0.049623729546984074,
+      "r_noise": 0.23571992688250074,
+      "r_stability": 0.1217206790123457,
+      "r_complexity": 0.04948295677541685,
+      "val_accuracy": 0.9791666666666666
+    },
+    "fitness_initial": {
+      "j": 0.2618794398724816,
+      "l_val": 0.24069483764692037,
+      "r_noise": 0.1058217083527254,
+      "r_stability": 0.15883005401234565,
+      "r_complexity": 0.001051140669039151,
+      "val_accuracy": 0.75
+    },
+    "test_accuracy": {
+      "trained": 0.96875,
+      "initial": 0.75,
+      "bits_linear": 0.5
+    },
+    "readout_size_sweep": [
+      {
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "features": 2,
+        "trained": 0.6302083333333334,
+        "initial": 0.4166666666666667
+      },
+      {
+        "grid": [
+          2,
+          2,
+          1
+        ],
+        "features": 4,
+        "trained": 0.96875,
+        "initial": 0.75
+      },
+      {
+        "grid": [
+          3,
+          3,
+          1
+        ],
+        "features": 9,
+        "trained": 0.9947916666666666,
+        "initial": 0.8541666666666666
+      },
+      {
+        "grid": [
+          4,
+          4,
+          1
+        ],
+        "features": 16,
+        "trained": 1.0,
+        "initial": 0.9010416666666666
+      },
+      {
+        "grid": [
+          6,
+          6,
+          1
+        ],
+        "features": 36,
+        "trained": 0.9947916666666666,
+        "initial": 0.8854166666666666
+      },
+      {
+        "grid": [
+          12,
+          12,
+          1
+        ],
+        "features": 144,
+        "trained": 0.953125,
+        "initial": 0.7239583333333334
+      }
+    ],
+    "random_search": null,
+    "history": [
+      {
+        "generation": 0,
+        "best_j": 0.2618794398724816,
+        "best_val_accuracy": 0.75,
+        "center_j": 0.2618794398724816,
+        "sigma": 0.8000000000000002
+      },
+      {
+        "generation": 1,
+        "best_j": 0.21643307514159776,
+        "best_val_accuracy": 0.6875,
+        "center_j": 0.2618794398724816,
+        "sigma": 0.8000000000000002
+      },
+      {
+        "generation": 2,
+        "best_j": 0.17489437293621699,
+        "best_val_accuracy": 0.7083333333333334,
+        "center_j": 0.252764160955389,
+        "sigma": 0.7444740565233362
+      },
+      {
+        "generation": 3,
+        "best_j": 0.14727160277108936,
+        "best_val_accuracy": 0.8541666666666666,
+        "center_j": 0.181534810926884,
+        "sigma": 0.6596609895172678
+      },
+      {
+        "generation": 4,
+        "best_j": 0.14727160277108936,
+        "best_val_accuracy": 0.8541666666666666,
+        "center_j": 0.17737738859483884,
+        "sigma": 0.6941495575648824
+      },
+      {
+        "generation": 5,
+        "best_j": 0.14727160277108936,
+        "best_val_accuracy": 0.8541666666666666,
+        "center_j": 0.17992009786923782,
+        "sigma": 0.6706095420706628
+      },
+      {
+        "generation": 6,
+        "best_j": 0.11678270324939845,
+        "best_val_accuracy": 0.9166666666666666,
+        "center_j": 0.16784247628878946,
+        "sigma": 0.4963594471510942
+      },
+      {
+        "generation": 7,
+        "best_j": 0.11678270324939845,
+        "best_val_accuracy": 0.9166666666666666,
+        "center_j": 0.1730977081404346,
+        "sigma": 0.42382233246951306
+      },
+      {
+        "generation": 8,
+        "best_j": 0.11678270324939845,
+        "best_val_accuracy": 0.9166666666666666,
+        "center_j": 0.11934381749368107,
+        "sigma": 0.38279409713623375
+      },
+      {
+        "generation": 9,
+        "best_j": 0.11578876419582575,
+        "best_val_accuracy": 0.9270833333333334,
+        "center_j": 0.11882743895882526,
+        "sigma": 0.2954879314586217
+      },
+      {
+        "generation": 10,
+        "best_j": 0.08841370594794876,
+        "best_val_accuracy": 0.9375,
+        "center_j": 0.11313973147020272,
+        "sigma": 0.27942057361887984
+      },
+      {
+        "generation": 11,
+        "best_j": 0.08841370594794876,
+        "best_val_accuracy": 0.9375,
+        "center_j": 0.11103479305873089,
+        "sigma": 0.24002613124702923
+      },
+      {
+        "generation": 12,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.10294993908055794,
+        "sigma": 0.21565190303307127
+      },
+      {
+        "generation": 13,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.10064776278718998,
+        "sigma": 0.21227403849767726
+      },
+      {
+        "generation": 14,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.10568485221236677,
+        "sigma": 0.19604552917596063
+      },
+      {
+        "generation": 15,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.0849596130429956,
+        "sigma": 0.17338247146957902
+      },
+      {
+        "generation": 16,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.10073901427942658,
+        "sigma": 0.1272118162305809
+      },
+      {
+        "generation": 17,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.09989805971145005,
+        "sigma": 0.13896187600980106
+      },
+      {
+        "generation": 18,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.08158752838062827,
+        "sigma": 0.1432975494192057
+      },
+      {
+        "generation": 19,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.08738208041677822,
+        "sigma": 0.13709574473434888
+      },
+      {
+        "generation": 20,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.08610527346291465,
+        "sigma": 0.11788413244071778
+      },
+      {
+        "generation": 21,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.08321704760902489,
+        "sigma": 0.12894044841653288
+      },
+      {
+        "generation": 22,
+        "best_j": 0.08048029688847952,
+        "best_val_accuracy": 0.9583333333333334,
+        "center_j": 0.08443063280992592,
+        "sigma": 0.1019646862576735
+      },
+      {
+        "generation": 23,
+        "best_j": 0.07926523378766659,
+        "best_val_accuracy": 0.96875,
+        "center_j": 0.0809794772857187,
+        "sigma": 0.07661147214831446
+      },
+      {
+        "generation": 24,
+        "best_j": 0.07926523378766659,
+        "best_val_accuracy": 0.96875,
+        "center_j": 0.08039022850379197,
+        "sigma": 0.07315244710009919
+      },
+      {
+        "generation": 25,
+        "best_j": 0.07926523378766659,
+        "best_val_accuracy": 0.96875,
+        "center_j": 0.08064103877673312,
+        "sigma": 0.06372361943820846
+      },
+      {
+        "generation": 26,
+        "best_j": 0.07407662336009785,
+        "best_val_accuracy": 0.9791666666666666,
+        "center_j": 0.07970332518091122,
+        "sigma": 0.06265362304001464
+      },
+      {
+        "generation": 27,
+        "best_j": 0.07407662336009785,
+        "best_val_accuracy": 0.9791666666666666,
+        "center_j": 0.08707852166868053,
+        "sigma": 0.055221066094138946
+      },
+      {
+        "generation": 28,
+        "best_j": 0.07407662336009785,
+        "best_val_accuracy": 0.9791666666666666,
+        "center_j": 0.08384113829370557,
+        "sigma": 0.056685700367851165
+      },
+      {
+        "generation": 29,
+        "best_j": 0.07407662336009785,
+        "best_val_accuracy": 0.9791666666666666,
+        "center_j": 0.09414488805249539,
+        "sigma": 0.06506232900667232
+      },
+      {
+        "generation": 30,
+        "best_j": 0.07407662336009785,
+        "best_val_accuracy": 0.9791666666666666,
+        "center_j": 0.08337057555737837,
+        "sigma": 0.06017873625480178
+      }
+    ]
+  },
+  "readout": {
+    "alpha": 1.0,
+    "mean": [
+      0.23216869212962968,
+      0.43891059027777785,
+      0.13791232638888884,
+      0.19100839120370372
+    ],
+    "scale": [
+      0.1280640567411456,
+      0.12006087876869487,
+      0.0693633842679133,
+      0.11641656867085072
+    ],
+    "weights": [
+      [
+        0.13403701754133898
+      ],
+      [
+        -0.0026613093834702544
+      ],
+      [
+        -0.4120626693573714
+      ],
+      [
+        0.10081259338363062
+      ],
+      [
+        0.5000000000000003
+      ]
+    ]
+  },
+  "notes": [
+    "One trainable physics system: theta is learned by an outer cross-entropy search.",
+    "Inner loop: the readout is the exact ridge optimum W*(theta) for each candidate theta.",
+    "Test realizations are never seen by either loop."
+  ]
+}

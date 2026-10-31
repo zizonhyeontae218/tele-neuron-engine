@@ -1,0 +1,236 @@
+{
+  "e2p_regular_multi_s2": {
+    "config": "configs/endophalon2_pro/regular.json",
+    "model": "outputs/e2p_regular_multi_s2.json",
+    "result": {
+      "trained/continuous/soft_zones": {
+        "and": 0.9791666666666666,
+        "xor": 0.9958333333333333,
+        "recall1": 1.0,
+        "recall2": 0.49270833333333336,
+        "xor_mem": 0.9989583333333333,
+        "parity3w": 0.478125,
+        "_finite": true
+      },
+      "trained/continuous/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 1.0,
+        "recall2": 1.0,
+        "xor_mem": 1.0,
+        "parity3w": 0.98125,
+        "_finite": true
+      },
+      "trained/reset/soft_zones": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.4979166666666667,
+        "recall2": 0.5020833333333333,
+        "xor_mem": 0.4947916666666667,
+        "parity3w": 0.46875,
+        "_finite": true
+      },
+      "trained/reset/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.484375,
+        "recall2": 0.5229166666666667,
+        "xor_mem": 0.5010416666666667,
+        "parity3w": 0.4895833333333333,
+        "_finite": true
+      },
+      "trained_no_cubic/continuous/soft_zones": {
+        "and": 0.9052083333333333,
+        "xor": 0.91875,
+        "recall1": 0.975,
+        "recall2": 0.6197916666666666,
+        "xor_mem": 0.9479166666666666,
+        "parity3w": 0.50625,
+        "_finite": true
+      },
+      "trained_no_cubic/continuous/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 1.0,
+        "recall2": 1.0,
+        "xor_mem": 1.0,
+        "parity3w": 0.940625,
+        "_finite": true
+      },
+      "trained_no_cubic/reset/soft_zones": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.5010416666666667,
+        "recall2": 0.5010416666666667,
+        "xor_mem": 0.5104166666666666,
+        "parity3w": 0.465625,
+        "_finite": true
+      },
+      "trained_no_cubic/reset/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.503125,
+        "recall2": 0.4979166666666667,
+        "xor_mem": 0.49375,
+        "parity3w": 0.4822916666666667,
+        "_finite": true
+      }
+    }
+  },
+  "irregular_multi": {
+    "config": "configs/endophalon2_pro/irregular.json",
+    "model": "models/endophalon2_pro/teleneuron_endophalon2_pro_irregular_multi.json",
+    "result": {
+      "trained/continuous/soft_zones": {
+        "and": 0.9739583333333334,
+        "xor": 0.9020833333333333,
+        "recall1": 0.8614583333333333,
+        "recall2": 0.578125,
+        "xor_mem": 0.8291666666666667,
+        "parity3w": 0.5677083333333334,
+        "_finite": true
+      },
+      "trained/continuous/linear_nodes": {
+        "and": 0.9854166666666667,
+        "xor": 0.925,
+        "recall1": 0.96875,
+        "recall2": 0.8677083333333333,
+        "xor_mem": 0.8885416666666667,
+        "parity3w": 0.6979166666666666,
+        "_finite": true
+      },
+      "trained/reset/soft_zones": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.4947916666666667,
+        "recall2": 0.503125,
+        "xor_mem": 0.49375,
+        "parity3w": 0.475,
+        "_finite": true
+      },
+      "trained/reset/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.4947916666666667,
+        "recall2": 0.49375,
+        "xor_mem": 0.5020833333333333,
+        "parity3w": 0.490625,
+        "_finite": true
+      },
+      "trained_no_cubic/continuous/soft_zones": {
+        "and": 0.9739583333333334,
+        "xor": 0.9166666666666666,
+        "recall1": 0.884375,
+        "recall2": 0.5802083333333333,
+        "xor_mem": 0.859375,
+        "parity3w": 0.5552083333333333,
+        "_finite": true
+      },
+      "trained_no_cubic/continuous/linear_nodes": {
+        "and": 0.96875,
+        "xor": 0.8958333333333334,
+        "recall1": 0.96875,
+        "recall2": 0.8708333333333333,
+        "xor_mem": 0.89375,
+        "parity3w": 0.7072916666666667,
+        "_finite": true
+      },
+      "trained_no_cubic/reset/soft_zones": {
+        "and": 1.0,
+        "xor": 0.9989583333333333,
+        "recall1": 0.4947916666666667,
+        "recall2": 0.5041666666666667,
+        "xor_mem": 0.49583333333333335,
+        "parity3w": 0.48333333333333334,
+        "_finite": true
+      },
+      "trained_no_cubic/reset/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.503125,
+        "recall2": 0.4864583333333333,
+        "xor_mem": 0.5114583333333333,
+        "parity3w": 0.49375,
+        "_finite": true
+      }
+    }
+  },
+  "teleneuron_endophalon2_pro_regular_multi": {
+    "config": "configs/endophalon2_pro/regular.json",
+    "model": "models/endophalon2_pro/teleneuron_endophalon2_pro_regular_multi.json",
+    "result": {
+      "trained/continuous/soft_zones": {
+        "and": 0.990625,
+        "xor": 0.9802083333333333,
+        "recall1": 0.9479166666666666,
+        "recall2": 0.6208333333333333,
+        "xor_mem": 0.9614583333333333,
+        "parity3w": 0.534375,
+        "_finite": true
+      },
+      "trained/continuous/linear_nodes": {
+        "and": 1.0,
+        "xor": 0.996875,
+        "recall1": 1.0,
+        "recall2": 0.9989583333333333,
+        "xor_mem": 1.0,
+        "parity3w": 0.9989583333333333,
+        "_finite": true
+      },
+      "trained/reset/soft_zones": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.4947916666666667,
+        "recall2": 0.5083333333333333,
+        "xor_mem": 0.4947916666666667,
+        "parity3w": 0.475,
+        "_finite": true
+      },
+      "trained/reset/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.503125,
+        "recall2": 0.5083333333333333,
+        "xor_mem": 0.4708333333333333,
+        "parity3w": 0.515625,
+        "_finite": true
+      },
+      "trained_no_cubic/continuous/soft_zones": {
+        "and": 0.9364583333333333,
+        "xor": 0.9083333333333333,
+        "recall1": 0.934375,
+        "recall2": 0.6041666666666666,
+        "xor_mem": 0.921875,
+        "parity3w": 0.5614583333333333,
+        "_finite": true
+      },
+      "trained_no_cubic/continuous/linear_nodes": {
+        "and": 1.0,
+        "xor": 0.9854166666666667,
+        "recall1": 1.0,
+        "recall2": 1.0,
+        "xor_mem": 1.0,
+        "parity3w": 0.9895833333333334,
+        "_finite": true
+      },
+      "trained_no_cubic/reset/soft_zones": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.49270833333333336,
+        "recall2": 0.5072916666666667,
+        "xor_mem": 0.49375,
+        "parity3w": 0.48020833333333335,
+        "_finite": true
+      },
+      "trained_no_cubic/reset/linear_nodes": {
+        "and": 1.0,
+        "xor": 1.0,
+        "recall1": 0.48854166666666665,
+        "recall2": 0.5010416666666667,
+        "xor_mem": 0.47708333333333336,
+        "parity3w": 0.5145833333333333,
+        "_finite": true
+      }
+    }
+  }
+}
