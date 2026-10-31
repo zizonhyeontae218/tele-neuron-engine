@@ -273,7 +273,7 @@ readout, and every input event is an instruction `LEVEL OP a b`, for example
 the opcode picks the operation, and a, b are the data. A slow region adds a
 second timescale for recall.
 
-7 fixed-budget models have been trained and audited; A accuracy gates 0/3. All seeds and negative results are reported.
+9 fixed-budget models have been trained and audited; A accuracy gates 0/3. All seeds and negative results are reported.
 [Results](docs/endophalon3.md) · [research report](docs/endophalon3_training_report.ko.md).
 
 ```bash

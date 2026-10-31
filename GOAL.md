@@ -32,4 +32,4 @@ and a final research report linked from `docs/endophalon3.md`.
 
 ## Experiment evidence
 
-Completed/audited 7/9 models. A accuracy gates 0/3. See docs/endophalon3_training_report.ko.md; original source and evidence preserved. Infrastructure-interrupted attempts are recorded separately. No master merge.
+Completed/audited 9/9 models. A accuracy gates 0/3. See docs/endophalon3_training_report.ko.md; original source and evidence preserved. Infrastructure-interrupted attempts are recorded separately. No master merge.

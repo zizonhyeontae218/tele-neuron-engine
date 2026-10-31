@@ -1,6 +1,6 @@
 # Teleneuron-Endophalon-3 (training experiments)
 
-**Status (2026-10-31):** 7/9 planned models trained and audited; A accuracy gates 0/3.
+**Status (2026-10-31):** 9/9 planned models trained and audited; A accuracy gates 0/3.
 See the [research report](endophalon3_training_report.ko.md). The original
 [handoff](endophalon3_handoff.md) remains the fixed experiment protocol.
 
@@ -108,7 +108,7 @@ python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --no
 
 ## Fixed-budget results — 2026-10-31
 
-Original scientific source/configs/models/logs are preserved. All reported training runs use 144 nodes, 2 substeps, 16 zones and 40 generations ×24 population (961 theta evaluations). A and B train separately. Search seeds vary; physics and dataset seed remain 1.
+Original scientific source/configs/models/logs are preserved. All training runs use 144 nodes, 2 substeps, 16 zones and 40 generations ×24 population (961 theta evaluations). A and B train separately; physics and dataset seed remain 1.
 
 | Run | Overall | xor | recall1 | recall2 | xor_mem | and | or | parity3w | and_mem |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -119,17 +119,19 @@ Original scientific source/configs/models/logs are preserved. All reported train
 | a_onehot_s1 | 87.71% | 92.05% | 93.31% | 77.78% | 87.12% | — | — | — | — |
 | b_binary_s1 | 74.48% | 80.87% | 80.17% | 61.19% | 62.18% | 89.92% | 94.59% | 55.00% | 75.21% |
 | b_binary_s2 | 73.65% | 83.48% | 83.47% | 59.70% | 60.50% | 87.39% | 89.19% | 50.83% | 77.69% |
+| b_onehot_s1 | 74.17% | 63.48% | 88.43% | 58.96% | 57.98% | 97.48% | 99.10% | 52.50% | 78.51% |
+| b_onehot_s2 | 73.96% | 72.17% | 85.95% | 56.72% | 57.98% | 80.67% | 96.40% | 57.50% | 87.60% |
 
 A accuracy gates (>=90% overall and >=85% each op): 0/3 non-ablated runs.
 
-Slow Region recall2 effect: seed 1 +5.13 pp, seed 2 -6.84 pp; mean -0.85 pp, conditional paired-stream 95% CI [-3.66, +2.01] pp. Consistent improvement is not demonstrated. This interval conditions on two search seeds.
+Slow Region recall2 effect: seed 1 +5.13 pp, seed 2 -6.84 pp; mean -0.85 pp, conditional paired-stream 95% CI [-3.66, +2.01] pp. Consistent improvement is not demonstrated. The interval conditions on these two search seeds.
 
-A binary seed-1 random search: 73.75%, versus trained 78.85% and initial 71.46%, each search using 961 theta evaluations.
+A binary seed-1 random search: 73.75%, versus trained 78.85% and initial 71.46%, using the same 961-theta budget.
 
-85 pytest tests and 9 CLI/config smoke combinations passed; four untrained probes and four original ProMax native-task cards replay exactly. Saved E3 readouts, per-op accuracy, split fingerprints, regularizers and finite values are audited.
+85 pytest tests and 9 CLI/config smoke combinations passed; four untrained probes and four original ProMax native-task cards replay exactly. Readout controls, train/validation/test splits, every regularizer, numerical ranges and timing are in the research report.
 
-Actual objective scope: validation MSE/noise, train-fitted weight complexity, combined train+validation kinetic-energy drift. Numerical measurements cover 64-event streams, not indefinite stability.
+Actual objective scope: validation MSE/noise, train-fitted weight complexity, combined train+validation kinetic-energy drift. Finite measurements cover 64-event streams.
 
-New cards: models/endophalon3/20261031_*.json. Raw logs, run metadata, predictions, checksums and audits: docs/endophalon3_runs/20261031-training/.
+The interrupted cloud attempts and the full-budget Actions recovery runs are recorded separately. Cross-runner readout statistics are checked at rtol=atol=1e-12, with actual numerical errors recorded; held-out aggregate and per-operation accuracy must still replay exactly. The original bitwise audit failure is preserved.
 
-The original executor was lost during B one-hot training. The incomplete attempts are recorded separately; recovered attempts restart from the original warm start and seeds. See the research report for hardware/timing and Filetree limitations.
+New cards: models/endophalon3/20261031_*.json. Logs, argv, predictions, audits and actual SHA-256 manifests: docs/endophalon3_runs/20261031-training/. The original generated Filetree index/ledger remain unchanged because the executor-owned updater/linter became unavailable.

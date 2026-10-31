@@ -1,0 +1,4 @@
+b_onehot_s1 readout refit max absolute errors {'mean': 0.0, 'scale': 0.0, 'weights': 0.0} bitwise statistics equal True
+b_onehot_s1 PASS 0.7416666666666667
+b_onehot_s2 readout refit max absolute errors {'mean': 6.938893903907228e-18, 'scale': 2.6020852139652106e-18, 'weights': 1.532107773982716e-14} bitwise statistics equal False
+b_onehot_s2 PASS 0.7395833333333334

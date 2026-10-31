@@ -152,5 +152,49 @@
       "bytes": 44936,
       "sha256": "fec6b82dc71a118c58742fe4bfe2cb7218800d777db2083cd4aff9509468fcf3"
     }
+  },
+  "b_onehot_s1": {
+    "models/endophalon3/20261031_b_onehot_s1.json": {
+      "bytes": 35404,
+      "sha256": "892fc2337418fe10da537f55a87af98a05fc12cc3af77ce8af1cb9f66dcf3a32"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s1.log": {
+      "bytes": 6908,
+      "sha256": "b2eb7a055cccbac6607631e277f5a42066cdcb760d60e034e9e3ff8484d926a7"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s1.run.json": {
+      "bytes": 1372,
+      "sha256": "7155d78170d00a4a67e423a0262b2ac7873f3a10a898ddbdd402c36c9f9f91e1"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s1.audit.json": {
+      "bytes": 25779,
+      "sha256": "b26d48da7eb8fe95fa08b3c7748ed02b84dceb6f137755e3ddea6eb89e1bae3a"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s1.predictions.csv": {
+      "bytes": 45009,
+      "sha256": "33d09985ca92b820706f70e9a8a92899a5bb647b9a9c34b2e642528c6e283578"
+    }
+  },
+  "b_onehot_s2": {
+    "models/endophalon3/20261031_b_onehot_s2.json": {
+      "bytes": 35523,
+      "sha256": "bd40f121a524ad84e2e05172ea39d51cf4e34a45b6bb50a11331847dd1be4b1a"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s2.log": {
+      "bytes": 6908,
+      "sha256": "69be774c981ac0dafe37c941e394cd3bc0b5a9741fb4ea47c0c7daabde4416ea"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s2.run.json": {
+      "bytes": 1367,
+      "sha256": "dee33c7c9ca24f7a0d6b324729b667c6e5a1e296c0ed64ad7cef532123811776"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s2.audit.json": {
+      "bytes": 25957,
+      "sha256": "fc8c7bf790e854bb467533c6b87999a866358a5c026d54364c75440f0d8f364d"
+    },
+    "docs/endophalon3_runs/20261031-training/b_onehot_s2.predictions.csv": {
+      "bytes": 44977,
+      "sha256": "0972320539f3deac6d107e5068cd557bfdf29660497b093b76d78df4fd721e57"
+    }
   }
 }

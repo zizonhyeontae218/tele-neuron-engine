@@ -1,0 +1,33 @@
+{
+  "training_commit": "6b791dc409460351449f39958241da4b8b81ed2e",
+  "files": {
+    "models/endophalon3/20261031_a_binary_s1.json": true,
+    "docs/endophalon3_runs/20261031-training/a_binary_s1.log": true,
+    "docs/endophalon3_runs/20261031-training/a_binary_s1.run.json": true,
+    "models/endophalon3/20261031_a_binary_s2.json": true,
+    "docs/endophalon3_runs/20261031-training/a_binary_s2.log": true,
+    "docs/endophalon3_runs/20261031-training/a_binary_s2.run.json": true,
+    "models/endophalon3/20261031_a_no_regions_s1.json": true,
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s1.log": true,
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s1.run.json": true,
+    "models/endophalon3/20261031_a_no_regions_s2.json": true,
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s2.log": true,
+    "docs/endophalon3_runs/20261031-training/a_no_regions_s2.run.json": true,
+    "models/endophalon3/20261031_a_onehot_s1.json": true,
+    "docs/endophalon3_runs/20261031-training/a_onehot_s1.log": true,
+    "docs/endophalon3_runs/20261031-training/a_onehot_s1.run.json": true,
+    "models/endophalon3/20261031_b_binary_s1.json": true,
+    "docs/endophalon3_runs/20261031-training/b_binary_s1.log": true,
+    "docs/endophalon3_runs/20261031-training/b_binary_s1.run.json": true,
+    "models/endophalon3/20261031_b_binary_s2.json": true,
+    "docs/endophalon3_runs/20261031-training/b_binary_s2.log": true,
+    "docs/endophalon3_runs/20261031-training/b_binary_s2.run.json": true,
+    "models/endophalon3/20261031_b_onehot_s1.json": true,
+    "docs/endophalon3_runs/20261031-training/b_onehot_s1.log": true,
+    "docs/endophalon3_runs/20261031-training/b_onehot_s1.run.json": true,
+    "models/endophalon3/20261031_b_onehot_s2.json": true,
+    "docs/endophalon3_runs/20261031-training/b_onehot_s2.log": true,
+    "docs/endophalon3_runs/20261031-training/b_onehot_s2.run.json": true
+  },
+  "all_unchanged": true
+}

@@ -1,10 +1,7 @@
 {
-  "audit_returncode": 1,
-  "completed_models": 7,
-  "incomplete_models": [
-    "b_onehot_s1",
-    "b_onehot_s2"
-  ],
+  "audit_returncode": 0,
+  "completed_models": 9,
+  "incomplete_models": [],
   "scientific_source_and_original_evidence_preserved": true,
   "filetree_update_lint": "Not run: executor-owned Filetree skill became unavailable after the original executor was lost. Original generated index/ledger preserved.",
   "notes": [
