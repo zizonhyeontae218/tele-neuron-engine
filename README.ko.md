@@ -218,6 +218,8 @@ Endophalon-2-Pro / ProMax의 스프링 물리 위에 만든 다음 세대입니�
 python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe
 ```
 
+공유 판독 후속 실험: 평균/최악 연산 손실 0.5 혼합을 A 두 시드로 검증했지만 둘 다 정확도 기준 미달이었습니다. 기본 동작은 유지합니다. [후속 보고서](docs/endophalon3_routing_report.ko.md).
+
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.

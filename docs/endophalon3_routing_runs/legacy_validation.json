@@ -1,0 +1,24 @@
+{
+  "1": {
+    "scalar_abs_errors": {
+      "j": 0.0,
+      "l_val": 0.0,
+      "r_noise": 0.0,
+      "r_drift": 0.0,
+      "r_complexity": 0.0,
+      "val_accuracy": 0.0
+    },
+    "per_op_accuracy_exact": true
+  },
+  "2": {
+    "scalar_abs_errors": {
+      "j": 0.0,
+      "l_val": 0.0,
+      "r_noise": 0.0,
+      "r_drift": 0.0,
+      "r_complexity": 0.0,
+      "val_accuracy": 0.0
+    },
+    "per_op_accuracy_exact": true
+  }
+}

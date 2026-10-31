@@ -134,4 +134,18 @@ Actual objective scope: validation MSE/noise, train-fitted weight complexity, co
 
 The interrupted cloud attempts and the full-budget Actions recovery runs are recorded separately. Cross-runner readout statistics are checked at rtol=atol=1e-12, with actual numerical errors recorded; held-out aggregate and per-operation accuracy must still replay exactly. The original bitwise audit failure is preserved.
 
-New cards: models/endophalon3/20261031_*.json. Logs, argv, predictions, audits and actual SHA-256 manifests: docs/endophalon3_runs/20261031-training/. The original generated Filetree index/ledger remain unchanged because the executor-owned updater/linter became unavailable.
+New cards: models/endophalon3/20261031_*.json. Logs, argv, predictions, audits and actual SHA-256 manifests: docs/endophalon3_runs/20261031-training/. The recovered executor later synchronized the generated FileTree index/ledger and passed lint at baseline closeout commit `24ebc6bb4133634380d7122070465e8445de014e`; original model and log bytes remain preserved.
+
+
+## Opt-in routing-loss follow-up — 2026-10-31
+
+A separate branch tested one predeclared change: `0.5 × pooled validation MSE + 0.5 × worst-operation validation MSE`. The existing default objective, physics, 144 nodes, 2 substeps, 16 zones, binary input and 40×24 budget remain unchanged. Both outer search seeds 1/2 completed, with 961 evaluations each.
+
+| Seed | Frozen original test | Modified test | Frozen original on new confirmation | Modified on new confirmation |
+| --- | --- | --- | --- | --- |
+| 1 | 78.85% | 75.31% | 77.29% | 73.33% |
+| 2 | 88.33% | 81.77% | 86.56% | 78.54% |
+
+The modification reduced worst-operation validation MSE but lowered overall held-out accuracy. It is not accepted as an improvement. Neither seed passed the overall/per-operation gates on the original test and predeclared unused confirmation streams 10000–10015, so this follow-up did not expand to B. The original B study above remains complete.
+
+Validation-only diagnostic readouts suggest usable information remains in the states, with losses associated with projection/shared operation selection. These higher-capacity controls do not establish a single causal mechanism. Full per-operation results, limitations, regularizers, cost and raw evidence: [routing report](endophalon3_routing_report.ko.md), [run artifacts](endophalon3_routing_runs/). Two new cards are isolated in `models/endophalon3_routing/`. All 89 pytest tests passed; default-objective replay differences on the two frozen A cards were exactly zero.

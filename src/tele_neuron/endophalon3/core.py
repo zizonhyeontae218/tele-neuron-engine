@@ -118,7 +118,7 @@ def single_readout(config: E3Config, data: E3Data, fit: range, score: range, *, 
     hit = (raw >= 0.5) == sy[:, 0]
     per_op = {OPS[i]: float(hit[sops == i].mean()) for i in sorted(set(sops.tolist()))}
     return {"accuracy": float(hit.mean()), "per_op": per_op, "mse": float(np.mean((raw - sy[:, 0]) ** 2)),
-            "readout": readout, "raw": raw, "target": sy[:, 0]}
+            "readout": readout, "raw": raw, "target": sy[:, 0], "ops": sops}
 
 
 def separate_readouts(config: E3Config, data: E3Data, fit: range, score: range) -> dict[str, Any]:
@@ -146,6 +146,24 @@ class Fitness:
     val_accuracy: float
     val_per_op: dict[str, float]
     finite: bool
+    l_val_mean: float | None = None
+    l_val_worst: float | None = None
+
+
+def operation_balanced_loss(raw: np.ndarray, target: np.ndarray, ops: np.ndarray,
+                            worst_op_weight: float = 0.0) -> tuple[float, float, float]:
+    """Blend pooled and worst-operation validation MSE; zero preserves the base loss.
+
+    This changes training selection only. It adds no features, routing head,
+    physics parameter, or information to the production readout.
+    """
+    if not 0.0 <= worst_op_weight <= 1.0:
+        raise ValueError("objective.worst_op_weight must be within [0, 1]")
+    error = (np.asarray(raw).reshape(-1) - np.asarray(target).reshape(-1)) ** 2
+    mean = float(np.mean(error))
+    worst = max(float(error[ops == i].mean()) for i in np.unique(ops))
+    combined = mean if worst_op_weight == 0.0 else (1.0 - worst_op_weight) * mean + worst_op_weight * worst
+    return float(combined), mean, worst
 
 
 def fitness(config: E3Config, data: E3Data, train: range, val: range) -> Fitness:
@@ -159,8 +177,9 @@ def fitness(config: E3Config, data: E3Data, train: range, val: range) -> Fitness
     r_drift = drift(config, data, range(train.start, val.stop))  # type: ignore[arg-type]
     r_complexity = float(np.mean(result["readout"].weights[:-1] ** 2))
     spec = config.objective
-    j = result["mse"] + spec.get("lambda_noise", 0.0) * r_noise + spec.get("lambda_drift", 0.0) * r_drift + spec.get("lambda_complexity", 0.0) * r_complexity
-    return Fitness(j, result["mse"], r_noise, r_drift, r_complexity, result["accuracy"], result["per_op"], True)
+    loss, mean, worst = operation_balanced_loss(raw, target, result["ops"], spec.get("worst_op_weight", 0.0))
+    j = loss + spec.get("lambda_noise", 0.0) * r_noise + spec.get("lambda_drift", 0.0) * r_drift + spec.get("lambda_complexity", 0.0) * r_complexity
+    return Fitness(j, loss, r_noise, r_drift, r_complexity, result["accuracy"], result["per_op"], True, mean, worst)
 
 
 @dataclass(frozen=True, slots=True)
@@ -281,6 +300,7 @@ def _strip(result: dict[str, Any]) -> dict[str, Any]:
 
 def report_payload(config: E3Config, report: Report) -> dict[str, Any]:
     return {"level": config.level, "encoding": config.encoding, "regions": config.regions,
+            "objective": dict(config.objective),
             "readout_zones": config.zones, "readout_delay": config.readout_delay, "events": asdict(config.stream),
             "evaluations": report.evaluations, "fitness_initial": asdict(report.fitness_init),
             "fitness_trained": asdict(report.fitness), "test": report.test,
