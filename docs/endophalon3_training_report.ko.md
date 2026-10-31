@@ -279,3 +279,9 @@ readout routing gap, parity3w, recall2는 표의 실제 값으로 평가한다. 
 Filetree 스킬의 updater/linter는 실행기 손실 뒤 사용할 수 없어 마지막 재생성·lint를 수행하지 못했다. 기존 생성 인덱스와 ledger는 보존했으며, 검증된 신규/기존 증거의 실제 SHA-256은 artifact_manifest.json과 preservation.json에 기록했다.
 최초 복구 감사는 mean/scale의 bitwise equality에서 실패했다(recovery_audit.log). 새 감사는 실제 최대 절대오차를 각 audit JSON에 기록하고 mean/scale rtol=atol=1e-12로 수치 동등성을 검사한다. 모델 카드·원본 학습 로그·정확도 기준은 바꾸지 않았으며, aggregate/per-op test 정확도는 여전히 정확히 재현되어야 한다.
 복구 audit return code: 0. 완료 9/9; 미완료: 없음.
+
+## 후속 보존 정리 — 2026-10-31
+
+실행 환경이 복구되어 중단된 cloud 원본 부분 로그와 당시 메타데이터를 추가 회수했다. `cloud-attempts-recovered/`에 그대로 복사했으며 stale running 상태는 성공으로 해석하지 않는다. 마지막 기록은 Seed 1의 28세대, Seed 2의 29세대다. 중단 실행의 확인 가능한 최소 평가 수는 각각 673/697, 합계 1,370회로 갱신된다. 최종 theta/readout은 회수하지 못했다. 이전 절의 25세대·로그 미회수 설명은 당시 확인 범위이며, 원래 보고서와 성공 모델 수·정확도를 수정하지 않았다. 기존 모델·로그·감사 증거 45개 파일의 SHA-256은 모두 유지된다.
+
+Filetree 생성기와 lint는 이번 보존 정리에서 다시 실행하고 결과를 `closeout_recovery.json`에 기록한다.
