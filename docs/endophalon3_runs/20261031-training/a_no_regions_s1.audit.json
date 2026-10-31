@@ -1,0 +1,707 @@
+{
+  "card": "models/endophalon3/20261031_a_no_regions_s1.json",
+  "replay": "PASS",
+  "saved_readout_matches_train_refit": true,
+  "fitness_matches_card": true,
+  "invariants": {
+    "nodes": 144,
+    "substeps": 2,
+    "zones": 16,
+    "generations": 40,
+    "population": 24,
+    "theta_evaluations": 961,
+    "physics_seed": 1,
+    "search_seed": 1,
+    "theta_dimensions": 77,
+    "slow_nodes": 0
+  },
+  "splits": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "validation": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "test": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ]
+  },
+  "events_per_stream": 64,
+  "washout": 4,
+  "split_fingerprints": {
+    "train": {
+      "0": "9c5a9908e2c13bf7d8b33455d3739e66c97290b78775edea0a41110360219baf",
+      "1": "c4224906370f1155509fd67cfaae7ec73ad5f7dffe01f0638c57935eeb5d728a",
+      "2": "78aceb75257cde1bf160d9168b21a11511336517c0d098ab6187d9fdc3c0e9a6",
+      "3": "6f627330ab7ba2a027f69836f7cdf784e2fba1103946cfba7b1e6e00f00dea1d",
+      "4": "0b06590b9db79a47799d833bd343478ba827ba419b0ea2da906a4d97375b6f97",
+      "5": "dd058af190a7362d9dbd488234b086c098529889a4cd7377472a8bdc1325c159",
+      "6": "dc5665cb651ed7d63d41890a4e6033cf062ca7a83a23a207d70e73eb4a57160f",
+      "7": "3c4758b79f1f2144ed37a04efc6467f9c446aa313c0fc3dd673a42a1d6255daa",
+      "8": "60cceda8d4a6d37b0908e4e2cd31ad82a4ced05e572720bbcc4fe4e76695c6e0",
+      "9": "ea19c02b04476acee1a75160c3e7bd7205fd9e274d1a444abf9178d96dcd16f6",
+      "10": "55fa4491c215e2b4a0c3c8654958179c7ff6c8db93ddf7b36be31955fefad41b",
+      "11": "6152c31a2bef1b080e33ce9b354ac1dee521e9594004cbc4b8cfb79372ce1a47",
+      "12": "8c2f865361ceb6b321eee6b8ba1d1169a0cb01c379836de9a5427b41aaab0176",
+      "13": "193fce58ed966be2a88a6749f9d66f54353fa759b7b534559dfd450c84573a0c",
+      "14": "f4f575704dfed3779e989535f519fa37c307937565df2257838052f7e6019503",
+      "15": "c06e87824aa69e31960374340b71e15aa492752b2c57b7a50fba9090294869c4"
+    },
+    "validation": {
+      "16": "c527ac91f9e3acb2a76b50fc039d23184c8d746a79ce9b4999b8fbfcbf35787d",
+      "17": "265220310ca9272b651221d6eae8a9f1f2b7f411921618918bcd1c9015205c29",
+      "18": "b1a865dc90e872e2bef3bb5b592fde085079e339b7366ad73436412dbede7ff3",
+      "19": "8a683bdd7a8667348428c18fc8b2e9199460413fe7bc4f66fe5279967f8834da",
+      "20": "279bac5054e522ee6bba0f6d445aaa0e480036052408fb2eb5bc7a24447143b4",
+      "21": "62a9bf0575e044980c6d7e3aaa79e31d3e03c3ddba5350b990def1bf8a0e9f92",
+      "22": "f087cb33840c4feb0b86d926858233eb6f00ce694828ba27d7db91961a0878ce",
+      "23": "0f50731da7017ed53c13bcdf0784b2d93bfb0c3bcf8b8287e0a39f1c3bacceb4"
+    },
+    "test": {
+      "24": "05622925acb1d893805acee26b350e75e4589795d18696ebc2ab96301a5c6f3f",
+      "25": "480fda777fcbd913da6a955adad60dbb0af121e4c780ba60ba5d610dc3af8609",
+      "26": "bc8e865cc9d80c33de9b60b750c685410a580430b3f402676296b576d02c8221",
+      "27": "691faee34b786d774ac5ba5dcd68948b75057ee14a9f35bee428c4e995c59ccc",
+      "28": "1a3478cca4cad3db4ff9ac63d7cd5688b7ada3c6f55d8176a4501a02c2fbf4f4",
+      "29": "46c1ea64f511de9d751d61658e885275d15c8400f8105533d66faf03a8e275e0",
+      "30": "226d5becb2918687269ef2c344cb61a8f17c588dd87825eedc706246c98d993d",
+      "31": "cf8226eb0df6c7c0c132e420151448c512b5411eed0c765f3a69b9c7d302b3b9",
+      "32": "c83fa2f70fdfc5a7f3a64f655bc3ef2603f5bceec78fe515bb014f20dcd24f41",
+      "33": "572cd483956907c16fec77e55b9fa04474e57c64f805607363c6b3683e2cd0b1",
+      "34": "f53f40e565501680f971927917a9e4cdb29702028856ec7b204be9ecb693f7b3",
+      "35": "3ed1e0debd6dad707a6f52bd6961d0fdb3e53d7bd42cddfe56b6550dfb5cc003",
+      "36": "43cc78daa246ab5ba0ae3b4755d8a85bef50c4d4c598d717ac4d46cb2d2f612f",
+      "37": "6e400a9aafc1cc09a1ea8d5fb5f22576a096fbc447c10ba4a1b6355840acabe5",
+      "38": "91f8b9f779d6835acf75b922cae588f2a5c9aa1222a120fde479adf3d67c8006",
+      "39": "cb4c18e1e9d49f764b1a907ac849867c4ea0f7f497a6f09caa68f680dfc0ef01"
+    }
+  },
+  "split_metrics": {
+    "train": {
+      "accuracy": 0.8135416666666667,
+      "mse": 0.13352637541213758,
+      "r_noise": 0.533332727262929,
+      "r_drift": 0.18818435331045488,
+      "r_complexity": 0.28770358034450105,
+      "j_split": 0.18188848290977452,
+      "per_op": {
+        "xor": {
+          "n": 230,
+          "accuracy": 0.9043478260869565,
+          "tn": 97,
+          "fp": 9,
+          "fn": 13,
+          "tp": 111,
+          "majority_accuracy": 0.5391304347826087
+        },
+        "recall1": {
+          "n": 245,
+          "accuracy": 0.8448979591836735,
+          "tn": 119,
+          "fp": 21,
+          "fn": 17,
+          "tp": 88,
+          "majority_accuracy": 0.5714285714285714
+        },
+        "recall2": {
+          "n": 242,
+          "accuracy": 0.6570247933884298,
+          "tn": 74,
+          "fp": 45,
+          "fn": 38,
+          "tp": 85,
+          "majority_accuracy": 0.5082644628099173
+        },
+        "xor_mem": {
+          "n": 243,
+          "accuracy": 0.8518518518518519,
+          "tn": 88,
+          "fp": 23,
+          "fn": 13,
+          "tp": 119,
+          "majority_accuracy": 0.5432098765432098
+        }
+      }
+    },
+    "validation": {
+      "accuracy": 0.8520833333333333,
+      "mse": 0.12173215517825782,
+      "r_noise": 0.4834473267700557,
+      "r_drift": 0.2304404774662038,
+      "r_complexity": 0.28770358034450105,
+      "j_split": 0.171825605066826,
+      "per_op": {
+        "xor": {
+          "n": 106,
+          "accuracy": 0.9056603773584906,
+          "tn": 49,
+          "fp": 6,
+          "fn": 4,
+          "tp": 47,
+          "majority_accuracy": 0.5188679245283019
+        },
+        "recall1": {
+          "n": 129,
+          "accuracy": 0.8449612403100775,
+          "tn": 45,
+          "fp": 11,
+          "fn": 9,
+          "tp": 64,
+          "majority_accuracy": 0.5658914728682171
+        },
+        "recall2": {
+          "n": 132,
+          "accuracy": 0.7878787878787878,
+          "tn": 54,
+          "fp": 13,
+          "fn": 15,
+          "tp": 50,
+          "majority_accuracy": 0.5075757575757576
+        },
+        "xor_mem": {
+          "n": 113,
+          "accuracy": 0.8849557522123894,
+          "tn": 41,
+          "fp": 6,
+          "fn": 7,
+          "tp": 59,
+          "majority_accuracy": 0.584070796460177
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.8072916666666666,
+      "mse": 0.13911092760258933,
+      "r_noise": 0.56029107669711,
+      "r_drift": 0.24439275080805578,
+      "r_complexity": 0.28770358034450105,
+      "j_split": 0.1944417923216954,
+      "per_op": {
+        "xor": {
+          "n": 239,
+          "accuracy": 0.9163179916317992,
+          "tn": 94,
+          "fp": 9,
+          "fn": 11,
+          "tp": 125,
+          "majority_accuracy": 0.5690376569037657
+        },
+        "recall1": {
+          "n": 254,
+          "accuracy": 0.7755905511811023,
+          "tn": 90,
+          "fp": 29,
+          "fn": 28,
+          "tp": 107,
+          "majority_accuracy": 0.531496062992126
+        },
+        "recall2": {
+          "n": 234,
+          "accuracy": 0.6837606837606838,
+          "tn": 67,
+          "fp": 41,
+          "fn": 33,
+          "tp": 93,
+          "majority_accuracy": 0.5384615384615384
+        },
+        "xor_mem": {
+          "n": 233,
+          "accuracy": 0.8540772532188842,
+          "tn": 97,
+          "fp": 26,
+          "fn": 8,
+          "tp": 102,
+          "majority_accuracy": 0.5278969957081545
+        }
+      }
+    }
+  },
+  "optimization_drift_scope": "combined train+validation, not validation alone",
+  "fitness": {
+    "j": 0.17065475314503314,
+    "l_val": 0.12173215517825782,
+    "r_noise": 0.4834473267700557,
+    "r_drift": 0.21873195824827524,
+    "r_complexity": 0.28770358034450105,
+    "val_accuracy": 0.8520833333333333,
+    "val_per_op": {
+      "xor": 0.9056603773584906,
+      "recall1": 0.8449612403100775,
+      "recall2": 0.7878787878787878,
+      "xor_mem": 0.8849557522123894
+    },
+    "finite": true
+  },
+  "numerical": {
+    "train": {
+      "features": {
+        "all_finite": true,
+        "min": 0.0009030757625045981,
+        "max": 0.02570849122751601,
+        "max_abs": 0.02570849122751601
+      },
+      "nodes": {
+        "all_finite": true,
+        "min": -1.2918739591907782,
+        "max": 1.0673288065294024,
+        "max_abs": 1.2918739591907782
+      },
+      "energy": {
+        "all_finite": true,
+        "min": 1.7892715464022863e-06,
+        "max": 0.0015032260533762276,
+        "max_abs": 0.0015032260533762276
+      },
+      "wall": {
+        "all_finite": true,
+        "min": 0.005523604150670829,
+        "max": 0.12021110207269703,
+        "max_abs": 0.12021110207269703
+      }
+    },
+    "validation": {
+      "features": {
+        "all_finite": true,
+        "min": 0.0013504237760901983,
+        "max": 0.025367293067648438,
+        "max_abs": 0.025367293067648438
+      },
+      "nodes": {
+        "all_finite": true,
+        "min": -1.185334895754142,
+        "max": 1.0542177762773475,
+        "max_abs": 1.185334895754142
+      },
+      "energy": {
+        "all_finite": true,
+        "min": 3.2131506928914017e-06,
+        "max": 0.0014893782586226237,
+        "max_abs": 0.0014893782586226237
+      },
+      "wall": {
+        "all_finite": true,
+        "min": 0.006975788573393974,
+        "max": 0.12001297062220356,
+        "max_abs": 0.12001297062220356
+      }
+    },
+    "test": {
+      "features": {
+        "all_finite": true,
+        "min": 0.000752594328897682,
+        "max": 0.02559723217616529,
+        "max_abs": 0.02559723217616529
+      },
+      "nodes": {
+        "all_finite": true,
+        "min": -1.2585107057929452,
+        "max": 1.0535957101085158,
+        "max_abs": 1.2585107057929452
+      },
+      "energy": {
+        "all_finite": true,
+        "min": 1.7002459424553137e-06,
+        "max": 0.001569897921082885,
+        "max_abs": 0.001569897921082885
+      },
+      "wall": {
+        "all_finite": true,
+        "min": 0.005439695115016706,
+        "max": 0.12029555397430407,
+        "max_abs": 0.12029555397430407
+      }
+    }
+  },
+  "failed_training_candidates": 0,
+  "finite_flag": true,
+  "controls": {
+    "single_readout": {
+      "accuracy": 0.8072916666666666,
+      "per_op": {
+        "xor": 0.9163179916317992,
+        "recall1": 0.7755905511811023,
+        "recall2": 0.6837606837606838,
+        "xor_mem": 0.8540772532188842
+      },
+      "early": 0.8166666666666667,
+      "late": 0.7979166666666667
+    },
+    "single_readout_plus_instruction": {
+      "accuracy": 0.8135416666666667,
+      "per_op": {
+        "xor": 0.9414225941422594,
+        "recall1": 0.7834645669291339,
+        "recall2": 0.6794871794871795,
+        "xor_mem": 0.8497854077253219
+      }
+    },
+    "separate_readouts": {
+      "accuracy": 0.9541666666666667,
+      "per_op": {
+        "xor": 0.99581589958159,
+        "recall1": 0.9960629921259843,
+        "recall2": 0.8376068376068376,
+        "xor_mem": 0.9828326180257511
+      }
+    },
+    "linear_nodes": {
+      "accuracy": 0.8479166666666667,
+      "per_op": {
+        "xor": 0.9037656903765691,
+        "recall1": 0.9094488188976378,
+        "recall2": 0.782051282051282,
+        "xor_mem": 0.7896995708154506
+      }
+    }
+  },
+  "history_baseline": {
+    "accuracy": 0.6197916666666666,
+    "per_op": {
+      "xor": 0.5983263598326359,
+      "recall1": 0.6811023622047244,
+      "recall2": 0.8247863247863247,
+      "xor_mem": 0.36909871244635195
+    }
+  },
+  "pattern_errors_abaa1a2": {
+    "xor": {
+      "0010": {
+        "n": 10,
+        "errors": 1
+      },
+      "1100": {
+        "n": 12,
+        "errors": 0
+      },
+      "1011": {
+        "n": 22,
+        "errors": 0
+      },
+      "0111": {
+        "n": 18,
+        "errors": 0
+      },
+      "0110": {
+        "n": 16,
+        "errors": 0
+      },
+      "1101": {
+        "n": 8,
+        "errors": 1
+      },
+      "1010": {
+        "n": 24,
+        "errors": 0
+      },
+      "0001": {
+        "n": 22,
+        "errors": 0
+      },
+      "1000": {
+        "n": 20,
+        "errors": 4
+      },
+      "1001": {
+        "n": 12,
+        "errors": 0
+      },
+      "1111": {
+        "n": 17,
+        "errors": 5
+      },
+      "0011": {
+        "n": 16,
+        "errors": 2
+      },
+      "0100": {
+        "n": 11,
+        "errors": 6
+      },
+      "0101": {
+        "n": 13,
+        "errors": 1
+      },
+      "1110": {
+        "n": 8,
+        "errors": 0
+      },
+      "0000": {
+        "n": 10,
+        "errors": 0
+      }
+    },
+    "recall1": {
+      "0001": {
+        "n": 22,
+        "errors": 0
+      },
+      "1011": {
+        "n": 18,
+        "errors": 0
+      },
+      "1110": {
+        "n": 18,
+        "errors": 11
+      },
+      "1101": {
+        "n": 16,
+        "errors": 7
+      },
+      "1111": {
+        "n": 18,
+        "errors": 1
+      },
+      "0110": {
+        "n": 17,
+        "errors": 0
+      },
+      "1001": {
+        "n": 15,
+        "errors": 13
+      },
+      "0010": {
+        "n": 20,
+        "errors": 9
+      },
+      "1000": {
+        "n": 17,
+        "errors": 1
+      },
+      "1010": {
+        "n": 15,
+        "errors": 3
+      },
+      "0011": {
+        "n": 16,
+        "errors": 4
+      },
+      "1100": {
+        "n": 11,
+        "errors": 0
+      },
+      "0000": {
+        "n": 8,
+        "errors": 0
+      },
+      "0101": {
+        "n": 13,
+        "errors": 6
+      },
+      "0100": {
+        "n": 17,
+        "errors": 2
+      },
+      "0111": {
+        "n": 13,
+        "errors": 0
+      }
+    },
+    "recall2": {
+      "0011": {
+        "n": 19,
+        "errors": 0
+      },
+      "0000": {
+        "n": 15,
+        "errors": 1
+      },
+      "0111": {
+        "n": 15,
+        "errors": 2
+      },
+      "1110": {
+        "n": 13,
+        "errors": 0
+      },
+      "1101": {
+        "n": 20,
+        "errors": 4
+      },
+      "0010": {
+        "n": 11,
+        "errors": 10
+      },
+      "0001": {
+        "n": 9,
+        "errors": 6
+      },
+      "1100": {
+        "n": 16,
+        "errors": 9
+      },
+      "0110": {
+        "n": 15,
+        "errors": 11
+      },
+      "1010": {
+        "n": 13,
+        "errors": 1
+      },
+      "0101": {
+        "n": 13,
+        "errors": 12
+      },
+      "0100": {
+        "n": 12,
+        "errors": 0
+      },
+      "1000": {
+        "n": 13,
+        "errors": 9
+      },
+      "1001": {
+        "n": 20,
+        "errors": 1
+      },
+      "1011": {
+        "n": 16,
+        "errors": 3
+      },
+      "1111": {
+        "n": 14,
+        "errors": 5
+      }
+    },
+    "xor_mem": {
+      "0000": {
+        "n": 14,
+        "errors": 0
+      },
+      "1000": {
+        "n": 14,
+        "errors": 5
+      },
+      "1110": {
+        "n": 20,
+        "errors": 0
+      },
+      "0001": {
+        "n": 12,
+        "errors": 4
+      },
+      "1101": {
+        "n": 14,
+        "errors": 1
+      },
+      "0100": {
+        "n": 8,
+        "errors": 0
+      },
+      "1010": {
+        "n": 18,
+        "errors": 0
+      },
+      "0010": {
+        "n": 13,
+        "errors": 0
+      },
+      "0011": {
+        "n": 15,
+        "errors": 0
+      },
+      "0101": {
+        "n": 18,
+        "errors": 1
+      },
+      "1001": {
+        "n": 12,
+        "errors": 0
+      },
+      "1111": {
+        "n": 14,
+        "errors": 9
+      },
+      "0111": {
+        "n": 14,
+        "errors": 1
+      },
+      "1011": {
+        "n": 19,
+        "errors": 12
+      },
+      "1100": {
+        "n": 19,
+        "errors": 1
+      },
+      "0110": {
+        "n": 9,
+        "errors": 0
+      }
+    }
+  },
+  "timing": {
+    "name": "a_no_regions_s1",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-u",
+      "-m",
+      "tele_neuron.endophalon3",
+      "--config",
+      "configs/endophalon3/level_a.json",
+      "--seed",
+      "1",
+      "--workers",
+      "4",
+      "--output",
+      "models/endophalon3/20261031_a_no_regions_s1.json",
+      "--no-regions"
+    ],
+    "start_utc": "2026-10-31T08:53:45.945679+00:00",
+    "base_sha": "1425d63fafee8a3ab5127b59a51324600fed00e3",
+    "checkout_sha": "3ad78d3378c7ca07f5f3e305a3683008135b720f",
+    "search_seed": 1,
+    "physics_and_dataset_seed": 1,
+    "generations": 40,
+    "population": 24,
+    "workers": 4,
+    "chunk_size": 96,
+    "status": "completed",
+    "returncode": 0,
+    "seconds": 934.1414129169998,
+    "end_utc": "2026-10-31T09:09:20.091640+00:00",
+    "card": "models/endophalon3/20261031_a_no_regions_s1.json"
+  },
+  "limitations": [
+    "Search seed changes the outer optimizer only; physics and streams retain seed 1.",
+    "Numerical finite/drift measurements cover 64-event streams; no long-horizon guarantee.",
+    "Failed flags count feature/end-position divergence; no per-substep telemetry is available.",
+    "No test selection: theta is selected by train+validation fitness, before test replay."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "audit_returncode": 1,
+  "completed_models": 7,
+  "incomplete_models": [
+    "b_onehot_s1",
+    "b_onehot_s2"
+  ],
+  "scientific_source_and_original_evidence_preserved": true,
+  "filetree_update_lint": "Not run: executor-owned Filetree skill became unavailable after the original executor was lost. Original generated index/ledger preserved.",
+  "notes": [
+    "Recovered runs start from original theta_init and original optimizer seeds, not from an intermediate theta.",
+    "Interrupted cloud attempts consumed at least 601 theta evaluations each; full logs/timings were not recovered.",
+    "Successful model search budgets remain 961 theta evaluations each; hardware differs for the recovered pair."
+  ]
+}

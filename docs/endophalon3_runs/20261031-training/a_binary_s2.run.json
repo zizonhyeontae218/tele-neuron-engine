@@ -1,0 +1,30 @@
+{
+  "name": "a_binary_s2",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-u",
+    "-m",
+    "tele_neuron.endophalon3",
+    "--config",
+    "configs/endophalon3/level_a.json",
+    "--seed",
+    "2",
+    "--workers",
+    "4",
+    "--output",
+    "models/endophalon3/20261031_a_binary_s2.json"
+  ],
+  "start_utc": "2026-10-31T08:22:29.162679+00:00",
+  "base_sha": "1425d63fafee8a3ab5127b59a51324600fed00e3",
+  "search_seed": 2,
+  "physics_and_dataset_seed": 1,
+  "generations": 40,
+  "population": 24,
+  "workers": 4,
+  "chunk_size": 96,
+  "status": "completed",
+  "returncode": 0,
+  "seconds": 929.3537182959999,
+  "end_utc": "2026-10-31T08:37:58.519356+00:00",
+  "card": "models/endophalon3/20261031_a_binary_s2.json"
+}

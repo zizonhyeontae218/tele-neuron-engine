@@ -1,0 +1,84 @@
+name: Endophalon 3 recovery
+on:
+  push:
+    branches: [experiment/endophalon3-training]
+    paths: [.github/workflows/endophalon3-recovery.yml]
+permissions:
+  contents: read
+env:
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install recorded package versions
+        run: python -m pip install -e . -r requirements.txt numpy==2.3.5 matplotlib==3.10.8 pytest==9.2.0
+      - name: Full-budget existing CLI
+        run: python scripts/recover_endophalon3.py train --seed ${{ matrix.seed }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: endophalon3-onehot-s${{ matrix.seed }}
+          path: |
+            models/endophalon3/20261031_b_onehot_s${{ matrix.seed }}.json
+            docs/endophalon3_runs/20261031-training/b_onehot_s${{ matrix.seed }}.log
+            docs/endophalon3_runs/20261031-training/b_onehot_s${{ matrix.seed }}.run.json
+          if-no-files-found: error
+          retention-days: 30
+  consolidate:
+    needs: train
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/endophalon3-training
+          fetch-depth: 0
+      - name: Reject concurrent branch changes
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: endophalon3-onehot-s*
+          merge-multiple: true
+          path: .
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . -r requirements.txt numpy==2.3.5 matplotlib==3.10.8 pytest==9.2.0
+      - name: Replay, audit and report
+        run: python scripts/recover_endophalon3.py finalize
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: endophalon3-research-evidence
+          path: |
+            models/endophalon3/20261031_*.json
+            docs/endophalon3_runs/20261031-training/
+            docs/endophalon3_training_report.ko.md
+          retention-days: 30
+      - name: Commit evidence to experiment branch only
+        run: |
+          test "$(git branch --show-current)" = experiment/endophalon3-training
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add models/endophalon3 docs/endophalon3_runs/20261031-training docs/endophalon3_training_report.ko.md docs/endophalon3.md docs/model_commands.md README.md README.ko.md GOAL.md
+          git diff --cached --quiet || git commit -m "Complete recovered Endophalon 3 experiments and research audit"
+          git push origin HEAD:experiment/endophalon3-training

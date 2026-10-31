@@ -1,0 +1,10 @@
+PASS endophalon/xor: import, CLI training/evaluation, model-card save
+PASS endophalon_plus/full_adder: import, CLI training/evaluation, model-card save
+PASS endophalon_pro/full_adder: import, CLI training/evaluation, model-card save
+PASS endophalon2/base: import, CLI training/evaluation, model-card save
+PASS endophalon2_pro/regular: import, CLI training/evaluation, model-card save
+PASS endophalon2_promax/promax8: import, CLI training/evaluation, model-card save
+PASS endophalon2_promax/promax16: import, CLI training/evaluation, model-card save
+PASS endophalon3/level_a: import, CLI training/evaluation, model-card save
+PASS endophalon3/level_b: import, CLI training/evaluation, model-card save
+9 model/config combinations passed

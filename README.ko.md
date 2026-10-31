@@ -207,11 +207,12 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 
 자세한 결과와 주의할 점은 [docs/endophalon2_promax.md](docs/endophalon2_promax.md)에 있습니다.
 
-## Teleneuron-Endophalon-3 (기반만 구성, 학습 전)
+## Teleneuron-Endophalon-3 (학습 실험)
 
 Endophalon-2-Pro / ProMax의 스프링 물리 위에 만든 다음 세대입니다. 명령어로 움직이는 물리 컴퓨터로, 물리계 하나와 판독기 하나를 쓰고, 모든 입력이 `레벨 연산 a b` 형태의 명령어입니다(예: `"A XOR 1 1"`). 레벨 비트가 명령어 묶음을 고르고(A는 연산 4개, B는 8개), 연산 코드가 그 안의 연산을 고르며, a와 b가 데이터입니다. 기억(recall)을 위해 느린 영역을 두어 시간척도를 하나 더 만들었습니다.
 
-기반 코드와 테스트는 준비돼 있지만 **아직 학습한 모델은 없습니다.** [docs/endophalon3_handoff.md](docs/endophalon3_handoff.md)부터 보세요.
+기존 설계와 40×24 예산으로 모델 9개를 학습·검증했습니다. 기본 A 모델의 정확도 조건 통과는 0/3개입니다. 모든 시드·부정적 결과·실행 환경 중단 및 복구를 기록했습니다.
+[결과](docs/endophalon3.md) · [연구 보고서](docs/endophalon3_training_report.ko.md).
 
 ```bash
 python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe
