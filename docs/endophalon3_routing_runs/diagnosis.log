@@ -1,0 +1,13 @@
+a_binary_s1 {'shared_zones': 0.7937, 'separate_zones': 0.9917, 'shared_nodes': 0.7771, 'separate_nodes': 0.9875, 'opcode_gated_zones_control': 0.9833} opcode zones/nodes 0.9854 1.0
+a_binary_s2 {'shared_zones': 0.8875, 'separate_zones': 0.9479, 'shared_nodes': 0.8708, 'separate_nodes': 0.9938, 'opcode_gated_zones_control': 0.9458} opcode zones/nodes 0.8542 1.0
+a_no_regions_s1 {'shared_zones': 0.8521, 'separate_zones': 0.9625, 'shared_nodes': 0.8375, 'separate_nodes': 1.0, 'opcode_gated_zones_control': 0.9292} opcode zones/nodes 0.9958 1.0
+a_no_regions_s2 {'shared_zones': 0.8875, 'separate_zones': 0.9354, 'shared_nodes': 0.8146, 'separate_nodes': 0.9979, 'opcode_gated_zones_control': 0.9271} opcode zones/nodes 0.8896 1.0
+a_onehot_s1 {'shared_zones': 0.8958, 'separate_zones': 0.9708, 'shared_nodes': 0.9021, 'separate_nodes': 1.0, 'opcode_gated_zones_control': 0.9458} opcode zones/nodes 0.8771 1.0
+b_binary_s1 {'shared_zones': 0.7688, 'separate_zones': 0.8438, 'shared_nodes': 0.7083, 'separate_nodes': 0.9646, 'opcode_gated_zones_control': 0.8417} opcode zones/nodes 0.9354 0.9958
+b_binary_s2 {'shared_zones': 0.75, 'separate_zones': 0.8562, 'shared_nodes': 0.7271, 'separate_nodes': 0.9396, 'opcode_gated_zones_control': 0.8562} opcode zones/nodes 0.7646 0.9812
+b_onehot_s1 {'shared_zones': 0.8187, 'separate_zones': 0.8896, 'shared_nodes': 0.7583, 'separate_nodes': 0.9667, 'opcode_gated_zones_control': 0.8854} opcode zones/nodes 0.8125 0.9167
+b_onehot_s2 {'shared_zones': 0.8104, 'separate_zones': 0.8917, 'shared_nodes': 0.7875, 'separate_nodes': 0.9833, 'opcode_gated_zones_control': 0.8896} opcode zones/nodes 0.775 1.0
+initial_level_a {'shared_zones': 0.675, 'separate_zones': 0.8917, 'shared_nodes': 0.8792, 'separate_nodes': 1.0, 'opcode_gated_zones_control': 0.8896} opcode zones/nodes 0.8917 1.0
+initial_level_a_onehot {'shared_zones': 0.7354, 'separate_zones': 0.9563, 'shared_nodes': 0.8688, 'separate_nodes': 1.0, 'opcode_gated_zones_control': 0.9333} opcode zones/nodes 0.8292 0.9979
+initial_level_b {'shared_zones': 0.6687, 'separate_zones': 0.9062, 'shared_nodes': 0.725, 'separate_nodes': 0.9583, 'opcode_gated_zones_control': 0.9} opcode zones/nodes 0.725 0.9938
+initial_level_b_onehot {'shared_zones': 0.6625, 'separate_zones': 0.9354, 'shared_nodes': 0.7458, 'separate_nodes': 0.9854, 'opcode_gated_zones_control': 0.9146} opcode zones/nodes 0.6438 0.9458

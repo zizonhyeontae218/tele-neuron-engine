@@ -8,7 +8,7 @@
 - `CLAUDE.md` — Claude working context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Endophalon repository consolidation — 2026-10-31.
+- `GOAL.md` — Endophalon 3 — routing bottleneck experiment.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
@@ -61,6 +61,7 @@
 
 - `level_a.json` — Stores structured data for level a.
 - `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_a_routing.json` — Stores structured data for level a routing.
 - `level_b.json` — Stores structured data for level b.
 - `level_b_onehot.json` — Stores structured data for level b onehot.
 
@@ -90,6 +91,8 @@
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
 - `endophalon3.md` — Teleneuron-Endophalon-3 (training experiments).
 - `endophalon3_handoff.md` — Endophalon-3 handoff: how to train it, and what we learned.
+- `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
+- `endophalon3_routing_report.ko.md` — Endophalon 3 — 공유 판독 병목 실험.
 - `endophalon3_training_report.ko.md` — Endophalon 3 — 학습 실험 및 성능 검증 보고서.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
@@ -127,6 +130,28 @@
 - `level_a_onehot.json` — Stores structured data for level a onehot.
 - `level_b.json` — Stores structured data for level b.
 - `level_b_onehot.json` — Stores structured data for level b onehot.
+
+## `docs/endophalon3_routing_runs`
+
+- `diagnosis.log` — Contains diagnosis data.
+- `pytest.log` — Contains pytest data.
+
+## `docs/endophalon3_routing_runs/diagnosis`
+
+- `a_binary_s1.json` — Stores structured data for a binary s1.
+- `a_binary_s2.json` — Stores structured data for a binary s2.
+- `a_no_regions_s1.json` — Stores structured data for a no regions s1.
+- `a_no_regions_s2.json` — Stores structured data for a no regions s2.
+- `a_onehot_s1.json` — Stores structured data for a onehot s1.
+- `b_binary_s1.json` — Stores structured data for b binary s1.
+- `b_binary_s2.json` — Stores structured data for b binary s2.
+- `b_onehot_s1.json` — Stores structured data for b onehot s1.
+- `b_onehot_s2.json` — Stores structured data for b onehot s2.
+- `initial_level_a.json` — Stores structured data for initial level a.
+- `initial_level_a_onehot.json` — Stores structured data for initial level a onehot.
+- `initial_level_b.json` — Stores structured data for initial level b.
+- `initial_level_b_onehot.json` — Stores structured data for initial level b onehot.
+- `summary.json` — Stores structured data for summary.
 
 ## `docs/endophalon3_runs/20261031-training`
 
@@ -283,8 +308,10 @@
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
 - `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
+- `diagnose_endophalon3_routing.py` — Diagnose frozen Endophalon-3 states on train/validation only; no theta search.
 - `recover_endophalon3.py` — Recover only the two infrastructure-interrupted experiments; scientific code is unchanged.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
+- `run_endophalon3_routing.py` — Run the predeclared routing-loss experiment and verify saved A models.
 - `run_endophalon3_training.py` — Run the fixed Endophalon-3 experiment matrix through the existing model CLI.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
 - `summarize_endophalon3_training.py` — Build evidence tables and a Korean research report from completed audits.
@@ -415,6 +442,7 @@
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
 - `test_endophalon3.py` — Provides the _small function.
+- `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
 - `test_learner.py` — Provides the test_algorithm_files_are_discoverable function.

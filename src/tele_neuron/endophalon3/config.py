@@ -117,5 +117,7 @@ def parse_config(raw: dict[str, Any]) -> E3Config:
         raise ValueError(f"readout.delay must be within [1, {config.stream.gap_min}]")
     if not 2 <= config.washout < config.stream.pulses:
         raise ValueError("split.washout must be >= 2 (recall2 needs two events of history) and leave scored events")
+    if not 0.0 <= config.objective.get("worst_op_weight", 0.0) <= 1.0:
+        raise ValueError("objective.worst_op_weight must be within [0, 1]")
     config.space.decode(config.space.encode(config.theta_init))
     return config

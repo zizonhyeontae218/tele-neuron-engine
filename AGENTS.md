@@ -35,3 +35,13 @@ Keep README.md and README.ko.md branch links accurate. Update FileTree.md and,
 when the Filetree generator is available, FileTree.md / FILETREE.hash.json.
 Record actual commands, results and limitations; never infer benchmark parity
 from smoke tests. No multi-agent delegation is required for this maintenance.
+
+## Routing experiment branch
+Read the current GOAL.md and docs/endophalon3_routing_design.md. The original
+nine cards and all prior logs are immutable. New evidence belongs under
+`docs/endophalon3_routing_runs/`; one corrected A config belongs alongside the
+original configs. Diagnostic gated/separate heads must never be presented as
+the production model. Keep 144/2/16 and the original CLI budget. Use validation
+only to choose one correction; reserve streams 10000–10015 for confirmation.
+Run the targeted correction checks and one full pytest suite after code changes.
+Do not expand to B unless both A seeds satisfy the documented gates.
