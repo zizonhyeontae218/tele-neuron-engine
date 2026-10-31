@@ -59,10 +59,10 @@
 
 ## `configs/endophalon3`
 
-- `level_a.json` — Endophalon-3 level A config (binary opcode).
-- `level_a_onehot.json` — Endophalon-3 level A config (one-hot opcode).
-- `level_b.json` — Endophalon-3 level B config (binary opcode).
-- `level_b_onehot.json` — Endophalon-3 level B config (one-hot opcode).
+- `level_a.json` — Stores structured data for level a.
+- `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_b.json` — Stores structured data for level b.
+- `level_b_onehot.json` — Stores structured data for level b onehot.
 
 ## `configs/endophalon_plus`
 
@@ -88,8 +88,9 @@
 - `endophalon2_pro.md` — Teleneuron-Endophalon-2-Pro.
 - `endophalon2_pro_ablation.json` — Stores structured data for endophalon2 pro ablation.
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
-- `endophalon3.md` — Teleneuron-Endophalon-3 design (base, untrained).
-- `endophalon3_handoff.md` — Endophalon-3 training method, run order and know-how.
+- `endophalon3.md` — Teleneuron-Endophalon-3 (base, untrained).
+- `endophalon3_handoff.md` — Endophalon-3 handoff: how to train it, and what we learned.
+- `endophalon3_training_report.ko.md` — Endophalon 3 — 학습 실험 및 성능 검증 보고서.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
 - `endophalon_pro.md` — Teleneuron-Endophalon-Pro.
@@ -122,10 +123,64 @@
 
 ## `docs/endophalon3_probes`
 
-- `level_a.json` — Untrained capacity probe, level A binary.
-- `level_a_onehot.json` — Untrained capacity probe, level A one-hot.
-- `level_b.json` — Untrained capacity probe, level B binary.
-- `level_b_onehot.json` — Untrained capacity probe, level B one-hot.
+- `level_a.json` — Stores structured data for level a.
+- `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_b.json` — Stores structured data for level b.
+- `level_b_onehot.json` — Stores structured data for level b onehot.
+
+## `docs/endophalon3_runs/20261031-training`
+
+- `a_binary_s1.audit.json` — Stores structured data for a binary s1.audit.
+- `a_binary_s1.log` — Contains a binary s1 data.
+- `a_binary_s1.predictions.csv` — Contains a binary s1.predictions data.
+- `a_binary_s1.run.json` — Stores structured data for a binary s1.run.
+- `a_binary_s2.audit.json` — Stores structured data for a binary s2.audit.
+- `a_binary_s2.log` — Contains a binary s2 data.
+- `a_binary_s2.predictions.csv` — Contains a binary s2.predictions data.
+- `a_binary_s2.run.json` — Stores structured data for a binary s2.run.
+- `a_no_regions_s1.audit.json` — Stores structured data for a no regions s1.audit.
+- `a_no_regions_s1.log` — Contains a no regions s1 data.
+- `a_no_regions_s1.predictions.csv` — Contains a no regions s1.predictions data.
+- `a_no_regions_s1.run.json` — Stores structured data for a no regions s1.run.
+- `a_no_regions_s2.audit.json` — Stores structured data for a no regions s2.audit.
+- `a_no_regions_s2.log` — Contains a no regions s2 data.
+- `a_no_regions_s2.predictions.csv` — Contains a no regions s2.predictions data.
+- `a_no_regions_s2.run.json` — Stores structured data for a no regions s2.run.
+- `a_onehot_s1.audit.json` — Stores structured data for a onehot s1.audit.
+- `a_onehot_s1.log` — Contains a onehot s1 data.
+- `a_onehot_s1.predictions.csv` — Contains a onehot s1.predictions data.
+- `a_onehot_s1.run.json` — Stores structured data for a onehot s1.run.
+- `ablation_initial_comparison.json` — Stores structured data for ablation initial comparison.
+- `ablation_initial_probe.json` — Stores structured data for ablation initial probe.
+- `ablation_initial_probe.log` — Contains ablation initial probe data.
+- `accuracy.csv` — Contains accuracy data.
+- `b_binary_s1.log` — Contains b binary s1 data.
+- `b_binary_s1.run.json` — Stores structured data for b binary s1.run.
+- `b_binary_s2.log` — Contains b binary s2 data.
+- `b_binary_s2.run.json` — Stores structured data for b binary s2.run.
+- `bootstrap_pytest_missing.log` — Contains bootstrap pytest missing data.
+- `dependency_install_attempt.log` — Contains dependency install attempt data.
+- `environment.json` — Stores structured data for environment.
+- `phase0_complete.json` — Stores structured data for phase0 complete.
+- `phase0_direct_commands.json` — Stores structured data for phase0 direct commands.
+- `preservation.json` — Stores structured data for preservation.
+- `probe_comparison.json` — Stores structured data for probe comparison.
+- `promax_replay.jsonl` — Contains promax replay data.
+- `pytest.log` — Contains pytest data.
+- `slow_region_ablation.json` — Stores structured data for slow region ablation.
+- `smoke.log` — Contains smoke data.
+- `summary.json` — Stores structured data for summary.
+
+## `docs/endophalon3_runs/20261031-training/probes`
+
+- `level_a.json` — Stores structured data for level a.
+- `level_a.log` — Contains level a data.
+- `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_a_onehot.log` — Contains level a onehot data.
+- `level_b.json` — Stores structured data for level b.
+- `level_b.log` — Contains level b data.
+- `level_b_onehot.json` — Stores structured data for level b onehot.
+- `level_b_onehot.log` — Contains level b onehot data.
 
 ## `docs/integration`
 
@@ -168,7 +223,12 @@
 
 ## `models/endophalon3`
 
-- `.gitkeep` — Placeholder; no Endophalon-3 model has been trained yet.
+- `.gitkeep` — Contains .gitkeep data.
+- `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
+- `20261031_a_binary_s2.json` — Stores structured data for 20261031 a binary s2.
+- `20261031_a_no_regions_s1.json` — Stores structured data for 20261031 a no regions s1.
+- `20261031_a_no_regions_s2.json` — Stores structured data for 20261031 a no regions s2.
+- `20261031_a_onehot_s1.json` — Stores structured data for 20261031 a onehot s1.
 
 ## `models/endophalon_plus`
 
@@ -191,8 +251,11 @@
 ## `scripts`
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
+- `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
+- `run_endophalon3_training.py` — Run the fixed Endophalon-3 experiment matrix through the existing model CLI.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
+- `summarize_endophalon3_training.py` — Build evidence tables and a Korean research report from completed audits.
 
 ## `src/tele_neuron`
 
@@ -262,13 +325,13 @@
 
 ## `src/tele_neuron/endophalon3`
 
-- `__init__.py` — Teleneuron-Endophalon-3 package (base, untrained).
-- `__main__.py` — CLI: probe or train level A / B.
-- `config.py` — Endophalon-3 config parsing.
-- `core.py` — Collection, single readout, controls, bilevel training, probe.
-- `engine.py` — Spring engine with slow region and readout-only recording.
-- `isa.py` — Instruction set: level -> operation -> data.
-- `theta.py` — Physics parameters including the slow region.
+- `__init__.py` — Teleneuron-Endophalon-3: an instruction-driven physical computer (base, untrained).
+- `__main__.py` — python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json [--probe | train options].
+- `config.py` — Defines the E3Config class.
+- `core.py` — Endophalon-3 collection, single-readout scoring, controls and bilevel training.
+- `engine.py` — Endophalon-3 engine: the Endophalon-2-Pro spring integrator, plus a slow region and readout-only recording.
+- `isa.py` — Endophalon-3 instruction set: level -> operation -> data, all carried by the input.
+- `theta.py` — Endophalon-3 theta: Endophalon-2-Pro spring physics plus a slow region.
 
 ## `src/tele_neuron/endophalon_plus`
 
@@ -319,7 +382,7 @@
 - `test_endophalon2.py` — Provides the _config function.
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
-- `test_endophalon3.py` — Endophalon-3 ISA, engine equivalence, probe and training tests.
+- `test_endophalon3.py` — Provides the _small function.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
 - `test_learner.py` — Provides the test_algorithm_files_are_discoverable function.

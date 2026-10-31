@@ -111,6 +111,7 @@ def main():
         'A One-hot는 소유자의 필수 순서대로 Seed 1만 수행했다. Binary 대비 단일 시드 비교로 일반적인 우열을 단정하지 않는다. B는 입력 채널 수뿐 아니라 연산 수 4→8, 학습 스트림 수 16→24도 달라진다.','',
         'A Binary에서는 level과 op_bit2 두 채널이 항상 0이며, A One-hot에서는 level 및 사용하지 않는 4개 opcode 채널이 항상 0이다. 해당 stimulus-point 차원도 기존 77/92차원 탐색에 그대로 포함했다. B의 level=1은 추가 자극도 가하므로 A/B 차이를 연산 개수 하나의 효과로 해석하지 않는다.','',
         '## 6. 정규화와 수치 안정성','',
+        '선택 목적함수는 J = L_validation + 0.05·R_noise + 0.1·R_drift + 0.01·R_complexity다. Inner Ridge α=1.0도 기존 설정을 유지했다.','',
         'readout의 mean/scale/weights는 train에서만 적합했다. 저장된 readout의 replay와 train 재적합 결과, validation fitness가 모델 카드와 일치하는지 검사했다. Split별 입력 스트림 SHA-256 중복도 검사했다.','',
         table(['실험 / Split','MSE','R_noise','R_drift','R_complexity','J_split'],[[n+' / '+label,*[f(audits[n]['split_metrics'][label][k]) for k in ['mse','r_noise','r_drift','r_complexity','j_split']]] for n in names for label in ['train','validation','test']]),'',
         'R_drift는 입력 직전 평균 운동에너지의 log(E+1e−9)에 대한 이벤트별 선형 추세 절댓값을 스트림별로 구하고 중앙값×60을 취한다. 강제 입력과 감쇠가 있는 계의 추세 지표이며, 전체 역학적 에너지 보존 오차는 아니다.','',
