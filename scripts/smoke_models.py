@@ -18,6 +18,8 @@ MODELS = (
     ("endophalon2_pro", "regular"),
     ("endophalon2_promax", "promax8"),
     ("endophalon2_promax", "promax16"),
+    ("endophalon3", "level_a"),
+    ("endophalon3", "level_b"),
 )
 
 
@@ -54,6 +56,8 @@ def reduced(raw: dict, family: str) -> dict:
         else:
             raw["network"]["lattice"] = [4, 3, 2]
             raw["events"].update(pulses=8, gap_min=6, gap_max=6, pulse_steps=2, warmup=4)
+        if family == "endophalon3":
+            raw["split"]["washout"] = 2  # recall2 needs two events of history
     if "outer" in raw:
         raw["outer"].update(generations=1, population=3, elite=2, seed=1)
     return raw
@@ -71,7 +75,7 @@ def main() -> None:
             if not source.exists():
                 if (ROOT / "src" / "tele_neuron" / family).exists():
                     raise FileNotFoundError(source)
-                if family.startswith("endophalon2"):
+                if family.startswith(("endophalon2", "endophalon3")):
                     continue
                 raise FileNotFoundError(source)
             importlib.import_module(f"tele_neuron.{family}")

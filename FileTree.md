@@ -57,6 +57,13 @@
 - `promax16.json` — Stores structured data for promax16.
 - `promax8.json` — Stores structured data for promax8.
 
+## `configs/endophalon3`
+
+- `level_a.json` — Endophalon-3 level A config (binary opcode).
+- `level_a_onehot.json` — Endophalon-3 level A config (one-hot opcode).
+- `level_b.json` — Endophalon-3 level B config (binary opcode).
+- `level_b_onehot.json` — Endophalon-3 level B config (one-hot opcode).
+
 ## `configs/endophalon_plus`
 
 - `adder2.json` — Stores structured data for adder2.
@@ -81,6 +88,8 @@
 - `endophalon2_pro.md` — Teleneuron-Endophalon-2-Pro.
 - `endophalon2_pro_ablation.json` — Stores structured data for endophalon2 pro ablation.
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
+- `endophalon3.md` — Teleneuron-Endophalon-3 design (base, untrained).
+- `endophalon3_handoff.md` — Endophalon-3 training method, run order and know-how.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
 - `endophalon_pro.md` — Teleneuron-Endophalon-Pro.
@@ -110,6 +119,13 @@
 - `e2_run_multi_k4.log` — Contains e2 run multi k4 data.
 - `e2_run_multi_k8.log` — Contains e2 run multi k8 data.
 - `e2_run_xor_k4.log` — Contains e2 run xor k4 data.
+
+## `docs/endophalon3_probes`
+
+- `level_a.json` — Untrained capacity probe, level A binary.
+- `level_a_onehot.json` — Untrained capacity probe, level A one-hot.
+- `level_b.json` — Untrained capacity probe, level B binary.
+- `level_b_onehot.json` — Untrained capacity probe, level B one-hot.
 
 ## `docs/integration`
 
@@ -149,6 +165,10 @@
 - `teleneuron_endophalon2_promax16_seed2.json` — Stores structured data for teleneuron endophalon2 promax16 seed2.
 - `teleneuron_endophalon2_promax8.json` — Stores structured data for teleneuron endophalon2 promax8.
 - `teleneuron_endophalon2_promax8_seed2.json` — Stores structured data for teleneuron endophalon2 promax8 seed2.
+
+## `models/endophalon3`
+
+- `.gitkeep` — Placeholder; no Endophalon-3 model has been trained yet.
 
 ## `models/endophalon_plus`
 
@@ -240,6 +260,16 @@
 - `core.py` — Collection, objective, bilevel training and evaluation for ProMax.
 - `tasks.py` — Opcode streams: per event, data bits (a, b) plus one of three operations.
 
+## `src/tele_neuron/endophalon3`
+
+- `__init__.py` — Teleneuron-Endophalon-3 package (base, untrained).
+- `__main__.py` — CLI: probe or train level A / B.
+- `config.py` — Endophalon-3 config parsing.
+- `core.py` — Collection, single readout, controls, bilevel training, probe.
+- `engine.py` — Spring engine with slow region and readout-only recording.
+- `isa.py` — Instruction set: level -> operation -> data.
+- `theta.py` — Physics parameters including the slow region.
+
 ## `src/tele_neuron/endophalon_plus`
 
 - `__init__.py` — Teleneuron-Endophalon-Plus: preset-routed reservoir on the Plus physics base.
@@ -289,6 +319,7 @@
 - `test_endophalon2.py` — Provides the _config function.
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
+- `test_endophalon3.py` — Endophalon-3 ISA, engine equivalence, probe and training tests.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
 - `test_learner.py` — Provides the test_algorithm_files_are_discoverable function.
