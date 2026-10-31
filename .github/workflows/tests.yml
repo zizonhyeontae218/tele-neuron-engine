@@ -19,3 +19,5 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Test
         run: python -m pytest
+      - name: Model CLI smoke
+        run: python scripts/smoke_models.py

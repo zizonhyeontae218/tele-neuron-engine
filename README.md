@@ -10,6 +10,19 @@ output bits.
 This is a physical reservoir computing prototype, not a practical LLM
 replacement.
 
+## Generation 1 archive / 1세대 보존본
+
+This branch preserves Endophalon, Endophalon Plus and Endophalon Pro together,
+with their original independent packages, configs, tests, cards and history.
+Generation-2 modules are intentionally absent from this generation-1 boundary.
+
+- [master](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/master): active integrated development.
+- [archive/endophalon-v1](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v1): this snapshot.
+- [archive/endophalon-v2](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v2): generation 2 and its dependencies.
+
+See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
+and [archive verification](docs/integration/2026-10-31.md).
+
 ## What This Is
 
 - A deterministic Python + NumPy simulation scaffold.
