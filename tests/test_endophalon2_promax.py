@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 import numpy as np
+import pytest
 
 from tele_neuron.endophalon2_pro.engine import EventSpec
 from tele_neuron.endophalon2_promax import variant_name
@@ -67,10 +68,11 @@ def test_single_readout_scores_every_operation_with_one_readout() -> None:
     assert set(separate_readouts(config, data, range(0, 4), range(4, 6))["per_op"]) == set(OPS)
 
 
-def test_training_end_to_end_and_model_card(tmp_path) -> None:
+@pytest.mark.parametrize("zones", [8, 16])
+def test_training_end_to_end_and_model_card(tmp_path, zones) -> None:
     from tele_neuron.endophalon2_promax.__main__ import save_model
 
-    config = replace(_config(), outer={"generations": 1, "population": 3, "elite": 2, "seed": 1, "init_sigma": 0.5})
+    config = replace(_config(zones), outer={"generations": 1, "population": 3, "elite": 2, "seed": 1, "init_sigma": 0.5})
 
     report = train(config, random_baseline=True)
     save_model("tiny", "inline", config, report, tmp_path / "card.json")
@@ -79,5 +81,5 @@ def test_training_end_to_end_and_model_card(tmp_path) -> None:
     assert report.evaluations == 4
     assert {"single_readout", "single_readout_plus_opcode", "separate_readouts", "linear_nodes"} <= set(report.test["trained"])
     card = json.loads((tmp_path / "card.json").read_text())
-    assert card["family"] == "Teleneuron-Endophalon-2-ProMax8"
+    assert card["family"] == variant_name(zones)
     assert len(card["theta"]["stimulus_points"]) == 5

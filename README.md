@@ -10,6 +10,23 @@ output bits.
 This is a physical reservoir computing prototype, not a practical LLM
 replacement.
 
+## Repository branches
+
+Active development includes all six model families and both ProMax sizes.
+
+| Branch | Role |
+|---|---|
+| [master](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/master) | Latest integrated development |
+| [archive/endophalon-v1](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v1) | Endophalon / Plus / Pro; generation 1 preservation |
+| [archive/endophalon-v2](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v2) | Endophalon 2 / 2 Pro / 2 ProMax8/16; includes required v1 dependencies |
+
+Original model branches are superseded by these archives. Their original heads
+remain in `backup/2026-10-31/<original-branch>` until preservation tags can be
+created and verified. No old branch is deleted before that verification.
+The Claude Volta and iPad Lab branches remain working branches.
+See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
+and [integration audit](docs/integration/2026-10-31.md).
+
 ## What This Is
 
 - A deterministic Python + NumPy simulation scaffold.

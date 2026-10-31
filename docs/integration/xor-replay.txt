@@ -1,0 +1,7 @@
+Loaded tele_neuron_001_xor: task=XOR, balls=96, cases=4
+tele_neuron_001_xor seed=1 threshold=3 score=4/4 accuracy=100.00%
+  bits=00 target=0 output=0 counts=(2,) collisions=8 ok
+  bits=01 target=1 output=1 counts=(7,) collisions=33 ok
+  bits=10 target=1 output=1 counts=(8,) collisions=34 ok
+  bits=11 target=0 output=0 counts=(2,) collisions=28 ok
+Ready. Use --display --bits 01 to watch it move.

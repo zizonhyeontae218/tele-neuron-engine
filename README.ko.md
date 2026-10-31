@@ -7,6 +7,23 @@
 
 이 프로젝트는 물리학 기반 컴퓨팅의 가능성을 살펴보기 위한 프로토타입이며, 실용적인 LLM 대체재를 목표로 하지 않습니다.
 
+## 브랜치 구성
+
+master는 모델 6종과 ProMax8/16을 모두 포함하는 최신 통합 개발본입니다.
+
+| Branch | Role |
+|---|---|
+| [master](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/master) | Latest integrated development |
+| [archive/endophalon-v1](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v1) | Endophalon / Plus / Pro; generation 1 preservation |
+| [archive/endophalon-v2](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v2) | Endophalon 2 / 2 Pro / 2 ProMax8/16; includes required v1 dependencies |
+
+Original model branches are superseded by these archives. Their original heads
+remain in `backup/2026-10-31/<original-branch>` until preservation tags can be
+created and verified. No old branch is deleted before that verification.
+The Claude Volta and iPad Lab branches remain working branches.
+See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
+and [integration audit](docs/integration/2026-10-31.md).
+
 ## 프로젝트 개요
 
 - 정해진 결과로 동작하는 Python + NumPy 기반 시뮬레이션
