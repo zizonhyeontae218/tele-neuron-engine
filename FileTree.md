@@ -12,6 +12,7 @@
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
+- `ipad_lab.html` — Contains ipad lab data.
 - `pyproject.toml` — Defines Python project configuration and dependencies.
 - `requirements.txt` — Contains requirements data.
 
