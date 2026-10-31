@@ -28,7 +28,11 @@ training correction on level-A binary seeds 1/2 at the original 40×24 budget.
 ## Deliverables and acceptance
 - [x] Saved-state information/routing diagnosis with original card hashes.
 - [x] One correction frozen: equal mixture of pooled/worst-op validation MSE.
-- [ ] Corrected CLI, focused checks, two complete A model cards and raw logs.
-- [ ] Split metrics, controls, stability and unchanged baseline evidence.
-- [ ] Final report, synchronized FileTree, separate PR targeting the frozen
+- [x] Corrected CLI, focused checks, two complete A model cards and raw logs.
+- [x] Split metrics, controls, stability and unchanged baseline evidence.
+- [x] Final report, synchronized FileTree, separate PR targeting the frozen
       baseline experiment branch (master remains untouched).
+
+## Outcome
+
+A test 75.31% / 81.77%; untouched confirmation 73.33% / 78.54%. Gate 0/2; B not run. The 0.5 mean/worst validation loss is not accepted as a performance improvement. Default behavior remains unchanged. PR #11 targets the frozen baseline branch; no master merge.

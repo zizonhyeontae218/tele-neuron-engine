@@ -280,6 +280,8 @@ second timescale for recall.
 python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe
 ```
 
+Routing-loss follow-up: an opt-in 0.5 pooled/worst-operation objective was tested with two A seeds. Both missed the accuracy gates; default behavior remains unchanged. [Report](docs/endophalon3_routing_report.ko.md).
+
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary

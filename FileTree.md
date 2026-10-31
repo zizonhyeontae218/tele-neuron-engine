@@ -133,7 +133,21 @@
 
 ## `docs/endophalon3_routing_runs`
 
+- `a_binary_s1.evaluation.json` — Stores structured data for a binary s1.evaluation.
+- `a_binary_s1.log` — Contains a binary s1 data.
+- `a_binary_s1.post_diagnosis.json` — Stores structured data for a binary s1.post diagnosis.
+- `a_binary_s1.run.json` — Stores structured data for a binary s1.run.
+- `a_binary_s2.evaluation.json` — Stores structured data for a binary s2.evaluation.
+- `a_binary_s2.log` — Contains a binary s2 data.
+- `a_binary_s2.post_diagnosis.json` — Stores structured data for a binary s2.post diagnosis.
+- `a_binary_s2.run.json` — Stores structured data for a binary s2.run.
+- `artifact_manifest.json` — Stores structured data for artifact manifest.
+- `baseline_confirmation.json` — Stores structured data for baseline confirmation.
+- `baseline_preservation.json` — Stores structured data for baseline preservation.
+- `controller.log` — Contains controller data.
 - `diagnosis.log` — Contains diagnosis data.
+- `gate.json` — Stores structured data for gate.
+- `legacy_validation.json` — Stores structured data for legacy validation.
 - `pytest.log` — Contains pytest data.
 
 ## `docs/endophalon3_routing_runs/diagnosis`
@@ -285,6 +299,11 @@
 - `20261031_b_binary_s2.json` — Stores structured data for 20261031 b binary s2.
 - `20261031_b_onehot_s1.json` — Stores structured data for 20261031 b onehot s1.
 - `20261031_b_onehot_s2.json` — Stores structured data for 20261031 b onehot s2.
+
+## `models/endophalon3_routing`
+
+- `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
+- `20261031_a_binary_s2.json` — Stores structured data for 20261031 a binary s2.
 
 ## `models/endophalon_plus`
 

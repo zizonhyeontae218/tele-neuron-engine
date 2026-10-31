@@ -1,0 +1,126 @@
+{
+  "docs/endophalon3_routing_runs/diagnosis.log": {
+    "sha256": "11e9f2aeebe3b2b80dd8b8690f9544ee7ebdb4c067d8a51fdf36f72ab430c7ac",
+    "bytes": 2388
+  },
+  "docs/endophalon3_routing_runs/a_binary_s1.evaluation.json": {
+    "sha256": "4758a34dbdc6a05e44781b01aabb8b7db4e6f35ac065607b4d6284b4ac600f62",
+    "bytes": 8755
+  },
+  "docs/endophalon3_routing_runs/a_binary_s2.log": {
+    "sha256": "c794212a43b234ec169ec246aab4db00e28cc1c9b5c5b94543862ace6757b808",
+    "bytes": 4688
+  },
+  "docs/endophalon3_routing_runs/a_binary_s2.evaluation.json": {
+    "sha256": "298ba014e6ad0255724c3d8f522999a46742fcd0b609d4edcd241c70bfd9363d",
+    "bytes": 8781
+  },
+  "docs/endophalon3_routing_runs/a_binary_s1.post_diagnosis.json": {
+    "sha256": "65a92f95e7754b4faf68289f18216fadde60554c9021dc7a62012f3bef05defe",
+    "bytes": 13990
+  },
+  "docs/endophalon3_routing_runs/baseline_preservation.json": {
+    "sha256": "3acdfd1491a591287790e527ac920414394807f81454357680f03bab4dbc41db",
+    "bytes": 17805
+  },
+  "docs/endophalon3_routing_runs/legacy_validation.json": {
+    "sha256": "522fb46345f065c4cd204b111be458fbcf591064d82fd53445971bb75780e90e",
+    "bytes": 433
+  },
+  "docs/endophalon3_routing_runs/pytest.log": {
+    "sha256": "8daef1fadbb991621ed4b6f54d19f111f47fa872787daf60d76b84fdb682c5d2",
+    "bytes": 179
+  },
+  "docs/endophalon3_routing_runs/gate.json": {
+    "sha256": "6d65cde66fcb01226e9607b2fdc69dbe3799c747eaccde1bf47bb1fb5b76d1fc",
+    "bytes": 20249
+  },
+  "docs/endophalon3_routing_runs/a_binary_s2.post_diagnosis.json": {
+    "sha256": "b48bd3e36e2fcdb16be575797d57b621eeaff00d3dcae8a7c70b3bfb49b27ff1",
+    "bytes": 14029
+  },
+  "docs/endophalon3_routing_runs/baseline_confirmation.json": {
+    "sha256": "00ca7c35e103a1cf809fb0ae7413ff192965e257e9d9778e4251962951a018ee",
+    "bytes": 1240
+  },
+  "docs/endophalon3_routing_runs/a_binary_s1.run.json": {
+    "sha256": "4b3068b36ebff70f58019b6d001c363e61dc51c60081ef88436da04d4862d8b9",
+    "bytes": 1164
+  },
+  "docs/endophalon3_routing_runs/controller.log": {
+    "sha256": "bf5551e379d85a3dd1836ba1b339edaf948faf6e225d5560644e04749491f2b9",
+    "bytes": 107
+  },
+  "docs/endophalon3_routing_runs/a_binary_s2.run.json": {
+    "sha256": "51dea964a35e6943872e61786d15d29f4f12ba1d01e7944a40ada37eb9878779",
+    "bytes": 1165
+  },
+  "docs/endophalon3_routing_runs/a_binary_s1.log": {
+    "sha256": "98fa183e845ee2ed9b8f021c472df37fa7eb6b194e0d2ff2347d0552ac5129ff",
+    "bytes": 4688
+  },
+  "docs/endophalon3_routing_runs/diagnosis/b_binary_s2.json": {
+    "sha256": "d8ca53fec04b968bde228c9a5beb7e0313f73bb90bb6a1cbe7b22e9f28ca6a65",
+    "bytes": 26152
+  },
+  "docs/endophalon3_routing_runs/diagnosis/summary.json": {
+    "sha256": "c77ee6e5cb3538449849c1f6fa260b1a81fb2ea5407ce8a8b743bb707b05378d",
+    "bytes": 19659
+  },
+  "docs/endophalon3_routing_runs/diagnosis/initial_level_b.json": {
+    "sha256": "73cf1d1436a2b2c0fdbffe034d0e99bcb66a82cff4a6678d1d9602c42194d9ab",
+    "bytes": 25919
+  },
+  "docs/endophalon3_routing_runs/diagnosis/initial_level_a_onehot.json": {
+    "sha256": "85275248d3c299049c8c44b47a3454bea506cbdb7fbde6ea565215bf382337d0",
+    "bytes": 14086
+  },
+  "docs/endophalon3_routing_runs/diagnosis/initial_level_b_onehot.json": {
+    "sha256": "1677148b1df57adbd1555bc8c4dd5824290df17feda5307520609fbb73c06e85",
+    "bytes": 25943
+  },
+  "docs/endophalon3_routing_runs/diagnosis/a_onehot_s1.json": {
+    "sha256": "d4ab92d70f375c67cf1bd1e5fddfcff179a452400d0e70e74de08bb1371ea924",
+    "bytes": 14178
+  },
+  "docs/endophalon3_routing_runs/diagnosis/a_no_regions_s1.json": {
+    "sha256": "953ce8ab1118605b7517bccb58396a05f6f3cf057e38c0e8e725452022ae5f58",
+    "bytes": 14209
+  },
+  "docs/endophalon3_routing_runs/diagnosis/b_onehot_s1.json": {
+    "sha256": "d7ee29883ad561f833f7c041774124d2e49ae6276ccf275bf2a9dfb5c59d2e09",
+    "bytes": 26089
+  },
+  "docs/endophalon3_routing_runs/diagnosis/a_binary_s1.json": {
+    "sha256": "9c91269817c94161105b67b36287b9c4cb897cfa26366af7062460a2dbd7b08c",
+    "bytes": 14293
+  },
+  "docs/endophalon3_routing_runs/diagnosis/b_binary_s1.json": {
+    "sha256": "6a8621bb9dccd5062f86c6766ec279c07c6f1778b1493b36bc2de8f6b8bd0873",
+    "bytes": 26177
+  },
+  "docs/endophalon3_routing_runs/diagnosis/b_onehot_s2.json": {
+    "sha256": "ac9b6e9fc341ec876c1fd8876dd9900ae6dbb26877aafbc697671f3f9b3c6281",
+    "bytes": 26095
+  },
+  "docs/endophalon3_routing_runs/diagnosis/a_no_regions_s2.json": {
+    "sha256": "a186796de9234fbec9381ad35d8ee02a2000c34cf9aa554c49cc187d34369044",
+    "bytes": 14308
+  },
+  "docs/endophalon3_routing_runs/diagnosis/initial_level_a.json": {
+    "sha256": "45049811cd679246f4425264c32d10a8c1091a37a53887fa7dd15bd59d69667d",
+    "bytes": 14148
+  },
+  "docs/endophalon3_routing_runs/diagnosis/a_binary_s2.json": {
+    "sha256": "0e0339791049a3c29ddb10d386c0fb5a325eb4817a9ca72bf376ebafc517641b",
+    "bytes": 14216
+  },
+  "models/endophalon3_routing/20261031_a_binary_s2.json": {
+    "sha256": "f352edbe9bab8ee0e4ca4035d7d70393092b8317ef5f4872614f10209d109d19",
+    "bytes": 27456
+  },
+  "models/endophalon3_routing/20261031_a_binary_s1.json": {
+    "sha256": "4ae1c7ecf1dd8c208f0a636c0b73e28df110cce79933da431181adafec96f36a",
+    "bytes": 27507
+  }
+}
