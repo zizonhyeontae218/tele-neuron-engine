@@ -94,11 +94,55 @@
       "a_accuracy_gate": false,
       "seconds": 857.9618014170001,
       "failed_candidates": 0
+    },
+    {
+      "run": "b_binary_s1",
+      "level": "B",
+      "encoding": "binary",
+      "slow_region": true,
+      "search_seed": 1,
+      "train_accuracy": 0.7506944444444444,
+      "validation_accuracy": 0.76875,
+      "test_accuracy": 0.7447916666666666,
+      "per_op": {
+        "xor": 0.808695652173913,
+        "recall1": 0.8016528925619835,
+        "recall2": 0.6119402985074627,
+        "xor_mem": 0.6218487394957983,
+        "and": 0.8991596638655462,
+        "or": 0.9459459459459459,
+        "parity3w": 0.55,
+        "and_mem": 0.7520661157024794
+      },
+      "a_accuracy_gate": null,
+      "seconds": 911.4008953570001,
+      "failed_candidates": 0
+    },
+    {
+      "run": "b_binary_s2",
+      "level": "B",
+      "encoding": "binary",
+      "slow_region": true,
+      "search_seed": 2,
+      "train_accuracy": 0.7270833333333333,
+      "validation_accuracy": 0.75,
+      "test_accuracy": 0.7364583333333333,
+      "per_op": {
+        "xor": 0.8347826086956521,
+        "recall1": 0.8347107438016529,
+        "recall2": 0.5970149253731343,
+        "xor_mem": 0.6050420168067226,
+        "and": 0.8739495798319328,
+        "or": 0.8918918918918919,
+        "parity3w": 0.5083333333333333,
+        "and_mem": 0.7768595041322314
+      },
+      "a_accuracy_gate": null,
+      "seconds": 1024.780753379,
+      "failed_candidates": 0
     }
   ],
   "missing": [
-    "b_binary_s1",
-    "b_binary_s2",
     "b_onehot_s1",
     "b_onehot_s2"
   ],

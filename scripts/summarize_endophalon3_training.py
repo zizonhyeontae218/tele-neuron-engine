@@ -125,6 +125,31 @@ def main():
         'ProMax는 xor/recall1/xor_mem 3개 연산, A는 recall2를 추가한 4개, B는 8개다. 데이터 생성 규칙과 opcode, 연산별 표본 분포도 다르므로 이 정확도 차이는 통제된 아키텍처 우열 비교가 아니다. 기존 ProMax를 재학습하거나 새 E3 task를 실행할 수 있도록 개조하지 않았다.','',
         table(['실험','E3의 공통 3연산 정확도 (기존 ProMax task와는 다른 스트림)'],[[n,pct(sum(v['accuracy']*v['n'] for op,v in audits[n]['split_metrics']['test']['per_op'].items() if op in ['xor','recall1','xor_mem'])/sum(v['n'] for op,v in audits[n]['split_metrics']['test']['per_op'].items() if op in ['xor','recall1','xor_mem']))] for n in names]),'',
         '## 9. 실패 양상과 한계','']
+    paired_cost=[]
+    for encoding in ['binary','onehot']:
+        for seed in [1,2]:
+            an,bn=f'a_{encoding}_s{seed}',f'b_{encoding}_s{seed}'
+            if an not in audits or bn not in audits:continue
+            aa,bb=audits[an],audits[bn]
+            ratio='A에 Random Baseline 포함: 비교 불가' if an=='a_binary_s1' else f"{bb['timing']['seconds']/aa['timing']['seconds']:.2f}×"
+            paired_cost.append([encoding,seed,pct(aa['split_metrics']['test']['accuracy']),pct(bb['split_metrics']['test']['accuracy']),pct(bb['split_metrics']['test']['accuracy']-aa['split_metrics']['test']['accuracy']),ratio])
+    cost_notes = ['### A 대비 B의 관측 성능·비용','',table(['인코딩','Seed','A Test','B Test','B−A (pp)','B/A CLI wall time'],paired_cost),'',
+        '고정 탐색 예산에서 B의 학습+검증 물리 스트림 수는 32/24=1.33배다. 위 wall time 비율은 최종 평가를 포함한 관측값이며 opcode 수·자극 부하·동시 실행 조건의 영향을 모두 포함한다. 아키텍처 하나의 순수 비용 효과로 분리할 수 없다.','']
+    finite_count=sum(bool(audits[n]['finite_flag']) for n in names)
+    failures=sum(audits[n]['failed_training_candidates'] for n in names)
+    largest=max(names,key=lambda n:abs(audits[n]['split_metrics']['test']['r_drift']-audits[n]['split_metrics']['train']['r_drift']))
+    aa=audits[largest]['split_metrics']
+    stability_notes = [f"선택 모델 {finite_count}/{len(names)}개가 측정 범위에서 finite였으며, 학습 탐색 {961*len(names)}회 중 발산 flag는 {failures}회였다(Random Search 후보별 집계는 미저장).",
+        f"Train–Test R_drift 차이가 가장 큰 관측 실행은 {largest}: train {aa['train']['r_drift']:.5f}, test {aa['test']['r_drift']:.5f}다. 유한한 결과와 동일한 분포의 drift 값을 구분해 해석한다.",'']
+    b_means=[]
+    for op in OPS:
+        vals=[]
+        for encoding in ['binary','onehot']:
+            group=[audits[f'b_{encoding}_s{seed}']['split_metrics']['test']['per_op'][op]['accuracy'] for seed in [1,2] if f'b_{encoding}_s{seed}' in audits]
+            vals.append(pct(float(np.mean(group)))+f' (n={len(group)} seeds)' if group else '미완료')
+        b_means.append([op,*vals])
+    lines += ['### B 연산별 시드 평균','',table(['연산','Binary','One-hot'],b_means),'',
+        '각 평균은 완료된 모든 해당 시드를 포함한다. 주 결과 표에는 각 시드를 따로 기록했으며, 평균으로 불리한 시드를 숨기지 않는다.','']
     patterns=[]
     for n in names:
         if not n.startswith('b_'):continue
@@ -148,7 +173,10 @@ def main():
         '- 표 재생성: `python scripts/summarize_endophalon3_training.py`. 기존 학습 산출물이 있으면 runner는 덮어쓰지 않는다.',
         '- 모든 설정·기존 모델·기존 로그·src/tests가 기준 commit과 동일한지는 `preservation.json`으로 검증한다.','',
         '자동 병합하지 않는다. 결과가 기준 미달이어도 그대로 보고하고, 기존 설계를 바꾸지 않는다.','']
-    (ROOT/'docs/endophalon3_training_report.ko.md').write_text('\n'.join(lines))
+    body='\n'.join(lines)
+    body=body.replace('## 7. 학습 비용', '\n'.join(stability_notes)+'\n\n## 7. 학습 비용')
+    body=body.replace('## 8. 기존 Endophalon 2 ProMax 비교', '\n'.join(cost_notes)+'\n\n## 8. 기존 Endophalon 2 ProMax 비교')
+    (ROOT/'docs/endophalon3_training_report.ko.md').write_text(body)
     print('Summarized',len(names),'audited models; missing',missing)
 
 if __name__=='__main__':main()
