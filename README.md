@@ -27,6 +27,10 @@ The Claude Volta and iPad Lab branches remain working branches.
 See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
 and [integration audit](docs/integration/2026-10-31.md).
 
+Finalize preservation tags and retire the six original model branches with the
+manual [Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml) workflow on `master`.
+No local checkout or personal access token is needed.
+
 ## What This Is
 
 - A deterministic Python + NumPy simulation scaffold.

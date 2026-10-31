@@ -16,6 +16,10 @@ Read GOAL.md, FileTree.md, docs/model_commands.md and the current model's docs.
 
 ## Commands (repository root, Python >=3.11)
 - Install: python -m pip install -e . -r requirements.txt
+- Archive preview (read-only): python scripts/archive_endophalon.py
+- Finalize backups/deletions: manual Archive Endophalon branches workflow on master.
+  It creates and verifies tags before deleting only the six audited model refs.
+  Never bypass its changed-ref checks or branch protection.
 - Full tests: python -m pytest -q
 - CLI/config smoke: python scripts/smoke_models.py
 - Run/training commands: docs/model_commands.md (can take much longer than smoke).

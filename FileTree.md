@@ -170,6 +170,7 @@
 
 ## `scripts`
 
+- `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
 
@@ -278,6 +279,7 @@
 
 ## `tests`
 
+- `test_archive_endophalon.py` — Exercise cleanup against a disposable bare remote, never against GitHub.
 - `test_ball.py` — Provides the test_ball_state_from_vectors_round_trips_arrays function.
 - `test_collision.py` — Provides the test_spatial_hash_candidates_finds_nearby_pair function.
 - `test_config.py` — Provides the test_loads_tiny_configs function.

@@ -1,0 +1,30 @@
+name: Archive Endophalon branches
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: archive-endophalon-2026-10-31
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    if: github.repository == 'zizonhyeontae218/tele-neuron-engine' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original heads and archive ancestry
+        run: python scripts/archive_endophalon.py
+      - name: Create and verify tags, then retire the six model branches
+        run: python scripts/archive_endophalon.py --apply

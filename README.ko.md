@@ -24,6 +24,10 @@ The Claude Volta and iPad Lab branches remain working branches.
 See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
 and [integration audit](docs/integration/2026-10-31.md).
 
+원격 태그 생성과 기존 모델 브랜치 6개 삭제는
+[Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml)에서
+`master` → **Run workflow**로 실행합니다. 로컬 다운로드나 별도 토큰은 필요 없습니다.
+
 ## 프로젝트 개요
 
 - 정해진 결과로 동작하는 Python + NumPy 기반 시뮬레이션
