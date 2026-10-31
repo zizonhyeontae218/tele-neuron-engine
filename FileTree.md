@@ -154,10 +154,18 @@
 - `ablation_initial_probe.json` — Stores structured data for ablation initial probe.
 - `ablation_initial_probe.log` — Contains ablation initial probe data.
 - `accuracy.csv` — Contains accuracy data.
+- `b_binary_s1.audit.json` — Stores structured data for b binary s1.audit.
 - `b_binary_s1.log` — Contains b binary s1 data.
+- `b_binary_s1.predictions.csv` — Contains b binary s1.predictions data.
 - `b_binary_s1.run.json` — Stores structured data for b binary s1.run.
+- `b_binary_s2.audit.json` — Stores structured data for b binary s2.audit.
 - `b_binary_s2.log` — Contains b binary s2 data.
+- `b_binary_s2.predictions.csv` — Contains b binary s2.predictions data.
 - `b_binary_s2.run.json` — Stores structured data for b binary s2.run.
+- `b_onehot_s1.log` — Contains b onehot s1 data.
+- `b_onehot_s1.run.json` — Stores structured data for b onehot s1.run.
+- `b_onehot_s2.log` — Contains b onehot s2 data.
+- `b_onehot_s2.run.json` — Stores structured data for b onehot s2.run.
 - `bootstrap_pytest_missing.log` — Contains bootstrap pytest missing data.
 - `dependency_install_attempt.log` — Contains dependency install attempt data.
 - `environment.json` — Stores structured data for environment.
@@ -229,6 +237,8 @@
 - `20261031_a_no_regions_s1.json` — Stores structured data for 20261031 a no regions s1.
 - `20261031_a_no_regions_s2.json` — Stores structured data for 20261031 a no regions s2.
 - `20261031_a_onehot_s1.json` — Stores structured data for 20261031 a onehot s1.
+- `20261031_b_binary_s1.json` — Stores structured data for 20261031 b binary s1.
+- `20261031_b_binary_s2.json` — Stores structured data for 20261031 b binary s2.
 
 ## `models/endophalon_plus`
 
