@@ -1,6 +1,7 @@
 # Tele-Neuron Engine agent instructions
 
 Read GOAL.md, FileTree.md, docs/model_commands.md and the current model's docs.
+Endophalon-3 (base, untrained) starts at docs/endophalon3_handoff.md.
 
 ## Branch roles
 - master is active integrated development: six independent model families, with

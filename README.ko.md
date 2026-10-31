@@ -17,16 +17,17 @@ master는 모델 6종과 ProMax8/16을 모두 포함하는 최신 통합 개발�
 | [archive/endophalon-v1](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v1) | Endophalon / Plus / Pro; generation 1 preservation |
 | [archive/endophalon-v2](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v2) | Endophalon 2 / 2 Pro / 2 ProMax8/16; includes required v1 dependencies |
 
-Original model branches are superseded by these archives. Their original heads
-remain in `backup/2026-10-31/<original-branch>` until preservation tags can be
-created and verified. No old branch is deleted before that verification.
+Original model branches are superseded by these archives. Preservation tags
+`backup/2026-10-31/<original-branch>` now exist for all six original model heads,
+and those six branches have been retired. The `backup/2026-10-31/*` safety
+branches are kept.
 The Claude Volta and iPad Lab branches remain working branches.
 See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
 and [integration audit](docs/integration/2026-10-31.md).
 
-원격 태그 생성과 기존 모델 브랜치 6개 삭제는
-[Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml)에서
-`master` → **Run workflow**로 실행합니다. 로컬 다운로드나 별도 토큰은 필요 없습니다.
+원격 태그 생성과 기존 모델 브랜치 6개 정리는
+[Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml)
+워크플로로 이미 완료됐습니다. 다시 실행해도 아무것도 바뀌지 않는 안전한 작업입니다.
 
 ## 프로젝트 개요
 
@@ -205,6 +206,16 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 ```
 
 자세한 결과와 주의할 점은 [docs/endophalon2_promax.md](docs/endophalon2_promax.md)에 있습니다.
+
+## Teleneuron-Endophalon-3 (기반만 구성, 학습 전)
+
+Endophalon-2-Pro / ProMax의 스프링 물리 위에 만든 다음 세대입니다. 명령어로 움직이는 물리 컴퓨터로, 물리계 하나와 판독기 하나를 쓰고, 모든 입력이 `레벨 연산 a b` 형태의 명령어입니다(예: `"A XOR 1 1"`). 레벨 비트가 명령어 묶음을 고르고(A는 연산 4개, B는 8개), 연산 코드가 그 안의 연산을 고르며, a와 b가 데이터입니다. 기억(recall)을 위해 느린 영역을 두어 시간척도를 하나 더 만들었습니다.
+
+기반 코드와 테스트는 준비돼 있지만 **아직 학습한 모델은 없습니다.** [docs/endophalon3_handoff.md](docs/endophalon3_handoff.md)부터 보세요.
+
+```bash
+python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe
+```
 
 ## 한계점
 

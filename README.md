@@ -20,16 +20,16 @@ Active development includes all six model families and both ProMax sizes.
 | [archive/endophalon-v1](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v1) | Endophalon / Plus / Pro; generation 1 preservation |
 | [archive/endophalon-v2](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v2) | Endophalon 2 / 2 Pro / 2 ProMax8/16; includes required v1 dependencies |
 
-Original model branches are superseded by these archives. Their original heads
-remain in `backup/2026-10-31/<original-branch>` until preservation tags can be
-created and verified. No old branch is deleted before that verification.
+Original model branches are superseded by these archives. Preservation tags
+`backup/2026-10-31/<original-branch>` now exist for all six original model heads,
+and those six branches have been retired. The `backup/2026-10-31/*` safety
+branches are kept.
 The Claude Volta and iPad Lab branches remain working branches.
 See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
 and [integration audit](docs/integration/2026-10-31.md).
 
-Finalize preservation tags and retire the six original model branches with the
-manual [Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml) workflow on `master`.
-No local checkout or personal access token is needed.
+The manual [Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml)
+workflow that did this stays available. Re-running it is a safe no-op.
 
 ## What This Is
 
@@ -263,6 +263,22 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 ```
 
 Details and caveats: [docs/endophalon2_promax.md](docs/endophalon2_promax.md).
+
+## Teleneuron-Endophalon-3 (base, untrained)
+
+The next generation, built on the Endophalon-2-Pro / ProMax spring physics.
+It is an instruction-driven physical computer: one physics system, one
+readout, and every input event is an instruction `LEVEL OP a b`, for example
+`"A XOR 1 1"`. The level bit picks the instruction table (A: 4 ops, B: 8 ops),
+the opcode picks the operation, and a, b are the data. A slow region adds a
+second timescale for recall.
+
+The base and tests are in place. **No model has been trained yet.**
+Start at [docs/endophalon3_handoff.md](docs/endophalon3_handoff.md).
+
+```bash
+python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe
+```
 
 ## Known Limitations
 
