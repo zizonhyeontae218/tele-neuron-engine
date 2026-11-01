@@ -93,3 +93,13 @@ def test_push_guard_blocks_a_branch_changed_after_validation(sandbox, monkeypatc
     for branch in archive.MODELS:
         assert f"refs/heads/{branch}" in after  # Atomic transaction deleted none.
         assert after[f"refs/tags/{archive.PREFIX}{branch}"] == original
+
+
+def test_rerun_after_owner_authorized_safety_branch_retirement(sandbox):
+    root, _, _ = sandbox
+    archive.finalize(root, apply=True)
+    git(root, "push", "--atomic", "origin",
+        *(f":refs/heads/{archive.PREFIX}{branch}" for branch in archive.MODELS))
+    before = archive.remote_refs(root)
+    archive.finalize(root, apply=True)
+    assert archive.remote_refs(root) == before

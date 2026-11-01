@@ -34,14 +34,19 @@ def tag_matches(root: Path, value: str | None, expected: str) -> bool:
 
 def validate(root: Path, expected: dict[str, str], refs: dict[str, str]) -> None:
     for branch, sha in expected.items():
-        if refs.get(f"refs/heads/{PREFIX}{branch}") != sha:
-            raise RuntimeError(f"Safety branch missing or changed: {branch}")
+        safety = refs.get(f"refs/heads/{PREFIX}{branch}")
         current = refs.get(f"refs/heads/{branch}")
         if current is not None and current != sha:
             raise RuntimeError(f"Original branch changed: {branch}; nothing may be deleted")
         tag = refs.get(f"refs/tags/{PREFIX}{branch}")
         if tag is not None and not tag_matches(root, tag, sha):
             raise RuntimeError(f"Conflicting preservation tag: {branch}")
+        # After owner-authorized backup consolidation, tags carry the original
+        # heads. A missing safety branch is allowed only for an already-retired
+        # model whose preservation tag still verifies. Changed safety refs fail.
+        retired = current is None and tag_matches(root, tag, sha)
+        if safety != sha and not (safety is None and retired):
+            raise RuntimeError(f"Safety branch missing or changed: {branch}")
         archive = "archive/endophalon-v1" if branch in MODELS[:3] else "archive/endophalon-v2"
         for destination in (archive, "master"):
             target = refs.get(f"refs/heads/{destination}")
@@ -100,7 +105,7 @@ def finalize(root: Path, *, apply: bool = False) -> None:
         if not tag_matches(root, refs.get(f"refs/tags/{PREFIX}{branch}"), sha):
             raise RuntimeError(f"Backup tag no longer matches: {branch}")
     message = "Six preservation tags verified; six superseded model branches absent.\n"
-    message += "Master, archives, working branches and nine safety branches retained.\n"
+    message += "Master, archives and working branches retained; original heads preserved by tags.\n"
     print(message)
     if summary := os.environ.get("GITHUB_STEP_SUMMARY"):
         with Path(summary).open("a") as output:

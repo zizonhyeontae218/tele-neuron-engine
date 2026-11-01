@@ -9,7 +9,7 @@
 
 ## 브랜치 구성
 
-master는 모델 6종과 ProMax8/16을 모두 포함하는 최신 통합 개발본입니다.
+master는 기존 모델 6종과 ProMax8/16, Endophalon-3를 포함하는 최신 통합 개발본입니다.
 
 | Branch | Role |
 |---|---|
@@ -17,17 +17,18 @@ master는 모델 6종과 ProMax8/16을 모두 포함하는 최신 통합 개발�
 | [archive/endophalon-v1](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v1) | Endophalon / Plus / Pro; generation 1 preservation |
 | [archive/endophalon-v2](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v2) | Endophalon 2 / 2 Pro / 2 ProMax8/16; includes required v1 dependencies |
 
-Original model branches are superseded by these archives. Preservation tags
-`backup/2026-10-31/<original-branch>` now exist for all six original model heads,
-and those six branches have been retired. The `backup/2026-10-31/*` safety
-branches are kept.
-The Claude Volta and iPad Lab branches remain working branches.
-See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
-and [integration audit](docs/integration/2026-10-31.md).
+기존 모델 브랜치는 세대별 archive로 통합했습니다. 임시
+`backup/2026-10-31/*` 브랜치 9개는 master에 재현 자료를 보존한 뒤 정리하며,
+동일한 이름의 태그로 원본 커밋을 유지합니다. 모델·설정·소스·공개 실험 데이터는
+원본 바이트를 보존하고, 구형 [iPad 실험실](ipad_lab.html)도 메인에 추가했습니다.
+Claude Volta, `endophalon3`, iPad Lab, 실험 및 preserve 브랜치는 유지합니다.
 
-원격 태그 생성과 기존 모델 브랜치 6개 정리는
-[Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml)
-워크플로로 이미 완료됐습니다. 다시 실행해도 아무것도 바뀌지 않는 안전한 작업입니다.
+과거 설계 문서와 README 버전은
+[Drive 문서 보존 폴더](https://drive.google.com/drive/folders/14ttCG7AO2yFLp1wu603xrb6m773x-A2s)에 있습니다.
+[모델 실행 명령](docs/model_commands.md), [작업 지침](AGENTS.md),
+[통합 감사 기록](docs/integration/2026-11-01.md)을 참고하세요.
+`python scripts/verify_backup_consolidation.py`로 재현 파일과 이력을 검사합니다.
+기존 Archive Endophalon branches 워크플로는 백업 브랜치 정리 후에도 재실행할 수 있습니다.
 
 ## 프로젝트 개요
 

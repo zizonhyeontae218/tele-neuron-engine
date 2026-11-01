@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10131a">
+  <title>Tele-Neuron iPad Lab</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0d1016;--panel:#151a23;--panel2:#1b2230;--line:#2c3546;--text:#eef3fb;--muted:#9ca9bb;--accent:#63d8c6;--danger:#ff7d8b;--ok:#72e08b;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text)}button,input,textarea{font:inherit}button,.file-button{min-height:44px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--panel2);color:var(--text);cursor:pointer;touch-action:manipulation}button.primary{background:var(--accent);color:#07110f;border-color:transparent;font-weight:800}button:disabled{opacity:.45}input,textarea{width:100%;border:1px solid var(--line);border-radius:10px;background:#0f141c;color:var(--text);padding:10px}textarea{min-height:145px;resize:vertical;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace}input[type=range]{padding:0}input[type=file]{display:none}header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;min-height:64px;padding:10px max(14px,env(safe-area-inset-right)) 10px max(14px,env(safe-area-inset-left));border-bottom:1px solid var(--line);background:rgba(13,16,22,.92);backdrop-filter:blur(18px)}header h1{margin:0;font-size:18px}#status{margin-left:auto;color:var(--muted);font-size:13px;text-align:right}#status.ok{color:var(--ok)}#status.bad{color:var(--danger)}main{display:grid;grid-template-columns:minmax(290px,360px) minmax(0,1fr);gap:14px;padding:14px max(14px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));max-width:1440px;margin:0 auto}.panel{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:14px}.stack{display:grid;gap:10px}.row{display:flex;gap:8px;align-items:center}.row>*{flex:1}.label{color:var(--muted);font-size:12px;margin-bottom:5px;display:block}details{border-top:1px solid var(--line);padding-top:10px}summary{color:var(--muted);cursor:pointer}.workspace{display:grid;gap:14px;align-content:start}.toolbar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric{background:var(--panel2);border-radius:12px;padding:10px;min-height:68px}.metric span{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;margin-top:5px;font-size:20px;color:var(--accent)}.canvas-wrap{position:relative;width:100%;aspect-ratio:4/3;min-height:320px;background:#090c11;border:1px solid var(--line);border-radius:14px;overflow:hidden}canvas{width:100%;height:100%;display:block}.canvas-note{position:absolute;left:10px;bottom:8px;color:var(--muted);font-size:11px;pointer-events:none}table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}th{color:var(--muted);font-weight:600}.good{color:var(--ok)}.bad{color:var(--danger)}pre{margin:0;white-space:pre-wrap;word-break:break-word;color:var(--muted);font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}@media(max-width:860px){main{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.canvas-wrap{min-height:280px}}
+  </style>
+</head>
+<body>
+<header><h1>Tele-Neuron iPad Lab</h1><div id="status">Python 엔진 준비 중…</div></header>
+<main>
+  <section class="panel stack">
+    <div><span class="label">실험 config JSON</span><div class="row"><label class="file-button" for="configFile">파일 선택</label><button id="sampleBtn">XOR 예제</button></div><input id="configFile" type="file" accept="application/json,.json"></div>
+    <textarea id="configJson" spellcheck="false" aria-label="Config JSON"></textarea>
+    <div><span class="label">가중치/model JSON</span><label class="file-button" for="modelFile">파일 선택</label><input id="modelFile" type="file" accept="application/json,.json"></div>
+    <textarea id="modelJson" spellcheck="false" placeholder='{"masses": [1.0, 0.9, ...]} 또는 [1.0, 0.9, ...]' aria-label="Model JSON"></textarea>
+    <div class="row"><label>질량 배율<input id="massScale" type="number" min="0.01" step="0.05" value="1"></label><label>첫 임계값<input id="thresholdOverride" type="number" min="0" step="1" placeholder="config 사용"></label></div>
+    <details><summary>사용 방식</summary><pre>1. config JSON과 masses가 든 모델 JSON을 불러옵니다.
+2. “전체 케이스 채점”으로 정확도와 충돌 수를 확인합니다.
+3. 입력 비트를 적고 “단일 입력 재생”을 누르면 단계별 위치를 볼 수 있습니다.
+
+처음 열 때 Pyodide와 NumPy를 내려받기 위해 인터넷 연결이 필요합니다. 계산은 브라우저 안에서만 수행됩니다.</pre></details>
+  </section>
+  <section class="workspace">
+    <div class="panel stack">
+      <div class="toolbar"><button id="runAllBtn" class="primary" disabled>전체 케이스 채점</button><div class="row"><input id="bitsInput" value="01" inputmode="numeric" aria-label="입력 비트"><button id="runOneBtn" disabled>단일 입력 재생</button></div><button id="downloadBtn" disabled>결과 JSON 저장</button></div>
+      <div class="metrics"><div class="metric"><span>정확도</span><strong id="accuracy">-</strong></div><div class="metric"><span>점수</span><strong id="score">-</strong></div><div class="metric"><span>공 개수</span><strong id="ballCount">-</strong></div><div class="metric"><span>현재 단계</span><strong id="stepMetric">-</strong></div></div>
+    </div>
+    <div class="panel stack"><div class="canvas-wrap"><canvas id="canvas"></canvas><div class="canvas-note">x-y 평면 · 색상은 z 높이 · 점선은 readout</div></div><div class="row"><button id="playBtn" disabled>▶ 재생</button><input id="frameSlider" type="range" min="0" max="0" value="0" disabled aria-label="시뮬레이션 단계"></div></div>
+    <div class="panel stack"><strong>케이스 결과</strong><div style="overflow-x:auto"><table><thead><tr><th>입력</th><th>목표</th><th>출력</th><th>영역 수</th><th>충돌</th><th>판정</th></tr></thead><tbody id="resultRows"><tr><td colspan="6">아직 실행하지 않았습니다.</td></tr></tbody></table></div><pre id="warnings"></pre></div>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script>
+<script>
+const $=id=>document.getElementById(id);let pyodide=null,lastResult=null,frames=[],currentConfig=null,playTimer=null;
+const SAMPLE_CONFIG={name:"tele_neuron_001_xor",task:"XOR",space:{size:[4,4,3]},simulation:{steps:24,dt:1,damping:.99,restitution:.9,cell_size:.5,seed:1},balls:{count:96,mass:1,radius:.08,initial_speed:.05},input:{points:[[.75,.75,1.5],[3.25,.75,1.5]],strength:.08,epsilon:.000001},readout:[{name:"out",center:[2,3.25,1.5],half_extents:[.5,.5,1.5],threshold:3}],cases:[{bits:[0,0],target:0},{bits:[0,1],target:1},{bits:[1,0],target:1},{bits:[1,1],target:0}]};
+const PYTHON_ENGINE=String.raw`
+import json
+from collections import defaultdict
+from itertools import product
+import numpy as np
+
+def normalize_target(value):
+    if isinstance(value, int): return [int(value)]
+    return [int(x) for x in value]
+
+def validate(config, masses):
+    count = int(config["balls"]["count"])
+    if len(masses) != count: raise ValueError(f"masses 길이({len(masses)})가 balls.count({count})와 다릅니다")
+    if any(float(m) <= 0 for m in masses): raise ValueError("모든 masses 값은 0보다 커야 합니다")
+    if len(config["input"]["points"]) == 0: raise ValueError("input.points가 비어 있습니다")
+
+def initialize_state(config, masses):
+    sim, balls = config["simulation"], config["balls"]
+    rng = np.random.default_rng(int(sim["seed"]))
+    space_size = np.array(config["space"]["size"], dtype=np.float64)
+    radius, count = float(balls["radius"]), int(balls["count"])
+    positions = rng.uniform(low=np.full(3, radius), high=space_size-radius, size=(count,3))
+    directions = rng.normal(size=(count,3)); norms = np.linalg.norm(directions, axis=1)
+    directions[norms>0] /= norms[norms>0, np.newaxis]
+    velocities = directions * float(balls["initial_speed"])
+    return positions, velocities, np.array(masses,dtype=np.float64), radius
+
+def input_forces(positions,bits,input_cfg):
+    points,strength,epsilon=input_cfg["points"],float(input_cfg["strength"]),float(input_cfg["epsilon"])
+    if len(bits)>len(points): raise ValueError("입력 비트 수가 input.points보다 많습니다")
+    forces=np.zeros_like(positions,dtype=np.float64)
+    for bit,point in zip(bits,points):
+        if int(bit)==0: continue
+        origin=np.array(point,dtype=np.float64); delta=positions-origin
+        distance_sq=np.sum(delta*delta,axis=1); distance=np.sqrt(np.maximum(distance_sq,epsilon))
+        direction=delta/distance[:,np.newaxis]
+        forces += direction*(strength/np.maximum(distance_sq,epsilon))[:,np.newaxis]
+    return forces
+
+def reflect_bounds(positions,velocities,space_size,radius):
+    lower=np.full(3,radius,dtype=np.float64); upper=np.array(space_size,dtype=np.float64)-radius
+    for axis in range(3):
+        low_hits=positions[:,axis]<lower[axis]; high_hits=positions[:,axis]>upper[axis]
+        positions[low_hits,axis]=lower[axis]; positions[high_hits,axis]=upper[axis]
+        velocities[low_hits|high_hits,axis]*=-1.0
+
+def spatial_hash_candidates(positions,cell_size):
+    cells=defaultdict(list); cell_coords=np.floor(positions/float(cell_size)).astype(np.int64)
+    for index,coord in enumerate(cell_coords): cells[(int(coord[0]),int(coord[1]),int(coord[2]))].append(index)
+    pairs=set()
+    for cell,indexes in cells.items():
+        for offset in product((-1,0,1),repeat=3):
+            neighbor=(cell[0]+offset[0],cell[1]+offset[1],cell[2]+offset[2])
+            for left in indexes:
+                for right in cells.get(neighbor,()):
+                    if left<right: pairs.add((left,right))
+    return sorted(pairs)
+
+def resolve_collisions(positions,velocities,masses,radius,cell_size,restitution,epsilon=1e-9):
+    collision_count=0; min_distance=radius*2.0; min_distance_sq=min_distance*min_distance
+    for left,right in spatial_hash_candidates(positions,cell_size):
+        delta=positions[right]-positions[left]; distance_sq=float(np.dot(delta,delta))
+        if distance_sq<=epsilon or distance_sq>min_distance_sq: continue
+        distance=float(np.sqrt(distance_sq)); normal=delta/distance
+        relative_velocity=velocities[left]-velocities[right]; impact=float(np.dot(relative_velocity,normal))
+        overlap=min_distance-distance
+        if overlap>0:
+            total_mass=masses[left]+masses[right]
+            positions[left]-=normal*overlap*(masses[right]/total_mass)
+            positions[right]+=normal*overlap*(masses[left]/total_mass)
+        if impact<=0: continue
+        impulse=(1.0+restitution)*impact/((1.0/masses[left])+(1.0/masses[right]))
+        velocities[left]-=normal*impulse/masses[left]; velocities[right]+=normal*impulse/masses[right]
+        collision_count+=1
+    return collision_count
+
+def readout_counts(positions,config):
+    counts=[]
+    for zone in config["readout"]:
+        center=np.array(zone["center"],dtype=np.float64); half=np.array(zone["half_extents"],dtype=np.float64)
+        counts.append(int(np.count_nonzero(np.all(np.abs(positions-center)<=half,axis=1))))
+    return counts
+
+def run_case(config,masses,bits,record_frames=False,threshold_override=None):
+    positions,velocities,masses_array,radius=initialize_state(config,masses); sim=config["simulation"]; collisions=0
+    recorded=[positions.tolist()] if record_frames else []
+    for _ in range(int(sim["steps"])):
+        forces=input_forces(positions,bits,config["input"]); acceleration=forces/masses_array[:,np.newaxis]
+        velocities*=float(sim["damping"]); velocities+=acceleration*float(sim["dt"]); positions+=velocities*float(sim["dt"])
+        reflect_bounds(positions,velocities,config["space"]["size"],radius)
+        collisions+=resolve_collisions(positions,velocities,masses_array,radius,float(sim["cell_size"]),float(sim["restitution"]))
+        reflect_bounds(positions,velocities,config["space"]["size"],radius)
+        if record_frames: recorded.append(positions.tolist())
+    counts=readout_counts(positions,config); output=[]
+    for index,(count,zone) in enumerate(zip(counts,config["readout"])):
+        threshold=threshold_override if index==0 and threshold_override is not None else zone["threshold"]
+        output.append(1 if count>=int(threshold) else 0)
+    return {"bits":[int(x) for x in bits],"counts":counts,"output":output,"collisions":collisions,"final_positions":positions.tolist(),"frames":recorded}
+
+def run_payload(payload_json):
+    payload=json.loads(payload_json); config=payload["config"]
+    masses=[float(x)*float(payload.get("mass_scale",1.0)) for x in payload["masses"]]
+    validate(config,masses); threshold_override=payload.get("threshold_override")
+    if payload.get("mode","all")=="one":
+        row=run_case(config,masses,[int(x) for x in payload["bits"]],True,threshold_override)
+        return json.dumps({"mode":"one","case":row})
+    rows=[]; score=0
+    for case in config["cases"]:
+        target=normalize_target(case["target"]); row=run_case(config,masses,case["bits"],False,threshold_override)
+        row["target"]=target; row["correct"]=row["output"]==target; score+=int(row["correct"]); rows.append(row)
+    total=len(rows)
+    return json.dumps({"mode":"all","config_name":config.get("name",""),"task":config.get("task",""),"score":score,"total":total,"accuracy":score/total if total else 0.0,"cases":rows})
+`;
+function setStatus(text,kind=""){$("status").textContent=text;$("status").className=kind}function parseJson(text,label){try{return JSON.parse(text)}catch(e){throw new Error(`${label} JSON 오류: ${e.message}`)}}
+function readPayload(mode){const config=parseJson($("configJson").value,"config"),text=$("modelJson").value.trim();let model=text?parseJson(text,"model"):null,masses;if(Array.isArray(model))masses=model;else if(model&&Array.isArray(model.masses))masses=model.masses;else masses=Array(Number(config.balls.count)).fill(Number(config.balls.mass));const t=$("thresholdOverride").value.trim();return{config,masses,mass_scale:Number($("massScale").value||1),threshold_override:t===""?null:Number(t),mode,bits:mode==="one"?[...$("bitsInput").value.trim()].map(Number):undefined,model_config_name:model&&!Array.isArray(model)?model.config_name:null}}
+function validateBits(p){if(p.mode!=="one")return;if(!p.bits.length||p.bits.some(b=>b!==0&&b!==1))throw new Error("입력 비트는 0과 1로만 입력하세요");if(p.bits.length!==p.config.input.points.length)throw new Error(`입력 비트 수(${p.bits.length})가 input.points(${p.config.input.points.length})와 다릅니다`)}
+async function run(mode){if(!pyodide)return;stopPlayback();try{const p=readPayload(mode);validateBits(p);currentConfig=p.config;$("ballCount").textContent=p.config.balls.count;$("warnings").textContent=p.model_config_name&&p.model_config_name!==p.config.name?`주의: model.config_name(${p.model_config_name})과 config.name(${p.config.name})이 다릅니다.`:"";setStatus("계산 중…");$("runAllBtn").disabled=$("runOneBtn").disabled=true;pyodide.globals.set("tele_payload_json",JSON.stringify(p));const result=JSON.parse(await pyodide.runPythonAsync("run_payload(tele_payload_json)"));lastResult={payload:p,result};$("downloadBtn").disabled=false;mode==="all"?renderAll(result):renderOne(result.case);setStatus("완료","ok")}catch(e){console.error(e);setStatus(e.message||String(e),"bad")}finally{$("runAllBtn").disabled=$("runOneBtn").disabled=false}}
+function renderAll(r){$("accuracy").textContent=`${(r.accuracy*100).toFixed(1)}%`;$("score").textContent=`${r.score}/${r.total}`;renderRows(r.cases);frames=r.cases.length?[r.cases[0].final_positions]:[];configureFrames()}function renderOne(r){$("accuracy").textContent="-";$("score").textContent=r.output.join("");renderRows([{...r,target:[],correct:null}]);frames=r.frames||[r.final_positions];configureFrames()}
+function renderRows(rows){const body=$("resultRows");body.innerHTML="";rows.forEach(r=>{const tr=document.createElement("tr"),verdict=r.correct===null?"-":r.correct?"성공":"실패",klass=r.correct===null?"":r.correct?"good":"bad";tr.innerHTML=`<td>${r.bits.join("")}</td><td>${(r.target||[]).join("")||"-"}</td><td>${r.output.join("")}</td><td>${r.counts.join(", ")}</td><td>${r.collisions}</td><td class="${klass}">${verdict}</td>`;body.appendChild(tr)})}
+function configureFrames(){const s=$("frameSlider");s.max=Math.max(0,frames.length-1);s.value=s.max;s.disabled=frames.length<=1;$("playBtn").disabled=frames.length<=1;drawFrame(Number(s.value))}
+function drawFrame(index){if(!currentConfig||!frames.length)return;const canvas=$("canvas"),rect=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.max(1,Math.round(rect.width*dpr));canvas.height=Math.max(1,Math.round(rect.height*dpr));const ctx=canvas.getContext("2d");ctx.setTransform(dpr,0,0,dpr,0,0);const w=rect.width,h=rect.height,pad=24,space=currentConfig.space.size,sx=(w-pad*2)/space[0],sy=(h-pad*2)/space[1],tx=x=>pad+x*sx,ty=y=>h-pad-y*sy;ctx.fillStyle="#090c11";ctx.fillRect(0,0,w,h);ctx.strokeStyle="#263044";ctx.strokeRect(pad,pad,space[0]*sx,space[1]*sy);for(const zone of currentConfig.readout){const[cx,cy]=zone.center,[hx,hy]=zone.half_extents;ctx.save();ctx.setLineDash([6,5]);ctx.strokeStyle="#63d8c6";ctx.strokeRect(tx(cx-hx),ty(cy+hy),hx*2*sx,hy*2*sy);ctx.restore()}currentConfig.input.points.forEach((point,i)=>{ctx.beginPath();ctx.arc(tx(point[0]),ty(point[1]),6,0,Math.PI*2);ctx.fillStyle="#ffbd69";ctx.fill();ctx.fillStyle="#ffdfb0";ctx.font="11px -apple-system";ctx.fillText(`I${i}`,tx(point[0])+8,ty(point[1])-7)});const radius=Math.max(2,currentConfig.balls.radius*Math.min(sx,sy));for(const[x,y,z]of frames[index]){const hue=210-170*Math.max(0,Math.min(1,z/space[2]));ctx.beginPath();ctx.arc(tx(x),ty(y),radius,0,Math.PI*2);ctx.fillStyle=`hsl(${hue} 80% 65%)`;ctx.fill()}$("stepMetric").textContent=index}
+function stopPlayback(){if(playTimer)clearInterval(playTimer);playTimer=null;$("playBtn").textContent="▶ 재생"}function togglePlayback(){if(playTimer){stopPlayback();return}if(frames.length<=1)return;$("playBtn").textContent="Ⅱ 정지";if(Number($("frameSlider").value)>=frames.length-1)$("frameSlider").value=0;playTimer=setInterval(()=>{const next=Number($("frameSlider").value)+1;if(next>=frames.length){stopPlayback();return}$("frameSlider").value=next;drawFrame(next)},120)}
+function downloadResult(){if(!lastResult)return;const blob=new Blob([JSON.stringify(lastResult,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=`tele-neuron-ipad-result-${Date.now()}.json`;a.click();URL.revokeObjectURL(url)}async function loadFile(input,target){const f=input.files[0];if(f)$(target).value=await f.text()}
+async function boot(){$("configJson").value=JSON.stringify(SAMPLE_CONFIG,null,2);try{pyodide=await loadPyodide();await pyodide.loadPackage("numpy");await pyodide.runPythonAsync(PYTHON_ENGINE);$("runAllBtn").disabled=$("runOneBtn").disabled=false;$("ballCount").textContent=SAMPLE_CONFIG.balls.count;setStatus("준비 완료","ok")}catch(e){console.error(e);setStatus("Python 엔진 로드 실패: 인터넷 연결을 확인하세요","bad")}}
+$("sampleBtn").onclick=()=>$("configJson").value=JSON.stringify(SAMPLE_CONFIG,null,2);$("configFile").onchange=()=>loadFile($("configFile"),"configJson");$("modelFile").onchange=()=>loadFile($("modelFile"),"modelJson");$("runAllBtn").onclick=()=>run("all");$("runOneBtn").onclick=()=>run("one");$("downloadBtn").onclick=downloadResult;$("frameSlider").oninput=()=>{stopPlayback();drawFrame(Number($("frameSlider").value))};$("playBtn").onclick=togglePlayback;addEventListener("resize",()=>drawFrame(Number($("frameSlider").value)));boot();
+</script>
+</body>
+</html>

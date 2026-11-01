@@ -8,10 +8,11 @@
 - `CLAUDE.md` — Claude working context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Endophalon repository consolidation — 2026-10-31.
+- `GOAL.md` — Backup consolidation — 2026-11-01.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
+- `ipad_lab.html` — Contains ipad lab data.
 - `pyproject.toml` — Defines Python project configuration and dependencies.
 - `requirements.txt` — Contains requirements data.
 
@@ -59,10 +60,10 @@
 
 ## `configs/endophalon3`
 
-- `level_a.json` — Endophalon-3 level A config (binary opcode).
-- `level_a_onehot.json` — Endophalon-3 level A config (one-hot opcode).
-- `level_b.json` — Endophalon-3 level B config (binary opcode).
-- `level_b_onehot.json` — Endophalon-3 level B config (one-hot opcode).
+- `level_a.json` — Stores structured data for level a.
+- `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_b.json` — Stores structured data for level b.
+- `level_b_onehot.json` — Stores structured data for level b onehot.
 
 ## `configs/endophalon_plus`
 
@@ -88,8 +89,8 @@
 - `endophalon2_pro.md` — Teleneuron-Endophalon-2-Pro.
 - `endophalon2_pro_ablation.json` — Stores structured data for endophalon2 pro ablation.
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
-- `endophalon3.md` — Teleneuron-Endophalon-3 design (base, untrained).
-- `endophalon3_handoff.md` — Endophalon-3 training method, run order and know-how.
+- `endophalon3.md` — Teleneuron-Endophalon-3 (base, untrained).
+- `endophalon3_handoff.md` — Endophalon-3 handoff: how to train it, and what we learned.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
 - `endophalon_pro.md` — Teleneuron-Endophalon-Pro.
@@ -122,14 +123,16 @@
 
 ## `docs/endophalon3_probes`
 
-- `level_a.json` — Untrained capacity probe, level A binary.
-- `level_a_onehot.json` — Untrained capacity probe, level A one-hot.
-- `level_b.json` — Untrained capacity probe, level B binary.
-- `level_b_onehot.json` — Untrained capacity probe, level B one-hot.
+- `level_a.json` — Stores structured data for level a.
+- `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_b.json` — Stores structured data for level b.
+- `level_b_onehot.json` — Stores structured data for level b onehot.
 
 ## `docs/integration`
 
 - `2026-10-31.md` — Endophalon consolidation audit — 2026-10-31.
+- `2026-11-01.md` — Backup consolidation — 2026-11-01.
+- `backup-consolidation-2026-11-01.json` — Stores structured data for backup consolidation 2026 11 01.
 - `original-heads.json` — Stores structured data for original heads.
 - `promax-replay.jsonl` — Contains promax replay data.
 - `xor-replay.txt` — Contains xor replay data.
@@ -168,7 +171,7 @@
 
 ## `models/endophalon3`
 
-- `.gitkeep` — Placeholder; no Endophalon-3 model has been trained yet.
+- `.gitkeep` — Contains .gitkeep data.
 
 ## `models/endophalon_plus`
 
@@ -192,7 +195,9 @@
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
+- `retire_backup_refs.py` — Retire only the nine owner-authorized 2026-10-31 backup branches.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
+- `verify_backup_consolidation.py` — Read-only verification of the 2026-11-01 backup consolidation.
 
 ## `src/tele_neuron`
 
@@ -262,13 +267,13 @@
 
 ## `src/tele_neuron/endophalon3`
 
-- `__init__.py` — Teleneuron-Endophalon-3 package (base, untrained).
-- `__main__.py` — CLI: probe or train level A / B.
-- `config.py` — Endophalon-3 config parsing.
-- `core.py` — Collection, single readout, controls, bilevel training, probe.
-- `engine.py` — Spring engine with slow region and readout-only recording.
-- `isa.py` — Instruction set: level -> operation -> data.
-- `theta.py` — Physics parameters including the slow region.
+- `__init__.py` — Teleneuron-Endophalon-3: an instruction-driven physical computer (base, untrained).
+- `__main__.py` — python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json [--probe | train options].
+- `config.py` — Defines the E3Config class.
+- `core.py` — Endophalon-3 collection, single-readout scoring, controls and bilevel training.
+- `engine.py` — Endophalon-3 engine: the Endophalon-2-Pro spring integrator, plus a slow region and readout-only recording.
+- `isa.py` — Endophalon-3 instruction set: level -> operation -> data, all carried by the input.
+- `theta.py` — Endophalon-3 theta: Endophalon-2-Pro spring physics plus a slow region.
 
 ## `src/tele_neuron/endophalon_plus`
 
@@ -319,7 +324,7 @@
 - `test_endophalon2.py` — Provides the _config function.
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
-- `test_endophalon3.py` — Endophalon-3 ISA, engine equivalence, probe and training tests.
+- `test_endophalon3.py` — Provides the _small function.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
 - `test_learner.py` — Provides the test_algorithm_files_are_discoverable function.
@@ -328,4 +333,5 @@
 - `test_physics.py` — Provides the test_initialize_state_is_deterministic function.
 - `test_plus_engine.py` — Provides the _small_world function.
 - `test_readout.py` — Provides the test_readout_count_and_threshold function.
+- `test_retire_backup_refs.py` — Exercise the nine-backup transaction against a disposable bare remote.
 - `test_trainer.py` — Provides the test_run_cases_returns_all_config_cases function.

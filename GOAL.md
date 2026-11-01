@@ -1,14 +1,16 @@
-# Endophalon repository consolidation — 2026-10-31
+# Backup consolidation — 2026-11-01
 
-Preserve the six independent model families and their history, configs, cards,
-experiments and tests; consolidate generation archives and update master through
-ProMax8/16 without changing scientific implementations.
+Preserve reproducibility while removing the nine temporary backup branches.
 
-- master: active integrated development; archive/endophalon-v1: generation 1;
-  archive/endophalon-v2: generation 2 plus shared and generation-1 dependencies.
-- Keep Claude Volta and iPad Lab work, with synchronized agent guidance.
-- Preserve every original head remotely before moving existing refs.
-- Validate full pytest, all model entry points and both ProMax variants.
-- Delete only the six superseded model branches, only after verified backup tags.
-- No force push, history rewriting, retraining overwrite, or architecture redesign.
-- Evidence and remaining blockers: docs/integration/2026-10-31.md.
+- Keep model cards, source, configs, task definitions, seeds and published data
+  byte-identical on master. Restore the original standalone ipad_lab.html.
+- Preserve historical design documents and README versions in Drive, with a
+  per-file Git-blob manifest and a verified ZIP SHA-256.
+- Keep all nine original heads reachable through master and immutable tags.
+- Delete only the nine audited backup/2026-10-31/* branches after verification.
+- Retain Claude, endophalon3, archives, iPad Lab, experiment and preserve branches.
+- No retraining, experiment PR merge, force push or history rewriting.
+- Audit and document archive: docs/integration/2026-11-01.md.
+
+The preceding six-model integration remains documented in
+docs/integration/2026-10-31.md.

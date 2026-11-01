@@ -6,3 +6,7 @@ The canonical development branch is `master`; generation snapshots live at
 `archive/endophalon-v1` and `archive/endophalon-v2`.
 Run `python -m pytest -q` and `python scripts/smoke_models.py` before proposing
 model or configuration changes. Preserve all published cards and experiment logs.
+
+Backup consolidation: see docs/integration/2026-11-01.md. Keep Claude and
+endophalon3 branches. Historical documents are in Drive; all backup model and
+reproduction files are preserved on master with immutable original-head tags.

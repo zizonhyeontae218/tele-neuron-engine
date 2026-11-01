@@ -12,7 +12,7 @@ replacement.
 
 ## Repository branches
 
-Active development includes all six model families and both ProMax sizes.
+Active development includes the six v1/v2 model families, both ProMax sizes and Endophalon-3.
 
 | Branch | Role |
 |---|---|
@@ -20,16 +20,20 @@ Active development includes all six model families and both ProMax sizes.
 | [archive/endophalon-v1](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v1) | Endophalon / Plus / Pro; generation 1 preservation |
 | [archive/endophalon-v2](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/archive/endophalon-v2) | Endophalon 2 / 2 Pro / 2 ProMax8/16; includes required v1 dependencies |
 
-Original model branches are superseded by these archives. Preservation tags
-`backup/2026-10-31/<original-branch>` now exist for all six original model heads,
-and those six branches have been retired. The `backup/2026-10-31/*` safety
-branches are kept.
-The Claude Volta and iPad Lab branches remain working branches.
-See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
-and [integration audit](docs/integration/2026-10-31.md).
+Original model branches are superseded by the generation archives. The nine
+`backup/2026-10-31/*` temporary branches are consolidated into master and retired;
+immutable tags with those names preserve their original heads. All original
+model cards and reproduction files remain byte-identical. The historical
+standalone [iPad Lab](ipad_lab.html) is also available directly on master.
+Claude Volta, `endophalon3`, iPad Lab, experiment and preserve branches are retained.
 
-The manual [Archive Endophalon branches](https://github.com/zizonhyeontae218/tele-neuron-engine/actions/workflows/archive-endophalon.yml)
-workflow that did this stays available. Re-running it is a safe no-op.
+Historical design documents and README versions are preserved in the
+[Drive document archive](https://drive.google.com/drive/folders/14ttCG7AO2yFLp1wu603xrb6m773x-A2s).
+See [model commands](docs/model_commands.md), [agent instructions](AGENTS.md),
+and the [consolidation audit](docs/integration/2026-11-01.md).
+Run `python scripts/verify_backup_consolidation.py` for the content/history check.
+The legacy Archive Endophalon branches workflow remains safe to rerun after
+backup-branch retirement.
 
 ## What This Is
 
