@@ -1,0 +1,27 @@
+{
+  "name": "b_onehot_s2",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-u",
+    "-m",
+    "tele_neuron.endophalon3",
+    "--config",
+    "configs/endophalon3/level_b_onehot.json",
+    "--seed",
+    "2",
+    "--workers",
+    "4",
+    "--output",
+    "models/endophalon3/20261031_b_onehot_s2.json"
+  ],
+  "start_utc": "2026-10-31T09:41:12.306333+00:00",
+  "base_sha": "1425d63fafee8a3ab5127b59a51324600fed00e3",
+  "checkout_sha": "2df14391e71967bcde82a28b72e0d8269f72d2b9",
+  "search_seed": 2,
+  "physics_and_dataset_seed": 1,
+  "generations": 40,
+  "population": 24,
+  "workers": 4,
+  "chunk_size": 96,
+  "status": "running"
+}

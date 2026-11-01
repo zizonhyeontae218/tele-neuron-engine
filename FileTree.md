@@ -8,11 +8,10 @@
 - `CLAUDE.md` — Claude working context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Backup consolidation — 2026-11-01.
+- `GOAL.md` — Endophalon 3 — routing bottleneck experiment.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
-- `ipad_lab.html` — Contains ipad lab data.
 - `pyproject.toml` — Defines Python project configuration and dependencies.
 - `requirements.txt` — Contains requirements data.
 
@@ -62,6 +61,7 @@
 
 - `level_a.json` — Stores structured data for level a.
 - `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_a_routing.json` — Stores structured data for level a routing.
 - `level_b.json` — Stores structured data for level b.
 - `level_b_onehot.json` — Stores structured data for level b onehot.
 
@@ -89,8 +89,11 @@
 - `endophalon2_pro.md` — Teleneuron-Endophalon-2-Pro.
 - `endophalon2_pro_ablation.json` — Stores structured data for endophalon2 pro ablation.
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
-- `endophalon3.md` — Teleneuron-Endophalon-3 (base, untrained).
+- `endophalon3.md` — Teleneuron-Endophalon-3 (training experiments).
 - `endophalon3_handoff.md` — Endophalon-3 handoff: how to train it, and what we learned.
+- `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
+- `endophalon3_routing_report.ko.md` — Endophalon 3 — 공유 판독 병목 실험.
+- `endophalon3_training_report.ko.md` — Endophalon 3 — 학습 실험 및 성능 검증 보고서.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
 - `endophalon_pro.md` — Teleneuron-Endophalon-Pro.
@@ -128,11 +131,126 @@
 - `level_b.json` — Stores structured data for level b.
 - `level_b_onehot.json` — Stores structured data for level b onehot.
 
+## `docs/endophalon3_routing_runs`
+
+- `a_binary_s1.evaluation.json` — Stores structured data for a binary s1.evaluation.
+- `a_binary_s1.log` — Contains a binary s1 data.
+- `a_binary_s1.post_diagnosis.json` — Stores structured data for a binary s1.post diagnosis.
+- `a_binary_s1.run.json` — Stores structured data for a binary s1.run.
+- `a_binary_s2.evaluation.json` — Stores structured data for a binary s2.evaluation.
+- `a_binary_s2.log` — Contains a binary s2 data.
+- `a_binary_s2.post_diagnosis.json` — Stores structured data for a binary s2.post diagnosis.
+- `a_binary_s2.run.json` — Stores structured data for a binary s2.run.
+- `artifact_manifest.json` — Stores structured data for artifact manifest.
+- `baseline_confirmation.json` — Stores structured data for baseline confirmation.
+- `baseline_preservation.json` — Stores structured data for baseline preservation.
+- `controller.log` — Contains controller data.
+- `diagnosis.log` — Contains diagnosis data.
+- `gate.json` — Stores structured data for gate.
+- `legacy_validation.json` — Stores structured data for legacy validation.
+- `pytest.log` — Contains pytest data.
+
+## `docs/endophalon3_routing_runs/diagnosis`
+
+- `a_binary_s1.json` — Stores structured data for a binary s1.
+- `a_binary_s2.json` — Stores structured data for a binary s2.
+- `a_no_regions_s1.json` — Stores structured data for a no regions s1.
+- `a_no_regions_s2.json` — Stores structured data for a no regions s2.
+- `a_onehot_s1.json` — Stores structured data for a onehot s1.
+- `b_binary_s1.json` — Stores structured data for b binary s1.
+- `b_binary_s2.json` — Stores structured data for b binary s2.
+- `b_onehot_s1.json` — Stores structured data for b onehot s1.
+- `b_onehot_s2.json` — Stores structured data for b onehot s2.
+- `initial_level_a.json` — Stores structured data for initial level a.
+- `initial_level_a_onehot.json` — Stores structured data for initial level a onehot.
+- `initial_level_b.json` — Stores structured data for initial level b.
+- `initial_level_b_onehot.json` — Stores structured data for initial level b onehot.
+- `summary.json` — Stores structured data for summary.
+
+## `docs/endophalon3_runs/20261031-training`
+
+- `a_binary_s1.audit.json` — Stores structured data for a binary s1.audit.
+- `a_binary_s1.log` — Contains a binary s1 data.
+- `a_binary_s1.predictions.csv` — Contains a binary s1.predictions data.
+- `a_binary_s1.run.json` — Stores structured data for a binary s1.run.
+- `a_binary_s2.audit.json` — Stores structured data for a binary s2.audit.
+- `a_binary_s2.log` — Contains a binary s2 data.
+- `a_binary_s2.predictions.csv` — Contains a binary s2.predictions data.
+- `a_binary_s2.run.json` — Stores structured data for a binary s2.run.
+- `a_no_regions_s1.audit.json` — Stores structured data for a no regions s1.audit.
+- `a_no_regions_s1.log` — Contains a no regions s1 data.
+- `a_no_regions_s1.predictions.csv` — Contains a no regions s1.predictions data.
+- `a_no_regions_s1.run.json` — Stores structured data for a no regions s1.run.
+- `a_no_regions_s2.audit.json` — Stores structured data for a no regions s2.audit.
+- `a_no_regions_s2.log` — Contains a no regions s2 data.
+- `a_no_regions_s2.predictions.csv` — Contains a no regions s2.predictions data.
+- `a_no_regions_s2.run.json` — Stores structured data for a no regions s2.run.
+- `a_onehot_s1.audit.json` — Stores structured data for a onehot s1.audit.
+- `a_onehot_s1.log` — Contains a onehot s1 data.
+- `a_onehot_s1.predictions.csv` — Contains a onehot s1.predictions data.
+- `a_onehot_s1.run.json` — Stores structured data for a onehot s1.run.
+- `ablation_initial_comparison.json` — Stores structured data for ablation initial comparison.
+- `ablation_initial_probe.json` — Stores structured data for ablation initial probe.
+- `ablation_initial_probe.log` — Contains ablation initial probe data.
+- `accuracy.csv` — Contains accuracy data.
+- `artifact_manifest.json` — Stores structured data for artifact manifest.
+- `b_binary_s1.audit.json` — Stores structured data for b binary s1.audit.
+- `b_binary_s1.log` — Contains b binary s1 data.
+- `b_binary_s1.predictions.csv` — Contains b binary s1.predictions data.
+- `b_binary_s1.run.json` — Stores structured data for b binary s1.run.
+- `b_binary_s2.audit.json` — Stores structured data for b binary s2.audit.
+- `b_binary_s2.log` — Contains b binary s2 data.
+- `b_binary_s2.predictions.csv` — Contains b binary s2.predictions data.
+- `b_binary_s2.run.json` — Stores structured data for b binary s2.run.
+- `b_onehot_s1.audit.json` — Stores structured data for b onehot s1.audit.
+- `b_onehot_s1.log` — Contains b onehot s1 data.
+- `b_onehot_s1.predictions.csv` — Contains b onehot s1.predictions data.
+- `b_onehot_s1.run.json` — Stores structured data for b onehot s1.run.
+- `b_onehot_s2.audit.json` — Stores structured data for b onehot s2.audit.
+- `b_onehot_s2.log` — Contains b onehot s2 data.
+- `b_onehot_s2.predictions.csv` — Contains b onehot s2.predictions data.
+- `b_onehot_s2.run.json` — Stores structured data for b onehot s2.run.
+- `bootstrap_pytest_missing.log` — Contains bootstrap pytest missing data.
+- `closeout_recovery.json` — Stores structured data for closeout recovery.
+- `dependency_install_attempt.log` — Contains dependency install attempt data.
+- `environment.json` — Stores structured data for environment.
+- `interrupted_runs.json` — Stores structured data for interrupted runs.
+- `phase0_complete.json` — Stores structured data for phase0 complete.
+- `phase0_direct_commands.json` — Stores structured data for phase0 direct commands.
+- `preservation.json` — Stores structured data for preservation.
+- `probe_comparison.json` — Stores structured data for probe comparison.
+- `promax_replay.jsonl` — Contains promax replay data.
+- `pytest.log` — Contains pytest data.
+- `recovery_audit.log` — Contains recovery audit data.
+- `recovery_audit_v2.log` — Contains recovery audit v2 data.
+- `recovery_verification.json` — Stores structured data for recovery verification.
+- `recovery_verification_v1.json` — Stores structured data for recovery verification v1.
+- `slow_region_ablation.json` — Stores structured data for slow region ablation.
+- `smoke.log` — Contains smoke data.
+- `summary.json` — Stores structured data for summary.
+- `training_artifact_preservation.json` — Stores structured data for training artifact preservation.
+
+## `docs/endophalon3_runs/20261031-training/cloud-attempts-recovered`
+
+- `b_onehot_s1.log` — Contains b onehot s1 data.
+- `b_onehot_s1.run.json` — Stores structured data for b onehot s1.run.
+- `b_onehot_s2.log` — Contains b onehot s2 data.
+- `b_onehot_s2.run.json` — Stores structured data for b onehot s2.run.
+
+## `docs/endophalon3_runs/20261031-training/probes`
+
+- `level_a.json` — Stores structured data for level a.
+- `level_a.log` — Contains level a data.
+- `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_a_onehot.log` — Contains level a onehot data.
+- `level_b.json` — Stores structured data for level b.
+- `level_b.log` — Contains level b data.
+- `level_b_onehot.json` — Stores structured data for level b onehot.
+- `level_b_onehot.log` — Contains level b onehot data.
+
 ## `docs/integration`
 
 - `2026-10-31.md` — Endophalon consolidation audit — 2026-10-31.
-- `2026-11-01.md` — Backup consolidation — 2026-11-01.
-- `backup-consolidation-2026-11-01.json` — Stores structured data for backup consolidation 2026 11 01.
 - `original-heads.json` — Stores structured data for original heads.
 - `promax-replay.jsonl` — Contains promax replay data.
 - `xor-replay.txt` — Contains xor replay data.
@@ -172,6 +290,20 @@
 ## `models/endophalon3`
 
 - `.gitkeep` — Contains .gitkeep data.
+- `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
+- `20261031_a_binary_s2.json` — Stores structured data for 20261031 a binary s2.
+- `20261031_a_no_regions_s1.json` — Stores structured data for 20261031 a no regions s1.
+- `20261031_a_no_regions_s2.json` — Stores structured data for 20261031 a no regions s2.
+- `20261031_a_onehot_s1.json` — Stores structured data for 20261031 a onehot s1.
+- `20261031_b_binary_s1.json` — Stores structured data for 20261031 b binary s1.
+- `20261031_b_binary_s2.json` — Stores structured data for 20261031 b binary s2.
+- `20261031_b_onehot_s1.json` — Stores structured data for 20261031 b onehot s1.
+- `20261031_b_onehot_s2.json` — Stores structured data for 20261031 b onehot s2.
+
+## `models/endophalon3_routing`
+
+- `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
+- `20261031_a_binary_s2.json` — Stores structured data for 20261031 a binary s2.
 
 ## `models/endophalon_plus`
 
@@ -194,10 +326,14 @@
 ## `scripts`
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
+- `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
+- `diagnose_endophalon3_routing.py` — Diagnose frozen Endophalon-3 states on train/validation only; no theta search.
+- `recover_endophalon3.py` — Recover only the two infrastructure-interrupted experiments; scientific code is unchanged.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
-- `retire_backup_refs.py` — Retire only the nine owner-authorized 2026-10-31 backup branches.
+- `run_endophalon3_routing.py` — Run the predeclared routing-loss experiment and verify saved A models.
+- `run_endophalon3_training.py` — Run the fixed Endophalon-3 experiment matrix through the existing model CLI.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
-- `verify_backup_consolidation.py` — Read-only verification of the 2026-11-01 backup consolidation.
+- `summarize_endophalon3_training.py` — Build evidence tables and a Korean research report from completed audits.
 
 ## `src/tele_neuron`
 
@@ -325,6 +461,7 @@
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
 - `test_endophalon3.py` — Provides the _small function.
+- `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
 - `test_learner.py` — Provides the test_algorithm_files_are_discoverable function.
@@ -333,5 +470,4 @@
 - `test_physics.py` — Provides the test_initialize_state_is_deterministic function.
 - `test_plus_engine.py` — Provides the _small_world function.
 - `test_readout.py` — Provides the test_readout_count_and_threshold function.
-- `test_retire_backup_refs.py` — Exercise the nine-backup transaction against a disposable bare remote.
 - `test_trainer.py` — Provides the test_run_cases_returns_all_config_cases function.

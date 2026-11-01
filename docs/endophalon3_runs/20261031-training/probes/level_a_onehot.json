@@ -1,0 +1,32 @@
+{
+  "config": "configs/endophalon3/level_a_onehot.json",
+  "regions": {
+    "axis": 1,
+    "threshold": 3.0
+  },
+  "finite": true,
+  "zones_single": {
+    "accuracy": 0.7291666666666666,
+    "per_op": {
+      "xor": 0.9539748953974896,
+      "recall1": 0.594488188976378,
+      "recall2": 0.5641025641025641,
+      "xor_mem": 0.8111587982832618
+    }
+  },
+  "nodes_single": {
+    "accuracy": 0.8989583333333333,
+    "per_op": {
+      "xor": 0.9163179916317992,
+      "recall1": 0.8976377952755905,
+      "recall2": 0.8333333333333334,
+      "xor_mem": 0.9484978540772532
+    }
+  },
+  "nodes_separate_per_op": {
+    "xor": 1.0,
+    "recall1": 1.0,
+    "recall2": 1.0,
+    "xor_mem": 1.0
+  }
+}

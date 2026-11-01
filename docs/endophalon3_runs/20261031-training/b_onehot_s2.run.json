@@ -1,0 +1,44 @@
+{
+  "name": "b_onehot_s2",
+  "argv": [
+    "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+    "-u",
+    "-m",
+    "tele_neuron.endophalon3",
+    "--config",
+    "configs/endophalon3/level_b_onehot.json",
+    "--seed",
+    "2",
+    "--workers",
+    "4",
+    "--output",
+    "models/endophalon3/20261031_b_onehot_s2.json"
+  ],
+  "start_utc": "2026-10-31T10:01:00.917003+00:00",
+  "base_sha": "1425d63fafee8a3ab5127b59a51324600fed00e3",
+  "checkout_sha": "dde0857678236d8651b19fa4390da7faa0b58a75",
+  "search_seed": 2,
+  "physics_and_dataset_seed": 1,
+  "generations": 40,
+  "population": 24,
+  "workers": 4,
+  "chunk_size": 96,
+  "status": "completed",
+  "attempt": "github-actions-recovery-from-original-theta-init",
+  "prior_attempt": "infrastructure lost; at least 25 generations observed; no final theta/readout recovered",
+  "environment": {
+    "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+    "cpu_count": 4,
+    "packages": {
+      "numpy": "2.3.5",
+      "matplotlib": "3.10.8",
+      "pytest": "9.2.0"
+    }
+  },
+  "workflow_url": "https://github.com/zizonhyeontae218/tele-neuron-engine/actions/runs/41190981201",
+  "returncode": 0,
+  "seconds": 946.702960503,
+  "end_utc": "2026-10-31T10:16:47.627600+00:00",
+  "card": "models/endophalon3/20261031_b_onehot_s2.json"
+}

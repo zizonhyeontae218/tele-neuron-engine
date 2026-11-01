@@ -1,0 +1,652 @@
+{
+  "a_binary_s1": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/a_binary_s1.json",
+    "card_sha256": "5ab5fd3f99ea8fbab753debe39575e0197a37e0fd55a7818b51b80ad6a5a5b62",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.79375,
+        "mse": 0.13674132498146083,
+        "worst_op_mse": 0.1654660580052681
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.79375,
+        "mse": 0.13844097834179692,
+        "worst_op_mse": 0.16840016592190704
+      },
+      "shared_nodes": {
+        "accuracy": 0.7770833333333333,
+        "mse": 0.15703018904786306,
+        "worst_op_mse": 0.21944729687304765
+      },
+      "shared_history": {
+        "accuracy": 0.65,
+        "mse": 0.21481498890232043,
+        "worst_op_mse": 0.3002947289675883
+      },
+      "separate_zones": {
+        "accuracy": 0.9916666666666667,
+        "mse": 0.04127688726170778,
+        "worst_op_mse": 0.06769181296103421
+      },
+      "separate_nodes": {
+        "accuracy": 0.9875,
+        "mse": 0.02060807354014211,
+        "worst_op_mse": 0.06551934919445292
+      },
+      "separate_history": {
+        "accuracy": 0.7104166666666667,
+        "mse": 0.11580901422749558,
+        "worst_op_mse": 0.2560537164674966
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9833333333333333,
+        "mse": 0.047415284152228836,
+        "worst_op_mse": 0.07157047463378496
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.9854166666666667,
+      "nodes": 1.0
+    }
+  },
+  "a_binary_s2": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/a_binary_s2.json",
+    "card_sha256": "e8f929e5b04236239095a28146fe8a443b7f9ed3f5480dd1062de5da72ca98b4",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.8875,
+        "mse": 0.09911894113541475,
+        "worst_op_mse": 0.19162224564193836
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.88125,
+        "mse": 0.09937945907999773,
+        "worst_op_mse": 0.1931727337022186
+      },
+      "shared_nodes": {
+        "accuracy": 0.8708333333333333,
+        "mse": 0.11488408776942703,
+        "worst_op_mse": 0.1379799109676266
+      },
+      "shared_history": {
+        "accuracy": 0.65,
+        "mse": 0.21481498890232043,
+        "worst_op_mse": 0.3002947289675883
+      },
+      "separate_zones": {
+        "accuracy": 0.9479166666666666,
+        "mse": 0.056515302405303086,
+        "worst_op_mse": 0.13586852330673085
+      },
+      "separate_nodes": {
+        "accuracy": 0.99375,
+        "mse": 0.012955643893083572,
+        "worst_op_mse": 0.028851465389445673
+      },
+      "separate_history": {
+        "accuracy": 0.7104166666666667,
+        "mse": 0.11580901422749558,
+        "worst_op_mse": 0.2560537164674966
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9458333333333333,
+        "mse": 0.05643759288706017,
+        "worst_op_mse": 0.13689894630654162
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.8541666666666666,
+      "nodes": 1.0
+    }
+  },
+  "a_no_regions_s1": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/a_no_regions_s1.json",
+    "card_sha256": "b054f26bb0fd7ba91710233816bde87b7dc3862f5114621fc04d256c62185503",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.8520833333333333,
+        "mse": 0.12173215517825782,
+        "worst_op_mse": 0.15190094040568083
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.8645833333333334,
+        "mse": 0.12024155882470496,
+        "worst_op_mse": 0.1519637446208273
+      },
+      "shared_nodes": {
+        "accuracy": 0.8375,
+        "mse": 0.12097797207114762,
+        "worst_op_mse": 0.19687105795368956
+      },
+      "shared_history": {
+        "accuracy": 0.65,
+        "mse": 0.21481498890232043,
+        "worst_op_mse": 0.3002947289675883
+      },
+      "separate_zones": {
+        "accuracy": 0.9625,
+        "mse": 0.05429469551058529,
+        "worst_op_mse": 0.12270516831595571
+      },
+      "separate_nodes": {
+        "accuracy": 1.0,
+        "mse": 0.006712331696429606,
+        "worst_op_mse": 0.009906366085182399
+      },
+      "separate_history": {
+        "accuracy": 0.7104166666666667,
+        "mse": 0.11580901422749558,
+        "worst_op_mse": 0.2560537164674966
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9291666666666667,
+        "mse": 0.07492421441191795,
+        "worst_op_mse": 0.15748216525622777
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.9958333333333333,
+      "nodes": 1.0
+    }
+  },
+  "a_no_regions_s2": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/a_no_regions_s2.json",
+    "card_sha256": "07080b574b607511b6c190a7200fdb5847d1b68dcbb3dc17f1df1216547301d1",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.8875,
+        "mse": 0.11412811856523737,
+        "worst_op_mse": 0.17358319437261802
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.88125,
+        "mse": 0.11629019656606901,
+        "worst_op_mse": 0.1741096564287956
+      },
+      "shared_nodes": {
+        "accuracy": 0.8145833333333333,
+        "mse": 0.14608811526099477,
+        "worst_op_mse": 0.18815596823026898
+      },
+      "shared_history": {
+        "accuracy": 0.65,
+        "mse": 0.21481498890232043,
+        "worst_op_mse": 0.3002947289675883
+      },
+      "separate_zones": {
+        "accuracy": 0.9354166666666667,
+        "mse": 0.06923358787446827,
+        "worst_op_mse": 0.14751556192201645
+      },
+      "separate_nodes": {
+        "accuracy": 0.9979166666666667,
+        "mse": 0.01641370749454886,
+        "worst_op_mse": 0.028214788020300915
+      },
+      "separate_history": {
+        "accuracy": 0.7104166666666667,
+        "mse": 0.11580901422749558,
+        "worst_op_mse": 0.2560537164674966
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9270833333333334,
+        "mse": 0.09190429891542351,
+        "worst_op_mse": 0.191010297863897
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.8895833333333333,
+      "nodes": 1.0
+    }
+  },
+  "a_onehot_s1": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/a_onehot_s1.json",
+    "card_sha256": "3dcd8434f7de2fa0fbd1a65b1384cbb93c9695ee3accc54f87eb58c85a4af7b2",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.8958333333333334,
+        "mse": 0.0969311784021452,
+        "worst_op_mse": 0.15560755042053015
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.8875,
+        "mse": 0.098398750566408,
+        "worst_op_mse": 0.14343729304587818
+      },
+      "shared_nodes": {
+        "accuracy": 0.9020833333333333,
+        "mse": 0.09073542334496679,
+        "worst_op_mse": 0.1296097947345704
+      },
+      "shared_history": {
+        "accuracy": 0.6416666666666667,
+        "mse": 0.21556436245908855,
+        "worst_op_mse": 0.3048589612080474
+      },
+      "separate_zones": {
+        "accuracy": 0.9708333333333333,
+        "mse": 0.04008524209767787,
+        "worst_op_mse": 0.09468319733320472
+      },
+      "separate_nodes": {
+        "accuracy": 1.0,
+        "mse": 0.002543365024325367,
+        "worst_op_mse": 0.004824719428458327
+      },
+      "separate_history": {
+        "accuracy": 0.7104166666666667,
+        "mse": 0.11580901422749555,
+        "worst_op_mse": 0.2560537164674966
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9458333333333333,
+        "mse": 0.06743716424837812,
+        "worst_op_mse": 0.14355829310991874
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.8770833333333333,
+      "nodes": 1.0
+    }
+  },
+  "b_binary_s1": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/b_binary_s1.json",
+    "card_sha256": "42cb43569797306fa806618ce1aa19f357442279369b4c5b44fb014d73cfd3a8",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.76875,
+        "mse": 0.15611137583922338,
+        "worst_op_mse": 0.23697664287038672
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.7645833333333333,
+        "mse": 0.15556639716038148,
+        "worst_op_mse": 0.23724061783357642
+      },
+      "shared_nodes": {
+        "accuracy": 0.7083333333333334,
+        "mse": 0.19072472720624892,
+        "worst_op_mse": 0.32888391363391384
+      },
+      "shared_history": {
+        "accuracy": 0.6645833333333333,
+        "mse": 0.2238425783142509,
+        "worst_op_mse": 0.2990573180220283
+      },
+      "separate_zones": {
+        "accuracy": 0.84375,
+        "mse": 0.10529824879209304,
+        "worst_op_mse": 0.24320631952909333
+      },
+      "separate_nodes": {
+        "accuracy": 0.9645833333333333,
+        "mse": 0.04016009285109194,
+        "worst_op_mse": 0.24996198366801778
+      },
+      "separate_history": {
+        "accuracy": 0.8020833333333334,
+        "mse": 0.11774224470166432,
+        "worst_op_mse": 0.2887896745784505
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.8416666666666667,
+        "mse": 0.10717774944594276,
+        "worst_op_mse": 0.24675409839639736
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.9354166666666667,
+      "nodes": 0.9958333333333333
+    }
+  },
+  "b_binary_s2": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/b_binary_s2.json",
+    "card_sha256": "05c8817392077364fbdd7d53432e39ba18efe0b523c77fa482528741cfcd6bb5",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.75,
+        "mse": 0.1655280571488704,
+        "worst_op_mse": 0.2796149632386007
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.73125,
+        "mse": 0.16729800428014185,
+        "worst_op_mse": 0.2839848066987435
+      },
+      "shared_nodes": {
+        "accuracy": 0.7270833333333333,
+        "mse": 0.21529690928415673,
+        "worst_op_mse": 0.35245405664182555
+      },
+      "shared_history": {
+        "accuracy": 0.6645833333333333,
+        "mse": 0.2238425783142509,
+        "worst_op_mse": 0.2990573180220283
+      },
+      "separate_zones": {
+        "accuracy": 0.85625,
+        "mse": 0.09848762213055966,
+        "worst_op_mse": 0.2675379226964457
+      },
+      "separate_nodes": {
+        "accuracy": 0.9395833333333333,
+        "mse": 0.0717581967246194,
+        "worst_op_mse": 0.3741849598073589
+      },
+      "separate_history": {
+        "accuracy": 0.8020833333333334,
+        "mse": 0.11774224470166432,
+        "worst_op_mse": 0.2887896745784505
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.85625,
+        "mse": 0.09751076666345972,
+        "worst_op_mse": 0.2679486201174461
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.7645833333333333,
+      "nodes": 0.98125
+    }
+  },
+  "b_onehot_s1": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/b_onehot_s1.json",
+    "card_sha256": "892fc2337418fe10da537f55a87af98a05fc12cc3af77ce8af1cb9f66dcf3a32",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.81875,
+        "mse": 0.1467162316988014,
+        "worst_op_mse": 0.2349688790983235
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.8104166666666667,
+        "mse": 0.1495211544978405,
+        "worst_op_mse": 0.234103493194771
+      },
+      "shared_nodes": {
+        "accuracy": 0.7583333333333333,
+        "mse": 0.16792871624433933,
+        "worst_op_mse": 0.3388880826921177
+      },
+      "shared_history": {
+        "accuracy": 0.6458333333333334,
+        "mse": 0.20611501484927372,
+        "worst_op_mse": 0.29532375934792177
+      },
+      "separate_zones": {
+        "accuracy": 0.8895833333333333,
+        "mse": 0.07839335166455653,
+        "worst_op_mse": 0.2406184084446911
+      },
+      "separate_nodes": {
+        "accuracy": 0.9666666666666667,
+        "mse": 0.03209578661916675,
+        "worst_op_mse": 0.20383330163337854
+      },
+      "separate_history": {
+        "accuracy": 0.8020833333333334,
+        "mse": 0.11774224470166435,
+        "worst_op_mse": 0.2887896745784507
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.8854166666666666,
+        "mse": 0.09949017916652213,
+        "worst_op_mse": 0.24939389057804878
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.8125,
+      "nodes": 0.9166666666666666
+    }
+  },
+  "b_onehot_s2": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/b_onehot_s2.json",
+    "card_sha256": "bd40f121a524ad84e2e05172ea39d51cf4e34a45b6bb50a11331847dd1be4b1a",
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.8104166666666667,
+        "mse": 0.15206390155878344,
+        "worst_op_mse": 0.23673579610457138
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.8020833333333334,
+        "mse": 0.15468907776057136,
+        "worst_op_mse": 0.24309401330548938
+      },
+      "shared_nodes": {
+        "accuracy": 0.7875,
+        "mse": 0.15685267106811254,
+        "worst_op_mse": 0.2637284052510086
+      },
+      "shared_history": {
+        "accuracy": 0.6458333333333334,
+        "mse": 0.20611501484927372,
+        "worst_op_mse": 0.29532375934792177
+      },
+      "separate_zones": {
+        "accuracy": 0.8916666666666667,
+        "mse": 0.08836397146959243,
+        "worst_op_mse": 0.2297321633773918
+      },
+      "separate_nodes": {
+        "accuracy": 0.9833333333333333,
+        "mse": 0.018887444869123533,
+        "worst_op_mse": 0.11300467749156652
+      },
+      "separate_history": {
+        "accuracy": 0.8020833333333334,
+        "mse": 0.11774224470166435,
+        "worst_op_mse": 0.2887896745784507
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.8895833333333333,
+        "mse": 0.09979455692217755,
+        "worst_op_mse": 0.22112112040722856
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.775,
+      "nodes": 1.0
+    }
+  },
+  "initial_level_a": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/initial_level_a.json",
+    "card_sha256": null,
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.675,
+        "mse": 0.21100371180639613,
+        "worst_op_mse": 0.30102997889133326
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.68125,
+        "mse": 0.2105251932554132,
+        "worst_op_mse": 0.30266834317929464
+      },
+      "shared_nodes": {
+        "accuracy": 0.8791666666666667,
+        "mse": 0.10361705082531068,
+        "worst_op_mse": 0.1376941776012289
+      },
+      "shared_history": {
+        "accuracy": 0.65,
+        "mse": 0.21481498890232043,
+        "worst_op_mse": 0.3002947289675883
+      },
+      "separate_zones": {
+        "accuracy": 0.8916666666666667,
+        "mse": 0.08197318507665322,
+        "worst_op_mse": 0.1945100612955828
+      },
+      "separate_nodes": {
+        "accuracy": 1.0,
+        "mse": 0.006144149238047038,
+        "worst_op_mse": 0.015041823508052485
+      },
+      "separate_history": {
+        "accuracy": 0.7104166666666667,
+        "mse": 0.11580901422749558,
+        "worst_op_mse": 0.2560537164674966
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.8895833333333333,
+        "mse": 0.09127259904355342,
+        "worst_op_mse": 0.2113283465596914
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.8916666666666667,
+      "nodes": 1.0
+    }
+  },
+  "initial_level_a_onehot": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/initial_level_a_onehot.json",
+    "card_sha256": null,
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.7354166666666667,
+        "mse": 0.19350199839091597,
+        "worst_op_mse": 0.2604216940324837
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.7354166666666667,
+        "mse": 0.19426419143295395,
+        "worst_op_mse": 0.26127625171152763
+      },
+      "shared_nodes": {
+        "accuracy": 0.86875,
+        "mse": 0.10567043452330192,
+        "worst_op_mse": 0.13087857454397728
+      },
+      "shared_history": {
+        "accuracy": 0.6416666666666667,
+        "mse": 0.21556436245908855,
+        "worst_op_mse": 0.3048589612080474
+      },
+      "separate_zones": {
+        "accuracy": 0.95625,
+        "mse": 0.04840093768814793,
+        "worst_op_mse": 0.14016608054448246
+      },
+      "separate_nodes": {
+        "accuracy": 1.0,
+        "mse": 0.002499011229126283,
+        "worst_op_mse": 0.005579562762551342
+      },
+      "separate_history": {
+        "accuracy": 0.7104166666666667,
+        "mse": 0.11580901422749555,
+        "worst_op_mse": 0.2560537164674966
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9333333333333333,
+        "mse": 0.06554001707425923,
+        "worst_op_mse": 0.18458784729590264
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.8291666666666667,
+      "nodes": 0.9979166666666667
+    }
+  },
+  "initial_level_b": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/initial_level_b.json",
+    "card_sha256": null,
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.66875,
+        "mse": 0.2132051153456692,
+        "worst_op_mse": 0.32628571907713516
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.6604166666666667,
+        "mse": 0.2115920878588246,
+        "worst_op_mse": 0.32730760176860413
+      },
+      "shared_nodes": {
+        "accuracy": 0.725,
+        "mse": 0.19129851383406518,
+        "worst_op_mse": 0.2799291947569306
+      },
+      "shared_history": {
+        "accuracy": 0.6645833333333333,
+        "mse": 0.2238425783142509,
+        "worst_op_mse": 0.2990573180220283
+      },
+      "separate_zones": {
+        "accuracy": 0.90625,
+        "mse": 0.07349550519480262,
+        "worst_op_mse": 0.2676650782069393
+      },
+      "separate_nodes": {
+        "accuracy": 0.9583333333333334,
+        "mse": 0.03473075162377589,
+        "worst_op_mse": 0.21733263781982792
+      },
+      "separate_history": {
+        "accuracy": 0.8020833333333334,
+        "mse": 0.11774224470166432,
+        "worst_op_mse": 0.2887896745784505
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9,
+        "mse": 0.07572514174690946,
+        "worst_op_mse": 0.266880500837855
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.725,
+      "nodes": 0.99375
+    }
+  },
+  "initial_level_b_onehot": {
+    "file": "docs/endophalon3_routing_runs/diagnosis/initial_level_b_onehot.json",
+    "card_sha256": null,
+    "validation": {
+      "shared_zones": {
+        "accuracy": 0.6625,
+        "mse": 0.21290318876959438,
+        "worst_op_mse": 0.2899889989689687
+      },
+      "zones_plus_instruction": {
+        "accuracy": 0.6833333333333333,
+        "mse": 0.19447207468201436,
+        "worst_op_mse": 0.27790660762912683
+      },
+      "shared_nodes": {
+        "accuracy": 0.7458333333333333,
+        "mse": 0.1852500672747421,
+        "worst_op_mse": 0.3248620682908418
+      },
+      "shared_history": {
+        "accuracy": 0.6458333333333334,
+        "mse": 0.20611501484927372,
+        "worst_op_mse": 0.29532375934792177
+      },
+      "separate_zones": {
+        "accuracy": 0.9354166666666667,
+        "mse": 0.06151833806143207,
+        "worst_op_mse": 0.2389489042199735
+      },
+      "separate_nodes": {
+        "accuracy": 0.9854166666666667,
+        "mse": 0.016730708137160755,
+        "worst_op_mse": 0.11673607197596947
+      },
+      "separate_history": {
+        "accuracy": 0.8020833333333334,
+        "mse": 0.11774224470166435,
+        "worst_op_mse": 0.2887896745784507
+      },
+      "opcode_gated_zones_control": {
+        "accuracy": 0.9145833333333333,
+        "mse": 0.06688353688958278,
+        "worst_op_mse": 0.24320270138274902
+      }
+    },
+    "opcode_decoding_validation": {
+      "zones": 0.64375,
+      "nodes": 0.9458333333333333
+    }
+  }
+}

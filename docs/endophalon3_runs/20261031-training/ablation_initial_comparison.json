@@ -1,0 +1,4 @@
+{
+  "all_probe_metrics_exactly_equal": true,
+  "explanation": "Slow and fast parameters start equal; no-regions control has the same initial computation."
+}

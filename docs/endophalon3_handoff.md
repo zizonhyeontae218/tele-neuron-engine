@@ -1,4 +1,6 @@
-# Endophalon-3 handoff: how to train it, and what we learned
+# Endophalon-3 historical handoff: original plan and lessons
+
+This is the original pre-training handoff, retained as historical context. The planned runs are complete; see [results](endophalon3.md) and the training and routing reports for actual outcomes and the closed B routing gate. Do not repeat runs merely to meet a target.
 
 For the next worker. The base is built and tested, but **no training has been
 run**. Read [endophalon3.md](endophalon3.md) first for the design. This page

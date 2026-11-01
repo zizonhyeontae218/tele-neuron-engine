@@ -1,0 +1,40 @@
+Teleneuron-Endophalon-3-B: encoding=binary channels=('level', 'op_bit2', 'op_bit1', 'op_bit0', 'a', 'b') ops=('xor', 'recall1', 'recall2', 'xor_mem', 'and', 'or', 'parity3w', 'and_mem') zones=16 slow nodes=56/144 theta dim=77 seed=1
+{
+  "finite": true,
+  "zones_single": {
+    "accuracy": 0.6645833333333333,
+    "per_op": {
+      "xor": 0.8173913043478261,
+      "recall1": 0.6528925619834711,
+      "recall2": 0.5970149253731343,
+      "xor_mem": 0.5798319327731093,
+      "and": 0.7983193277310925,
+      "or": 0.7297297297297297,
+      "parity3w": 0.4,
+      "and_mem": 0.7603305785123967
+    }
+  },
+  "nodes_single": {
+    "accuracy": 0.7072916666666667,
+    "per_op": {
+      "xor": 0.6869565217391305,
+      "recall1": 0.6776859504132231,
+      "recall2": 0.7014925373134329,
+      "xor_mem": 0.6134453781512605,
+      "and": 0.773109243697479,
+      "or": 0.8648648648648649,
+      "parity3w": 0.5166666666666667,
+      "and_mem": 0.8347107438016529
+    }
+  },
+  "nodes_separate_per_op": {
+    "xor": 1.0,
+    "recall1": 1.0,
+    "recall2": 1.0,
+    "xor_mem": 1.0,
+    "and": 1.0,
+    "or": 1.0,
+    "parity3w": 0.7166666666666667,
+    "and_mem": 1.0
+  }
+}

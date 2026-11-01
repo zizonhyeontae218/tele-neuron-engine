@@ -1,0 +1,22 @@
+{
+  "reason": "Work executor became unavailable: exec-server transport disconnected; recovery timed out after 25s.",
+  "status": "infrastructure-interrupted; no final model/readout recovered",
+  "last_directly_observed_generation": 25,
+  "minimum_theta_evaluations_per_attempt": 601,
+  "full_raw_log_recovered": false,
+  "attempts": [
+    {
+      "name": "b_onehot_s1",
+      "last_observed_cli_tail": "  gen  25 best J=0.1971 val=0.779 xor=0.81 recall1=0.91 recall2=0.61 xor_mem=0.67 and=0.90 or=1.00 parity3w=0.47 and_mem=0.84"
+    },
+    {
+      "name": "b_onehot_s2",
+      "last_observed_cli_tail": "  gen  25 best J=0.2005 val=0.773 xor=0.75 recall1=0.85 recall2=0.61 xor_mem=0.58 and=0.86 or=1.00 parity3w=0.62 and_mem=0.90"
+    }
+  ],
+  "notes": [
+    "Captured tail excerpts are observations, not reconstructed full raw logs.",
+    "Recovery restarts original theta_init and seeds, with unchanged 40×24 per completed run.",
+    "Seven completed models were checkpointed before the executor was lost."
+  ]
+}

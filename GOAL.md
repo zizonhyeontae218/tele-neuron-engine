@@ -1,16 +1,9 @@
-# Backup consolidation — 2026-11-01
+# Endophalon 3 — experiment closeout and integration
 
-Preserve reproducibility while removing the nine temporary backup branches.
+Preserve the fixed-budget Endophalon 3 A/B study and its negative routing follow-up alongside the 2026-11-01 backup consolidation. See `docs/endophalon3_training_report.ko.md`, `docs/endophalon3_routing_report.ko.md`, and `docs/integration/2026-11-01.md`.
 
-- Keep model cards, source, configs, task definitions, seeds and published data
-  byte-identical on master. Restore the original standalone ipad_lab.html.
-- Preserve historical design documents and README versions in Drive, with a
-  per-file Git-blob manifest and a verified ZIP SHA-256.
-- Keep all nine original heads reachable through master and immutable tags.
-- Delete only the nine audited backup/2026-10-31/* branches after verification.
-- Retain Claude, endophalon3, archives, iPad Lab, experiment and preserve branches.
-- No retraining, experiment PR merge, force push or history rewriting.
-- Audit and document archive: docs/integration/2026-11-01.md.
-
-The preceding six-model integration remains documented in
-docs/integration/2026-10-31.md.
+- Retain 144 nodes, 2 substeps, 16 zones, single linear production readout, original splits and seeds. Do not overwrite published models, logs, configs or prior artifacts.
+- Nine planned training cards and the equal-budget random baseline were completed and audited. Optional A one-hot seed 2 was not run. A achieved neither the overall/per-operation accuracy gate nor consistent slow-region recall2 improvement.
+- Routing A trials on both search seeds failed the predeclared gate; B expansion stopped. The 0.5 loss remains opt-in for reproducibility, not an accepted improvement. No extra seed search or expanded budget is authorized by this closeout.
+- Preserve interrupted attempts and their limits; missing final state from the interrupted cloud runs cannot be recovered. Keep existing backup consolidation and `ipad_lab.html` intact.
+- Integrate the audited work into master and endophalon3 with history preserved; never force push or rewrite history. Other archive, Claude and iPad branches are outside scope.

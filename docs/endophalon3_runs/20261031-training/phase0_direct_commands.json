@@ -1,0 +1,38 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "-u",
+        "scripts/smoke_models.py"
+      ],
+      "result": "9 model/config combinations passed",
+      "log": "smoke.log",
+      "timing": "not measured"
+    },
+    {
+      "argv": [
+        "python",
+        "-u",
+        "-m",
+        "tele_neuron.endophalon3",
+        "--config",
+        "configs/endophalon3/level_a.json",
+        "--probe",
+        "--output",
+        "docs/endophalon3_runs/20261031-training/probes/level_a.json"
+      ],
+      "result": "matches original JSON exactly",
+      "log": "probes/level_a.log",
+      "timing": "not measured"
+    }
+  ],
+  "dependency_setup": [
+    "python -m pip install --user --no-build-isolation --no-deps -e .",
+    "python -m pip install --user --timeout 15 --retries 0 pytest"
+  ],
+  "notes": [
+    "The build-isolated editable install was initially slow but completed successfully; dependency_install_attempt.log retains its final output. The no-build-isolation install also completed.",
+    "A first pytest invocation failed before pytest was installed; bootstrap_pytest_missing.log is preserved."
+  ]
+}

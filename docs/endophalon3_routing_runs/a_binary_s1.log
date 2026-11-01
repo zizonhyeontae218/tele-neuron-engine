@@ -1,0 +1,53 @@
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python -u -m tele_neuron.endophalon3 --config configs/endophalon3/level_a_routing.json --seed 1 --workers 4 --output models/endophalon3_routing/20261031_a_binary_s1.json
+Teleneuron-Endophalon-3-A: encoding=binary channels=('level', 'op_bit2', 'op_bit1', 'op_bit0', 'a', 'b') ops=('xor', 'recall1', 'recall2', 'xor_mem') zones=16 slow nodes=56/144 theta dim=77 seed=1
+  gen   0 best J=0.3375 val=0.675 xor=0.89 recall1=0.64 recall2=0.45 xor_mem=0.78
+  gen   1 best J=0.2904 val=0.665 xor=0.69 recall1=0.69 recall2=0.61 xor_mem=0.68
+  gen   2 best J=0.2744 val=0.692 xor=0.81 recall1=0.61 recall2=0.67 xor_mem=0.69
+  gen   3 best J=0.2744 val=0.692 xor=0.81 recall1=0.61 recall2=0.67 xor_mem=0.69
+  gen   4 best J=0.2744 val=0.692 xor=0.81 recall1=0.61 recall2=0.67 xor_mem=0.69
+  gen   5 best J=0.2620 val=0.708 xor=0.72 recall1=0.77 recall2=0.64 xor_mem=0.72
+  gen   6 best J=0.2620 val=0.708 xor=0.72 recall1=0.77 recall2=0.64 xor_mem=0.72
+  gen   7 best J=0.2620 val=0.708 xor=0.72 recall1=0.77 recall2=0.64 xor_mem=0.72
+  gen   8 best J=0.2567 val=0.723 xor=0.67 recall1=0.81 recall2=0.64 xor_mem=0.78
+  gen   9 best J=0.2461 val=0.700 xor=0.74 recall1=0.64 recall2=0.66 xor_mem=0.79
+  gen  10 best J=0.2403 val=0.740 xor=0.75 recall1=0.78 recall2=0.67 xor_mem=0.77
+  gen  11 best J=0.2362 val=0.715 xor=0.76 recall1=0.67 recall2=0.69 xor_mem=0.74
+  gen  12 best J=0.2341 val=0.721 xor=0.79 recall1=0.67 recall2=0.69 xor_mem=0.74
+  gen  13 best J=0.2322 val=0.733 xor=0.76 recall1=0.73 recall2=0.72 xor_mem=0.73
+  gen  14 best J=0.2289 val=0.717 xor=0.75 recall1=0.71 recall2=0.70 xor_mem=0.70
+  gen  15 best J=0.2271 val=0.735 xor=0.80 recall1=0.70 recall2=0.71 xor_mem=0.74
+  gen  16 best J=0.2232 val=0.738 xor=0.74 recall1=0.74 recall2=0.72 xor_mem=0.75
+  gen  17 best J=0.2231 val=0.738 xor=0.75 recall1=0.73 recall2=0.71 xor_mem=0.76
+  gen  18 best J=0.2216 val=0.742 xor=0.75 recall1=0.73 recall2=0.73 xor_mem=0.76
+  gen  19 best J=0.2179 val=0.762 xor=0.78 recall1=0.75 recall2=0.76 xor_mem=0.76
+  gen  20 best J=0.2148 val=0.754 xor=0.74 recall1=0.76 recall2=0.76 xor_mem=0.76
+  gen  21 best J=0.2110 val=0.758 xor=0.75 recall1=0.75 recall2=0.74 xor_mem=0.80
+  gen  22 best J=0.2110 val=0.756 xor=0.75 recall1=0.78 recall2=0.73 xor_mem=0.77
+  gen  23 best J=0.2089 val=0.758 xor=0.75 recall1=0.78 recall2=0.75 xor_mem=0.76
+  gen  24 best J=0.2075 val=0.767 xor=0.75 recall1=0.78 recall2=0.77 xor_mem=0.76
+  gen  25 best J=0.2066 val=0.771 xor=0.75 recall1=0.78 recall2=0.79 xor_mem=0.75
+  gen  26 best J=0.2056 val=0.775 xor=0.75 recall1=0.78 recall2=0.79 xor_mem=0.78
+  gen  27 best J=0.2056 val=0.787 xor=0.76 recall1=0.78 recall2=0.79 xor_mem=0.81
+  gen  28 best J=0.2048 val=0.783 xor=0.76 recall1=0.78 recall2=0.78 xor_mem=0.81
+  gen  29 best J=0.2023 val=0.792 xor=0.75 recall1=0.80 recall2=0.80 xor_mem=0.81
+  gen  30 best J=0.2023 val=0.792 xor=0.75 recall1=0.80 recall2=0.80 xor_mem=0.81
+  gen  31 best J=0.2023 val=0.792 xor=0.75 recall1=0.80 recall2=0.80 xor_mem=0.81
+  gen  32 best J=0.2023 val=0.792 xor=0.75 recall1=0.80 recall2=0.80 xor_mem=0.81
+  gen  33 best J=0.2020 val=0.790 xor=0.75 recall1=0.77 recall2=0.82 xor_mem=0.82
+  gen  34 best J=0.1997 val=0.804 xor=0.77 recall1=0.81 recall2=0.80 xor_mem=0.83
+  gen  35 best J=0.1991 val=0.802 xor=0.76 recall1=0.78 recall2=0.83 xor_mem=0.84
+  gen  36 best J=0.1984 val=0.804 xor=0.76 recall1=0.78 recall2=0.83 xor_mem=0.84
+  gen  37 best J=0.1978 val=0.800 xor=0.76 recall1=0.78 recall2=0.80 xor_mem=0.85
+  gen  38 best J=0.1969 val=0.808 xor=0.77 recall1=0.78 recall2=0.83 xor_mem=0.85
+  gen  39 best J=0.1969 val=0.808 xor=0.77 recall1=0.78 recall2=0.83 xor_mem=0.85
+  gen  40 best J=0.1968 val=0.808 xor=0.76 recall1=0.79 recall2=0.83 xor_mem=0.85
+  J 0.3375 -> 0.1968 (961 thetas)
+  trained  single_readout                   0.753 xor=0.80 recall1=0.75 recall2=0.75 xor_mem=0.71
+  trained  single_readout_plus_instruction  0.748 xor=0.81 recall1=0.73 recall2=0.76 xor_mem=0.70
+  trained  separate_readouts                0.953 xor=1.00 recall1=1.00 recall2=0.88 xor_mem=0.93
+  trained  linear_nodes                     0.796 xor=0.67 recall1=0.94 recall2=0.81 xor_mem=0.76
+  initial  single_readout                   0.715 xor=0.96 recall1=0.65 recall2=0.53 xor_mem=0.72
+  initial  single_readout_plus_instruction  0.706 xor=0.95 recall1=0.65 recall2=0.51 xor_mem=0.71
+  initial  separate_readouts                0.906 xor=1.00 recall1=0.99 recall2=0.70 xor_mem=0.93
+  initial  linear_nodes                     0.879 xor=0.95 recall1=0.92 recall2=0.82 xor_mem=0.82
+Saved model card to models/endophalon3_routing/20261031_a_binary_s1.json

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "probes": [
+    "level_b",
+    "level_b_onehot",
+    "level_a",
+    "level_a_onehot"
+  ]
+}

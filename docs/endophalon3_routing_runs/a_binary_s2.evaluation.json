@@ -1,0 +1,320 @@
+{
+  "name": "a_binary_s2",
+  "status": "audited",
+  "splits": {
+    "train": {
+      "accuracy": 0.815625,
+      "mse": 0.1293593834629542,
+      "worst_op_mse": 0.15526803282453958,
+      "per_op": {
+        "xor": {
+          "accuracy": 0.8434782608695652,
+          "mse": 0.12058174985779845,
+          "n": 230
+        },
+        "recall1": {
+          "accuracy": 0.8448979591836735,
+          "mse": 0.12126236866500674,
+          "n": 245
+        },
+        "recall2": {
+          "accuracy": 0.756198347107438,
+          "mse": 0.15526803282453958,
+          "n": 242
+        },
+        "xor_mem": {
+          "accuracy": 0.8189300411522634,
+          "mse": 0.12002905922089373,
+          "n": 243
+        }
+      },
+      "l_balanced": 0.1423137081437469,
+      "l_mean": 0.1293593834629542,
+      "l_worst": 0.15526803282453958,
+      "r_noise": 0.5170865617560242,
+      "r_drift": 0.14526572990367306,
+      "r_complexity": 0.24775735813452748,
+      "j_split": 0.1851721828032607
+    },
+    "validation": {
+      "accuracy": 0.8458333333333333,
+      "mse": 0.12024081154377948,
+      "worst_op_mse": 0.12697823085397308,
+      "per_op": {
+        "xor": {
+          "accuracy": 0.8584905660377359,
+          "mse": 0.12030249439443604,
+          "n": 106
+        },
+        "recall1": {
+          "accuracy": 0.8527131782945736,
+          "mse": 0.11520741605481531,
+          "n": 129
+        },
+        "recall2": {
+          "accuracy": 0.8484848484848485,
+          "mse": 0.12697823085397308,
+          "n": 132
+        },
+        "xor_mem": {
+          "accuracy": 0.8230088495575221,
+          "mse": 0.11805877868502933,
+          "n": 113
+        }
+      },
+      "l_balanced": 0.12360952119887628,
+      "l_mean": 0.12024081154377948,
+      "l_worst": 0.12697823085397308,
+      "r_noise": 0.4767147693297452,
+      "r_drift": 0.24046719204472553,
+      "r_complexity": 0.24775735813452748,
+      "j_split": 0.17396955245118137
+    },
+    "test": {
+      "accuracy": 0.8177083333333334,
+      "mse": 0.12989768935268675,
+      "worst_op_mse": 0.14680249992570493,
+      "per_op": {
+        "xor": {
+          "accuracy": 0.8410041841004184,
+          "mse": 0.11414468813533787,
+          "n": 239
+        },
+        "recall1": {
+          "accuracy": 0.8346456692913385,
+          "mse": 0.1333206105633729,
+          "n": 254
+        },
+        "recall2": {
+          "accuracy": 0.7777777777777778,
+          "mse": 0.14680249992570493,
+          "n": 234
+        },
+        "xor_mem": {
+          "accuracy": 0.8154506437768241,
+          "mse": 0.1253475590065316,
+          "n": 233
+        }
+      },
+      "l_balanced": 0.13835009463919584,
+      "l_mean": 0.12989768935268675,
+      "l_worst": 0.14680249992570493,
+      "r_noise": 0.5203337575698855,
+      "r_drift": 0.32359976143702524,
+      "r_complexity": 0.24775735813452748,
+      "j_split": 0.19920433224273795
+    }
+  },
+  "confirmation": {
+    "accuracy": 0.7854166666666667,
+    "mse": 0.14112922587913043,
+    "worst_op_mse": 0.15326086916801948,
+    "per_op": {
+      "xor": {
+        "accuracy": 0.8212765957446808,
+        "mse": 0.13100161479949787,
+        "n": 235
+      },
+      "recall1": {
+        "accuracy": 0.7967479674796748,
+        "mse": 0.14216044937955843,
+        "n": 246
+      },
+      "recall2": {
+        "accuracy": 0.7584745762711864,
+        "mse": 0.15326086916801948,
+        "n": 236
+      },
+      "xor_mem": {
+        "accuracy": 0.7654320987654321,
+        "mse": 0.13809729092616976,
+        "n": 243
+      }
+    },
+    "l_balanced": 0.14719504752357496,
+    "l_mean": 0.14112922587913043,
+    "l_worst": 0.15326086916801948,
+    "r_noise": 0.5692703379972179,
+    "r_drift": 0.22243112664053546,
+    "r_complexity": 0.24775735813452748,
+    "j_split": 0.2003792506688347
+  },
+  "confirmation_streams": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015
+  ],
+  "pass_test": false,
+  "pass_confirmation": false,
+  "pass_both": false,
+  "fitness_validation": {
+    "j": 0.16642678315814208,
+    "l_val": 0.12360952119887628,
+    "r_noise": 0.4767147693297452,
+    "r_drift": 0.16503949911433263,
+    "r_complexity": 0.24775735813452748,
+    "val_accuracy": 0.8458333333333333,
+    "val_per_op": {
+      "xor": 0.8584905660377359,
+      "recall1": 0.8527131782945736,
+      "recall2": 0.8484848484848485,
+      "xor_mem": 0.8230088495575221
+    },
+    "finite": true,
+    "l_val_mean": 0.12024081154377948,
+    "l_val_worst": 0.12697823085397308
+  },
+  "failed_candidates": 0,
+  "finite": true,
+  "max_abs_displacement_test": 1.589839946621939,
+  "max_abs_displacement_confirmation": 1.507368980799839,
+  "controls": {
+    "trained": {
+      "single_readout": {
+        "accuracy": 0.8177083333333334,
+        "per_op": {
+          "xor": 0.8410041841004184,
+          "recall1": 0.8346456692913385,
+          "recall2": 0.7777777777777778,
+          "xor_mem": 0.8154506437768241
+        },
+        "early": 0.8041666666666667,
+        "late": 0.83125
+      },
+      "single_readout_plus_instruction": {
+        "accuracy": 0.825,
+        "per_op": {
+          "xor": 0.8702928870292888,
+          "recall1": 0.8188976377952756,
+          "recall2": 0.7735042735042735,
+          "xor_mem": 0.8369098712446352
+        }
+      },
+      "separate_readouts": {
+        "accuracy": 0.9552083333333333,
+        "per_op": {
+          "xor": 0.9832635983263598,
+          "recall1": 1.0,
+          "recall2": 0.8803418803418803,
+          "xor_mem": 0.9527896995708155
+        }
+      },
+      "linear_nodes": {
+        "accuracy": 0.8677083333333333,
+        "per_op": {
+          "xor": 0.8075313807531381,
+          "recall1": 0.9645669291338582,
+          "recall2": 0.8717948717948718,
+          "xor_mem": 0.8197424892703863
+        }
+      },
+      "drift": 0.32359976143702524,
+      "finite": true
+    },
+    "initial": {
+      "single_readout": {
+        "accuracy": 0.7145833333333333,
+        "per_op": {
+          "xor": 0.9581589958158996,
+          "recall1": 0.6535433070866141,
+          "recall2": 0.5256410256410257,
+          "xor_mem": 0.721030042918455
+        },
+        "early": 0.7166666666666667,
+        "late": 0.7125
+      },
+      "single_readout_plus_instruction": {
+        "accuracy": 0.70625,
+        "per_op": {
+          "xor": 0.9497907949790795,
+          "recall1": 0.6496062992125984,
+          "recall2": 0.5128205128205128,
+          "xor_mem": 0.7124463519313304
+        }
+      },
+      "separate_readouts": {
+        "accuracy": 0.90625,
+        "per_op": {
+          "xor": 1.0,
+          "recall1": 0.9921259842519685,
+          "recall2": 0.6965811965811965,
+          "xor_mem": 0.927038626609442
+        }
+      },
+      "linear_nodes": {
+        "accuracy": 0.8791666666666667,
+        "per_op": {
+          "xor": 0.9539748953974896,
+          "recall1": 0.9173228346456693,
+          "recall2": 0.8205128205128205,
+          "xor_mem": 0.8197424892703863
+        }
+      },
+      "drift": 0.24677037600736054,
+      "finite": true
+    },
+    "history_baseline": {
+      "accuracy": 0.6197916666666666,
+      "per_op": {
+        "xor": 0.5983263598326359,
+        "recall1": 0.6811023622047244,
+        "recall2": 0.8247863247863247,
+        "xor_mem": 0.36909871244635195
+      }
+    }
+  },
+  "timing": {
+    "name": "a_binary_s2",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-u",
+      "-m",
+      "tele_neuron.endophalon3",
+      "--config",
+      "configs/endophalon3/level_a_routing.json",
+      "--seed",
+      "2",
+      "--workers",
+      "4",
+      "--output",
+      "models/endophalon3_routing/20261031_a_binary_s2.json"
+    ],
+    "base_sha": "24ebc6bb4133634380d7122070465e8445de014e",
+    "checkout_sha": "d2720c48a9ddbb1c36d299a4ffac31835b9517e9",
+    "start_utc": "2026-10-31T12:04:37.047501+00:00",
+    "status": "completed",
+    "search_seed": 2,
+    "physics_dataset_seed": 1,
+    "nodes": 144,
+    "substeps": 2,
+    "zones": 16,
+    "generations": 40,
+    "population": 24,
+    "workers": 4,
+    "worst_op_weight": 0.5,
+    "config_sha256": "d29b6f64e8638738779defb58076b7f6ef895ba61695894e4d71aa99ec3f5ed0",
+    "environment": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "numpy": "2.3.5",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.39"
+    },
+    "returncode": 0,
+    "seconds": 1012.5920760139998,
+    "end_utc": "2026-10-31T12:21:29.642517+00:00",
+    "card": "models/endophalon3_routing/20261031_a_binary_s2.json"
+  },
+  "objective_note": "l_val is mean/worst mixture; drift in selected J uses train+validation union. j_split uses only that split."
+}

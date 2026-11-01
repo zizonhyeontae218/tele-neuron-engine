@@ -1,0 +1,77 @@
+{
+  "base_sha": "1425d63fafee8a3ab5127b59a51324600fed00e3",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "pytest": "9.2.0"
+  },
+  "cpu_max": "800000 100000",
+  "thread_env": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "commands": [
+    {
+      "name": "pytest",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "seconds": 7.993608236312866,
+      "returncode": 0
+    },
+    {
+      "name": "level_a_onehot",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-u",
+        "-m",
+        "tele_neuron.endophalon3",
+        "--config",
+        "configs/endophalon3/level_a_onehot.json",
+        "--probe",
+        "--output",
+        "/workspace/scratch/7f4ce1df7db7/tele-neuron-engine/docs/endophalon3_runs/20261031-training/probes/level_a_onehot.json"
+      ],
+      "seconds": 5.43801474571228,
+      "returncode": 0
+    },
+    {
+      "name": "level_b",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-u",
+        "-m",
+        "tele_neuron.endophalon3",
+        "--config",
+        "configs/endophalon3/level_b.json",
+        "--probe",
+        "--output",
+        "/workspace/scratch/7f4ce1df7db7/tele-neuron-engine/docs/endophalon3_runs/20261031-training/probes/level_b.json"
+      ],
+      "seconds": 6.48079252243042,
+      "returncode": 0
+    },
+    {
+      "name": "level_b_onehot",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-u",
+        "-m",
+        "tele_neuron.endophalon3",
+        "--config",
+        "configs/endophalon3/level_b_onehot.json",
+        "--probe",
+        "--output",
+        "/workspace/scratch/7f4ce1df7db7/tele-neuron-engine/docs/endophalon3_runs/20261031-training/probes/level_b_onehot.json"
+      ],
+      "seconds": 7.3540425300598145,
+      "returncode": 0
+    }
+  ]
+}

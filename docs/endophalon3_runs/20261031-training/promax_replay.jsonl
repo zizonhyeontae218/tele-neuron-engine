@@ -1,0 +1,4 @@
+{"card": "teleneuron_endophalon2_promax16.json", "result": "PASS", "accuracy": 0.96875, "mse": 0.05642392909422632, "per_op": {"xor": 0.9790419161676647, "recall1": 0.9700598802395209, "xor_mem": 0.9554794520547946}}
+{"card": "teleneuron_endophalon2_promax16_seed2.json", "result": "PASS", "accuracy": 0.91875, "mse": 0.08508304702653093, "per_op": {"xor": 0.937125748502994, "recall1": 0.8922155688622755, "xor_mem": 0.928082191780822}}
+{"card": "teleneuron_endophalon2_promax8.json", "result": "PASS", "accuracy": 0.9104166666666667, "mse": 0.09199381041204546, "per_op": {"xor": 0.9880239520958084, "recall1": 0.8023952095808383, "xor_mem": 0.9452054794520548}}
+{"card": "teleneuron_endophalon2_promax8_seed2.json", "result": "PASS", "accuracy": 0.95, "mse": 0.07106374228021853, "per_op": {"xor": 0.9940119760479041, "recall1": 0.9251497005988024, "xor_mem": 0.928082191780822}}

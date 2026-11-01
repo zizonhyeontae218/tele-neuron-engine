@@ -1,0 +1,57 @@
+name: Endophalon 3 cross-runner audit
+on:
+  push:
+    branches: [experiment/endophalon3-training]
+    paths: [.github/workflows/endophalon3-audit.yml]
+permissions:
+  contents: read
+env:
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experiment/endophalon3-training
+          fetch-depth: 0
+      - name: Reject concurrent branch changes
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . -r requirements.txt numpy==2.3.5 matplotlib==3.10.8 pytest==9.2.0
+      - name: Audit saved models without retraining
+        run: python scripts/recover_endophalon3.py finalize
+      - name: Preserve and show numerical evidence
+        if: always()
+        run: |
+          if test -f docs/endophalon3_runs/20261031-training/recovery_audit_v2.log; then
+            cat docs/endophalon3_runs/20261031-training/recovery_audit_v2.log
+          fi
+      - name: Require nine audited models
+        run: |
+          python -c "import json; d=json.load(open('docs/endophalon3_runs/20261031-training/recovery_verification.json')); assert d['audit_returncode']==0 and d['completed_models']==9 and not d['incomplete_models'], d"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: endophalon3-final-audit-evidence
+          path: |
+            docs/endophalon3_runs/20261031-training/
+            docs/endophalon3_training_report.ko.md
+          retention-days: 30
+      - name: Commit verified evidence to experiment branch only
+        run: |
+          test "$(git branch --show-current)" = experiment/endophalon3-training
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/endophalon3_runs/20261031-training docs/endophalon3_training_report.ko.md docs/endophalon3.md README.md README.ko.md GOAL.md
+          git diff --cached --quiet || git commit -m "Verify nine Endophalon 3 cards across runners with measured float error"
+          git push origin HEAD:experiment/endophalon3-training

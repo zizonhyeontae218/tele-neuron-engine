@@ -1,7 +1,8 @@
-# Teleneuron-Endophalon-3 (base, untrained)
+# Teleneuron-Endophalon-3 (training experiments)
 
-**Status:** the base is built and tested. **Nothing has been trained.** Start
-with [endophalon3_handoff.md](endophalon3_handoff.md).
+**Status (2026-10-31):** 9/9 planned models trained and audited; A accuracy gates 0/3.
+See the [research report](endophalon3_training_report.ko.md). The original
+[handoff](endophalon3_handoff.md) remains the fixed experiment protocol.
 
 Endophalon-3 builds on the Endophalon-2-Pro / ProMax spring architecture. It
 is an instruction-driven physical computer: one physics system and **one**
@@ -83,7 +84,7 @@ The probes start from `theta_init`: ProMax16 seed-1 physics and readout
 zones, plus new level/opcode points. They read held-out test streams with
 ridge readouts.
 
-| Config | Single zone readout | Single readout on all node displacements | Separate per-op readout on nodes (≈ what the state holds) |
+| Config | Single readout (16 zones) | Single readout on all node displacements | Separate per-op readout on nodes (≈ what the state holds) |
 |---|---|---|---|
 | level A, binary | 71.5% (xor 96, recall1 65, recall2 53, xor_mem 72) | 87.9% | 100% for every op |
 | level A, onehot | 72.9% | 89.9% | 100% for every op |
@@ -104,3 +105,47 @@ python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --ra
     --output models/endophalon3/<new-card>.json                                                # stage 2 training
 python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --no-regions ...   # homogeneous ablation
 ```
+
+## Fixed-budget results — 2026-10-31
+
+Original scientific source/configs/models/logs are preserved. All training runs use 144 nodes, 2 substeps, 16 zones and 40 generations ×24 population (961 theta evaluations). A and B train separately; physics and dataset seed remain 1.
+
+| Run | Overall | xor | recall1 | recall2 | xor_mem | and | or | parity3w | and_mem |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| a_binary_s1 | 78.85% | 73.22% | 81.50% | 73.50% | 87.12% | — | — | — | — |
+| a_binary_s2 | 88.33% | 97.07% | 94.49% | 67.09% | 93.99% | — | — | — | — |
+| a_no_regions_s1 | 80.73% | 91.63% | 77.56% | 68.38% | 85.41% | — | — | — | — |
+| a_no_regions_s2 | 85.42% | 93.31% | 90.55% | 73.93% | 83.26% | — | — | — | — |
+| a_onehot_s1 | 87.71% | 92.05% | 93.31% | 77.78% | 87.12% | — | — | — | — |
+| b_binary_s1 | 74.48% | 80.87% | 80.17% | 61.19% | 62.18% | 89.92% | 94.59% | 55.00% | 75.21% |
+| b_binary_s2 | 73.65% | 83.48% | 83.47% | 59.70% | 60.50% | 87.39% | 89.19% | 50.83% | 77.69% |
+| b_onehot_s1 | 74.17% | 63.48% | 88.43% | 58.96% | 57.98% | 97.48% | 99.10% | 52.50% | 78.51% |
+| b_onehot_s2 | 73.96% | 72.17% | 85.95% | 56.72% | 57.98% | 80.67% | 96.40% | 57.50% | 87.60% |
+
+A accuracy gates (>=90% overall and >=85% each op): 0/3 non-ablated runs.
+
+Slow Region recall2 effect: seed 1 +5.13 pp, seed 2 -6.84 pp; mean -0.85 pp, conditional paired-stream 95% CI [-3.66, +2.01] pp. Consistent improvement is not demonstrated. The interval conditions on these two search seeds.
+
+A binary seed-1 random search: 73.75%, versus trained 78.85% and initial 71.46%, using the same 961-theta budget.
+
+85 pytest tests and 9 CLI/config smoke combinations passed; four untrained probes and four original ProMax native-task cards replay exactly. Readout controls, train/validation/test splits, every regularizer, numerical ranges and timing are in the research report.
+
+Actual objective scope: validation MSE/noise, train-fitted weight complexity, combined train+validation kinetic-energy drift. Finite measurements cover 64-event streams.
+
+The interrupted cloud attempts and the full-budget Actions recovery runs are recorded separately. Cross-runner readout statistics are checked at rtol=atol=1e-12, with actual numerical errors recorded; held-out aggregate and per-operation accuracy must still replay exactly. The original bitwise audit failure is preserved.
+
+New cards: models/endophalon3/20261031_*.json. Logs, argv, predictions, audits and actual SHA-256 manifests: docs/endophalon3_runs/20261031-training/. The recovered executor later synchronized the generated FileTree index/ledger and passed lint at baseline closeout commit `24ebc6bb4133634380d7122070465e8445de014e`; original model and log bytes remain preserved.
+
+
+## Opt-in routing-loss follow-up — 2026-10-31
+
+A separate branch tested one predeclared change: `0.5 × pooled validation MSE + 0.5 × worst-operation validation MSE`. The existing default objective, physics, 144 nodes, 2 substeps, 16 zones, binary input and 40×24 budget remain unchanged. Both outer search seeds 1/2 completed, with 961 evaluations each.
+
+| Seed | Frozen original test | Modified test | Frozen original on new confirmation | Modified on new confirmation |
+| --- | --- | --- | --- | --- |
+| 1 | 78.85% | 75.31% | 77.29% | 73.33% |
+| 2 | 88.33% | 81.77% | 86.56% | 78.54% |
+
+The modification reduced worst-operation validation MSE but lowered overall held-out accuracy. It is not accepted as an improvement. Neither seed passed the overall/per-operation gates on the original test and predeclared unused confirmation streams 10000–10015, so this follow-up did not expand to B. The original B study above remains complete.
+
+Validation-only diagnostic readouts suggest usable information remains in the states, with losses associated with projection/shared operation selection. These higher-capacity controls do not establish a single causal mechanism. Full per-operation results, limitations, regularizers, cost and raw evidence: [routing report](endophalon3_routing_report.ko.md), [run artifacts](endophalon3_routing_runs/). Two new cards are isolated in `models/endophalon3_routing/`. All 89 pytest tests passed; default-objective replay differences on the two frozen A cards were exactly zero.

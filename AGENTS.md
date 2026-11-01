@@ -1,7 +1,7 @@
 # Tele-Neuron Engine agent instructions
 
 Read GOAL.md, FileTree.md, docs/model_commands.md and the current model's docs.
-Endophalon-3 (base, untrained) starts at docs/endophalon3_handoff.md.
+Endophalon-3 results and limits start at docs/endophalon3.md; the handoff is the historical original plan.
 
 ## Branch roles
 - master is active integrated development: the six v1/v2 model families plus Endophalon-3, with
@@ -14,9 +14,9 @@ Endophalon-3 (base, untrained) starts at docs/endophalon3_handoff.md.
 - agent/add-ipad-lab is a working branch; retain its standalone ipad_lab.html.
 - The nine backup/2026-10-31/* branches are retired after consolidation.
   Their original heads remain as immutable tags with the same names.
-- Keep claude/eloquent-volta-ylkb47 and endophalon3, and all experiment/preserve
-  branches unchanged. The 2026-11-01 owner decision authorizes only the nine
-  audited backup-branch deletions; it does not authorize experiment PR merges.
+- Keep master and endophalon3 aligned; retain Claude, archive and iPad branches.
+  The owner authorized integration and audited cleanup of the three Endophalon 3
+  experiment/preserve branches, without force pushes or history rewriting.
 - Historical design documents/README versions live in the verified Drive archive
   linked from docs/integration/2026-11-01.md; reproduction files remain on master.
 
@@ -44,3 +44,13 @@ Keep README.md and README.ko.md branch links accurate. Update FileTree.md and,
 when the Filetree generator is available, FileTree.md / FILETREE.hash.json.
 Record actual commands, results and limitations; never infer benchmark parity
 from smoke tests. No multi-agent delegation is required for this maintenance.
+
+## Routing experiment record
+Read GOAL.md and docs/endophalon3_routing_report.ko.md. The original
+nine cards and all prior logs are immutable. New evidence belongs under
+`docs/endophalon3_routing_runs/`; one corrected A config belongs alongside the
+original configs. Diagnostic gated/separate heads must never be presented as
+the production model. Keep 144/2/16 and the original CLI budget. Use validation
+only to choose one correction; reserve streams 10000–10015 for confirmation.
+Run the targeted correction checks and one full pytest suite after code changes.
+Do not expand to B unless both A seeds satisfy the documented gates.
