@@ -35,3 +35,5 @@ capacity probe. Training method, run order and know-how:
 [endophalon3_handoff.md](endophalon3_handoff.md).
 
 The routing loss in `configs/endophalon3/level_a_routing.json` is an opt-in negative experiment, not an improved default; see [routing report](endophalon3_routing_report.ko.md). Saved-card audits and reproduction procedures are documented in the [training report](endophalon3_training_report.ko.md).
+
+Joint A/B cards and optimizer checkpoints are preserved separately. Read-only verification: `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/audit_endophalon3_joint.py`. Training commands in the [frozen joint plan](endophalon3_joint_plan.md) reproduce the bounded trials; completed output paths are rejected. See [actual results](endophalon3_joint_report.md) before launching any new run.

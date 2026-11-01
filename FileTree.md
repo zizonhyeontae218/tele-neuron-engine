@@ -9,7 +9,7 @@
 - `CLAUDE.md` — Claude working context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Endophalon 3 experiment closeout and integration.
+- `GOAL.md` — Endophalon 3 joint A/B closeout.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
@@ -106,6 +106,7 @@
 - `endophalon3.md` — Teleneuron-Endophalon-3 (training experiments).
 - `endophalon3_handoff.md` — Endophalon-3 handoff: how to train it, and what we learned.
 - `endophalon3_joint_plan.md` — Endophalon 3 joint A/B training — 2026-11-01.
+- `endophalon3_joint_report.md` — Endophalon 3 — joint A/B training closeout.
 - `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
 - `endophalon3_routing_report.ko.md` — Endophalon 3 — 공유 판독 병목 실험.
 - `endophalon3_training_report.ko.md` — Endophalon 3 — 학습 실험 및 성능 검증 보고서.
@@ -138,6 +139,29 @@
 - `e2_run_multi_k4.log` — Contains e2 run multi k4 data.
 - `e2_run_multi_k8.log` — Contains e2 run multi k8 data.
 - `e2_run_xor_k4.log` — Contains e2 run xor k4 data.
+
+## `docs/endophalon3_joint_runs/20261101`
+
+- `artifact_manifest.json` — Contains artifact manifest data.
+- `closeout_verification.json` — Contains closeout verification data.
+
+## `docs/endophalon3_joint_runs/20261101/ab_binary_s1`
+
+- `checkpoint.json` — Contains checkpoint data.
+- `model.json` — Contains model data.
+- `train.log` — Contains train data.
+
+## `docs/endophalon3_joint_runs/20261101/ab_binary_s2`
+
+- `checkpoint.json` — Contains checkpoint data.
+- `model.json` — Contains model data.
+- `train.log` — Contains train data.
+
+## `docs/endophalon3_joint_runs/20261101/ab_onehot_s1`
+
+- `checkpoint.json` — Contains checkpoint data.
+- `model.json` — Contains model data.
+- `train.log` — Contains train data.
 
 ## `docs/endophalon3_probes`
 
@@ -318,6 +342,12 @@
 - `20261031_b_onehot_s1.json` — Stores structured data for 20261031 b onehot s1.
 - `20261031_b_onehot_s2.json` — Stores structured data for 20261031 b onehot s2.
 
+## `models/endophalon3_joint`
+
+- `ab_binary_s1.json` — Contains ab binary s1 data.
+- `ab_binary_s2.json` — Contains ab binary s2 data.
+- `ab_onehot_s1.json` — Contains ab onehot s1 data.
+
 ## `models/endophalon3_routing`
 
 - `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
@@ -344,6 +374,7 @@
 ## `scripts`
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
+- `audit_endophalon3_joint.py` — Contains audit endophalon3 joint data.
 - `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
 - `diagnose_endophalon3_routing.py` — Diagnose frozen Endophalon-3 states on train/validation only; no theta search.
 - `recover_endophalon3.py` — Recover only the two infrastructure-interrupted experiments; scientific code is unchanged.

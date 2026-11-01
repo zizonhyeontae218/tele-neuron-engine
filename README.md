@@ -307,3 +307,7 @@ keep Phase 1 scope clear: this is a physical reservoir computing prototype, not
 a practical LLM replacement.
 
 The operation-balanced routing follow-up did not improve accuracy; its B expansion gate failed. Its loss is available only as an opt-in reproducibility setting. See [routing report](docs/endophalon3_routing_report.ko.md).
+
+### Joint A/B follow-up
+
+Three joint AB models completed 120 new generations each, using one shared linear readout with interleaved levels. All three missed the per-level/per-operation goals; fresh pooled accuracy was 72.32%, 73.02%, and 76.77%. [Joint results, cards, and replay](docs/endophalon3_joint_report.md).

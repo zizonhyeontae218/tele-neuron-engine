@@ -60,3 +60,7 @@ The owner authorized joint A/B training and additional budget on 2026-11-01.
 See docs/endophalon3_joint_plan.md for the frozen trials and stopping rules.
 The historical 40-generation and separate-level scope does not govern this follow-up.
 Preserve all previous cards and reports. No test-driven repeated search.
+
+Joint trials are now complete, 0/3 accuracy gates passed. Read
+docs/endophalon3_joint_report.md before any follow-up. The old and joint
+model/evidence files remain immutable.

@@ -1,0 +1,32 @@
+{
+  "workflow_run": 41287301037,
+  "pytest_passed": 95,
+  "saved_card_replay": {
+    "ab_binary_s1": "PASS",
+    "ab_binary_s2": "PASS",
+    "ab_onehot_s1": "PASS"
+  },
+  "replay_scope": [
+    "exact train/validation/test/fresh level and operation accuracies",
+    "train-only serialized head refit",
+    "validation fitness",
+    "finite states",
+    "checkpoint decode equals saved theta",
+    "artifact file SHA-256"
+  ],
+  "original_artifact_zip_digests_verified": {
+    "13077518257": "027750ba295cb9d2fa31972f1541a53dfb3c58a1035af2af7d6242a1e4365bec",
+    "13076659900": "2b297dfa4b950b1ce09108ee2c76361090f3f191aeaf1fb3b4656b6fdb033742",
+    "13076548911": "ef008d30fa9627876583e00a29dbb88342aa666b2a72db7c0f68e3bf156d2971"
+  },
+  "prior_backup_reproduction_files_verified": 166,
+  "prior_heads_reachable": 9,
+  "accuracy_goal_passed": 0,
+  "accuracy_goal_trials": 3,
+  "audit_correction": {
+    "initial_encode_roundtrip_check": "failed on binary seed 2, one scalar max latent error 0.0443435",
+    "reason": "Existing logit encoder clips probabilities; encode is not exact inverse at bounds",
+    "corrected_check": "decode(checkpoint best_u) equals serialized theta exactly for all three cards",
+    "training_artifacts_modified": false
+  }
+}

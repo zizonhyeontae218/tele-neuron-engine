@@ -149,3 +149,7 @@ A separate branch tested one predeclared change: `0.5 × pooled validation MSE +
 The modification reduced worst-operation validation MSE but lowered overall held-out accuracy. It is not accepted as an improvement. Neither seed passed the overall/per-operation gates on the original test and predeclared unused confirmation streams 10000–10015, so this follow-up did not expand to B. The original B study above remains complete.
 
 Validation-only diagnostic readouts suggest usable information remains in the states, with losses associated with projection/shared operation selection. These higher-capacity controls do not establish a single causal mechanism. Full per-operation results, limitations, regularizers, cost and raw evidence: [routing report](endophalon3_routing_report.ko.md), [run artifacts](endophalon3_routing_runs/). Two new cards are isolated in `models/endophalon3_routing/`. All 89 pytest tests passed; default-objective replay differences on the two frozen A cards were exactly zero.
+
+## Joint AB follow-up — 2026-11-01
+
+The owner authorized three joint A/B trials beyond the earlier separate-level scope. Each completed 120 generations; none met the per-level/per-operation gates. A single head serves both interleaved levels. See [joint report](endophalon3_joint_report.md), [frozen plan](endophalon3_joint_plan.md), and `models/endophalon3_joint/`.

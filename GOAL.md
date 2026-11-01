@@ -1,3 +1,3 @@
-# Endophalon 3 — joint A/B training
+# Endophalon 3 — joint A/B closeout
 
-The owner requests one model usable for A and B together. See [frozen plan](docs/endophalon3_joint_plan.md). Three fixed joint trials, validation-only selection, bounded additional compute, atomic optimizer checkpoints. Preserve all previous artifacts and their failures.
+The three joint AB trials completed 120 generations each; 0/3 met the accuracy gates. See [report](docs/endophalon3_joint_report.md) and [frozen plan](docs/endophalon3_joint_plan.md). The requested high-accuracy unified model remains an unmet research goal. Preserve every prior and joint result; do not turn this negative result into a performance claim.

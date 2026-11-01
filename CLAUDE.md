@@ -14,3 +14,7 @@ reproduction files are preserved on master with immutable original-head tags.
 Endophalon 3 training and the negative routing result are integrated; see
 `docs/endophalon3.md` and the two experiment reports. The B routing gate failed.
 The opt-in routing loss is retained for reproduction, not as an improvement.
+
+Joint AB closeout: three fixed trials completed 120 generations each and failed
+accuracy gates. See docs/endophalon3_joint_report.md. Preserve the joint cards,
+raw logs and optimizer checkpoints; high-accuracy A/B remains unachieved.
