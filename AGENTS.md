@@ -54,3 +54,9 @@ the production model. Keep 144/2/16 and the original CLI budget. Use validation
 only to choose one correction; reserve streams 10000–10015 for confirmation.
 Run the targeted correction checks and one full pytest suite after code changes.
 Do not expand to B unless both A seeds satisfy the documented gates.
+
+## Joint AB follow-up
+The owner authorized joint A/B training and additional budget on 2026-11-01.
+See docs/endophalon3_joint_plan.md for the frozen trials and stopping rules.
+The historical 40-generation and separate-level scope does not govern this follow-up.
+Preserve all previous cards and reports. No test-driven repeated search.

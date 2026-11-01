@@ -21,6 +21,7 @@
 
 - `archive-endophalon.yml` — Contains archive-endophalon data.
 - `endophalon3-audit.yml` — Contains endophalon3-audit data.
+- `endophalon3-joint.yml` — Contains endophalon3-joint data.
 - `endophalon3-recovery.yml` — Contains endophalon3-recovery data.
 - `retire-backup-refs.yml` — Contains retire-backup-refs data.
 - `tests.yml` — Contains tests data.
@@ -69,6 +70,9 @@
 
 ## `configs/endophalon3`
 
+- `ab_binary_s1.json` — Contains ab binary s1 data.
+- `ab_binary_s2.json` — Contains ab binary s2 data.
+- `ab_onehot_s1.json` — Contains ab onehot s1 data.
 - `level_a.json` — Stores structured data for level a.
 - `level_a_onehot.json` — Stores structured data for level a onehot.
 - `level_a_routing.json` — Stores structured data for level a routing.
@@ -101,6 +105,7 @@
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
 - `endophalon3.md` — Teleneuron-Endophalon-3 (training experiments).
 - `endophalon3_handoff.md` — Endophalon-3 handoff: how to train it, and what we learned.
+- `endophalon3_joint_plan.md` — Endophalon 3 joint A/B training — 2026-11-01.
 - `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
 - `endophalon3_routing_report.ko.md` — Endophalon 3 — 공유 판독 병목 실험.
 - `endophalon3_training_report.ko.md` — Endophalon 3 — 학습 실험 및 성능 검증 보고서.
@@ -348,6 +353,7 @@
 - `run_endophalon3_training.py` — Run the fixed Endophalon-3 experiment matrix through the existing model CLI.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
 - `summarize_endophalon3_training.py` — Build evidence tables and a Korean research report from completed audits.
+- `train_endophalon3_joint.py` — Contains train endophalon3 joint data.
 - `verify_backup_consolidation.py` — Contains verify backup consolidation data.
 
 ## `src/tele_neuron`
@@ -476,6 +482,7 @@
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
 - `test_endophalon3.py` — Provides the _small function.
+- `test_endophalon3_joint.py` — Contains test endophalon3 joint data.
 - `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
