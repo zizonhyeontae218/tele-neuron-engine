@@ -21,7 +21,7 @@ master는 기존 모델 6종과 ProMax8/16, Endophalon-3를 포함하는 최신 
 `backup/2026-10-31/*` 브랜치 9개는 master에 재현 자료를 보존한 뒤 정리하며,
 동일한 이름의 태그로 원본 커밋을 유지합니다. 모델·설정·소스·공개 실험 데이터는
 원본 바이트를 보존하고, 구형 [iPad 실험실](ipad_lab.html)도 메인에 추가했습니다.
-Claude Volta, `endophalon3`, iPad Lab, 실험 및 preserve 브랜치는 유지합니다.
+Claude Volta, `endophalon3`, iPad Lab 브랜치는 유지합니다. Endophalon 3 실험 및 workspace 이력은 master와 endophalon3에 통합합니다.
 
 과거 설계 문서와 README 버전은
 [Drive 문서 보존 폴더](https://drive.google.com/drive/folders/14ttCG7AO2yFLp1wu603xrb6m773x-A2s)에 있습니다.
@@ -235,3 +235,5 @@ MIT. 자세한 내용은 [LICENSE](LICENSE)를 참고하세요.
 ## 기여
 
 기여를 환영합니다. [CONTRIBUTING.md](CONTRIBUTING.md)를 읽고, Phase 1이 물리 리저버 컴퓨팅 프로토타입이라는 범위가 유지되도록 해 주세요. 이 프로젝트는 **아직** 실용적인 LLM 대체재가 아닙니다.
+
+연산 균형 라우팅 후속 실험은 정확도를 개선하지 못했고 B 확장 게이트는 실패했습니다. 해당 손실은 재현을 위한 선택 설정입니다. [라우팅 보고서](docs/endophalon3_routing_report.ko.md)를 참조하세요.

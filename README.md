@@ -25,7 +25,7 @@ Original model branches are superseded by the generation archives. The nine
 immutable tags with those names preserve their original heads. All original
 model cards and reproduction files remain byte-identical. The historical
 standalone [iPad Lab](ipad_lab.html) is also available directly on master.
-Claude Volta, `endophalon3`, iPad Lab, experiment and preserve branches are retained.
+Claude Volta, `endophalon3`, and iPad Lab are retained. The audited Endophalon 3 experiment and workspace histories are integrated into master and endophalon3.
 
 Historical design documents and README versions are preserved in the
 [Drive document archive](https://drive.google.com/drive/folders/14ttCG7AO2yFLp1wu603xrb6m773x-A2s).
@@ -305,3 +305,5 @@ MIT. See [LICENSE](LICENSE).
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and
 keep Phase 1 scope clear: this is a physical reservoir computing prototype, not
 a practical LLM replacement.
+
+The operation-balanced routing follow-up did not improve accuracy; its B expansion gate failed. Its loss is available only as an opt-in reproducibility setting. See [routing report](docs/endophalon3_routing_report.ko.md).
