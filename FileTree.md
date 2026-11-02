@@ -6,10 +6,10 @@
 
 - `.gitignore` — Contains .gitignore data.
 - `AGENTS.md` — Tele-Neuron Engine agent instructions.
-- `CLAUDE.md` — Claude working context.
+- `CLAUDE.md` — Current context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Endophalon 3 — independent A/B models connected in software.
+- `GOAL.md` — Endophalon 3 — independent A/B release.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
@@ -20,11 +20,7 @@
 ## `.github/workflows`
 
 - `archive-endophalon.yml` — Contains archive-endophalon data.
-- `endophalon3-alpha-training.yml` — Contains endophalon3-alpha-training data.
-- `endophalon3-audit.yml` — Contains endophalon3-audit data.
 - `endophalon3-independent.yml` — Contains endophalon3-independent data.
-- `endophalon3-joint.yml` — Contains endophalon3-joint data.
-- `endophalon3-recovery.yml` — Contains endophalon3-recovery data.
 - `retire-backup-refs.yml` — Contains retire-backup-refs data.
 - `tests.yml` — Contains tests data.
 
@@ -70,30 +66,12 @@
 - `promax16.json` — Stores structured data for promax16.
 - `promax8.json` — Stores structured data for promax8.
 
-## `configs/endophalon3`
-
-- `ab_binary_s1.json` — Contains ab binary s1 data.
-- `ab_binary_s2.json` — Contains ab binary s2 data.
-- `ab_onehot_s1.json` — Contains ab onehot s1 data.
-- `level_a.json` — Stores structured data for level a.
-- `level_a_onehot.json` — Stores structured data for level a onehot.
-- `level_a_routing.json` — Stores structured data for level a routing.
-- `level_b.json` — Stores structured data for level b.
-- `level_b_onehot.json` — Stores structured data for level b onehot.
-
-## `configs/endophalon3_alpha`
-
-- `example_program.txt` — Contains example program data.
-- `from_3t_seed1.json` — Contains from 3t seed1 data.
-
 ## `configs/endophalon3_software`
 
 - `A.json` — Contains A data.
 - `B.json` — Contains B data.
 - `current.json` — Contains current data.
 - `example_program.txt` — Contains example program data.
-- `existing_best_observed.json` — Contains existing best observed data.
-- `retirement.json` — Contains retirement data.
 
 ## `configs/endophalon_plus`
 
@@ -119,30 +97,16 @@
 - `endophalon2_pro.md` — Teleneuron-Endophalon-2-Pro.
 - `endophalon2_pro_ablation.json` — Stores structured data for endophalon2 pro ablation.
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
-- `endophalon3.md` — Teleneuron-Endophalon-3T (historical training experiments).
-- `endophalon3_ab_alpha_design.ko.md` — Endophalon 3 (AB alpha) — 명령으로 선택하는 A/B와 공유 물리 기억.
-- `endophalon3_alpha.md` — Endophalon 3 (AB alpha) — implementation and first measurements.
-- `endophalon3_alpha_120_closeout.md` — Endophalon 3 physics120 — closeout recovery.
-- `endophalon3_alpha_120_plan.md` — Endophalon 3 — 120-generation paired-bank physics training.
-- `endophalon3_alpha_120_preflight.json` — Contains endophalon3 alpha 120 preflight data.
-- `endophalon3_alpha_120_report.md` — Endophalon 3 — 120-generation physics training result.
-- `endophalon3_alpha_experiment_plan.md` — Endophalon 3 MVP evaluation plan — 2026-11-02.
 - `endophalon3_development.md` — Endophalon 3 버전 개발기록.
-- `endophalon3_handoff.md` — Endophalon-3 historical handoff: original plan and lessons.
 - `endophalon3_independent_plan.md` — Endophalon 3 — independent A/B 120 generations and tree cleanup.
-- `endophalon3_joint_plan.md` — Endophalon 3 joint A/B training — 2026-11-01.
-- `endophalon3_joint_report.md` — Endophalon 3 — joint A/B training closeout.
-- `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
-- `endophalon3_routing_report.ko.md` — Endophalon 3 — 공유 판독 병목 실험.
-- `endophalon3_software.md` — Endophalon 3 — independent A/B models with software connections.
-- `endophalon3_training_report.ko.md` — Endophalon 3 — 학습 실험 및 성능 검증 보고서.
+- `endophalon3_software.md` — Endophalon 3 — current independent A/B.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
 - `endophalon_pro.md` — Teleneuron-Endophalon-Pro.
 - `endophalon_pro_matrix.json` — Stores structured data for endophalon pro matrix.
 - `experiment_design.md` — Phase 1 Experiment Design.
 - `model_commands.md` — Model entry points.
-- `model_names.md` — Model names after the 2026-11-02 owner decision.
+- `model_names.md` — Current model names.
 
 ## `docs/endophalon2_pro_runs`
 
@@ -167,27 +131,41 @@
 - `e2_run_multi_k8.log` — Contains e2 run multi k8 data.
 - `e2_run_xor_k4.log` — Contains e2 run xor k4 data.
 
-## `docs/endophalon3_alpha_runs/20261102`
+## `docs/endophalon3_probes`
 
-- `verification.json` — Contains verification data.
+- `level_a.json` — Stores structured data for level a.
+- `level_a_onehot.json` — Stores structured data for level a onehot.
+- `level_b.json` — Stores structured data for level b.
+- `level_b_onehot.json` — Stores structured data for level b onehot.
 
-## `docs/endophalon3_alpha_runs/20261102/physics120`
+## `docs/endophalon3_software_runs/20261102/independent120`
 
-- `actions_job.log` — Contains actions job data.
+- `artifact_recovery.json` — Contains artifact recovery data.
+- `backup_integrity.log` — Contains backup integrity data.
+- `finalization.log` — Contains finalization data.
+- `original_artifact_A_files.json` — Contains original artifact A files data.
+- `original_artifact_B_files.json` — Contains original artifact B files data.
+- `original_failed_finalization.log` — Contains original failed finalization data.
+- `preflight.json` — Contains preflight data.
+- `release_verification.json` — Contains release verification data.
+- `remote_refs_before.json` — Contains remote refs before data.
+- `smoke.log` — Contains smoke data.
+- `tests.log` — Contains tests data.
+
+## `docs/endophalon3_software_runs/20261102/independent120/A`
+
 - `checkpoint.json` — Contains checkpoint data.
 - `confirmation_observations.npz` — Contains confirmation observations data.
 - `environment.json` — Contains environment data.
 - `evaluation.json` — Contains evaluation data.
 - `manifest.json` — Contains manifest data.
 - `model.json` — Contains model data.
-- `recovery_original_files.json` — Contains recovery original files data.
-- `recovery_verification.json` — Contains recovery verification data.
+- `saved_audit.json` — Contains saved audit data.
 - `settings.json` — Contains settings data.
 - `test_observations.npz` — Contains test observations data.
 - `training.log` — Contains training data.
-- `verification.json` — Contains verification data.
 
-## `docs/endophalon3_alpha_runs/20261102/physics120/checkpoints`
+## `docs/endophalon3_software_runs/20261102/independent120/A/checkpoints`
 
 - `generation_000.json` — Contains generation 000 data.
 - `generation_001.json` — Contains generation 001 data.
@@ -311,177 +289,146 @@
 - `generation_119.json` — Contains generation 119 data.
 - `generation_120.json` — Contains generation 120 data.
 
-## `docs/endophalon3_alpha_runs/20261102/seed1_binary`
+## `docs/endophalon3_software_runs/20261102/independent120/B`
 
+- `checkpoint.json` — Contains checkpoint data.
+- `confirmation_observations.npz` — Contains confirmation observations data.
+- `environment.json` — Contains environment data.
 - `evaluation.json` — Contains evaluation data.
 - `manifest.json` — Contains manifest data.
 - `model.json` — Contains model data.
-- `observations.npz` — Contains observations data.
-- `reset_observations.npz` — Contains reset observations data.
+- `saved_audit.json` — Contains saved audit data.
+- `settings.json` — Contains settings data.
+- `test_observations.npz` — Contains test observations data.
+- `training.log` — Contains training data.
 
-## `docs/endophalon3_joint_runs/20261101`
+## `docs/endophalon3_software_runs/20261102/independent120/B/checkpoints`
 
-- `artifact_manifest.json` — Contains artifact manifest data.
-- `closeout_verification.json` — Contains closeout verification data.
-
-## `docs/endophalon3_joint_runs/20261101/ab_binary_s1`
-
-- `checkpoint.json` — Contains checkpoint data.
-- `model.json` — Contains model data.
-- `train.log` — Contains train data.
-
-## `docs/endophalon3_joint_runs/20261101/ab_binary_s2`
-
-- `checkpoint.json` — Contains checkpoint data.
-- `model.json` — Contains model data.
-- `train.log` — Contains train data.
-
-## `docs/endophalon3_joint_runs/20261101/ab_onehot_s1`
-
-- `checkpoint.json` — Contains checkpoint data.
-- `model.json` — Contains model data.
-- `train.log` — Contains train data.
-
-## `docs/endophalon3_probes`
-
-- `level_a.json` — Stores structured data for level a.
-- `level_a_onehot.json` — Stores structured data for level a onehot.
-- `level_b.json` — Stores structured data for level b.
-- `level_b_onehot.json` — Stores structured data for level b onehot.
-
-## `docs/endophalon3_routing_runs`
-
-- `a_binary_s1.evaluation.json` — Stores structured data for a binary s1.evaluation.
-- `a_binary_s1.log` — Contains a binary s1 data.
-- `a_binary_s1.post_diagnosis.json` — Stores structured data for a binary s1.post diagnosis.
-- `a_binary_s1.run.json` — Stores structured data for a binary s1.run.
-- `a_binary_s2.evaluation.json` — Stores structured data for a binary s2.evaluation.
-- `a_binary_s2.log` — Contains a binary s2 data.
-- `a_binary_s2.post_diagnosis.json` — Stores structured data for a binary s2.post diagnosis.
-- `a_binary_s2.run.json` — Stores structured data for a binary s2.run.
-- `artifact_manifest.json` — Stores structured data for artifact manifest.
-- `baseline_confirmation.json` — Stores structured data for baseline confirmation.
-- `baseline_preservation.json` — Stores structured data for baseline preservation.
-- `controller.log` — Contains controller data.
-- `diagnosis.log` — Contains diagnosis data.
-- `gate.json` — Stores structured data for gate.
-- `legacy_validation.json` — Stores structured data for legacy validation.
-- `pytest.log` — Contains pytest data.
-
-## `docs/endophalon3_routing_runs/diagnosis`
-
-- `a_binary_s1.json` — Stores structured data for a binary s1.
-- `a_binary_s2.json` — Stores structured data for a binary s2.
-- `a_no_regions_s1.json` — Stores structured data for a no regions s1.
-- `a_no_regions_s2.json` — Stores structured data for a no regions s2.
-- `a_onehot_s1.json` — Stores structured data for a onehot s1.
-- `b_binary_s1.json` — Stores structured data for b binary s1.
-- `b_binary_s2.json` — Stores structured data for b binary s2.
-- `b_onehot_s1.json` — Stores structured data for b onehot s1.
-- `b_onehot_s2.json` — Stores structured data for b onehot s2.
-- `initial_level_a.json` — Stores structured data for initial level a.
-- `initial_level_a_onehot.json` — Stores structured data for initial level a onehot.
-- `initial_level_b.json` — Stores structured data for initial level b.
-- `initial_level_b_onehot.json` — Stores structured data for initial level b onehot.
-- `summary.json` — Stores structured data for summary.
-
-## `docs/endophalon3_runs/20261031-training`
-
-- `a_binary_s1.audit.json` — Stores structured data for a binary s1.audit.
-- `a_binary_s1.log` — Contains a binary s1 data.
-- `a_binary_s1.predictions.csv` — Contains a binary s1.predictions data.
-- `a_binary_s1.run.json` — Stores structured data for a binary s1.run.
-- `a_binary_s2.audit.json` — Stores structured data for a binary s2.audit.
-- `a_binary_s2.log` — Contains a binary s2 data.
-- `a_binary_s2.predictions.csv` — Contains a binary s2.predictions data.
-- `a_binary_s2.run.json` — Stores structured data for a binary s2.run.
-- `a_no_regions_s1.audit.json` — Stores structured data for a no regions s1.audit.
-- `a_no_regions_s1.log` — Contains a no regions s1 data.
-- `a_no_regions_s1.predictions.csv` — Contains a no regions s1.predictions data.
-- `a_no_regions_s1.run.json` — Stores structured data for a no regions s1.run.
-- `a_no_regions_s2.audit.json` — Stores structured data for a no regions s2.audit.
-- `a_no_regions_s2.log` — Contains a no regions s2 data.
-- `a_no_regions_s2.predictions.csv` — Contains a no regions s2.predictions data.
-- `a_no_regions_s2.run.json` — Stores structured data for a no regions s2.run.
-- `a_onehot_s1.audit.json` — Stores structured data for a onehot s1.audit.
-- `a_onehot_s1.log` — Contains a onehot s1 data.
-- `a_onehot_s1.predictions.csv` — Contains a onehot s1.predictions data.
-- `a_onehot_s1.run.json` — Stores structured data for a onehot s1.run.
-- `ablation_initial_comparison.json` — Stores structured data for ablation initial comparison.
-- `ablation_initial_probe.json` — Stores structured data for ablation initial probe.
-- `ablation_initial_probe.log` — Contains ablation initial probe data.
-- `accuracy.csv` — Contains accuracy data.
-- `artifact_manifest.json` — Stores structured data for artifact manifest.
-- `b_binary_s1.audit.json` — Stores structured data for b binary s1.audit.
-- `b_binary_s1.log` — Contains b binary s1 data.
-- `b_binary_s1.predictions.csv` — Contains b binary s1.predictions data.
-- `b_binary_s1.run.json` — Stores structured data for b binary s1.run.
-- `b_binary_s2.audit.json` — Stores structured data for b binary s2.audit.
-- `b_binary_s2.log` — Contains b binary s2 data.
-- `b_binary_s2.predictions.csv` — Contains b binary s2.predictions data.
-- `b_binary_s2.run.json` — Stores structured data for b binary s2.run.
-- `b_onehot_s1.audit.json` — Stores structured data for b onehot s1.audit.
-- `b_onehot_s1.log` — Contains b onehot s1 data.
-- `b_onehot_s1.predictions.csv` — Contains b onehot s1.predictions data.
-- `b_onehot_s1.run.json` — Stores structured data for b onehot s1.run.
-- `b_onehot_s2.audit.json` — Stores structured data for b onehot s2.audit.
-- `b_onehot_s2.log` — Contains b onehot s2 data.
-- `b_onehot_s2.predictions.csv` — Contains b onehot s2.predictions data.
-- `b_onehot_s2.run.json` — Stores structured data for b onehot s2.run.
-- `bootstrap_pytest_missing.log` — Contains bootstrap pytest missing data.
-- `closeout_recovery.json` — Stores structured data for closeout recovery.
-- `dependency_install_attempt.log` — Contains dependency install attempt data.
-- `environment.json` — Stores structured data for environment.
-- `interrupted_runs.json` — Stores structured data for interrupted runs.
-- `phase0_complete.json` — Stores structured data for phase0 complete.
-- `phase0_direct_commands.json` — Stores structured data for phase0 direct commands.
-- `preservation.json` — Stores structured data for preservation.
-- `probe_comparison.json` — Stores structured data for probe comparison.
-- `promax_replay.jsonl` — Contains promax replay data.
-- `pytest.log` — Contains pytest data.
-- `recovery_audit.log` — Contains recovery audit data.
-- `recovery_audit_v2.log` — Contains recovery audit v2 data.
-- `recovery_verification.json` — Stores structured data for recovery verification.
-- `recovery_verification_v1.json` — Stores structured data for recovery verification v1.
-- `slow_region_ablation.json` — Stores structured data for slow region ablation.
-- `smoke.log` — Contains smoke data.
-- `summary.json` — Stores structured data for summary.
-- `training_artifact_preservation.json` — Stores structured data for training artifact preservation.
-
-## `docs/endophalon3_runs/20261031-training/cloud-attempts-recovered`
-
-- `b_onehot_s1.log` — Contains b onehot s1 data.
-- `b_onehot_s1.run.json` — Stores structured data for b onehot s1.run.
-- `b_onehot_s2.log` — Contains b onehot s2 data.
-- `b_onehot_s2.run.json` — Stores structured data for b onehot s2.run.
-
-## `docs/endophalon3_runs/20261031-training/probes`
-
-- `level_a.json` — Stores structured data for level a.
-- `level_a.log` — Contains level a data.
-- `level_a_onehot.json` — Stores structured data for level a onehot.
-- `level_a_onehot.log` — Contains level a onehot data.
-- `level_b.json` — Stores structured data for level b.
-- `level_b.log` — Contains level b data.
-- `level_b_onehot.json` — Stores structured data for level b onehot.
-- `level_b_onehot.log` — Contains level b onehot data.
-
-## `docs/endophalon3_software_runs/20261102/existing_cards`
-
-- `evaluation.json` — Contains evaluation data.
-- `manifest.json` — Contains manifest data.
-- `model.json` — Contains model data.
-- `observations.npz` — Contains observations data.
-- `verification.json` — Contains verification data.
-
-## `docs/endophalon3_software_runs/20261102/independent120`
-
-- `preflight.json` — Contains preflight data.
+- `generation_000.json` — Contains generation 000 data.
+- `generation_001.json` — Contains generation 001 data.
+- `generation_002.json` — Contains generation 002 data.
+- `generation_003.json` — Contains generation 003 data.
+- `generation_004.json` — Contains generation 004 data.
+- `generation_005.json` — Contains generation 005 data.
+- `generation_006.json` — Contains generation 006 data.
+- `generation_007.json` — Contains generation 007 data.
+- `generation_008.json` — Contains generation 008 data.
+- `generation_009.json` — Contains generation 009 data.
+- `generation_010.json` — Contains generation 010 data.
+- `generation_011.json` — Contains generation 011 data.
+- `generation_012.json` — Contains generation 012 data.
+- `generation_013.json` — Contains generation 013 data.
+- `generation_014.json` — Contains generation 014 data.
+- `generation_015.json` — Contains generation 015 data.
+- `generation_016.json` — Contains generation 016 data.
+- `generation_017.json` — Contains generation 017 data.
+- `generation_018.json` — Contains generation 018 data.
+- `generation_019.json` — Contains generation 019 data.
+- `generation_020.json` — Contains generation 020 data.
+- `generation_021.json` — Contains generation 021 data.
+- `generation_022.json` — Contains generation 022 data.
+- `generation_023.json` — Contains generation 023 data.
+- `generation_024.json` — Contains generation 024 data.
+- `generation_025.json` — Contains generation 025 data.
+- `generation_026.json` — Contains generation 026 data.
+- `generation_027.json` — Contains generation 027 data.
+- `generation_028.json` — Contains generation 028 data.
+- `generation_029.json` — Contains generation 029 data.
+- `generation_030.json` — Contains generation 030 data.
+- `generation_031.json` — Contains generation 031 data.
+- `generation_032.json` — Contains generation 032 data.
+- `generation_033.json` — Contains generation 033 data.
+- `generation_034.json` — Contains generation 034 data.
+- `generation_035.json` — Contains generation 035 data.
+- `generation_036.json` — Contains generation 036 data.
+- `generation_037.json` — Contains generation 037 data.
+- `generation_038.json` — Contains generation 038 data.
+- `generation_039.json` — Contains generation 039 data.
+- `generation_040.json` — Contains generation 040 data.
+- `generation_041.json` — Contains generation 041 data.
+- `generation_042.json` — Contains generation 042 data.
+- `generation_043.json` — Contains generation 043 data.
+- `generation_044.json` — Contains generation 044 data.
+- `generation_045.json` — Contains generation 045 data.
+- `generation_046.json` — Contains generation 046 data.
+- `generation_047.json` — Contains generation 047 data.
+- `generation_048.json` — Contains generation 048 data.
+- `generation_049.json` — Contains generation 049 data.
+- `generation_050.json` — Contains generation 050 data.
+- `generation_051.json` — Contains generation 051 data.
+- `generation_052.json` — Contains generation 052 data.
+- `generation_053.json` — Contains generation 053 data.
+- `generation_054.json` — Contains generation 054 data.
+- `generation_055.json` — Contains generation 055 data.
+- `generation_056.json` — Contains generation 056 data.
+- `generation_057.json` — Contains generation 057 data.
+- `generation_058.json` — Contains generation 058 data.
+- `generation_059.json` — Contains generation 059 data.
+- `generation_060.json` — Contains generation 060 data.
+- `generation_061.json` — Contains generation 061 data.
+- `generation_062.json` — Contains generation 062 data.
+- `generation_063.json` — Contains generation 063 data.
+- `generation_064.json` — Contains generation 064 data.
+- `generation_065.json` — Contains generation 065 data.
+- `generation_066.json` — Contains generation 066 data.
+- `generation_067.json` — Contains generation 067 data.
+- `generation_068.json` — Contains generation 068 data.
+- `generation_069.json` — Contains generation 069 data.
+- `generation_070.json` — Contains generation 070 data.
+- `generation_071.json` — Contains generation 071 data.
+- `generation_072.json` — Contains generation 072 data.
+- `generation_073.json` — Contains generation 073 data.
+- `generation_074.json` — Contains generation 074 data.
+- `generation_075.json` — Contains generation 075 data.
+- `generation_076.json` — Contains generation 076 data.
+- `generation_077.json` — Contains generation 077 data.
+- `generation_078.json` — Contains generation 078 data.
+- `generation_079.json` — Contains generation 079 data.
+- `generation_080.json` — Contains generation 080 data.
+- `generation_081.json` — Contains generation 081 data.
+- `generation_082.json` — Contains generation 082 data.
+- `generation_083.json` — Contains generation 083 data.
+- `generation_084.json` — Contains generation 084 data.
+- `generation_085.json` — Contains generation 085 data.
+- `generation_086.json` — Contains generation 086 data.
+- `generation_087.json` — Contains generation 087 data.
+- `generation_088.json` — Contains generation 088 data.
+- `generation_089.json` — Contains generation 089 data.
+- `generation_090.json` — Contains generation 090 data.
+- `generation_091.json` — Contains generation 091 data.
+- `generation_092.json` — Contains generation 092 data.
+- `generation_093.json` — Contains generation 093 data.
+- `generation_094.json` — Contains generation 094 data.
+- `generation_095.json` — Contains generation 095 data.
+- `generation_096.json` — Contains generation 096 data.
+- `generation_097.json` — Contains generation 097 data.
+- `generation_098.json` — Contains generation 098 data.
+- `generation_099.json` — Contains generation 099 data.
+- `generation_100.json` — Contains generation 100 data.
+- `generation_101.json` — Contains generation 101 data.
+- `generation_102.json` — Contains generation 102 data.
+- `generation_103.json` — Contains generation 103 data.
+- `generation_104.json` — Contains generation 104 data.
+- `generation_105.json` — Contains generation 105 data.
+- `generation_106.json` — Contains generation 106 data.
+- `generation_107.json` — Contains generation 107 data.
+- `generation_108.json` — Contains generation 108 data.
+- `generation_109.json` — Contains generation 109 data.
+- `generation_110.json` — Contains generation 110 data.
+- `generation_111.json` — Contains generation 111 data.
+- `generation_112.json` — Contains generation 112 data.
+- `generation_113.json` — Contains generation 113 data.
+- `generation_114.json` — Contains generation 114 data.
+- `generation_115.json` — Contains generation 115 data.
+- `generation_116.json` — Contains generation 116 data.
+- `generation_117.json` — Contains generation 117 data.
+- `generation_118.json` — Contains generation 118 data.
+- `generation_119.json` — Contains generation 119 data.
+- `generation_120.json` — Contains generation 120 data.
 
 ## `docs/integration`
 
 - `2026-10-31.md` — Endophalon consolidation audit — 2026-10-31.
-- `2026-11-01-endophalon3.md` — Endophalon 3 integration closeout.
 - `2026-11-01.md` — Backup consolidation — 2026-11-01.
 - `backup-consolidation-2026-11-01.json` — Contains backup-consolidation-2026-11-01 data.
 - `original-heads.json` — Stores structured data for original heads.
@@ -520,38 +467,8 @@
 - `teleneuron_endophalon2_promax8.json` — Stores structured data for teleneuron endophalon2 promax8.
 - `teleneuron_endophalon2_promax8_seed2.json` — Stores structured data for teleneuron endophalon2 promax8 seed2.
 
-## `models/endophalon3`
-
-- `.gitkeep` — Contains .gitkeep data.
-- `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
-- `20261031_a_binary_s2.json` — Stores structured data for 20261031 a binary s2.
-- `20261031_a_no_regions_s1.json` — Stores structured data for 20261031 a no regions s1.
-- `20261031_a_no_regions_s2.json` — Stores structured data for 20261031 a no regions s2.
-- `20261031_a_onehot_s1.json` — Stores structured data for 20261031 a onehot s1.
-- `20261031_b_binary_s1.json` — Stores structured data for 20261031 b binary s1.
-- `20261031_b_binary_s2.json` — Stores structured data for 20261031 b binary s2.
-- `20261031_b_onehot_s1.json` — Stores structured data for 20261031 b onehot s1.
-- `20261031_b_onehot_s2.json` — Stores structured data for 20261031 b onehot s2.
-
-## `models/endophalon3_alpha`
-
-- `20261102_physics120_seed1_binary.json` — Contains 20261102 physics120 seed1 binary data.
-- `20261102_seed1_binary.json` — Contains 20261102 seed1 binary data.
-
-## `models/endophalon3_joint`
-
-- `ab_binary_s1.json` — Contains ab binary s1 data.
-- `ab_binary_s2.json` — Contains ab binary s2 data.
-- `ab_onehot_s1.json` — Contains ab onehot s1 data.
-
-## `models/endophalon3_routing`
-
-- `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
-- `20261031_a_binary_s2.json` — Stores structured data for 20261031 a binary s2.
-
 ## `models/endophalon3_software`
 
-- `20261102_existing_cards.json` — Contains 20261102 existing cards data.
 - `A.json` — Contains A data.
 - `B.json` — Contains B data.
 - `current.json` — Contains current data.
@@ -577,29 +494,14 @@
 ## `scripts`
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
-- `audit_endophalon3_alpha.py` — Contains audit endophalon3 alpha data.
-- `audit_endophalon3_alpha_training.py` — Contains audit endophalon3 alpha training data.
 - `audit_endophalon3_independent.py` — Contains audit endophalon3 independent data.
-- `audit_endophalon3_joint.py` — Contains audit endophalon3 joint data.
-- `audit_endophalon3_software.py` — Contains audit endophalon3 software data.
-- `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
-- `closeout_endophalon3_alpha_training.py` — Contains closeout endophalon3 alpha training data.
-- `diagnose_endophalon3_routing.py` — Diagnose frozen Endophalon-3 states on train/validation only; no theta search.
-- `evaluate_endophalon3_alpha.py` — Contains evaluate endophalon3 alpha data.
-- `evaluate_endophalon3_software.py` — Contains evaluate endophalon3 software data.
 - `filetree_index.py` — Contains filetree index data.
 - `finalize_endophalon3_independent.py` — Contains finalize endophalon3 independent data.
-- `recover_endophalon3.py` — Recover only the two infrastructure-interrupted experiments; scientific code is unchanged.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
 - `retire_backup_refs.py` — Contains retire backup refs data.
 - `retire_endophalon3_experiments.py` — Contains retire endophalon3 experiments data.
-- `run_endophalon3_routing.py` — Run the predeclared routing-loss experiment and verify saved A models.
-- `run_endophalon3_training.py` — Run the fixed Endophalon-3 experiment matrix through the existing model CLI.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
-- `summarize_endophalon3_training.py` — Build evidence tables and a Korean research report from completed audits.
-- `train_endophalon3_alpha.py` — Contains train endophalon3 alpha data.
 - `train_endophalon3_independent.py` — Contains train endophalon3 independent data.
-- `train_endophalon3_joint.py` — Contains train endophalon3 joint data.
 - `verify_backup_consolidation.py` — Contains verify backup consolidation data.
 
 ## `src/tele_neuron`
@@ -668,24 +570,6 @@
 - `core.py` — Collection, objective, bilevel training and evaluation for ProMax.
 - `tasks.py` — Opcode streams: per event, data bits (a, b) plus one of three operations.
 
-## `src/tele_neuron/endophalon3`
-
-- `__init__.py` — Teleneuron-Endophalon-3: an instruction-driven physical computer (base, untrained).
-- `__main__.py` — python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json [--probe | train options].
-- `config.py` — Defines the E3Config class.
-- `core.py` — Endophalon-3 collection, single-readout scoring, controls and bilevel training.
-- `engine.py` — Endophalon-3 engine: the Endophalon-2-Pro spring integrator, plus a slow region and readout-only recording.
-- `isa.py` — Endophalon-3 instruction set: level -> operation -> data, all carried by the input.
-- `theta.py` — Endophalon-3 theta: Endophalon-2-Pro spring physics plus a slow region.
-
-## `src/tele_neuron/endophalon3_alpha`
-
-- `__init__.py` — Contains   init   data.
-- `__main__.py` — Contains   main   data.
-- `model.py` — Contains model data.
-- `session.py` — Contains session data.
-- `train.py` — Contains train data.
-
 ## `src/tele_neuron/endophalon3_software`
 
 - `__init__.py` — Contains   init   data.
@@ -698,11 +582,6 @@
 - `session.py` — Contains session data.
 - `theta.py` — Contains theta data.
 - `training.py` — Contains training data.
-
-## `src/tele_neuron/endophalon3t`
-
-- `__init__.py` — Contains   init   data.
-- `__main__.py` — Contains   main   data.
 
 ## `src/tele_neuron/endophalon_plus`
 
@@ -753,14 +632,8 @@
 - `test_endophalon2.py` — Provides the _config function.
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
-- `test_endophalon3.py` — Provides the _small function.
-- `test_endophalon3_alpha.py` — Contains test endophalon3 alpha data.
-- `test_endophalon3_alpha_closeout.py` — Contains test endophalon3 alpha closeout data.
-- `test_endophalon3_alpha_training.py` — Contains test endophalon3 alpha training data.
 - `test_endophalon3_independent.py` — Contains test endophalon3 independent data.
-- `test_endophalon3_joint.py` — Contains test endophalon3 joint data.
 - `test_endophalon3_retirement.py` — Contains test endophalon3 retirement data.
-- `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
 - `test_endophalon3_software.py` — Contains test endophalon3 software data.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.

@@ -18,8 +18,6 @@ MODELS = (
     ("endophalon2_pro", "regular"),
     ("endophalon2_promax", "promax8"),
     ("endophalon2_promax", "promax16"),
-    ("endophalon3", "level_a"),
-    ("endophalon3", "level_b"),
 )
 
 
@@ -92,20 +90,6 @@ def main() -> None:
             if "metrics" not in payload:
                 raise AssertionError(f"Missing card metrics: {family}/{name}")
             print(f"PASS {family}/{name}: import, CLI training/evaluation, model-card save")
-            count += 1
-        if (ROOT / "src/tele_neuron/endophalon3_alpha").exists():
-            bundle = Path(directory) / "alpha-bundle.json"
-            state = Path(directory) / "alpha-session.json"
-            for argv in (
-                ["-m", "tele_neuron.endophalon3_alpha", "--config", "configs/endophalon3_alpha/from_3t_seed1.json", "--build", str(bundle)],
-                ["-m", "tele_neuron.endophalon3_alpha", "--model", str(bundle), "--program", "configs/endophalon3_alpha/example_program.txt", "--checkpoint-out", str(state)],
-                ["-m", "tele_neuron.endophalon3t", "--help"],
-            ):
-                result = subprocess.run([sys.executable, *argv], cwd=ROOT, env=env, capture_output=True, text=True, timeout=60)
-                if result.returncode:
-                    raise RuntimeError(result.stdout + result.stderr)
-            assert json.loads(state.read_text())["events"] == 5
-            print("PASS endophalon3_alpha: two-bank build, commands, persistent checkpoint; explicit 3T CLI alias")
             count += 1
         if (ROOT / "src/tele_neuron/endophalon3_software").exists():
             bundle = Path(directory) / "software-bundle.json"

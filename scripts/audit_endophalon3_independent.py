@@ -7,6 +7,20 @@ from tele_neuron.endophalon3_software.training import Module,observe,fitness,met
 ROOT=Path(__file__).resolve().parents[1]
 
 
+def assert_selected_config(selected,saved):
+    """Keep config exact; allow only libm/SIMD rounding in decoded theta.
+
+    Re-evaluating sigmoid on another CPU can differ by one ULP. Neither the
+    saved model nor its checkpoint is changed. Physics replay stays bitwise.
+    """
+    assert {k:v for k,v in selected.items() if k!='theta_init'}=={k:v for k,v in saved.items() if k!='theta_init'}
+    assert selected['theta_init'].keys()==saved['theta_init'].keys()
+    for name,expected in selected['theta_init'].items():
+        actual=saved['theta_init'][name]
+        assert np.asarray(expected).shape==np.asarray(actual).shape,name
+        np.testing.assert_allclose(actual,expected,rtol=1e-14,atol=1e-14,err_msg=name)
+
+
 def audit(out):
     report=json.loads((out/'evaluation.json').read_text());state=json.loads((out/'checkpoint.json').read_text());settings=json.loads((out/'settings.json').read_text());raw=settings['config'];ids=raw['training_stream_ids']
     assert state['settings_digest']==hashlib.sha256(json.dumps(settings,sort_keys=True).encode()).hexdigest()
@@ -16,7 +30,8 @@ def audit(out):
     assert all(a['best']['j']>=b['best']['j'] for a,b in zip(state['history'],state['history'][1:]))
     assert sum(h['failed'] for h in state['history'])==report['failed_candidates']
     for name,sha in settings['source_sha256'].items():assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==sha,name
-    model=Module.load(out/'model.json');selected=decode(raw,state['best_u']);assert selected.raw==model.raw and model.provenance['training_settings']==settings
+    model=Module.load(out/'model.json');selected=decode(raw,state['best_u']);assert_selected_config(selected.raw,model.raw)
+    assert model.provenance['training_settings']==settings
     for generation in range(121):
         saved=json.loads((out/'checkpoints'/f'generation_{generation:03}.json').read_text())
         assert saved['generation']==generation and saved['evaluations']==1+24*generation and saved['settings_digest']==state['settings_digest']

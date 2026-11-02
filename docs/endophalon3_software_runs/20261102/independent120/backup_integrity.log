@@ -1,0 +1,4 @@
+PASS: 166 byte-identical reproduction files, 22 models, 9 original heads reachable.
+Document archive: https://drive.google.com/file/d/1QADLkOoVDZg0RYW6YvUq7Snf2CObzptY/view?usp=drivesdk
+Drive archive SHA-256 was verified by download during consolidation; this offline check does not recheck Drive or remote tags.
+PASS: all 166 protected files also match actual release worktree bytes and executable modes

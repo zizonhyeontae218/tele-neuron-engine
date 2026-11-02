@@ -1,106 +1,21 @@
 # Tele-Neuron Engine agent instructions
 
-Read GOAL.md, FileTree.md, docs/model_commands.md and the current model's docs.
-Current names: docs/model_names.md. Current 3: docs/endophalon3_software.md.
-Preserved shared-state alpha: docs/endophalon3_alpha.md.
-Historical 3T: docs/endophalon3.md and the preserved experiment reports.
+Read GOAL.md, FileTree.md, docs/model_commands.md and docs/endophalon3_software.md.
+Current 3 is ONLY independent A/B, connected by explicit predicted-output registers.
+A/B each own physical state, clock, RNG and local history. Pause the inactive model.
+144 nodes, 2 substeps, gap16, delay12, 16 zones per active model. No oracle input.
 
-## Branch roles
-- master is active integrated development: the six v1/v2 model families plus 3T and new Endophalon-3, with
-  ProMax8 and ProMax16 configured separately.
-- archive/endophalon-v1 preserves Endophalon, Plus and Pro at the generation-1
-  boundary. Keep all three importable and executable.
-- archive/endophalon-v2 preserves Endophalon 2, 2 Pro and 2 ProMax8/16. Keep v1
-  dependencies: v2 imports utilities and physics from those packages.
-- claude/eloquent-volta-ylkb47 is a working branch, not a canonical model branch.
-- agent/add-ipad-lab is a working branch; retain its standalone ipad_lab.html.
-- The nine backup/2026-10-31/* branches are retired after consolidation.
-  Their original heads remain as immutable tags with the same names.
-- Keep master and endophalon3 aligned; retain Claude, archive and iPad branches.
-  The owner authorized integration and audited cleanup of the three Endophalon 3
-  experiment/preserve branches, without force pushes or history rewriting.
-- Historical design documents/README versions live in the verified Drive archive
-  linked from docs/integration/2026-11-01.md; reproduction files remain on master.
+The owner authorized deletion of obsolete 3T/shared-state/old model artifacts;
+experimental history is consolidated in docs/endophalon3_development.md.
+Do not restore discarded versions or launch new searches without a new task.
+Current A/B training is 120 generations each; report failures and accuracy gates plainly.
+Preserve current models/configs/seeds, current reproducibility evidence and all v1/v2.
 
-## Commands (repository root, Python >=3.11)
-- Install: python -m pip install -e . -r requirements.txt
-- Archive preview (read-only): python scripts/archive_endophalon.py
-- The manual Archive Endophalon branches workflow is legacy and idempotent.
-  It checks preservation tags after safety-branch retirement, and only ever
-  deletes the six original model refs in its fixed allowlist.
-  Never bypass its changed-ref checks or branch protection.
-- Full tests: python -m pytest -q
-- Retire the nine consolidated backups: python scripts/retire_backup_refs.py
-  previews; --apply is authorized only for this fixed audited 2026-11-01 scope.
-- Consolidation integrity: python scripts/verify_backup_consolidation.py
-- CLI/config smoke: python scripts/smoke_models.py
-- Run/training commands: docs/model_commands.md (can take much longer than smoke).
+master and endophalon3 must stay aligned. No new remote work branch, force push,
+history rewriting or unrelated branch deletion. Leave Claude, generation archives
+and iPad Lab branches intact; retain ipad_lab.html and v1/v2 backup consolidation.
 
-## Invariants
-Preserve source, configs, model cards, logs, task definitions, dataset splits and
-seeds. Do not replace older models or overwrite published experiment outputs.
-No force pushes, unrelated branch deletion or history rewriting. Respect branch
-protection and inspect the remote head before updating. Archive changes must be
-limited to compatibility fixes and documentation; record the evidence.
-Keep README.md and README.ko.md branch links accurate. Update FileTree.md and,
-when the Filetree generator is available, FileTree.md / FILETREE.hash.json.
-Record actual commands, results and limitations; never infer benchmark parity
-from smoke tests. No multi-agent delegation is required for this maintenance.
-
-## Routing experiment record
-Read GOAL.md and docs/endophalon3_routing_report.ko.md. The original
-nine cards and all prior logs are immutable. New evidence belongs under
-`docs/endophalon3_routing_runs/`; one corrected A config belongs alongside the
-original configs. Diagnostic gated/separate heads must never be presented as
-the production model. Keep 144/2/16 and the original CLI budget. Use validation
-only to choose one correction; reserve streams 10000–10015 for confirmation.
-Run the targeted correction checks and one full pytest suite after code changes.
-Do not expand to B unless both A seeds satisfy the documented gates.
-
-## Joint AB follow-up
-The owner authorized joint A/B training and additional budget on 2026-11-01.
-See docs/endophalon3_joint_plan.md for the frozen trials and stopping rules.
-The historical 40-generation and separate-level scope does not govern this follow-up.
-Preserve all previous cards and reports. No test-driven repeated search.
-
-Joint trials are now complete, 0/3 accuracy gates passed. Read
-docs/endophalon3_joint_report.md before any follow-up. The old and joint
-model/evidence files remain immutable.
-
-## Endophalon 3 shared-state alpha implementation (preserved experiment)
-The owner renamed the previous 3 models to 3T; keep their historical files and
-family strings byte-identical. `tele_neuron.endophalon3t` is the explicit legacy
-CLI alias. `tele_neuron.endophalon3_alpha` is the new Endophalon 3 (AB alpha).
-Read GOAL.md and docs/endophalon3_ab_alpha_design.ko.md. Two A/B parameter/head
-banks share one physical state. Preserve position, velocity, clock and RNG on
-switches; record switching energy. Keep 144/2/16 active zones. No hidden input
-history or per-bank state; only the evaluation oracle sees target history.
-Implement/verify the bounded MVP before outer physics training.
-
-Local index fallback (external skill generator unavailable):
-`python scripts/filetree_index.py update` then `python scripts/filetree_index.py lint`.
-
-## Paired-bank training (2026-11-02)
-The owner authorized 120 generations of new-3 physics training. Follow
-`docs/endophalon3_alpha_120_plan.md`; do not confuse it with the 3T joint run.
-Use production Session, separate train-only heads, checkpoints, a fixed seed and
-no held-out selection. Both banks remain separate despite paired optimization.
-
-New-3 physics120 is complete (2,881 pairs), audit passed; accuracy gates remain
-unmet. Preserve the original failed job/closeout log and recovered artifacts.
-See docs/endophalon3_alpha_120_closeout.md. Do not repeat the completed run.
-
-## Current software-linked A/B direction
-The owner now requests independent physical sessions connected in software.
-See GOAL.md and docs/endophalon3_software.md. New runtime is
-tele_neuron.endophalon3_software; preserve all previous shared-state alpha code,
-models and artifacts. Pause the inactive model; use local event histories.
-Only explicit predicted-output registers bridge A/B, with no oracle or physical
-state transfer. No retraining or additional search in this slice.
-
-## Latest owner override: independent 120 + cleanup
-Train A/B independently for 120 generations each; after both audits remove
-other 3 versions from the active tree and retain experimental history only in
-docs/endophalon3_development.md. This supersedes prior 3-version preservation
-rules for the fixed cleanup scope. See docs/endophalon3_independent_plan.md.
-No v1/v2 or unrelated branch changes; no force push or history rewriting.
+Commands: python -m pytest -q; python scripts/smoke_models.py;
+python scripts/verify_backup_consolidation.py; python scripts/filetree_index.py update;
+python scripts/filetree_index.py lint. Install: python -m pip install -e . -r requirements.txt.
+Model training/audit commands are in docs/model_commands.md.

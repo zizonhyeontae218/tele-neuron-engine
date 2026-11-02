@@ -1,0 +1,4 @@
+PASS A 120 generations / 2881 candidates; source/head/fitness and six-stream exact physical replay
+PASS B 120 generations / 2881 candidates; source/head/fitness and six-stream exact physical replay
+Removed 341 obsolete 3-version files from current tree; no history rewrite
+Both native models ready; old 3 tree retired; current tests/smoke/publication remain

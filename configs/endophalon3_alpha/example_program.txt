@@ -1,7 +1,0 @@
-# Shared physical history; the first two events have insufficient recall2 history.
-A XOR 1 0
-A XOR 0 1
-level B
-recall2 0 0
-A recall1 1 0
-B xor_mem 0 1

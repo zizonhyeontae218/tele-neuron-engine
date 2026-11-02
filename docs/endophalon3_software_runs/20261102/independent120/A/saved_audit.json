@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "generation": 120,
+  "candidate_evaluations": 2881,
+  "generation_checkpoints": 121,
+  "source_hashes_verified": true,
+  "train_only_refit_verified": true,
+  "fitness_and_all_metrics_verified": true,
+  "baseline_metrics_reproduced": true,
+  "exact_physical_replay": {
+    "test_streams": 3,
+    "confirmation_streams": 3
+  },
+  "model_sha256": "7556a9ef7b99cb79c9190f32b4474738f09a99f305772d6dd7b1348394b32d70",
+  "theta_decode_tolerance": {
+    "rtol": 1e-14,
+    "atol": 1e-14,
+    "scope": "decoded theta only; metadata and bitwise physics replay unchanged"
+  },
+  "audit_script_sha256": "92a072dbee0b9fc684bcf24726419345cb7625491f3ce2861f26a71476b0be18",
+  "recovery_platform": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "status": "both independent 120-generation runs audited; old 3 active-tree versions retired",
+  "removed_files": 341,
+  "reports": {
+    "A": {
+      "accuracy_gate": false,
+      "user_target": {
+        "overall": 0.9,
+        "passed": false
+      },
+      "confirmation": {
+        "accuracy": 0.8916666666666667,
+        "mse": 0.1001509311538318,
+        "per_op": {
+          "xor": {
+            "accuracy": 0.9823834196891191,
+            "n": 965
+          },
+          "recall1": {
+            "accuracy": 0.9518935516888434,
+            "n": 977
+          },
+          "recall2": {
+            "accuracy": 0.7222808870116156,
+            "n": 947
+          },
+          "xor_mem": {
+            "accuracy": 0.9064143007360673,
+            "n": 951
+          }
+        }
+      }
+    },
+    "B": {
+      "accuracy_gate": false,
+      "user_target": {
+        "overall": 0.8,
+        "passed": false
+      },
+      "confirmation": {
+        "accuracy": 0.7661458333333333,
+        "mse": 0.16205175239797398,
+        "per_op": {
+          "xor": {
+            "accuracy": 0.8315789473684211,
+            "n": 475
+          },
+          "recall1": {
+            "accuracy": 0.7386831275720165,
+            "n": 486
+          },
+          "recall2": {
+            "accuracy": 0.6652360515021459,
+            "n": 466
+          },
+          "xor_mem": {
+            "accuracy": 0.5522388059701493,
+            "n": 469
+          },
+          "and": {
+            "accuracy": 0.9575371549893843,
+            "n": 471
+          },
+          "or": {
+            "accuracy": 0.9732510288065843,
+            "n": 486
+          },
+          "parity3w": {
+            "accuracy": 0.5135699373695198,
+            "n": 479
+          },
+          "and_mem": {
+            "accuracy": 0.8838582677165354,
+            "n": 508
+          }
+        }
+      }
+    }
+  },
+  "no_history_rewrite": true,
+  "original_artifact_bytes_unchanged": true,
+  "current_models_match_original_worker_artifacts": true,
+  "both_model_manifests_verified": true,
+  "all_obsolete_allowlist_paths_absent": true,
+  "pytest_passed": 91,
+  "smoke_combinations_passed": 8,
+  "backup_protected_files_unchanged": 166,
+  "original_workflow_conclusion": "failure (postprocessing assertion)",
+  "recovered_without_retraining": true,
+  "candidate_evaluations_total": 5762,
+  "canonical_source_commit": "1b12528c91563e4a50dd39a10b766237181f6ddc",
+  "remote_branch_changes": "only existing master/endophalon3; no creation/deletion, no force or history rewrite"
+}

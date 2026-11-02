@@ -10,11 +10,9 @@ output bits.
 This is a physical reservoir computing prototype, not a practical LLM
 replacement.
 
-The owner has authorized independent A/B 120-generation training, followed by removal of obsolete 3 variants. See the [frozen plan](docs/endophalon3_independent_plan.md); prior results are consolidated in the [3 development history](docs/endophalon3_development.md). Cleanup waits for both saved-model audits.
-
 ## Repository branches
 
-Active development includes the six v1/v2 model families, both ProMax sizes, preserved Endophalon-3T, and the new Endophalon-3 (software-linked A/B).
+Active development includes the six v1/v2 model families, both ProMax sizes, Endophalon-3 (independent A/B, software-linked).
 
 | Branch | Role |
 |---|---|
@@ -270,24 +268,6 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 
 Details and caveats: [docs/endophalon2_promax.md](docs/endophalon2_promax.md).
 
-## Teleneuron-Endophalon-3T (historical training experiments)
-
-The next generation, built on the Endophalon-2-Pro / ProMax spring physics.
-It is an instruction-driven physical computer: one physics system, one
-readout, and every input event is an instruction `LEVEL OP a b`, for example
-`"A XOR 1 1"`. The level bit picks the instruction table (A: 4 ops, B: 8 ops),
-the opcode picks the operation, and a, b are the data. A slow region adds a
-second timescale for recall.
-
-9 fixed-budget models have been trained and audited; A accuracy gates 0/3. All seeds and negative results are reported.
-[Results](docs/endophalon3.md) · [research report](docs/endophalon3_training_report.ko.md).
-
-```bash
-python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe
-```
-
-Routing-loss follow-up: an opt-in 0.5 pooled/worst-operation objective was tested with two A seeds. Both missed the accuracy gates; default behavior remains unchanged. [Report](docs/endophalon3_routing_report.ko.md).
-
 ## Known Limitations
 
 - The physics model is intentionally simple and tuned only for tiny binary
@@ -308,32 +288,10 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and
 keep Phase 1 scope clear: this is a physical reservoir computing prototype, not
 a practical LLM replacement.
 
-The operation-balanced routing follow-up did not improve accuracy; its B expansion gate failed. Its loss is available only as an opt-in reproducibility setting. See [routing report](docs/endophalon3_routing_report.ko.md).
+## Endophalon 3 — independent A/B
 
-### Historical 3T joint A/B follow-up
-
-Three joint AB models completed 120 new generations each, using one shared linear readout with interleaved levels. All three missed the per-level/per-operation goals; fresh pooled accuracy was 72.32%, 73.02%, and 76.77%. [Joint results, cards, and replay](docs/endophalon3_joint_report.md).
-
-## Previous Endophalon-3 shared-state alpha experiment
-
-The new 3 keeps independent A/B parameter banks and linear readouts on one continuous physical state. A command selects the module; positions, velocities, time and RNG continue across switches. The previous 3 family is now named **3T**; historical paths/cards remain intact. [Name mapping](docs/model_names.md) · [design](docs/endophalon3_ab_alpha_design.ko.md) · [implementation and measurements](docs/endophalon3_alpha.md).
+A/B each completed 120 generations with independent theta/readout/state/RNG. Software registers connect actual predicted outputs. A: 89.17% confirmation / B: 76.61% confirmation. Both overall targets (A 90%, B 80%) and the strict per-operation gate remain unmet. Accuracy gates and per-op limits are recorded in [development history](docs/endophalon3_development.md). Older 3 implementations/model files were removed from the current tree at the owner’s request; v1/v2 remain.
 
 ```bash
-python -m tele_neuron.endophalon3_alpha --config configs/endophalon3_alpha/from_3t_seed1.json --build /tmp/new-e3-banks.json
-python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program configs/endophalon3_alpha/example_program.txt --checkpoint-out /tmp/new-e3-session.json
+python -m tele_neuron.endophalon3_software --model models/endophalon3_software/current.json --program configs/endophalon3_software/example_program.txt
 ```
-
-Output paths must be new. Bundling old heads alone does not establish accuracy after switches; the implementation report distinguishes imported heads from train-only head refits and actual performance goals.
-
-The new 3 completed **120 generations / 2,881 candidate pairs**. Fresh confirmation improved from 65.44% to 75.36% overall (A 77.77%, B 73.07%); accuracy gates remain unmet. [Results](docs/endophalon3_alpha_120_report.md) · [closeout recovery and verification](docs/endophalon3_alpha_120_closeout.md).
-
-## Endophalon 3: independent A/B connected in software
-
-A/B run as separate saved models. A software dispatcher pauses the inactive model and routes predicted output bits through explicit registers. Each model retains its own physical state, clock, RNG and local input history. Prior 3T/shared-state experiments remain unchanged. [Design, actual card accuracy and verification](docs/endophalon3_software.md).
-
-```bash
-python -m tele_neuron.endophalon3_software --config configs/endophalon3_software/existing_best_observed.json --build /tmp/new-e3-software.json
-python -m tele_neuron.endophalon3_software --model /tmp/new-e3-software.json --program configs/endophalon3_software/example_program.txt --checkpoint-out /tmp/new-e3-software-state.json
-```
-
-Example dataflow: `A xor 1 0 -> r0`, then `B and @r0 1`. Registers carry actual model predictions, including errors. Historical native accuracy is A 88.33%, B 74.48%; this does not establish end-to-end chained accuracy.

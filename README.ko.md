@@ -7,11 +7,9 @@
 
 이 프로젝트는 물리학 기반 컴퓨팅의 가능성을 살펴보기 위한 프로토타입이며, 실용적인 LLM 대체재를 목표로 하지 않습니다.
 
-A/B 독립 모델 각각 120세대 학습 후 이전 3 버전을 삭제하도록 승인됐다. [확정 계획](docs/endophalon3_independent_plan.md)과 [3 개발 기록](docs/endophalon3_development.md)을 참고한다. 두 저장 모델의 감사가 끝난 뒤 현재 트리를 정리한다.
-
 ## 브랜치 구성
 
-master는 기존 모델 6종과 ProMax8/16, 보존된 Endophalon-3T와 새 Endophalon-3(독립 A/B 소프트웨어 연결)를 포함하는 최신 통합 개발본입니다.
+master는 기존 모델 6종과 ProMax8/16, Endophalon-3(독립 A/B 소프트웨어 연결)를 포함하는 최신 통합 개발본입니다.
 
 | Branch | Role |
 |---|---|
@@ -210,19 +208,6 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 
 자세한 결과와 주의할 점은 [docs/endophalon2_promax.md](docs/endophalon2_promax.md)에 있습니다.
 
-## Teleneuron-Endophalon-3T (이전 학습 실험)
-
-Endophalon-2-Pro / ProMax의 스프링 물리 위에 만든 다음 세대입니다. 명령어로 움직이는 물리 컴퓨터로, 물리계 하나와 판독기 하나를 쓰고, 모든 입력이 `레벨 연산 a b` 형태의 명령어입니다(예: `"A XOR 1 1"`). 레벨 비트가 명령어 묶음을 고르고(A는 연산 4개, B는 8개), 연산 코드가 그 안의 연산을 고르며, a와 b가 데이터입니다. 기억(recall)을 위해 느린 영역을 두어 시간척도를 하나 더 만들었습니다.
-
-기존 설계와 40×24 예산으로 모델 9개를 학습·검증했습니다. 기본 A 모델의 정확도 조건 통과는 0/3개입니다. 모든 시드·부정적 결과·실행 환경 중단 및 복구를 기록했습니다.
-[결과](docs/endophalon3.md) · [연구 보고서](docs/endophalon3_training_report.ko.md).
-
-```bash
-python -m tele_neuron.endophalon3 --config configs/endophalon3/level_a.json --probe
-```
-
-공유 판독 후속 실험: 평균/최악 연산 손실 0.5 혼합을 A 두 시드로 검증했지만 둘 다 정확도 기준 미달이었습니다. 기본 동작은 유지합니다. [후속 보고서](docs/endophalon3_routing_report.ko.md).
-
 ## 한계점
 
 - 물리 모델은 의도적으로 단순화되어 있으며, 작은 이진 과제에 맞춰 조정되어 있습니다.
@@ -238,32 +223,10 @@ MIT. 자세한 내용은 [LICENSE](LICENSE)를 참고하세요.
 
 기여를 환영합니다. [CONTRIBUTING.md](CONTRIBUTING.md)를 읽고, Phase 1이 물리 리저버 컴퓨팅 프로토타입이라는 범위가 유지되도록 해 주세요. 이 프로젝트는 **아직** 실용적인 LLM 대체재가 아닙니다.
 
-연산 균형 라우팅 후속 실험은 정확도를 개선하지 못했고 B 확장 게이트는 실패했습니다. 해당 손실은 재현을 위한 선택 설정입니다. [라우팅 보고서](docs/endophalon3_routing_report.ko.md)를 참조하세요.
+## Endophalon 3 — 독립 A/B
 
-### 이전 3T A/B 통합 후속 학습
-
-A/B 입력을 같은 물리계·단일 readout으로 처리하는 세 모델이 각각 추가 120세대를 완료했습니다. 세 모델 모두 수준별·연산별 목표에 미달했으며 새 확인 세트 전체 정확도는 72.32%, 73.02%, 76.77%입니다. [결과·모델·재현 검사](docs/endophalon3_joint_report.md).
-
-## 이전 Endophalon-3 공유 상태 alpha 실험
-
-새 3은 A/B의 파라미터와 readout을 따로 두고 위치·속도·시간·난수 상태를 공유합니다. 명령이 A/B를 선택하며 전환 시 물리 상태를 초기화하지 않습니다. 기존 3 계열은 **3T**로 명명하며 이전 파일·카드·결과는 보존합니다. [이름 대응표](docs/model_names.md) · [설계](docs/endophalon3_ab_alpha_design.ko.md) · [구현·측정 결과](docs/endophalon3_alpha.md).
+A/B 각각 120세대를 완료했다. theta·readout·물리 상태·RNG는 독립적이며 실제 예측 출력을 소프트웨어 레지스터로 연결한다. A: confirmation 89.17% / B: confirmation 76.61%. A 90%·B 80% 목표와 엄격한 연산별 게이트는 모두 미달했다. 목표 달성 여부와 연산별 한계는 [3 개발 기록](docs/endophalon3_development.md)에 있다. 소유자 요청에 따라 이전 3 구현·모델 파일은 현재 트리에서 삭제했고 v1/v2는 유지했다.
 
 ```bash
-python -m tele_neuron.endophalon3_alpha --config configs/endophalon3_alpha/from_3t_seed1.json --build /tmp/new-e3-banks.json
-python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program configs/endophalon3_alpha/example_program.txt --checkpoint-out /tmp/new-e3-session.json
+python -m tele_neuron.endophalon3_software --model models/endophalon3_software/current.json --program configs/endophalon3_software/example_program.txt
 ```
-
-출력 경로는 새 파일이어야 합니다. 기존 head를 연결하는 것만으로 전환 후 정확도를 보장하지 않으며, 구현 보고서는 기존 head와 학습 스트림에서 따로 적합한 A/B head의 실제 성능을 구분합니다.
-
-새 3은 **120세대 / 후보 2,881쌍** 학습을 완료했습니다. 새 확인 세트 전체 정확도는 65.44%→75.36%(A 77.77%, B 73.07%)로 개선됐지만 성능 목표에는 미달합니다. [결과](docs/endophalon3_alpha_120_report.md) · [후처리 복구·검증](docs/endophalon3_alpha_120_closeout.md).
-
-## Endophalon 3: 독립 A/B 모델의 소프트웨어 연결
-
-A/B는 물리 상태·시계·난수·입력 이력을 따로 유지하며, 소프트웨어가 명령을 선택하고 예측 출력값을 레지스터로 전달합니다. 비활성 모델은 그대로 일시정지합니다. 이전 3T·공유 상태 실험은 보존합니다. [설계·실제 카드 정확도·검증](docs/endophalon3_software.md).
-
-```bash
-python -m tele_neuron.endophalon3_software --config configs/endophalon3_software/existing_best_observed.json --build /tmp/new-e3-software.json
-python -m tele_neuron.endophalon3_software --model /tmp/new-e3-software.json --program configs/endophalon3_software/example_program.txt --checkpoint-out /tmp/new-e3-software-state.json
-```
-
-예: `A xor 1 0 -> r0` 다음 `B and @r0 1`. 실제 예측 비트를 전달하므로 모델 오답도 전달됩니다. 기존 별도 테스트 정확도는 A 88.33%, B 74.48%이며, 연결 프로그램 전체의 정확도와는 별도입니다.

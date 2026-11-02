@@ -1,0 +1,6 @@
+{
+  "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+  "numpy": "2.3.5",
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "workers": 4
+}
