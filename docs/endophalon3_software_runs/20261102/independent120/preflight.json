@@ -1,0 +1,33 @@
+{
+  "status": "preflight complete; independent 120-generation searches NOT started at time of writing",
+  "pytest_before_cleanup": 125,
+  "cli_smoke_before_cleanup": 11,
+  "physics_migration": {
+    "levels": [
+      "A",
+      "B"
+    ],
+    "streams_per_level": 2,
+    "events": 8,
+    "result": "bitwise equal features, energy and opcodes versus original fixed-level engine"
+  },
+  "gen0_fitness_check": {
+    "selection_data": "train and validation only; fixed initial theta, no random candidate or held-out exploration",
+    "A": {
+      "j": 0.15291113988960495,
+      "validation_accuracy": 0.8770833333333333
+    },
+    "B": {
+      "j": 0.2452368914337818,
+      "validation_accuracy": 0.71875
+    }
+  },
+  "disposable_cleanup_test": {
+    "old_files_removed": 341,
+    "pytest_after_cleanup": 90,
+    "smoke_after_cleanup": 8,
+    "index_paths": 243,
+    "model_inputs": "existing native modules and deliberately mocked report data; no training outcome claimed; entire test tree discarded"
+  },
+  "checks_before_publication": "backup integrity, index and changed-file deletion guard"
+}

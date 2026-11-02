@@ -36,3 +36,10 @@ Current owner direction: independent A/B sessions connected in software, no new
 training. See GOAL.md and docs/endophalon3_software.md. Preserve shared-state alpha
 and physics120 evidence. New CLI is tele_neuron.endophalon3_software; registers
 carry only actual predicted output bits. Local history/clock/RNG are independent.
+
+## Latest owner override: independent 120 + cleanup
+Train A/B independently for 120 generations each; after both audits remove
+other 3 versions from the active tree and retain experimental history only in
+docs/endophalon3_development.md. This supersedes prior 3-version preservation
+rules for the fixed cleanup scope. See docs/endophalon3_independent_plan.md.
+No v1/v2 or unrelated branch changes; no force push or history rewriting.

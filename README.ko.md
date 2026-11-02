@@ -7,6 +7,8 @@
 
 이 프로젝트는 물리학 기반 컴퓨팅의 가능성을 살펴보기 위한 프로토타입이며, 실용적인 LLM 대체재를 목표로 하지 않습니다.
 
+A/B 독립 모델 각각 120세대 학습 후 이전 3 버전을 삭제하도록 승인됐다. [확정 계획](docs/endophalon3_independent_plan.md)과 [3 개발 기록](docs/endophalon3_development.md)을 참고한다. 두 저장 모델의 감사가 끝난 뒤 현재 트리를 정리한다.
+
 ## 브랜치 구성
 
 master는 기존 모델 6종과 ProMax8/16, 보존된 Endophalon-3T와 새 Endophalon-3(독립 A/B 소프트웨어 연결)를 포함하는 최신 통합 개발본입니다.

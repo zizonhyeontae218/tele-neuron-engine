@@ -3,19 +3,19 @@ from pathlib import Path
 import json
 import numpy as np
 import pytest
-from tele_neuron.endophalon3.isa import Instruction
-from tele_neuron.endophalon3_alpha.session import Session
+from tele_neuron.endophalon3_software.isa import Instruction
+from tele_neuron.endophalon3_software.session import Session
 from tele_neuron.endophalon3_software import SoftwareModel,Router
 
 ROOT=Path(__file__).resolve().parents[1]
 
 @pytest.fixture
 def model():
-    return SoftwareModel.from_cards(ROOT/'models/endophalon3/20261031_a_binary_s2.json',ROOT/'models/endophalon3/20261031_b_binary_s1.json',ROOT)
+    return SoftwareModel.load(ROOT/'models/endophalon3_software/current.json')
 
 
 def test_interleaving_equals_standalone_local_streams_and_pauses_other_model(model):
-    hub=Router(model);local={level:Session(model.parameters) for level in 'AB'}
+    hub=Router(model);local={level:Session(model.modules[level]) for level in 'AB'}
     for text in ['A xor 1 0','B and 0 1','B recall1 1 0','A recall1 0 0','B parity3w 1 1','A recall2 0 0']:
         level=text[0];other='B' if level=='A' else 'A';before=hub.sessions[other].snapshot()
         actual=hub.execute(text);expected=local[level].execute(text)
@@ -27,7 +27,7 @@ def test_interleaving_equals_standalone_local_streams_and_pauses_other_model(mod
 
 
 def test_register_passes_actual_prediction_even_when_task_answer_is_different(model):
-    payload=model.to_payload();head=payload['parameters']['banks']['A']['head'];head['weights']=np.zeros((17,1)).tolist();head['weights'][-1][0]=-1
+    payload=model.to_payload();head=payload['modules']['A']['readout'];head['weights']=np.zeros((17,1)).tolist();head['weights'][-1][0]=-1
     hub=Router(SoftwareModel.from_payload(payload))
     # XOR(1,0) is 1; deliberately wrong model emits 0. Wire must pass that 0.
     result=hub.execute('A xor 1 0 -> wire');assert result['output']==0 and hub.registers['wire']==0
@@ -53,7 +53,7 @@ def test_checkpoint_continues_both_local_memories_and_registers(model):
     assert a.snapshot()==b.snapshot()
     bad=deepcopy(a.snapshot());bad['registers']['p']=2
     with pytest.raises(ValueError):Router.restore(model,bad)
-    bad=deepcopy(a.snapshot());bad['sessions']['A']['active']=[1]
+    bad=deepcopy(a.snapshot());bad['sessions']['A']['model']=model.modules['B'].fingerprint
     with pytest.raises(ValueError):Router.restore(model,bad)
 
 

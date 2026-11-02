@@ -10,6 +10,8 @@ output bits.
 This is a physical reservoir computing prototype, not a practical LLM
 replacement.
 
+The owner has authorized independent A/B 120-generation training, followed by removal of obsolete 3 variants. See the [frozen plan](docs/endophalon3_independent_plan.md); prior results are consolidated in the [3 development history](docs/endophalon3_development.md). Cleanup waits for both saved-model audits.
+
 ## Repository branches
 
 Active development includes the six v1/v2 model families, both ProMax sizes, preserved Endophalon-3T, and the new Endophalon-3 (software-linked A/B).

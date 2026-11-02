@@ -22,6 +22,7 @@
 - `archive-endophalon.yml` — Contains archive-endophalon data.
 - `endophalon3-alpha-training.yml` — Contains endophalon3-alpha-training data.
 - `endophalon3-audit.yml` — Contains endophalon3-audit data.
+- `endophalon3-independent.yml` — Contains endophalon3-independent data.
 - `endophalon3-joint.yml` — Contains endophalon3-joint data.
 - `endophalon3-recovery.yml` — Contains endophalon3-recovery data.
 - `retire-backup-refs.yml` — Contains retire-backup-refs data.
@@ -87,8 +88,12 @@
 
 ## `configs/endophalon3_software`
 
+- `A.json` — Contains A data.
+- `B.json` — Contains B data.
+- `current.json` — Contains current data.
 - `example_program.txt` — Contains example program data.
 - `existing_best_observed.json` — Contains existing best observed data.
+- `retirement.json` — Contains retirement data.
 
 ## `configs/endophalon_plus`
 
@@ -122,7 +127,9 @@
 - `endophalon3_alpha_120_preflight.json` — Contains endophalon3 alpha 120 preflight data.
 - `endophalon3_alpha_120_report.md` — Endophalon 3 — 120-generation physics training result.
 - `endophalon3_alpha_experiment_plan.md` — Endophalon 3 MVP evaluation plan — 2026-11-02.
+- `endophalon3_development.md` — Endophalon 3 버전 개발기록.
 - `endophalon3_handoff.md` — Endophalon-3 historical handoff: original plan and lessons.
+- `endophalon3_independent_plan.md` — Endophalon 3 — independent A/B 120 generations and tree cleanup.
 - `endophalon3_joint_plan.md` — Endophalon 3 joint A/B training — 2026-11-01.
 - `endophalon3_joint_report.md` — Endophalon 3 — joint A/B training closeout.
 - `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
@@ -467,6 +474,10 @@
 - `observations.npz` — Contains observations data.
 - `verification.json` — Contains verification data.
 
+## `docs/endophalon3_software_runs/20261102/independent120`
+
+- `preflight.json` — Contains preflight data.
+
 ## `docs/integration`
 
 - `2026-10-31.md` — Endophalon consolidation audit — 2026-10-31.
@@ -541,6 +552,9 @@
 ## `models/endophalon3_software`
 
 - `20261102_existing_cards.json` — Contains 20261102 existing cards data.
+- `A.json` — Contains A data.
+- `B.json` — Contains B data.
+- `current.json` — Contains current data.
 
 ## `models/endophalon_plus`
 
@@ -565,6 +579,7 @@
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
 - `audit_endophalon3_alpha.py` — Contains audit endophalon3 alpha data.
 - `audit_endophalon3_alpha_training.py` — Contains audit endophalon3 alpha training data.
+- `audit_endophalon3_independent.py` — Contains audit endophalon3 independent data.
 - `audit_endophalon3_joint.py` — Contains audit endophalon3 joint data.
 - `audit_endophalon3_software.py` — Contains audit endophalon3 software data.
 - `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
@@ -573,14 +588,17 @@
 - `evaluate_endophalon3_alpha.py` — Contains evaluate endophalon3 alpha data.
 - `evaluate_endophalon3_software.py` — Contains evaluate endophalon3 software data.
 - `filetree_index.py` — Contains filetree index data.
+- `finalize_endophalon3_independent.py` — Contains finalize endophalon3 independent data.
 - `recover_endophalon3.py` — Recover only the two infrastructure-interrupted experiments; scientific code is unchanged.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
 - `retire_backup_refs.py` — Contains retire backup refs data.
+- `retire_endophalon3_experiments.py` — Contains retire endophalon3 experiments data.
 - `run_endophalon3_routing.py` — Run the predeclared routing-loss experiment and verify saved A models.
 - `run_endophalon3_training.py` — Run the fixed Endophalon-3 experiment matrix through the existing model CLI.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
 - `summarize_endophalon3_training.py` — Build evidence tables and a Korean research report from completed audits.
 - `train_endophalon3_alpha.py` — Contains train endophalon3 alpha data.
+- `train_endophalon3_independent.py` — Contains train endophalon3 independent data.
 - `train_endophalon3_joint.py` — Contains train endophalon3 joint data.
 - `verify_backup_consolidation.py` — Contains verify backup consolidation data.
 
@@ -672,7 +690,14 @@
 
 - `__init__.py` — Contains   init   data.
 - `__main__.py` — Contains   main   data.
+- `config.py` — Contains config data.
+- `isa.py` — Contains isa data.
+- `model.py` — Contains model data.
+- `physics.py` — Contains physics data.
 - `router.py` — Contains router data.
+- `session.py` — Contains session data.
+- `theta.py` — Contains theta data.
+- `training.py` — Contains training data.
 
 ## `src/tele_neuron/endophalon3t`
 
@@ -732,7 +757,9 @@
 - `test_endophalon3_alpha.py` — Contains test endophalon3 alpha data.
 - `test_endophalon3_alpha_closeout.py` — Contains test endophalon3 alpha closeout data.
 - `test_endophalon3_alpha_training.py` — Contains test endophalon3 alpha training data.
+- `test_endophalon3_independent.py` — Contains test endophalon3 independent data.
 - `test_endophalon3_joint.py` — Contains test endophalon3 joint data.
+- `test_endophalon3_retirement.py` — Contains test endophalon3 retirement data.
 - `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
 - `test_endophalon3_software.py` — Contains test endophalon3 software data.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.

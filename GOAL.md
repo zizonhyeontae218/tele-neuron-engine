@@ -16,3 +16,10 @@ Native card accuracy exactly preserved: A 88.33%, B 74.48%. New local-stream che
 A 87.71%, B 74.74%. Tests 120 passed; smoke 11 combinations; saved bundle audit
 passed. No new training. Per-op memory weaknesses and composed-program accuracy
 remain limitations; do not claim a saved B-eight-op model already reached 80–90%.
+
+## Latest owner override: independent 120 + cleanup
+Train A/B independently for 120 generations each; after both audits remove
+other 3 versions from the active tree and retain experimental history only in
+docs/endophalon3_development.md. This supersedes prior 3-version preservation
+rules for the fixed cleanup scope. See docs/endophalon3_independent_plan.md.
+No v1/v2 or unrelated branch changes; no force push or history rewriting.

@@ -111,7 +111,7 @@ def main() -> None:
             bundle = Path(directory) / "software-bundle.json"
             state = Path(directory) / "software-state.json"
             for argv in (
-                ["-m", "tele_neuron.endophalon3_software", "--config", "configs/endophalon3_software/existing_best_observed.json", "--build", str(bundle)],
+                ["-m", "tele_neuron.endophalon3_software", "--config", "configs/endophalon3_software/current.json", "--build", str(bundle)],
                 ["-m", "tele_neuron.endophalon3_software", "--model", str(bundle), "--program", "configs/endophalon3_software/example_program.txt", "--checkpoint-out", str(state)],
             ):
                 result = subprocess.run([sys.executable, *argv], cwd=ROOT, env=env, capture_output=True, text=True, timeout=60)

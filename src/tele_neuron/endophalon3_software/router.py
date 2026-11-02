@@ -5,43 +5,40 @@ import hashlib
 import json
 from pathlib import Path
 import re
-from tele_neuron.endophalon3.isa import Instruction
-from tele_neuron.endophalon3_alpha.model import Model as ParameterBanks
-from tele_neuron.endophalon3_alpha.session import Session as PhysicalSession
+from .isa import Instruction
+from .model import Module
+from tele_neuron.endophalon.readout import RidgeReadout
+from .session import Session as PhysicalSession
 
 REGISTER=re.compile(r'[A-Za-z_][A-Za-z0-9_]*\Z')
 
 
 class SoftwareModel:
-    def __init__(self,banks):
-        if any(bank.head is None for bank in banks.banks.values()):
-            raise ValueError('Both existing models must have fitted heads')
-        self.parameters=banks
-
+    def __init__(self,modules):
+        if set(modules)!={'A','B'} or any(m.level!=l or m.head is None for l,m in modules.items()):raise ValueError('Two fitted independent modules required')
+        self.modules=modules
     @classmethod
     def from_cards(cls,a,b,root='.'):
-        return cls(ParameterBanks.from_cards(a,b,root))
-
-    def to_payload(self):
-        return {'schema':'endophalon3-software/v1','family':'Teleneuron-Endophalon-3',
-                'architecture':'two independent physical states; explicit software output registers',
-                'inactive_model':'paused; no physical or RNG steps',
-                'memory_semantics':'model-local input history; cross-model values require explicit registers',
-                'parameters':self.parameters.to_payload()}
-
+        modules={}
+        for level,path in [('A',a),('B',b)]:
+            raw=Path(path).read_bytes();card=json.loads(raw)
+            if card.get('schema')=='endophalon3-module/v1':modules[level]=Module.from_payload(card)
+            else:
+                cfg=json.loads((Path(root)/card['config']).read_text());cfg['theta_init']=card['theta'];cfg['regions']=card['metrics']['regions']
+                modules[level]=Module(cfg,RidgeReadout.from_payload(card['readout']),{'import_sha256':hashlib.sha256(raw).hexdigest()})
+        return cls(modules)
+    def to_payload(self):return {'schema':'endophalon3-software/v2','family':'Teleneuron-Endophalon-3','modules':{l:m.to_payload() for l,m in self.modules.items()}}
     @classmethod
-    def from_payload(cls,payload):
-        if payload.get('schema')!='endophalon3-software/v1':raise ValueError('Unsupported software model schema')
-        return cls(ParameterBanks.from_payload(payload['parameters']))
-
+    def from_payload(cls,p):
+        if p.get('schema')=='endophalon3-software/v1':
+            return cls({l:Module(v['config'],RidgeReadout.from_payload(v['head']),p['parameters'].get('provenance')) for l,v in p['parameters']['banks'].items()})
+        if p.get('schema')!='endophalon3-software/v2':raise ValueError('Unsupported model schema')
+        return cls({l:Module.from_payload(v) for l,v in p['modules'].items()})
     @property
-    def fingerprint(self):
-        return hashlib.sha256(json.dumps(self.to_payload(),sort_keys=True,allow_nan=False).encode()).hexdigest()
-
+    def fingerprint(self):return hashlib.sha256(json.dumps(self.to_payload(),sort_keys=True,allow_nan=False).encode()).hexdigest()
     def save(self,path):
         path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
         with path.open('x') as f:json.dump(self.to_payload(),f,indent=2,allow_nan=False);f.write('\n')
-
     @classmethod
     def load(cls,path):return cls.from_payload(json.loads(Path(path).read_text()))
 
@@ -50,7 +47,7 @@ class Router:
     def __init__(self,model,streams=(0,)):
         self.model=model;self.selected='A';self._registers={}
         # Only immutable geometry/parameter data is reused, never live state.
-        self.sessions={level:PhysicalSession(model.parameters,streams) for level in 'AB'}
+        self.sessions={level:PhysicalSession(model.modules[level],streams) for level in 'AB'}
 
     @property
     def registers(self):return dict(self._registers)
@@ -62,7 +59,6 @@ class Router:
         if level not in self.sessions or any(not isinstance(i,Instruction) or i.level!=level for i in instructions):
             raise ValueError('Dispatch requires valid instructions for exactly the selected model')
         result=self.sessions[level].step(instructions)
-        self.sessions[level].selected=level
         self.selected=level
         return result
 
@@ -108,7 +104,6 @@ class Router:
         if not isinstance(registers,dict) or any(not isinstance(k,str) or not REGISTER.fullmatch(k) or type(v) is not int or v not in (0,1) for k,v in registers.items()):raise ValueError('Invalid output registers')
         restored={}
         for level,record in payload['sessions'].items():
-            if record['active'] is not None and any(bit!=int(level=='B') for bit in record['active']):raise ValueError('Physical state belongs to another local model')
-            restored[level]=PhysicalSession.restore(model.parameters,record)
+            restored[level]=PhysicalSession.restore(model.modules[level],record)
         result=cls.__new__(cls);result.model=model;result.sessions=restored;result.selected=payload['selected'];result._registers=deepcopy(registers)
         return result

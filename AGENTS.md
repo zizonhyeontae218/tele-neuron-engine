@@ -97,3 +97,10 @@ tele_neuron.endophalon3_software; preserve all previous shared-state alpha code,
 models and artifacts. Pause the inactive model; use local event histories.
 Only explicit predicted-output registers bridge A/B, with no oracle or physical
 state transfer. No retraining or additional search in this slice.
+
+## Latest owner override: independent 120 + cleanup
+Train A/B independently for 120 generations each; after both audits remove
+other 3 versions from the active tree and retain experimental history only in
+docs/endophalon3_development.md. This supersedes prior 3-version preservation
+rules for the fixed cleanup scope. See docs/endophalon3_independent_plan.md.
+No v1/v2 or unrelated branch changes; no force push or history rewriting.
