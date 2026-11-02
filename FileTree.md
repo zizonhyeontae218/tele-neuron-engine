@@ -149,6 +149,10 @@
 - `e2_run_multi_k8.log` — Contains e2 run multi k8 data.
 - `e2_run_xor_k4.log` — Contains e2 run xor k4 data.
 
+## `docs/endophalon3_alpha_runs/20261102`
+
+- `verification.json` — Contains verification data.
+
 ## `docs/endophalon3_alpha_runs/20261102/seed1_binary`
 
 - `evaluation.json` — Contains evaluation data.

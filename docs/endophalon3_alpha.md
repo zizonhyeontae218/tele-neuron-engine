@@ -42,7 +42,7 @@ These point estimates support a useful state-history contribution in this settin
 
 - Fixed-level A and B observations and pre-event kinetic energies exactly match the preserved engine for tested streams; head scores match to 1e-13 and thresholded predictions exactly. Initial bitwise score checks exposed a maximum 4.44e-16 difference from one-row versus batched dot products; physical observations remain exact.
 - State/time/RNG unchanged by selection-only or invalid commands; checkpoint continuation, model mismatch guards, explicit head selection and cross-level dependence tests pass.
-- Full-suite results are recorded in the verification file after the final tests, including CLI build/program/restore, explicit 3T serialization and mixed-bank batch-versus-individual equivalence.
+- Full suite: **107 passed**, including CLI build/program/restore, explicit 3T serialization and mixed-bank batch-versus-individual equivalence.
 - CLI smoke: 10 model/config combinations, including new 3 and the explicit 3T alias.
 - Saved bundle audit: artifact hashes, disjoint splits, train-only head mean/scale/weights, all split metrics and exact physical replay of three fresh streams pass.
 - Historical scientific source/configs/cards/logs remain byte-identical; current naming/documentation is updated without rewriting the originals.
