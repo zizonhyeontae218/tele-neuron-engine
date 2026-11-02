@@ -12,8 +12,8 @@ Each model has its own module, configs, tests, docs and model-card directory.
 | 2 | 2 Pro | tele_neuron.endophalon2_pro | configs/endophalon2_pro/regular.json |
 | 2 | 2 ProMax8 | tele_neuron.endophalon2_promax | configs/endophalon2_promax/promax8.json |
 | 2 | 2 ProMax16 | tele_neuron.endophalon2_promax | configs/endophalon2_promax/promax16.json |
-| 3 | 3-A (trained, experimental) | tele_neuron.endophalon3 | configs/endophalon3/level_a.json |
-| 3 | 3-B (trained, experimental) | tele_neuron.endophalon3 | configs/endophalon3/level_b.json |
+| 3T | 3T-A (historical) | tele_neuron.endophalon3t | configs/endophalon3/level_a.json |
+| 3T | 3T-B (historical) | tele_neuron.endophalon3t | configs/endophalon3/level_b.json |
 
 Train/evaluate with `python -m <module> --config <config>` using any row above.
 Add `--output <new-path.json>` to save a new card. Do not overwrite original cards.
@@ -37,3 +37,20 @@ capacity probe. Training method, run order and know-how:
 The routing loss in `configs/endophalon3/level_a_routing.json` is an opt-in negative experiment, not an improved default; see [routing report](endophalon3_routing_report.ko.md). Saved-card audits and reproduction procedures are documented in the [training report](endophalon3_training_report.ko.md).
 
 Joint A/B cards and optimizer checkpoints are preserved separately. Read-only verification: `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/audit_endophalon3_joint.py`. Training commands in the [frozen joint plan](endophalon3_joint_plan.md) reproduce the bounded trials; completed output paths are rejected. See [actual results](endophalon3_joint_report.md) before launching any new run.
+
+## Endophalon 3 and 3T
+
+See [name mapping](model_names.md). The preceding Endophalon-3 experiment descriptions refer to the currently named 3T models and preserve their historical paths.
+
+New 3 (separate A/B, one continuous session):
+
+```bash
+python -m tele_neuron.endophalon3_alpha --config configs/endophalon3_alpha/from_3t_seed1.json --build /tmp/new-e3-banks.json
+python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program configs/endophalon3_alpha/example_program.txt --output /tmp/new-e3-output.json --checkpoint-out /tmp/new-e3-session.json
+# Continue with a NEW program; do not repeat the earlier program on the restored state.
+python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program /path/to/next_program.txt --checkpoint-in /tmp/new-e3-session.json --checkpoint-out /tmp/new-e3-session-next.json
+```
+
+`level A` / `level B` selects the module for subsequent `OP a b` commands without advancing the physical clock. Full `A OP a b` / `B OP a b` syntax is also supported. Every data event advances 16 steps, observing 16 zones at delay 12; the initial 32-step warmup runs once. Output is the head score/thresholded bit, not ground truth. The first two events lack full recall2 history. Runtime never stores an oracle bit history. The bank-parameter switch energy is reported in each event.
+
+The bounded initial readout fit/evaluation command is in [the alpha experiment plan](endophalon3_alpha_experiment_plan.md); it rejects existing output directories. This is not a long outer physics training run.

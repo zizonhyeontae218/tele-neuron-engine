@@ -9,7 +9,7 @@
 - `CLAUDE.md` — Claude working context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Endophalon 3 joint A/B closeout.
+- `GOAL.md` — Endophalon 3 — separate A/B modules, one continuous physical state.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
@@ -79,6 +79,11 @@
 - `level_b.json` — Stores structured data for level b.
 - `level_b_onehot.json` — Stores structured data for level b onehot.
 
+## `configs/endophalon3_alpha`
+
+- `example_program.txt` — Contains example program data.
+- `from_3t_seed1.json` — Contains from 3t seed1 data.
+
 ## `configs/endophalon_plus`
 
 - `adder2.json` — Stores structured data for adder2.
@@ -103,8 +108,11 @@
 - `endophalon2_pro.md` — Teleneuron-Endophalon-2-Pro.
 - `endophalon2_pro_ablation.json` — Stores structured data for endophalon2 pro ablation.
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
-- `endophalon3.md` — Teleneuron-Endophalon-3 (training experiments).
-- `endophalon3_handoff.md` — Endophalon-3 handoff: how to train it, and what we learned.
+- `endophalon3.md` — Teleneuron-Endophalon-3T (historical training experiments).
+- `endophalon3_ab_alpha_design.ko.md` — Endophalon 3 (AB alpha) — 명령으로 선택하는 A/B와 공유 물리 기억.
+- `endophalon3_alpha.md` — Endophalon 3 (AB alpha) — implementation and first measurements.
+- `endophalon3_alpha_experiment_plan.md` — Endophalon 3 MVP evaluation plan — 2026-11-02.
+- `endophalon3_handoff.md` — Endophalon-3 historical handoff: original plan and lessons.
 - `endophalon3_joint_plan.md` — Endophalon 3 joint A/B training — 2026-11-01.
 - `endophalon3_joint_report.md` — Endophalon 3 — joint A/B training closeout.
 - `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
@@ -116,6 +124,7 @@
 - `endophalon_pro_matrix.json` — Stores structured data for endophalon pro matrix.
 - `experiment_design.md` — Phase 1 Experiment Design.
 - `model_commands.md` — Model entry points.
+- `model_names.md` — Model names after the 2026-11-02 owner decision.
 
 ## `docs/endophalon2_pro_runs`
 
@@ -139,6 +148,14 @@
 - `e2_run_multi_k4.log` — Contains e2 run multi k4 data.
 - `e2_run_multi_k8.log` — Contains e2 run multi k8 data.
 - `e2_run_xor_k4.log` — Contains e2 run xor k4 data.
+
+## `docs/endophalon3_alpha_runs/20261102/seed1_binary`
+
+- `evaluation.json` — Contains evaluation data.
+- `manifest.json` — Contains manifest data.
+- `model.json` — Contains model data.
+- `observations.npz` — Contains observations data.
+- `reset_observations.npz` — Contains reset observations data.
 
 ## `docs/endophalon3_joint_runs/20261101`
 
@@ -342,6 +359,10 @@
 - `20261031_b_onehot_s1.json` — Stores structured data for 20261031 b onehot s1.
 - `20261031_b_onehot_s2.json` — Stores structured data for 20261031 b onehot s2.
 
+## `models/endophalon3_alpha`
+
+- `20261102_seed1_binary.json` — Contains 20261102 seed1 binary data.
+
 ## `models/endophalon3_joint`
 
 - `ab_binary_s1.json` — Contains ab binary s1 data.
@@ -374,9 +395,12 @@
 ## `scripts`
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
+- `audit_endophalon3_alpha.py` — Contains audit endophalon3 alpha data.
 - `audit_endophalon3_joint.py` — Contains audit endophalon3 joint data.
 - `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
 - `diagnose_endophalon3_routing.py` — Diagnose frozen Endophalon-3 states on train/validation only; no theta search.
+- `evaluate_endophalon3_alpha.py` — Contains evaluate endophalon3 alpha data.
+- `filetree_index.py` — Contains filetree index data.
 - `recover_endophalon3.py` — Recover only the two infrastructure-interrupted experiments; scientific code is unchanged.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
 - `retire_backup_refs.py` — Contains retire backup refs data.
@@ -463,6 +487,18 @@
 - `isa.py` — Endophalon-3 instruction set: level -> operation -> data, all carried by the input.
 - `theta.py` — Endophalon-3 theta: Endophalon-2-Pro spring physics plus a slow region.
 
+## `src/tele_neuron/endophalon3_alpha`
+
+- `__init__.py` — Contains   init   data.
+- `__main__.py` — Contains   main   data.
+- `model.py` — Contains model data.
+- `session.py` — Contains session data.
+
+## `src/tele_neuron/endophalon3t`
+
+- `__init__.py` — Contains   init   data.
+- `__main__.py` — Contains   main   data.
+
 ## `src/tele_neuron/endophalon_plus`
 
 - `__init__.py` — Teleneuron-Endophalon-Plus: preset-routed reservoir on the Plus physics base.
@@ -513,6 +549,7 @@
 - `test_endophalon2_pro.py` — Provides the _config function.
 - `test_endophalon2_promax.py` — Provides the _config function.
 - `test_endophalon3.py` — Provides the _small function.
+- `test_endophalon3_alpha.py` — Contains test endophalon3 alpha data.
 - `test_endophalon3_joint.py` — Contains test endophalon3 joint data.
 - `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.

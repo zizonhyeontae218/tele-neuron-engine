@@ -1,4 +1,6 @@
-# Teleneuron-Endophalon-3 (training experiments)
+# Teleneuron-Endophalon-3T (historical training experiments)
+
+Owner naming update (2026-11-02): this previous family is now 3T. Historical file paths and model family strings remain unchanged. New 3 is the [separate-bank AB alpha](endophalon3_alpha.md); see [name mapping](model_names.md).
 
 **Status (2026-10-31):** 9/9 planned models trained and audited; A accuracy gates 0/3.
 See the [research report](endophalon3_training_report.ko.md). The original

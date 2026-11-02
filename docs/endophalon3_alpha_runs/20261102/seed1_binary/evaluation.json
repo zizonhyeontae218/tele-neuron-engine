@@ -1,0 +1,1304 @@
+{
+  "status": "completed",
+  "physics_training": "none",
+  "head_training": "one train-only Ridge fit for each of A/B",
+  "streams": {
+    "train": [
+      30000,
+      30001,
+      30002,
+      30003,
+      30004,
+      30005,
+      30006,
+      30007,
+      30008,
+      30009,
+      30010,
+      30011,
+      30012,
+      30013,
+      30014,
+      30015,
+      30016,
+      30017,
+      30018,
+      30019,
+      30020,
+      30021,
+      30022,
+      30023
+    ],
+    "validation": [
+      30024,
+      30025,
+      30026,
+      30027,
+      30028,
+      30029,
+      30030,
+      30031
+    ],
+    "test": [
+      30032,
+      30033,
+      30034,
+      30035,
+      30036,
+      30037,
+      30038,
+      30039,
+      30040,
+      30041,
+      30042,
+      30043,
+      30044,
+      30045,
+      30046,
+      30047,
+      30048,
+      30049,
+      30050,
+      30051,
+      30052,
+      30053,
+      30054,
+      30055,
+      30056,
+      30057,
+      30058,
+      30059,
+      30060,
+      30061,
+      30062,
+      30063
+    ],
+    "confirmation": [
+      30064,
+      30065,
+      30066,
+      30067,
+      30068,
+      30069,
+      30070,
+      30071,
+      30072,
+      30073,
+      30074,
+      30075,
+      30076,
+      30077,
+      30078,
+      30079,
+      30080,
+      30081,
+      30082,
+      30083,
+      30084,
+      30085,
+      30086,
+      30087,
+      30088,
+      30089,
+      30090,
+      30091,
+      30092,
+      30093,
+      30094,
+      30095,
+      30096,
+      30097,
+      30098,
+      30099,
+      30100,
+      30101,
+      30102,
+      30103,
+      30104,
+      30105,
+      30106,
+      30107,
+      30108,
+      30109,
+      30110,
+      30111,
+      30112,
+      30113,
+      30114,
+      30115,
+      30116,
+      30117,
+      30118,
+      30119,
+      30120,
+      30121,
+      30122,
+      30123,
+      30124,
+      30125,
+      30126,
+      30127
+    ]
+  },
+  "seed": 1,
+  "events": 64,
+  "washout": 4,
+  "active_zones_per_event": 16,
+  "stored_zone_banks": 2,
+  "metrics": {
+    "train": {
+      "original_heads": {
+        "overall": 0.6597222222222222,
+        "levels": {
+          "A": {
+            "accuracy": 0.6016260162601627,
+            "n": 738,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.6294117647058823,
+                "n": 170
+              },
+              "recall1": {
+                "accuracy": 0.6256410256410256,
+                "n": 195
+              },
+              "recall2": {
+                "accuracy": 0.5842105263157895,
+                "n": 190
+              },
+              "xor_mem": {
+                "accuracy": 0.5683060109289617,
+                "n": 183
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.523943661971831,
+              "n": 355
+            },
+            "second_after_switch": {
+              "accuracy": 0.521505376344086,
+              "n": 186
+            }
+          },
+          "B": {
+            "accuracy": 0.7207977207977208,
+            "n": 702,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.7195121951219512,
+                "n": 82
+              },
+              "recall1": {
+                "accuracy": 0.7272727272727273,
+                "n": 99
+              },
+              "recall2": {
+                "accuracy": 0.6585365853658537,
+                "n": 82
+              },
+              "xor_mem": {
+                "accuracy": 0.6025641025641025,
+                "n": 78
+              },
+              "and": {
+                "accuracy": 0.97,
+                "n": 100
+              },
+              "or": {
+                "accuracy": 0.8817204301075269,
+                "n": 93
+              },
+              "parity3w": {
+                "accuracy": 0.39285714285714285,
+                "n": 84
+              },
+              "and_mem": {
+                "accuracy": 0.7380952380952381,
+                "n": 84
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.7114285714285714,
+              "n": 350
+            },
+            "second_after_switch": {
+              "accuracy": 0.7062146892655368,
+              "n": 177
+            }
+          }
+        }
+      },
+      "two_fitted_heads": {
+        "overall": 0.6826388888888889,
+        "levels": {
+          "A": {
+            "accuracy": 0.6517615176151762,
+            "n": 738,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5823529411764706,
+                "n": 170
+              },
+              "recall1": {
+                "accuracy": 0.8307692307692308,
+                "n": 195
+              },
+              "recall2": {
+                "accuracy": 0.6263157894736842,
+                "n": 190
+              },
+              "xor_mem": {
+                "accuracy": 0.5519125683060109,
+                "n": 183
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6197183098591549,
+              "n": 355
+            },
+            "second_after_switch": {
+              "accuracy": 0.6827956989247311,
+              "n": 186
+            }
+          },
+          "B": {
+            "accuracy": 0.7150997150997151,
+            "n": 702,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.7926829268292683,
+                "n": 82
+              },
+              "recall1": {
+                "accuracy": 0.6666666666666666,
+                "n": 99
+              },
+              "recall2": {
+                "accuracy": 0.7195121951219512,
+                "n": 82
+              },
+              "xor_mem": {
+                "accuracy": 0.5128205128205128,
+                "n": 78
+              },
+              "and": {
+                "accuracy": 0.88,
+                "n": 100
+              },
+              "or": {
+                "accuracy": 0.946236559139785,
+                "n": 93
+              },
+              "parity3w": {
+                "accuracy": 0.4523809523809524,
+                "n": 84
+              },
+              "and_mem": {
+                "accuracy": 0.6904761904761905,
+                "n": 84
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.72,
+              "n": 350
+            },
+            "second_after_switch": {
+              "accuracy": 0.7062146892655368,
+              "n": 177
+            }
+          }
+        }
+      },
+      "pooled_head_control": {
+        "overall": 0.6277777777777778,
+        "levels": {
+          "A": {
+            "accuracy": 0.6178861788617886,
+            "n": 738,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.47058823529411764,
+                "n": 170
+              },
+              "recall1": {
+                "accuracy": 0.7435897435897436,
+                "n": 195
+              },
+              "recall2": {
+                "accuracy": 0.6210526315789474,
+                "n": 190
+              },
+              "xor_mem": {
+                "accuracy": 0.6174863387978142,
+                "n": 183
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5915492957746479,
+              "n": 355
+            },
+            "second_after_switch": {
+              "accuracy": 0.6290322580645161,
+              "n": 186
+            }
+          },
+          "B": {
+            "accuracy": 0.6381766381766382,
+            "n": 702,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.6707317073170732,
+                "n": 82
+              },
+              "recall1": {
+                "accuracy": 0.5050505050505051,
+                "n": 99
+              },
+              "recall2": {
+                "accuracy": 0.6463414634146342,
+                "n": 82
+              },
+              "xor_mem": {
+                "accuracy": 0.47435897435897434,
+                "n": 78
+              },
+              "and": {
+                "accuracy": 0.79,
+                "n": 100
+              },
+              "or": {
+                "accuracy": 0.8387096774193549,
+                "n": 93
+              },
+              "parity3w": {
+                "accuracy": 0.44047619047619047,
+                "n": 84
+              },
+              "and_mem": {
+                "accuracy": 0.7023809523809523,
+                "n": 84
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6285714285714286,
+              "n": 350
+            },
+            "second_after_switch": {
+              "accuracy": 0.6440677966101694,
+              "n": 177
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "original_heads": {
+        "overall": 0.6375,
+        "levels": {
+          "A": {
+            "accuracy": 0.6055776892430279,
+            "n": 251,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.631578947368421,
+                "n": 57
+              },
+              "recall1": {
+                "accuracy": 0.5942028985507246,
+                "n": 69
+              },
+              "recall2": {
+                "accuracy": 0.576271186440678,
+                "n": 59
+              },
+              "xor_mem": {
+                "accuracy": 0.6212121212121212,
+                "n": 66
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5555555555555556,
+              "n": 117
+            },
+            "second_after_switch": {
+              "accuracy": 0.515625,
+              "n": 64
+            }
+          },
+          "B": {
+            "accuracy": 0.6724890829694323,
+            "n": 229,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.782608695652174,
+                "n": 23
+              },
+              "recall1": {
+                "accuracy": 0.6666666666666666,
+                "n": 24
+              },
+              "recall2": {
+                "accuracy": 0.47368421052631576,
+                "n": 19
+              },
+              "xor_mem": {
+                "accuracy": 0.5714285714285714,
+                "n": 42
+              },
+              "and": {
+                "accuracy": 1.0,
+                "n": 28
+              },
+              "or": {
+                "accuracy": 0.7,
+                "n": 20
+              },
+              "parity3w": {
+                "accuracy": 0.5714285714285714,
+                "n": 42
+              },
+              "and_mem": {
+                "accuracy": 0.6774193548387096,
+                "n": 31
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6722689075630253,
+              "n": 119
+            },
+            "second_after_switch": {
+              "accuracy": 0.6379310344827587,
+              "n": 58
+            }
+          }
+        }
+      },
+      "two_fitted_heads": {
+        "overall": 0.64375,
+        "levels": {
+          "A": {
+            "accuracy": 0.6254980079681275,
+            "n": 251,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5789473684210527,
+                "n": 57
+              },
+              "recall1": {
+                "accuracy": 0.7246376811594203,
+                "n": 69
+              },
+              "recall2": {
+                "accuracy": 0.6779661016949152,
+                "n": 59
+              },
+              "xor_mem": {
+                "accuracy": 0.5151515151515151,
+                "n": 66
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6410256410256411,
+              "n": 117
+            },
+            "second_after_switch": {
+              "accuracy": 0.65625,
+              "n": 64
+            }
+          },
+          "B": {
+            "accuracy": 0.6637554585152838,
+            "n": 229,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.9130434782608695,
+                "n": 23
+              },
+              "recall1": {
+                "accuracy": 0.5416666666666666,
+                "n": 24
+              },
+              "recall2": {
+                "accuracy": 0.47368421052631576,
+                "n": 19
+              },
+              "xor_mem": {
+                "accuracy": 0.5714285714285714,
+                "n": 42
+              },
+              "and": {
+                "accuracy": 0.9285714285714286,
+                "n": 28
+              },
+              "or": {
+                "accuracy": 0.95,
+                "n": 20
+              },
+              "parity3w": {
+                "accuracy": 0.5714285714285714,
+                "n": 42
+              },
+              "and_mem": {
+                "accuracy": 0.5161290322580645,
+                "n": 31
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6470588235294118,
+              "n": 119
+            },
+            "second_after_switch": {
+              "accuracy": 0.6724137931034483,
+              "n": 58
+            }
+          }
+        }
+      },
+      "pooled_head_control": {
+        "overall": 0.625,
+        "levels": {
+          "A": {
+            "accuracy": 0.6215139442231076,
+            "n": 251,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5263157894736842,
+                "n": 57
+              },
+              "recall1": {
+                "accuracy": 0.7391304347826086,
+                "n": 69
+              },
+              "recall2": {
+                "accuracy": 0.6271186440677966,
+                "n": 59
+              },
+              "xor_mem": {
+                "accuracy": 0.5757575757575758,
+                "n": 66
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6324786324786325,
+              "n": 117
+            },
+            "second_after_switch": {
+              "accuracy": 0.640625,
+              "n": 64
+            }
+          },
+          "B": {
+            "accuracy": 0.62882096069869,
+            "n": 229,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.6956521739130435,
+                "n": 23
+              },
+              "recall1": {
+                "accuracy": 0.5833333333333334,
+                "n": 24
+              },
+              "recall2": {
+                "accuracy": 0.7894736842105263,
+                "n": 19
+              },
+              "xor_mem": {
+                "accuracy": 0.5238095238095238,
+                "n": 42
+              },
+              "and": {
+                "accuracy": 0.6785714285714286,
+                "n": 28
+              },
+              "or": {
+                "accuracy": 0.8,
+                "n": 20
+              },
+              "parity3w": {
+                "accuracy": 0.5714285714285714,
+                "n": 42
+              },
+              "and_mem": {
+                "accuracy": 0.5806451612903226,
+                "n": 31
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6638655462184874,
+              "n": 119
+            },
+            "second_after_switch": {
+              "accuracy": 0.6206896551724138,
+              "n": 58
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "original_heads": {
+        "overall": 0.6619791666666667,
+        "levels": {
+          "A": {
+            "accuracy": 0.6140529531568228,
+            "n": 982,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.6343612334801763,
+                "n": 227
+              },
+              "recall1": {
+                "accuracy": 0.6692913385826772,
+                "n": 254
+              },
+              "recall2": {
+                "accuracy": 0.5620437956204379,
+                "n": 274
+              },
+              "xor_mem": {
+                "accuracy": 0.5947136563876652,
+                "n": 227
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5414937759336099,
+              "n": 482
+            },
+            "second_after_switch": {
+              "accuracy": 0.5714285714285714,
+              "n": 231
+            }
+          },
+          "B": {
+            "accuracy": 0.7121535181236673,
+            "n": 938,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.6936936936936937,
+                "n": 111
+              },
+              "recall1": {
+                "accuracy": 0.7244094488188977,
+                "n": 127
+              },
+              "recall2": {
+                "accuracy": 0.5636363636363636,
+                "n": 110
+              },
+              "xor_mem": {
+                "accuracy": 0.5981308411214953,
+                "n": 107
+              },
+              "and": {
+                "accuracy": 0.9310344827586207,
+                "n": 116
+              },
+              "or": {
+                "accuracy": 0.9354838709677419,
+                "n": 124
+              },
+              "parity3w": {
+                "accuracy": 0.4878048780487805,
+                "n": 123
+              },
+              "and_mem": {
+                "accuracy": 0.7416666666666667,
+                "n": 120
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.7104722792607803,
+              "n": 487
+            },
+            "second_after_switch": {
+              "accuracy": 0.7181818181818181,
+              "n": 220
+            }
+          }
+        }
+      },
+      "two_fitted_heads": {
+        "overall": 0.6671875,
+        "levels": {
+          "A": {
+            "accuracy": 0.6334012219959266,
+            "n": 982,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5198237885462555,
+                "n": 227
+              },
+              "recall1": {
+                "accuracy": 0.7952755905511811,
+                "n": 254
+              },
+              "recall2": {
+                "accuracy": 0.6240875912408759,
+                "n": 274
+              },
+              "xor_mem": {
+                "accuracy": 0.5770925110132159,
+                "n": 227
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5871369294605809,
+              "n": 482
+            },
+            "second_after_switch": {
+              "accuracy": 0.670995670995671,
+              "n": 231
+            }
+          },
+          "B": {
+            "accuracy": 0.7025586353944563,
+            "n": 938,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.8198198198198198,
+                "n": 111
+              },
+              "recall1": {
+                "accuracy": 0.7007874015748031,
+                "n": 127
+              },
+              "recall2": {
+                "accuracy": 0.4909090909090909,
+                "n": 110
+              },
+              "xor_mem": {
+                "accuracy": 0.5794392523364486,
+                "n": 107
+              },
+              "and": {
+                "accuracy": 0.8362068965517241,
+                "n": 116
+              },
+              "or": {
+                "accuracy": 0.9919354838709677,
+                "n": 124
+              },
+              "parity3w": {
+                "accuracy": 0.4959349593495935,
+                "n": 123
+              },
+              "and_mem": {
+                "accuracy": 0.6833333333333333,
+                "n": 120
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.7145790554414785,
+              "n": 487
+            },
+            "second_after_switch": {
+              "accuracy": 0.7272727272727273,
+              "n": 220
+            }
+          }
+        }
+      },
+      "pooled_head_control": {
+        "overall": 0.6239583333333333,
+        "levels": {
+          "A": {
+            "accuracy": 0.6008146639511202,
+            "n": 982,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.46255506607929514,
+                "n": 227
+              },
+              "recall1": {
+                "accuracy": 0.7086614173228346,
+                "n": 254
+              },
+              "recall2": {
+                "accuracy": 0.6277372262773723,
+                "n": 274
+              },
+              "xor_mem": {
+                "accuracy": 0.5859030837004405,
+                "n": 227
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5684647302904564,
+              "n": 482
+            },
+            "second_after_switch": {
+              "accuracy": 0.5930735930735931,
+              "n": 231
+            }
+          },
+          "B": {
+            "accuracy": 0.6481876332622601,
+            "n": 938,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.7117117117117117,
+                "n": 111
+              },
+              "recall1": {
+                "accuracy": 0.4566929133858268,
+                "n": 127
+              },
+              "recall2": {
+                "accuracy": 0.5727272727272728,
+                "n": 110
+              },
+              "xor_mem": {
+                "accuracy": 0.5700934579439252,
+                "n": 107
+              },
+              "and": {
+                "accuracy": 0.7931034482758621,
+                "n": 116
+              },
+              "or": {
+                "accuracy": 0.8629032258064516,
+                "n": 124
+              },
+              "parity3w": {
+                "accuracy": 0.5203252032520326,
+                "n": 123
+              },
+              "and_mem": {
+                "accuracy": 0.7,
+                "n": 120
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6714579055441479,
+              "n": 487
+            },
+            "second_after_switch": {
+              "accuracy": 0.6454545454545455,
+              "n": 220
+            }
+          }
+        }
+      },
+      "same_heads_reset_at_switch": {
+        "overall": 0.6369791666666667,
+        "levels": {
+          "A": {
+            "accuracy": 0.5773930753564155,
+            "n": 982,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5418502202643172,
+                "n": 227
+              },
+              "recall1": {
+                "accuracy": 0.6653543307086615,
+                "n": 254
+              },
+              "recall2": {
+                "accuracy": 0.5401459854014599,
+                "n": 274
+              },
+              "xor_mem": {
+                "accuracy": 0.5594713656387665,
+                "n": 227
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5020746887966805,
+              "n": 482
+            },
+            "second_after_switch": {
+              "accuracy": 0.6320346320346321,
+              "n": 231
+            }
+          },
+          "B": {
+            "accuracy": 0.6993603411513859,
+            "n": 938,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.8828828828828829,
+                "n": 111
+              },
+              "recall1": {
+                "accuracy": 0.5905511811023622,
+                "n": 127
+              },
+              "recall2": {
+                "accuracy": 0.43636363636363634,
+                "n": 110
+              },
+              "xor_mem": {
+                "accuracy": 0.5607476635514018,
+                "n": 107
+              },
+              "and": {
+                "accuracy": 0.8793103448275862,
+                "n": 116
+              },
+              "or": {
+                "accuracy": 1.0,
+                "n": 124
+              },
+              "parity3w": {
+                "accuracy": 0.5121951219512195,
+                "n": 123
+              },
+              "and_mem": {
+                "accuracy": 0.7166666666666667,
+                "n": 120
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.7145790554414785,
+              "n": 487
+            },
+            "second_after_switch": {
+              "accuracy": 0.7181818181818181,
+              "n": 220
+            }
+          }
+        }
+      }
+    },
+    "confirmation": {
+      "original_heads": {
+        "overall": 0.6559895833333333,
+        "levels": {
+          "A": {
+            "accuracy": 0.6080453842186694,
+            "n": 1939,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.6215644820295984,
+                "n": 473
+              },
+              "recall1": {
+                "accuracy": 0.6147540983606558,
+                "n": 488
+              },
+              "recall2": {
+                "accuracy": 0.5956989247311828,
+                "n": 465
+              },
+              "xor_mem": {
+                "accuracy": 0.6003898635477583,
+                "n": 513
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.560081466395112,
+              "n": 982
+            },
+            "second_after_switch": {
+              "accuracy": 0.5637450199203188,
+              "n": 502
+            }
+          },
+          "B": {
+            "accuracy": 0.7048921620199895,
+            "n": 1901,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.7751937984496124,
+                "n": 258
+              },
+              "recall1": {
+                "accuracy": 0.6758893280632411,
+                "n": 253
+              },
+              "recall2": {
+                "accuracy": 0.5983263598326359,
+                "n": 239
+              },
+              "xor_mem": {
+                "accuracy": 0.5990783410138248,
+                "n": 217
+              },
+              "and": {
+                "accuracy": 0.919831223628692,
+                "n": 237
+              },
+              "or": {
+                "accuracy": 0.8846153846153846,
+                "n": 234
+              },
+              "parity3w": {
+                "accuracy": 0.4978902953586498,
+                "n": 237
+              },
+              "and_mem": {
+                "accuracy": 0.6769911504424779,
+                "n": 226
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6937307297019527,
+              "n": 973
+            },
+            "second_after_switch": {
+              "accuracy": 0.6838842975206612,
+              "n": 484
+            }
+          }
+        }
+      },
+      "two_fitted_heads": {
+        "overall": 0.671875,
+        "levels": {
+          "A": {
+            "accuracy": 0.6456936565239815,
+            "n": 1939,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5539112050739958,
+                "n": 473
+              },
+              "recall1": {
+                "accuracy": 0.805327868852459,
+                "n": 488
+              },
+              "recall2": {
+                "accuracy": 0.6236559139784946,
+                "n": 465
+              },
+              "xor_mem": {
+                "accuracy": 0.5984405458089669,
+                "n": 513
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6221995926680245,
+              "n": 982
+            },
+            "second_after_switch": {
+              "accuracy": 0.647410358565737,
+              "n": 502
+            }
+          },
+          "B": {
+            "accuracy": 0.6985796948974224,
+            "n": 1901,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.8604651162790697,
+                "n": 258
+              },
+              "recall1": {
+                "accuracy": 0.6403162055335968,
+                "n": 253
+              },
+              "recall2": {
+                "accuracy": 0.5815899581589958,
+                "n": 239
+              },
+              "xor_mem": {
+                "accuracy": 0.5668202764976958,
+                "n": 217
+              },
+              "and": {
+                "accuracy": 0.8396624472573839,
+                "n": 237
+              },
+              "or": {
+                "accuracy": 0.9700854700854701,
+                "n": 234
+              },
+              "parity3w": {
+                "accuracy": 0.48945147679324896,
+                "n": 237
+              },
+              "and_mem": {
+                "accuracy": 0.6194690265486725,
+                "n": 226
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.71120246659815,
+              "n": 973
+            },
+            "second_after_switch": {
+              "accuracy": 0.6632231404958677,
+              "n": 484
+            }
+          }
+        }
+      },
+      "pooled_head_control": {
+        "overall": 0.628125,
+        "levels": {
+          "A": {
+            "accuracy": 0.6162970603403817,
+            "n": 1939,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5221987315010571,
+                "n": 473
+              },
+              "recall1": {
+                "accuracy": 0.7213114754098361,
+                "n": 488
+              },
+              "recall2": {
+                "accuracy": 0.6086021505376344,
+                "n": 465
+              },
+              "xor_mem": {
+                "accuracy": 0.6101364522417154,
+                "n": 513
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5824847250509165,
+              "n": 982
+            },
+            "second_after_switch": {
+              "accuracy": 0.6334661354581673,
+              "n": 502
+            }
+          },
+          "B": {
+            "accuracy": 0.640189374013677,
+            "n": 1901,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.7054263565891473,
+                "n": 258
+              },
+              "recall1": {
+                "accuracy": 0.48616600790513836,
+                "n": 253
+              },
+              "recall2": {
+                "accuracy": 0.5439330543933054,
+                "n": 239
+              },
+              "xor_mem": {
+                "accuracy": 0.5207373271889401,
+                "n": 217
+              },
+              "and": {
+                "accuracy": 0.8143459915611815,
+                "n": 237
+              },
+              "or": {
+                "accuracy": 0.8589743589743589,
+                "n": 234
+              },
+              "parity3w": {
+                "accuracy": 0.5443037974683544,
+                "n": 237
+              },
+              "and_mem": {
+                "accuracy": 0.6460176991150443,
+                "n": 226
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.6515930113052415,
+              "n": 973
+            },
+            "second_after_switch": {
+              "accuracy": 0.6157024793388429,
+              "n": 484
+            }
+          }
+        }
+      },
+      "same_heads_reset_at_switch": {
+        "overall": 0.6372395833333333,
+        "levels": {
+          "A": {
+            "accuracy": 0.5848375451263538,
+            "n": 1939,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.5454545454545454,
+                "n": 473
+              },
+              "recall1": {
+                "accuracy": 0.6680327868852459,
+                "n": 488
+              },
+              "recall2": {
+                "accuracy": 0.5741935483870968,
+                "n": 465
+              },
+              "xor_mem": {
+                "accuracy": 0.5516569200779727,
+                "n": 513
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.5386965376782077,
+              "n": 982
+            },
+            "second_after_switch": {
+              "accuracy": 0.5956175298804781,
+              "n": 502
+            }
+          },
+          "B": {
+            "accuracy": 0.6906891109942136,
+            "n": 1901,
+            "per_op": {
+              "xor": {
+                "accuracy": 0.8992248062015504,
+                "n": 258
+              },
+              "recall1": {
+                "accuracy": 0.5691699604743083,
+                "n": 253
+              },
+              "recall2": {
+                "accuracy": 0.5062761506276151,
+                "n": 239
+              },
+              "xor_mem": {
+                "accuracy": 0.511520737327189,
+                "n": 217
+              },
+              "and": {
+                "accuracy": 0.9029535864978903,
+                "n": 237
+              },
+              "or": {
+                "accuracy": 0.9529914529914529,
+                "n": 234
+              },
+              "parity3w": {
+                "accuracy": 0.5189873417721519,
+                "n": 237
+              },
+              "and_mem": {
+                "accuracy": 0.6415929203539823,
+                "n": 226
+              }
+            },
+            "first_after_switch": {
+              "accuracy": 0.710174717368962,
+              "n": 973
+            },
+            "second_after_switch": {
+              "accuracy": 0.6446280991735537,
+              "n": 484
+            }
+          }
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 41.805332969999995,
+  "switching_energy": {
+    "maximum_abs": 0.4025005517797098,
+    "note": "Total kinetic + spring + anchor energy jump from parameter changes at fixed positions/velocities; not conservation error"
+  },
+  "reset_control": "At profile changes reset only positions/velocities to original jitter states; preserve clock and RNG, no extra warmup. Evaluate with the same fitted heads.",
+  "limitations": [
+    "One physical/data seed and one predeclared binary bank pair; no seed or encoding ranking.",
+    "Observed 64-event streams; no infinite-horizon claim.",
+    "Head fit and physics-state continuity do not guarantee useful cross-bank memory.",
+    "External level dispatcher selects A/B; opcode routing remains inside each bank."
+  ]
+}

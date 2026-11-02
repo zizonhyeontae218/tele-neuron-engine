@@ -12,7 +12,7 @@ replacement.
 
 ## Repository branches
 
-Active development includes the six v1/v2 model families, both ProMax sizes and Endophalon-3.
+Active development includes the six v1/v2 model families, both ProMax sizes, preserved Endophalon-3T, and the new Endophalon-3 (AB alpha).
 
 | Branch | Role |
 |---|---|
@@ -268,7 +268,7 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 
 Details and caveats: [docs/endophalon2_promax.md](docs/endophalon2_promax.md).
 
-## Teleneuron-Endophalon-3 (training experiments)
+## Teleneuron-Endophalon-3T (historical training experiments)
 
 The next generation, built on the Endophalon-2-Pro / ProMax spring physics.
 It is an instruction-driven physical computer: one physics system, one
@@ -308,6 +308,17 @@ a practical LLM replacement.
 
 The operation-balanced routing follow-up did not improve accuracy; its B expansion gate failed. Its loss is available only as an opt-in reproducibility setting. See [routing report](docs/endophalon3_routing_report.ko.md).
 
-### Joint A/B follow-up
+### Historical 3T joint A/B follow-up
 
 Three joint AB models completed 120 new generations each, using one shared linear readout with interleaved levels. All three missed the per-level/per-operation goals; fresh pooled accuracy was 72.32%, 73.02%, and 76.77%. [Joint results, cards, and replay](docs/endophalon3_joint_report.md).
+
+## Teleneuron-Endophalon-3 (AB alpha)
+
+The new 3 keeps independent A/B parameter banks and linear readouts on one continuous physical state. A command selects the module; positions, velocities, time and RNG continue across switches. The previous 3 family is now named **3T**; historical paths/cards remain intact. [Name mapping](docs/model_names.md) · [design](docs/endophalon3_ab_alpha_design.ko.md) · [implementation and measurements](docs/endophalon3_alpha.md).
+
+```bash
+python -m tele_neuron.endophalon3_alpha --config configs/endophalon3_alpha/from_3t_seed1.json --build /tmp/new-e3-banks.json
+python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program configs/endophalon3_alpha/example_program.txt --checkpoint-out /tmp/new-e3-session.json
+```
+
+Output paths must be new. Bundling old heads alone does not establish accuracy after switches; the implementation report distinguishes imported heads from train-only head refits and actual performance goals.

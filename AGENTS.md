@@ -1,10 +1,11 @@
 # Tele-Neuron Engine agent instructions
 
 Read GOAL.md, FileTree.md, docs/model_commands.md and the current model's docs.
-Endophalon-3 results and limits start at docs/endophalon3.md; the handoff is the historical original plan.
+Current names: docs/model_names.md. New 3: docs/endophalon3_alpha.md.
+Historical 3T: docs/endophalon3.md and the preserved experiment reports.
 
 ## Branch roles
-- master is active integrated development: the six v1/v2 model families plus Endophalon-3, with
+- master is active integrated development: the six v1/v2 model families plus 3T and new Endophalon-3, with
   ProMax8 and ProMax16 configured separately.
 - archive/endophalon-v1 preserves Endophalon, Plus and Pro at the generation-1
   boundary. Keep all three importable and executable.
@@ -64,3 +65,16 @@ Preserve all previous cards and reports. No test-driven repeated search.
 Joint trials are now complete, 0/3 accuracy gates passed. Read
 docs/endophalon3_joint_report.md before any follow-up. The old and joint
 model/evidence files remain immutable.
+
+## Endophalon 3 naming and current implementation
+The owner renamed the previous 3 models to 3T; keep their historical files and
+family strings byte-identical. `tele_neuron.endophalon3t` is the explicit legacy
+CLI alias. `tele_neuron.endophalon3_alpha` is the new Endophalon 3 (AB alpha).
+Read GOAL.md and docs/endophalon3_ab_alpha_design.ko.md. Two A/B parameter/head
+banks share one physical state. Preserve position, velocity, clock and RNG on
+switches; record switching energy. Keep 144/2/16 active zones. No hidden input
+history or per-bank state; only the evaluation oracle sees target history.
+Implement/verify the bounded MVP before outer physics training.
+
+Local index fallback (external skill generator unavailable):
+`python scripts/filetree_index.py update` then `python scripts/filetree_index.py lint`.

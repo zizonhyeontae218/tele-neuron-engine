@@ -9,7 +9,7 @@
 
 ## 브랜치 구성
 
-master는 기존 모델 6종과 ProMax8/16, Endophalon-3를 포함하는 최신 통합 개발본입니다.
+master는 기존 모델 6종과 ProMax8/16, 보존된 Endophalon-3T와 새 Endophalon-3(AB alpha)를 포함하는 최신 통합 개발본입니다.
 
 | Branch | Role |
 |---|---|
@@ -208,7 +208,7 @@ python -m tele_neuron.endophalon2_promax --config configs/endophalon2_promax/pro
 
 자세한 결과와 주의할 점은 [docs/endophalon2_promax.md](docs/endophalon2_promax.md)에 있습니다.
 
-## Teleneuron-Endophalon-3 (학습 실험)
+## Teleneuron-Endophalon-3T (이전 학습 실험)
 
 Endophalon-2-Pro / ProMax의 스프링 물리 위에 만든 다음 세대입니다. 명령어로 움직이는 물리 컴퓨터로, 물리계 하나와 판독기 하나를 쓰고, 모든 입력이 `레벨 연산 a b` 형태의 명령어입니다(예: `"A XOR 1 1"`). 레벨 비트가 명령어 묶음을 고르고(A는 연산 4개, B는 8개), 연산 코드가 그 안의 연산을 고르며, a와 b가 데이터입니다. 기억(recall)을 위해 느린 영역을 두어 시간척도를 하나 더 만들었습니다.
 
@@ -238,6 +238,17 @@ MIT. 자세한 내용은 [LICENSE](LICENSE)를 참고하세요.
 
 연산 균형 라우팅 후속 실험은 정확도를 개선하지 못했고 B 확장 게이트는 실패했습니다. 해당 손실은 재현을 위한 선택 설정입니다. [라우팅 보고서](docs/endophalon3_routing_report.ko.md)를 참조하세요.
 
-### A/B 통합 후속 학습
+### 이전 3T A/B 통합 후속 학습
 
 A/B 입력을 같은 물리계·단일 readout으로 처리하는 세 모델이 각각 추가 120세대를 완료했습니다. 세 모델 모두 수준별·연산별 목표에 미달했으며 새 확인 세트 전체 정확도는 72.32%, 73.02%, 76.77%입니다. [결과·모델·재현 검사](docs/endophalon3_joint_report.md).
+
+## Teleneuron-Endophalon-3 (AB alpha)
+
+새 3은 A/B의 파라미터와 readout을 따로 두고 위치·속도·시간·난수 상태를 공유합니다. 명령이 A/B를 선택하며 전환 시 물리 상태를 초기화하지 않습니다. 기존 3 계열은 **3T**로 명명하며 이전 파일·카드·결과는 보존합니다. [이름 대응표](docs/model_names.md) · [설계](docs/endophalon3_ab_alpha_design.ko.md) · [구현·측정 결과](docs/endophalon3_alpha.md).
+
+```bash
+python -m tele_neuron.endophalon3_alpha --config configs/endophalon3_alpha/from_3t_seed1.json --build /tmp/new-e3-banks.json
+python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program configs/endophalon3_alpha/example_program.txt --checkpoint-out /tmp/new-e3-session.json
+```
+
+출력 경로는 새 파일이어야 합니다. 기존 head를 연결하는 것만으로 전환 후 정확도를 보장하지 않으며, 구현 보고서는 기존 head와 학습 스트림에서 따로 적합한 A/B head의 실제 성능을 구분합니다.
