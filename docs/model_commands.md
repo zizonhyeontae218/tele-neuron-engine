@@ -70,3 +70,14 @@ The 2026-11-02 physics120 run is complete. Use
 for the trained bundle. Do not rerun the completed budget. See
 [endophalon3_alpha_120_closeout.md](endophalon3_alpha_120_closeout.md) for the
 original successful audit and later closeout error recovery.
+
+## Current independent A/B software connection
+
+```bash
+python -m tele_neuron.endophalon3_software --config configs/endophalon3_software/existing_best_observed.json --build /tmp/new-e3-software.json
+python -m tele_neuron.endophalon3_software --model /tmp/new-e3-software.json --program configs/endophalon3_software/example_program.txt --output /tmp/new-e3-software-output.json --checkpoint-out /tmp/new-e3-software-state.json
+# Resume with new commands, preserving both local sessions and output registers.
+python -m tele_neuron.endophalon3_software --model /tmp/new-e3-software.json --program /path/to/next.txt --checkpoint-in /tmp/new-e3-software-state.json --checkpoint-out /tmp/new-e3-software-next.json
+```
+
+Use new output paths. Syntax: `[A|B] OP 0|1|@register 0|1|@register [-> register]`; `level A/B` changes the default without advancing physics. Inactive models freeze; each readout's recall uses its own local input history. Software registers are output values, not an oracle. See [actual model scores and limitations](endophalon3_software.md). No shared-state or 3T model file is overwritten.

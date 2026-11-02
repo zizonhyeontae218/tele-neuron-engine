@@ -1,0 +1,6 @@
+# r0/r1/r2 contain actual predicted output bits, not oracle answers.
+A xor 1 0 -> r0
+B and @r0 1 -> r1
+level A
+recall1 0 0 -> r2
+B xor @r2 @r1 -> r3

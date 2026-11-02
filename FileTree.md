@@ -9,7 +9,7 @@
 - `CLAUDE.md` — Claude working context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Endophalon 3 — separate A/B modules, one continuous physical state.
+- `GOAL.md` — Endophalon 3 — independent A/B models connected in software.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
@@ -85,6 +85,11 @@
 - `example_program.txt` — Contains example program data.
 - `from_3t_seed1.json` — Contains from 3t seed1 data.
 
+## `configs/endophalon3_software`
+
+- `example_program.txt` — Contains example program data.
+- `existing_best_observed.json` — Contains existing best observed data.
+
 ## `configs/endophalon_plus`
 
 - `adder2.json` — Stores structured data for adder2.
@@ -122,6 +127,7 @@
 - `endophalon3_joint_report.md` — Endophalon 3 — joint A/B training closeout.
 - `endophalon3_routing_design.md` — Endophalon 3 routing diagnosis — design.
 - `endophalon3_routing_report.ko.md` — Endophalon 3 — 공유 판독 병목 실험.
+- `endophalon3_software.md` — Endophalon 3 — independent A/B models with software connections.
 - `endophalon3_training_report.ko.md` — Endophalon 3 — 학습 실험 및 성능 검증 보고서.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
@@ -453,6 +459,14 @@
 - `level_b_onehot.json` — Stores structured data for level b onehot.
 - `level_b_onehot.log` — Contains level b onehot data.
 
+## `docs/endophalon3_software_runs/20261102/existing_cards`
+
+- `evaluation.json` — Contains evaluation data.
+- `manifest.json` — Contains manifest data.
+- `model.json` — Contains model data.
+- `observations.npz` — Contains observations data.
+- `verification.json` — Contains verification data.
+
 ## `docs/integration`
 
 - `2026-10-31.md` — Endophalon consolidation audit — 2026-10-31.
@@ -524,6 +538,10 @@
 - `20261031_a_binary_s1.json` — Stores structured data for 20261031 a binary s1.
 - `20261031_a_binary_s2.json` — Stores structured data for 20261031 a binary s2.
 
+## `models/endophalon3_software`
+
+- `20261102_existing_cards.json` — Contains 20261102 existing cards data.
+
 ## `models/endophalon_plus`
 
 - `teleneuron_endophalon_plus_full_adder.json` — Stores structured data for teleneuron endophalon plus full adder.
@@ -548,10 +566,12 @@
 - `audit_endophalon3_alpha.py` — Contains audit endophalon3 alpha data.
 - `audit_endophalon3_alpha_training.py` — Contains audit endophalon3 alpha training data.
 - `audit_endophalon3_joint.py` — Contains audit endophalon3 joint data.
+- `audit_endophalon3_software.py` — Contains audit endophalon3 software data.
 - `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
 - `closeout_endophalon3_alpha_training.py` — Contains closeout endophalon3 alpha training data.
 - `diagnose_endophalon3_routing.py` — Diagnose frozen Endophalon-3 states on train/validation only; no theta search.
 - `evaluate_endophalon3_alpha.py` — Contains evaluate endophalon3 alpha data.
+- `evaluate_endophalon3_software.py` — Contains evaluate endophalon3 software data.
 - `filetree_index.py` — Contains filetree index data.
 - `recover_endophalon3.py` — Recover only the two infrastructure-interrupted experiments; scientific code is unchanged.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
@@ -648,6 +668,12 @@
 - `session.py` — Contains session data.
 - `train.py` — Contains train data.
 
+## `src/tele_neuron/endophalon3_software`
+
+- `__init__.py` — Contains   init   data.
+- `__main__.py` — Contains   main   data.
+- `router.py` — Contains router data.
+
 ## `src/tele_neuron/endophalon3t`
 
 - `__init__.py` — Contains   init   data.
@@ -708,6 +734,7 @@
 - `test_endophalon3_alpha_training.py` — Contains test endophalon3 alpha training data.
 - `test_endophalon3_joint.py` — Contains test endophalon3 joint data.
 - `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
+- `test_endophalon3_software.py` — Contains test endophalon3 software data.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
 - `test_learner.py` — Provides the test_algorithm_files_are_discoverable function.

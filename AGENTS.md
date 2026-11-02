@@ -1,7 +1,8 @@
 # Tele-Neuron Engine agent instructions
 
 Read GOAL.md, FileTree.md, docs/model_commands.md and the current model's docs.
-Current names: docs/model_names.md. New 3: docs/endophalon3_alpha.md.
+Current names: docs/model_names.md. Current 3: docs/endophalon3_software.md.
+Preserved shared-state alpha: docs/endophalon3_alpha.md.
 Historical 3T: docs/endophalon3.md and the preserved experiment reports.
 
 ## Branch roles
@@ -66,7 +67,7 @@ Joint trials are now complete, 0/3 accuracy gates passed. Read
 docs/endophalon3_joint_report.md before any follow-up. The old and joint
 model/evidence files remain immutable.
 
-## Endophalon 3 naming and current implementation
+## Endophalon 3 shared-state alpha implementation (preserved experiment)
 The owner renamed the previous 3 models to 3T; keep their historical files and
 family strings byte-identical. `tele_neuron.endophalon3t` is the explicit legacy
 CLI alias. `tele_neuron.endophalon3_alpha` is the new Endophalon 3 (AB alpha).
@@ -88,3 +89,11 @@ no held-out selection. Both banks remain separate despite paired optimization.
 New-3 physics120 is complete (2,881 pairs), audit passed; accuracy gates remain
 unmet. Preserve the original failed job/closeout log and recovered artifacts.
 See docs/endophalon3_alpha_120_closeout.md. Do not repeat the completed run.
+
+## Current software-linked A/B direction
+The owner now requests independent physical sessions connected in software.
+See GOAL.md and docs/endophalon3_software.md. New runtime is
+tele_neuron.endophalon3_software; preserve all previous shared-state alpha code,
+models and artifacts. Pause the inactive model; use local event histories.
+Only explicit predicted-output registers bridge A/B, with no oracle or physical
+state transfer. No retraining or additional search in this slice.

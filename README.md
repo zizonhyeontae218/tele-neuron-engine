@@ -12,7 +12,7 @@ replacement.
 
 ## Repository branches
 
-Active development includes the six v1/v2 model families, both ProMax sizes, preserved Endophalon-3T, and the new Endophalon-3 (AB alpha).
+Active development includes the six v1/v2 model families, both ProMax sizes, preserved Endophalon-3T, and the new Endophalon-3 (software-linked A/B).
 
 | Branch | Role |
 |---|---|
@@ -312,7 +312,7 @@ The operation-balanced routing follow-up did not improve accuracy; its B expansi
 
 Three joint AB models completed 120 new generations each, using one shared linear readout with interleaved levels. All three missed the per-level/per-operation goals; fresh pooled accuracy was 72.32%, 73.02%, and 76.77%. [Joint results, cards, and replay](docs/endophalon3_joint_report.md).
 
-## Teleneuron-Endophalon-3 (AB alpha)
+## Previous Endophalon-3 shared-state alpha experiment
 
 The new 3 keeps independent A/B parameter banks and linear readouts on one continuous physical state. A command selects the module; positions, velocities, time and RNG continue across switches. The previous 3 family is now named **3T**; historical paths/cards remain intact. [Name mapping](docs/model_names.md) · [design](docs/endophalon3_ab_alpha_design.ko.md) · [implementation and measurements](docs/endophalon3_alpha.md).
 
@@ -324,3 +324,14 @@ python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program
 Output paths must be new. Bundling old heads alone does not establish accuracy after switches; the implementation report distinguishes imported heads from train-only head refits and actual performance goals.
 
 The new 3 completed **120 generations / 2,881 candidate pairs**. Fresh confirmation improved from 65.44% to 75.36% overall (A 77.77%, B 73.07%); accuracy gates remain unmet. [Results](docs/endophalon3_alpha_120_report.md) · [closeout recovery and verification](docs/endophalon3_alpha_120_closeout.md).
+
+## Endophalon 3: independent A/B connected in software
+
+A/B run as separate saved models. A software dispatcher pauses the inactive model and routes predicted output bits through explicit registers. Each model retains its own physical state, clock, RNG and local input history. Prior 3T/shared-state experiments remain unchanged. [Design, actual card accuracy and verification](docs/endophalon3_software.md).
+
+```bash
+python -m tele_neuron.endophalon3_software --config configs/endophalon3_software/existing_best_observed.json --build /tmp/new-e3-software.json
+python -m tele_neuron.endophalon3_software --model /tmp/new-e3-software.json --program configs/endophalon3_software/example_program.txt --checkpoint-out /tmp/new-e3-software-state.json
+```
+
+Example dataflow: `A xor 1 0 -> r0`, then `B and @r0 1`. Registers carry actual model predictions, including errors. Historical native accuracy is A 88.33%, B 74.48%; this does not establish end-to-end chained accuracy.

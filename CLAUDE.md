@@ -31,3 +31,8 @@ train-only separate heads, no held-out selection; preserve all prior artifacts.
 New-3 physics120 is complete (2,881 pairs), audit passed; accuracy gates remain
 unmet. Preserve the original failed job/closeout log and recovered artifacts.
 See docs/endophalon3_alpha_120_closeout.md. Do not repeat the completed run.
+
+Current owner direction: independent A/B sessions connected in software, no new
+training. See GOAL.md and docs/endophalon3_software.md. Preserve shared-state alpha
+and physics120 evidence. New CLI is tele_neuron.endophalon3_software; registers
+carry only actual predicted output bits. Local history/clock/RNG are independent.

@@ -107,6 +107,20 @@ def main() -> None:
             assert json.loads(state.read_text())["events"] == 5
             print("PASS endophalon3_alpha: two-bank build, commands, persistent checkpoint; explicit 3T CLI alias")
             count += 1
+        if (ROOT / "src/tele_neuron/endophalon3_software").exists():
+            bundle = Path(directory) / "software-bundle.json"
+            state = Path(directory) / "software-state.json"
+            for argv in (
+                ["-m", "tele_neuron.endophalon3_software", "--config", "configs/endophalon3_software/existing_best_observed.json", "--build", str(bundle)],
+                ["-m", "tele_neuron.endophalon3_software", "--model", str(bundle), "--program", "configs/endophalon3_software/example_program.txt", "--checkpoint-out", str(state)],
+            ):
+                result = subprocess.run([sys.executable, *argv], cwd=ROOT, env=env, capture_output=True, text=True, timeout=60)
+                if result.returncode:
+                    raise RuntimeError(result.stdout + result.stderr)
+            payload = json.loads(state.read_text())
+            assert {k:v["events"] for k,v in payload["sessions"].items()} == {"A":2,"B":2}
+            print("PASS endophalon3_software: independent models, output registers and checkpoint")
+            count += 1
     print(f"{count} model/config combinations passed")
 
 
