@@ -1,0 +1,84 @@
+name: Endophalon 3 paired-bank physics 120
+on:
+  push:
+    branches: [master]
+    paths: [.github/workflows/endophalon3-alpha-training.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: endophalon3-alpha-physics120
+  cancel-in-progress: false
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  TRIAL_DIRECTORY: docs/endophalon3_alpha_runs/20261102/physics120
+jobs:
+  train-and-closeout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e . -r requirements.txt numpy==2.3.5
+      - name: Required tests
+        run: python -m pytest -q
+      - name: Reject an already completed experiment
+        run: test ! -f "$TRIAL_DIRECTORY/model.json"
+      - name: Train 120 generations using shared state and separate A/B heads
+        run: |
+          set -o pipefail
+          mkdir -p "$TRIAL_DIRECTORY"
+          python -u scripts/train_endophalon3_alpha.py --output-dir "$TRIAL_DIRECTORY" --workers 4 2>&1 | tee "$TRIAL_DIRECTORY/training.log"
+      - name: Audit saved model and prepare reviewable report
+        run: python scripts/closeout_endophalon3_alpha_training.py "$TRIAL_DIRECTORY"
+      - name: Model CLI smoke
+        run: python scripts/smoke_models.py
+      - name: Index and preservation verification
+        run: |
+          python scripts/filetree_index.py update
+          python scripts/filetree_index.py lint
+          python scripts/verify_backup_consolidation.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: endophalon3-alpha-physics120
+          path: |
+            docs/endophalon3_alpha_runs/20261102/physics120/
+            models/endophalon3_alpha/20261102_physics120_seed1_binary.json
+            docs/endophalon3_alpha_120_report.md
+          retention-days: 90
+      - name: Publish only if both canonical branch heads still match source
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os,subprocess,tempfile
+          from pathlib import Path
+          source=os.environ['SOURCE_SHA']
+          refs=dict(line.split()[::-1] for line in subprocess.check_output(['git','ls-remote','origin','refs/heads/master','refs/heads/endophalon3'],text=True).splitlines())
+          expected={'refs/heads/master':source,'refs/heads/endophalon3':source}
+          if refs!=expected:raise SystemExit('Concurrent branch changes; artifacts preserved, normal integration required')
+          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
+          paths=['docs/endophalon3_alpha_runs/20261102/physics120','models/endophalon3_alpha/20261102_physics120_seed1_binary.json','docs/endophalon3_alpha_120_report.md','docs/endophalon3_alpha.md','README.md','README.ko.md','GOAL.md','FileTree.md','FILETREE.hash.json']
+          subprocess.run(['git','add','--',*paths],check=True)
+          subprocess.run(['git','diff','--cached','--check'],check=True)
+          subprocess.run(['git','commit','-m','Preserve audited Endophalon 3 paired-bank 120-generation result'],check=True)
+          with tempfile.TemporaryDirectory() as tmp:
+              hook=Path(tmp)/'pre-push'
+              hook.write_text('#!/usr/bin/env python3\nimport sys\nexpected='+repr(expected)+'\nseen=set()\nfor line in sys.stdin:\n a,b,c,d=line.split()\n if expected.get(c)!=d or a=="(delete)":sys.exit("Unexpected or changed ref: "+c)\n seen.add(c)\nif seen!=set(expected):sys.exit("Incomplete transaction")\n')
+              hook.chmod(0o755)
+              subprocess.run(['git','-c','core.hooksPath='+tmp,'push','--atomic','origin','HEAD:refs/heads/master','HEAD:refs/heads/endophalon3'],check=True)
+          refs=dict(line.split()[::-1] for line in subprocess.check_output(['git','ls-remote','origin','refs/heads/master','refs/heads/endophalon3'],text=True).splitlines())
+          final=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+          assert refs=={ref:final for ref in expected}
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write('Training/audit complete; master and endophalon3 match '+final+'\n')
+          PY

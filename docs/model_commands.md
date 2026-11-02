@@ -54,3 +54,13 @@ python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program
 `level A` / `level B` selects the module for subsequent `OP a b` commands without advancing the physical clock. Full `A OP a b` / `B OP a b` syntax is also supported. Every data event advances 16 steps, observing 16 zones at delay 12; the initial 32-step warmup runs once. Output is the head score/thresholded bit, not ground truth. The first two events lack full recall2 history. Runtime never stores an oracle bit history. The bank-parameter switch energy is reported in each event.
 
 The bounded initial readout fit/evaluation command is in [the alpha experiment plan](endophalon3_alpha_experiment_plan.md); it rejects existing output directories. This is not a long outer physics training run.
+
+## New 3: paired-bank physics training, 120 generations
+
+[Fixed plan](endophalon3_alpha_120_plan.md). After installation:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python scripts/train_endophalon3_alpha.py --output-dir docs/endophalon3_alpha_runs/20261102/physics120 --workers 4
+```
+
+This optimizes both bank theta vectors together, fits two separate heads on train only and uses one shared physical state. The budget is 120×24+1=2,881 candidate **pairs**. A partial matching checkpoint resumes deterministically; completed results are never overwritten. The paired-bank workflow runs this bounded workload and audits, reports and publishes the outputs with changed-head guards. A report link is added after completion.

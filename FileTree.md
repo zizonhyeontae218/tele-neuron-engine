@@ -20,6 +20,7 @@
 ## `.github/workflows`
 
 - `archive-endophalon.yml` — Contains archive-endophalon data.
+- `endophalon3-alpha-training.yml` — Contains endophalon3-alpha-training data.
 - `endophalon3-audit.yml` — Contains endophalon3-audit data.
 - `endophalon3-joint.yml` — Contains endophalon3-joint data.
 - `endophalon3-recovery.yml` — Contains endophalon3-recovery data.
@@ -111,6 +112,8 @@
 - `endophalon3.md` — Teleneuron-Endophalon-3T (historical training experiments).
 - `endophalon3_ab_alpha_design.ko.md` — Endophalon 3 (AB alpha) — 명령으로 선택하는 A/B와 공유 물리 기억.
 - `endophalon3_alpha.md` — Endophalon 3 (AB alpha) — implementation and first measurements.
+- `endophalon3_alpha_120_plan.md` — Endophalon 3 — 120-generation paired-bank physics training.
+- `endophalon3_alpha_120_preflight.json` — Contains endophalon3 alpha 120 preflight data.
 - `endophalon3_alpha_experiment_plan.md` — Endophalon 3 MVP evaluation plan — 2026-11-02.
 - `endophalon3_handoff.md` — Endophalon-3 historical handoff: original plan and lessons.
 - `endophalon3_joint_plan.md` — Endophalon 3 joint A/B training — 2026-11-01.
@@ -400,8 +403,10 @@
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
 - `audit_endophalon3_alpha.py` — Contains audit endophalon3 alpha data.
+- `audit_endophalon3_alpha_training.py` — Contains audit endophalon3 alpha training data.
 - `audit_endophalon3_joint.py` — Contains audit endophalon3 joint data.
 - `audit_endophalon3_training.py` — Audit saved Endophalon-3 CLI cards; never train or modify model/source files.
+- `closeout_endophalon3_alpha_training.py` — Contains closeout endophalon3 alpha training data.
 - `diagnose_endophalon3_routing.py` — Diagnose frozen Endophalon-3 states on train/validation only; no theta search.
 - `evaluate_endophalon3_alpha.py` — Contains evaluate endophalon3 alpha data.
 - `filetree_index.py` — Contains filetree index data.
@@ -412,6 +417,7 @@
 - `run_endophalon3_training.py` — Run the fixed Endophalon-3 experiment matrix through the existing model CLI.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
 - `summarize_endophalon3_training.py` — Build evidence tables and a Korean research report from completed audits.
+- `train_endophalon3_alpha.py` — Contains train endophalon3 alpha data.
 - `train_endophalon3_joint.py` — Contains train endophalon3 joint data.
 - `verify_backup_consolidation.py` — Contains verify backup consolidation data.
 
@@ -497,6 +503,7 @@
 - `__main__.py` — Contains   main   data.
 - `model.py` — Contains model data.
 - `session.py` — Contains session data.
+- `train.py` — Contains train data.
 
 ## `src/tele_neuron/endophalon3t`
 
@@ -554,6 +561,7 @@
 - `test_endophalon2_promax.py` — Provides the _config function.
 - `test_endophalon3.py` — Provides the _small function.
 - `test_endophalon3_alpha.py` — Contains test endophalon3 alpha data.
+- `test_endophalon3_alpha_training.py` — Contains test endophalon3 alpha training data.
 - `test_endophalon3_joint.py` — Contains test endophalon3 joint data.
 - `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.

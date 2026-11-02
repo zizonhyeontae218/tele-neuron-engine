@@ -78,3 +78,9 @@ Implement/verify the bounded MVP before outer physics training.
 
 Local index fallback (external skill generator unavailable):
 `python scripts/filetree_index.py update` then `python scripts/filetree_index.py lint`.
+
+## Paired-bank training (2026-11-02)
+The owner authorized 120 generations of new-3 physics training. Follow
+`docs/endophalon3_alpha_120_plan.md`; do not confuse it with the 3T joint run.
+Use production Session, separate train-only heads, checkpoints, a fixed seed and
+no held-out selection. Both banks remain separate despite paired optimization.

@@ -15,3 +15,9 @@ experiment reaches 67.19% fresh pooled accuracy (A 64.57%, B 69.86%); targets
 remain unmet. See docs/endophalon3_alpha.md for controls, evidence and limits.
 Next milestone is transition-aware bank-physics adaptation under a frozen budget;
 no additional search has been run in this implementation slice.
+
+## Owner-authorized 120-generation run
+Train both bank theta vectors with separate train-only Ridge heads over shared
+transition state. Exact scope, source/start fingerprints, 2,881-pair budget and
+fresh confirmation IDs are frozen in docs/endophalon3_alpha_120_plan.md.
+Previous models, original MVP observations and 3T evidence stay immutable.

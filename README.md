@@ -322,3 +322,5 @@ python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program
 ```
 
 Output paths must be new. Bundling old heads alone does not establish accuracy after switches; the implementation report distinguishes imported heads from train-only head refits and actual performance goals.
+
+The new 3 paired-bank physics experiment is configured for **120 generations** with separate A/B heads and shared state. [Frozen plan and completion workflow](docs/endophalon3_alpha_120_plan.md). Training completion and accuracy success will be reported separately.

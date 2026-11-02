@@ -23,3 +23,7 @@ Owner naming decision (2026-11-02): old Endophalon 3 experiments are now 3T;
 the new AB alpha is 3. See docs/model_names.md, GOAL.md, and
 docs/endophalon3_alpha.md. Preserve old raw family strings/files. New runtime
 is tele_neuron.endophalon3_alpha; explicit legacy CLI is tele_neuron.endophalon3t.
+
+Current training: owner-authorized 120 generations of new-3 paired-bank physics,
+not 3T. Follow docs/endophalon3_alpha_120_plan.md. Frozen seed/budget/splits;
+train-only separate heads, no held-out selection; preserve all prior artifacts.

@@ -252,3 +252,5 @@ python -m tele_neuron.endophalon3_alpha --model /tmp/new-e3-banks.json --program
 ```
 
 출력 경로는 새 파일이어야 합니다. 기존 head를 연결하는 것만으로 전환 후 정확도를 보장하지 않으며, 구현 보고서는 기존 head와 학습 스트림에서 따로 적합한 A/B head의 실제 성능을 구분합니다.
+
+새 3의 A/B 물리 파라미터를 공유 상태·분리 readout 구조에서 **120세대** 학습합니다. [고정 계획·완료 후 처리](docs/endophalon3_alpha_120_plan.md). 실행 완료와 성능 목표 달성은 구분해 보고합니다.
