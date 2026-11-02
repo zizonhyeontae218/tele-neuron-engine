@@ -1,0 +1,20 @@
+{
+  "training_source_commit": "91e4fc0b729e9811319a71aa3c25f2a9ebb278c2",
+  "workflow_run": 41435945048,
+  "original_workflow_conclusion": "failure",
+  "training": "completed, 120 generations / 2881 candidate pairs",
+  "original_saved_model_audit": "PASS, original job log verifies train-only refits/fitness/all held-out metrics/exact six-stream physical replay",
+  "post_audit_failure": "Manifest writer mixed relative output paths with absolute ROOT",
+  "fix": "Resolve output directory before repository-relative hashing",
+  "training_repeated": false,
+  "selected_model_modified": false,
+  "original_artifact_files_preserved": 132,
+  "artifact_zip_sha256_verified": "eb56d6165d46c319edfb67e196b38bf35aa3ceb24800ce716bc81eceeb6ffc8d",
+  "original_pytest": "114 passed in Actions",
+  "new_closeout_regression": "1 passed",
+  "cli_smoke": "10 combinations passed",
+  "artifact_and_source_start_and_budget_check": "PASS",
+  "serialized_full_held_out_metrics_check": "PASS",
+  "prior_backup_consolidation": "166 files and 9 heads verified",
+  "confirmation_gate": "FAIL"
+}

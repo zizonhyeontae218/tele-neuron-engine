@@ -64,3 +64,9 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python scripts/train_
 ```
 
 This optimizes both bank theta vectors together, fits two separate heads on train only and uses one shared physical state. The budget is 120×24+1=2,881 candidate **pairs**. A partial matching checkpoint resumes deterministically; completed results are never overwritten. The paired-bank workflow runs this bounded workload and audits, reports and publishes the outputs with changed-head guards. A report link is added after completion.
+
+The 2026-11-02 physics120 run is complete. Use
+`models/endophalon3_alpha/20261102_physics120_seed1_binary.json` with the new-3 CLI
+for the trained bundle. Do not rerun the completed budget. See
+[endophalon3_alpha_120_closeout.md](endophalon3_alpha_120_closeout.md) for the
+original successful audit and later closeout error recovery.

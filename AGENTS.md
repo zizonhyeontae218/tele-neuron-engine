@@ -84,3 +84,7 @@ The owner authorized 120 generations of new-3 physics training. Follow
 `docs/endophalon3_alpha_120_plan.md`; do not confuse it with the 3T joint run.
 Use production Session, separate train-only heads, checkpoints, a fixed seed and
 no held-out selection. Both banks remain separate despite paired optimization.
+
+New-3 physics120 is complete (2,881 pairs), audit passed; accuracy gates remain
+unmet. Preserve the original failed job/closeout log and recovered artifacts.
+See docs/endophalon3_alpha_120_closeout.md. Do not repeat the completed run.

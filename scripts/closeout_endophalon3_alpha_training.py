@@ -10,6 +10,9 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def closeout(out):
+    # The workflow passes a relative path; all repository-relative hashes below
+    # must derive from absolute paths, just like ROOT.
+    out=out.resolve()
     from audit_endophalon3_alpha_training import audit
     audit(out)
     report=json.loads((out/'evaluation.json').read_text())

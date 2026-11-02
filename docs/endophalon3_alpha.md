@@ -60,3 +60,8 @@ For an interactive program, use `python -m tele_neuron.endophalon3_alpha --model
 The next research step is adapting the bank physics to transitions while retaining separate heads, after inspecting validation transition/op failures and freezing another finite training budget. No further physical retraining or successful accuracy gate is implied by the current bundle. The old 3T results remain available as baselines.
 
 Repository file index: the external skill generator was unavailable; `python scripts/filetree_index.py update` and `lint` provide a reproducible repository-local fallback using real tracked/unignored paths and actual SHA-256 values. This is separate from the unavailable external skill CLI.
+
+## Subsequent 120-generation physics training
+The new-3 paired-bank run completed; confirmation accuracy improved to 75.36%
+(A 77.77%, B 73.07%), below target. See [original result report](endophalon3_alpha_120_report.md)
+and [recovery/verification](endophalon3_alpha_120_closeout.md). The MVP results above are unchanged.

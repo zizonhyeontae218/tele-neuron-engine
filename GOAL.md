@@ -21,3 +21,10 @@ Train both bank theta vectors with separate train-only Ridge heads over shared
 transition state. Exact scope, source/start fingerprints, 2,881-pair budget and
 fresh confirmation IDs are frozen in docs/endophalon3_alpha_120_plan.md.
 Previous models, original MVP observations and 3T evidence stay immutable.
+
+## 120-generation outcome
+Completed 120 generations / 2,881 pairs; saved-model audit passed. Confirmation
+improved 65.44% to 75.36% (A 77.77%, B 73.07%); accuracy gates failed. The
+automatic closeout path error was repaired without retraining or artifact changes.
+See docs/endophalon3_alpha_120_report.md and docs/endophalon3_alpha_120_closeout.md.
+No extra search or new seed is authorized by this closeout.

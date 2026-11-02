@@ -112,8 +112,10 @@
 - `endophalon3.md` — Teleneuron-Endophalon-3T (historical training experiments).
 - `endophalon3_ab_alpha_design.ko.md` — Endophalon 3 (AB alpha) — 명령으로 선택하는 A/B와 공유 물리 기억.
 - `endophalon3_alpha.md` — Endophalon 3 (AB alpha) — implementation and first measurements.
+- `endophalon3_alpha_120_closeout.md` — Endophalon 3 physics120 — closeout recovery.
 - `endophalon3_alpha_120_plan.md` — Endophalon 3 — 120-generation paired-bank physics training.
 - `endophalon3_alpha_120_preflight.json` — Contains endophalon3 alpha 120 preflight data.
+- `endophalon3_alpha_120_report.md` — Endophalon 3 — 120-generation physics training result.
 - `endophalon3_alpha_experiment_plan.md` — Endophalon 3 MVP evaluation plan — 2026-11-02.
 - `endophalon3_handoff.md` — Endophalon-3 historical handoff: original plan and lessons.
 - `endophalon3_joint_plan.md` — Endophalon 3 joint A/B training — 2026-11-01.
@@ -155,6 +157,146 @@
 ## `docs/endophalon3_alpha_runs/20261102`
 
 - `verification.json` — Contains verification data.
+
+## `docs/endophalon3_alpha_runs/20261102/physics120`
+
+- `actions_job.log` — Contains actions job data.
+- `checkpoint.json` — Contains checkpoint data.
+- `confirmation_observations.npz` — Contains confirmation observations data.
+- `environment.json` — Contains environment data.
+- `evaluation.json` — Contains evaluation data.
+- `manifest.json` — Contains manifest data.
+- `model.json` — Contains model data.
+- `recovery_original_files.json` — Contains recovery original files data.
+- `recovery_verification.json` — Contains recovery verification data.
+- `settings.json` — Contains settings data.
+- `test_observations.npz` — Contains test observations data.
+- `training.log` — Contains training data.
+- `verification.json` — Contains verification data.
+
+## `docs/endophalon3_alpha_runs/20261102/physics120/checkpoints`
+
+- `generation_000.json` — Contains generation 000 data.
+- `generation_001.json` — Contains generation 001 data.
+- `generation_002.json` — Contains generation 002 data.
+- `generation_003.json` — Contains generation 003 data.
+- `generation_004.json` — Contains generation 004 data.
+- `generation_005.json` — Contains generation 005 data.
+- `generation_006.json` — Contains generation 006 data.
+- `generation_007.json` — Contains generation 007 data.
+- `generation_008.json` — Contains generation 008 data.
+- `generation_009.json` — Contains generation 009 data.
+- `generation_010.json` — Contains generation 010 data.
+- `generation_011.json` — Contains generation 011 data.
+- `generation_012.json` — Contains generation 012 data.
+- `generation_013.json` — Contains generation 013 data.
+- `generation_014.json` — Contains generation 014 data.
+- `generation_015.json` — Contains generation 015 data.
+- `generation_016.json` — Contains generation 016 data.
+- `generation_017.json` — Contains generation 017 data.
+- `generation_018.json` — Contains generation 018 data.
+- `generation_019.json` — Contains generation 019 data.
+- `generation_020.json` — Contains generation 020 data.
+- `generation_021.json` — Contains generation 021 data.
+- `generation_022.json` — Contains generation 022 data.
+- `generation_023.json` — Contains generation 023 data.
+- `generation_024.json` — Contains generation 024 data.
+- `generation_025.json` — Contains generation 025 data.
+- `generation_026.json` — Contains generation 026 data.
+- `generation_027.json` — Contains generation 027 data.
+- `generation_028.json` — Contains generation 028 data.
+- `generation_029.json` — Contains generation 029 data.
+- `generation_030.json` — Contains generation 030 data.
+- `generation_031.json` — Contains generation 031 data.
+- `generation_032.json` — Contains generation 032 data.
+- `generation_033.json` — Contains generation 033 data.
+- `generation_034.json` — Contains generation 034 data.
+- `generation_035.json` — Contains generation 035 data.
+- `generation_036.json` — Contains generation 036 data.
+- `generation_037.json` — Contains generation 037 data.
+- `generation_038.json` — Contains generation 038 data.
+- `generation_039.json` — Contains generation 039 data.
+- `generation_040.json` — Contains generation 040 data.
+- `generation_041.json` — Contains generation 041 data.
+- `generation_042.json` — Contains generation 042 data.
+- `generation_043.json` — Contains generation 043 data.
+- `generation_044.json` — Contains generation 044 data.
+- `generation_045.json` — Contains generation 045 data.
+- `generation_046.json` — Contains generation 046 data.
+- `generation_047.json` — Contains generation 047 data.
+- `generation_048.json` — Contains generation 048 data.
+- `generation_049.json` — Contains generation 049 data.
+- `generation_050.json` — Contains generation 050 data.
+- `generation_051.json` — Contains generation 051 data.
+- `generation_052.json` — Contains generation 052 data.
+- `generation_053.json` — Contains generation 053 data.
+- `generation_054.json` — Contains generation 054 data.
+- `generation_055.json` — Contains generation 055 data.
+- `generation_056.json` — Contains generation 056 data.
+- `generation_057.json` — Contains generation 057 data.
+- `generation_058.json` — Contains generation 058 data.
+- `generation_059.json` — Contains generation 059 data.
+- `generation_060.json` — Contains generation 060 data.
+- `generation_061.json` — Contains generation 061 data.
+- `generation_062.json` — Contains generation 062 data.
+- `generation_063.json` — Contains generation 063 data.
+- `generation_064.json` — Contains generation 064 data.
+- `generation_065.json` — Contains generation 065 data.
+- `generation_066.json` — Contains generation 066 data.
+- `generation_067.json` — Contains generation 067 data.
+- `generation_068.json` — Contains generation 068 data.
+- `generation_069.json` — Contains generation 069 data.
+- `generation_070.json` — Contains generation 070 data.
+- `generation_071.json` — Contains generation 071 data.
+- `generation_072.json` — Contains generation 072 data.
+- `generation_073.json` — Contains generation 073 data.
+- `generation_074.json` — Contains generation 074 data.
+- `generation_075.json` — Contains generation 075 data.
+- `generation_076.json` — Contains generation 076 data.
+- `generation_077.json` — Contains generation 077 data.
+- `generation_078.json` — Contains generation 078 data.
+- `generation_079.json` — Contains generation 079 data.
+- `generation_080.json` — Contains generation 080 data.
+- `generation_081.json` — Contains generation 081 data.
+- `generation_082.json` — Contains generation 082 data.
+- `generation_083.json` — Contains generation 083 data.
+- `generation_084.json` — Contains generation 084 data.
+- `generation_085.json` — Contains generation 085 data.
+- `generation_086.json` — Contains generation 086 data.
+- `generation_087.json` — Contains generation 087 data.
+- `generation_088.json` — Contains generation 088 data.
+- `generation_089.json` — Contains generation 089 data.
+- `generation_090.json` — Contains generation 090 data.
+- `generation_091.json` — Contains generation 091 data.
+- `generation_092.json` — Contains generation 092 data.
+- `generation_093.json` — Contains generation 093 data.
+- `generation_094.json` — Contains generation 094 data.
+- `generation_095.json` — Contains generation 095 data.
+- `generation_096.json` — Contains generation 096 data.
+- `generation_097.json` — Contains generation 097 data.
+- `generation_098.json` — Contains generation 098 data.
+- `generation_099.json` — Contains generation 099 data.
+- `generation_100.json` — Contains generation 100 data.
+- `generation_101.json` — Contains generation 101 data.
+- `generation_102.json` — Contains generation 102 data.
+- `generation_103.json` — Contains generation 103 data.
+- `generation_104.json` — Contains generation 104 data.
+- `generation_105.json` — Contains generation 105 data.
+- `generation_106.json` — Contains generation 106 data.
+- `generation_107.json` — Contains generation 107 data.
+- `generation_108.json` — Contains generation 108 data.
+- `generation_109.json` — Contains generation 109 data.
+- `generation_110.json` — Contains generation 110 data.
+- `generation_111.json` — Contains generation 111 data.
+- `generation_112.json` — Contains generation 112 data.
+- `generation_113.json` — Contains generation 113 data.
+- `generation_114.json` — Contains generation 114 data.
+- `generation_115.json` — Contains generation 115 data.
+- `generation_116.json` — Contains generation 116 data.
+- `generation_117.json` — Contains generation 117 data.
+- `generation_118.json` — Contains generation 118 data.
+- `generation_119.json` — Contains generation 119 data.
+- `generation_120.json` — Contains generation 120 data.
 
 ## `docs/endophalon3_alpha_runs/20261102/seed1_binary`
 
@@ -368,6 +510,7 @@
 
 ## `models/endophalon3_alpha`
 
+- `20261102_physics120_seed1_binary.json` — Contains 20261102 physics120 seed1 binary data.
 - `20261102_seed1_binary.json` — Contains 20261102 seed1 binary data.
 
 ## `models/endophalon3_joint`
@@ -561,6 +704,7 @@
 - `test_endophalon2_promax.py` — Provides the _config function.
 - `test_endophalon3.py` — Provides the _small function.
 - `test_endophalon3_alpha.py` — Contains test endophalon3 alpha data.
+- `test_endophalon3_alpha_closeout.py` — Contains test endophalon3 alpha closeout data.
 - `test_endophalon3_alpha_training.py` — Contains test endophalon3 alpha training data.
 - `test_endophalon3_joint.py` — Contains test endophalon3 joint data.
 - `test_endophalon3_routing.py` — Check that the opt-in objective resists sacrificing an operation.

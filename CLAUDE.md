@@ -27,3 +27,7 @@ is tele_neuron.endophalon3_alpha; explicit legacy CLI is tele_neuron.endophalon3
 Current training: owner-authorized 120 generations of new-3 paired-bank physics,
 not 3T. Follow docs/endophalon3_alpha_120_plan.md. Frozen seed/budget/splits;
 train-only separate heads, no held-out selection; preserve all prior artifacts.
+
+New-3 physics120 is complete (2,881 pairs), audit passed; accuracy gates remain
+unmet. Preserve the original failed job/closeout log and recovered artifacts.
+See docs/endophalon3_alpha_120_closeout.md. Do not repeat the completed run.

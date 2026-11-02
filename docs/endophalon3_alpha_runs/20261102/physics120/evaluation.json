@@ -1,0 +1,1038 @@
+{
+  "status": "completed",
+  "settings": {
+    "schema": "endophalon3-alpha-training/v1",
+    "start_sha256": "f01317e891e91e0458fe638fbc69f5f0a433c08842038fa409ec0dc89b92ca1e",
+    "generations": 120,
+    "population": 24,
+    "elite": 6,
+    "init_sigma": 0.5,
+    "min_sigma": 0.05,
+    "search_seed": 1,
+    "train": [
+      30000,
+      30001,
+      30002,
+      30003,
+      30004,
+      30005,
+      30006,
+      30007,
+      30008,
+      30009,
+      30010,
+      30011,
+      30012,
+      30013,
+      30014,
+      30015,
+      30016,
+      30017,
+      30018,
+      30019,
+      30020,
+      30021,
+      30022,
+      30023
+    ],
+    "validation": [
+      30024,
+      30025,
+      30026,
+      30027,
+      30028,
+      30029,
+      30030,
+      30031
+    ],
+    "test": [
+      30032,
+      30033,
+      30034,
+      30035,
+      30036,
+      30037,
+      30038,
+      30039,
+      30040,
+      30041,
+      30042,
+      30043,
+      30044,
+      30045,
+      30046,
+      30047,
+      30048,
+      30049,
+      30050,
+      30051,
+      30052,
+      30053,
+      30054,
+      30055,
+      30056,
+      30057,
+      30058,
+      30059,
+      30060,
+      30061,
+      30062,
+      30063
+    ],
+    "confirmation": [
+      40000,
+      40001,
+      40002,
+      40003,
+      40004,
+      40005,
+      40006,
+      40007,
+      40008,
+      40009,
+      40010,
+      40011,
+      40012,
+      40013,
+      40014,
+      40015,
+      40016,
+      40017,
+      40018,
+      40019,
+      40020,
+      40021,
+      40022,
+      40023,
+      40024,
+      40025,
+      40026,
+      40027,
+      40028,
+      40029,
+      40030,
+      40031,
+      40032,
+      40033,
+      40034,
+      40035,
+      40036,
+      40037,
+      40038,
+      40039,
+      40040,
+      40041,
+      40042,
+      40043,
+      40044,
+      40045,
+      40046,
+      40047,
+      40048,
+      40049,
+      40050,
+      40051,
+      40052,
+      40053,
+      40054,
+      40055,
+      40056,
+      40057,
+      40058,
+      40059,
+      40060,
+      40061,
+      40062,
+      40063
+    ],
+    "objective": "mean(A_MSE,B_MSE)+0.05 mean(bank_noise)+0.1 per_stream_kinetic_log_drift+0.01 mean(bank_weight_complexity)",
+    "source_sha256": {
+      "scripts/train_endophalon3_alpha.py": "5c5abb0b0aa1b45a776491766510aa3ee67357790796d087b766b5e418916aee",
+      "src/tele_neuron/endophalon3_alpha/train.py": "24424eab2edd5b8946b77f0bf3967795f41bb6ca47d672c83af7193c2e3b594a",
+      "src/tele_neuron/endophalon3_alpha/model.py": "2321f444a86072d5b9f6b597a7eff214ee26013fad5d4f51dc784357b735b371",
+      "src/tele_neuron/endophalon3_alpha/session.py": "3bcb920c3f28a7bcd9d3d6236572b3a9241945119b324b89a795de67aa866345",
+      "src/tele_neuron/endophalon3/engine.py": "b5b49366709356d1f7e01d867e830f108304c050c8bdf538d9a5044df16c2b6f",
+      "src/tele_neuron/endophalon3/isa.py": "43d8d12e3a829eca505610ff37bf167e2805eb6078fdcd451ba799e07f01c20c",
+      "src/tele_neuron/endophalon3/theta.py": "5584f5ca188652bcdda8ae00cd1ba44cf77d9cc49baf93d12261dd2e0b6cdded",
+      "src/tele_neuron/endophalon/readout.py": "6ebc1ba121620b2e36db542024dd83dac7cbdf2d72cd5df737aab59f96ebc9a8"
+    }
+  },
+  "environment": {
+    "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+    "numpy": "2.3.5",
+    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+    "workers": 4
+  },
+  "evaluations": 2881,
+  "generations": 120,
+  "fitness": {
+    "j": 0.18202882408067814,
+    "l_val": 0.14100188392795548,
+    "r_noise": 0.571481050396268,
+    "r_drift": 0.12089248484619389,
+    "r_complexity": 0.036363914828984746,
+    "finite": true,
+    "validation": {
+      "accuracy": 0.8,
+      "mse": 0.14013521464130416,
+      "levels": {
+        "A": {
+          "accuracy": 0.8406374501992032,
+          "mse": 0.12209273585556393,
+          "n": 251,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.9298245614035088,
+              "n": 57
+            },
+            "recall1": {
+              "accuracy": 0.8695652173913043,
+              "n": 69
+            },
+            "recall2": {
+              "accuracy": 0.6779661016949152,
+              "n": 59
+            },
+            "xor_mem": {
+              "accuracy": 0.8787878787878788,
+              "n": 66
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7948717948717948,
+            "n": 117
+          },
+          "second_after_switch": {
+            "accuracy": 0.859375,
+            "n": 64
+          }
+        },
+        "B": {
+          "accuracy": 0.7554585152838428,
+          "mse": 0.159911032000347,
+          "n": 229,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.6956521739130435,
+              "n": 23
+            },
+            "recall1": {
+              "accuracy": 0.75,
+              "n": 24
+            },
+            "recall2": {
+              "accuracy": 0.6842105263157895,
+              "n": 19
+            },
+            "xor_mem": {
+              "accuracy": 0.8095238095238095,
+              "n": 42
+            },
+            "and": {
+              "accuracy": 1.0,
+              "n": 28
+            },
+            "or": {
+              "accuracy": 1.0,
+              "n": 20
+            },
+            "parity3w": {
+              "accuracy": 0.5,
+              "n": 42
+            },
+            "and_mem": {
+              "accuracy": 0.7419354838709677,
+              "n": 31
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7647058823529411,
+            "n": 119
+          },
+          "second_after_switch": {
+            "accuracy": 0.7586206896551724,
+            "n": 58
+          }
+        }
+      }
+    }
+  },
+  "initial_fitness": {
+    "j": 0.32862995083192786,
+    "l_val": 0.21389166056285414,
+    "r_noise": 1.2829667146056225,
+    "r_drift": 0.5013397830579962,
+    "r_complexity": 0.045597623299300796,
+    "finite": true,
+    "validation": {
+      "accuracy": 0.64375,
+      "mse": 0.21452471160917058,
+      "levels": {
+        "A": {
+          "accuracy": 0.6254980079681275,
+          "mse": 0.22770368339157632,
+          "n": 251,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.5789473684210527,
+              "n": 57
+            },
+            "recall1": {
+              "accuracy": 0.7246376811594203,
+              "n": 69
+            },
+            "recall2": {
+              "accuracy": 0.6779661016949152,
+              "n": 59
+            },
+            "xor_mem": {
+              "accuracy": 0.5151515151515151,
+              "n": 66
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.6410256410256411,
+            "n": 117
+          },
+          "second_after_switch": {
+            "accuracy": 0.65625,
+            "n": 64
+          }
+        },
+        "B": {
+          "accuracy": 0.6637554585152838,
+          "mse": 0.20007963773413195,
+          "n": 229,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.9130434782608695,
+              "n": 23
+            },
+            "recall1": {
+              "accuracy": 0.5416666666666666,
+              "n": 24
+            },
+            "recall2": {
+              "accuracy": 0.47368421052631576,
+              "n": 19
+            },
+            "xor_mem": {
+              "accuracy": 0.5714285714285714,
+              "n": 42
+            },
+            "and": {
+              "accuracy": 0.9285714285714286,
+              "n": 28
+            },
+            "or": {
+              "accuracy": 0.95,
+              "n": 20
+            },
+            "parity3w": {
+              "accuracy": 0.5714285714285714,
+              "n": 42
+            },
+            "and_mem": {
+              "accuracy": 0.5161290322580645,
+              "n": 31
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.6470588235294118,
+            "n": 119
+          },
+          "second_after_switch": {
+            "accuracy": 0.6724137931034483,
+            "n": 58
+          }
+        }
+      }
+    },
+    "max_switching_energy": 0.4025005517797102
+  },
+  "failed_candidates": 0,
+  "elapsed_seconds_this_process": 4475.6018444599995,
+  "metrics": {
+    "train": {
+      "accuracy": 0.7694444444444445,
+      "mse": 0.16038472399744744,
+      "levels": {
+        "A": {
+          "accuracy": 0.8048780487804879,
+          "mse": 0.14446269801927794,
+          "n": 738,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.9294117647058824,
+              "n": 170
+            },
+            "recall1": {
+              "accuracy": 0.7948717948717948,
+              "n": 195
+            },
+            "recall2": {
+              "accuracy": 0.6684210526315789,
+              "n": 190
+            },
+            "xor_mem": {
+              "accuracy": 0.8415300546448088,
+              "n": 183
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.8056338028169014,
+            "n": 355
+          },
+          "second_after_switch": {
+            "accuracy": 0.7903225806451613,
+            "n": 186
+          }
+        },
+        "B": {
+          "accuracy": 0.7321937321937322,
+          "mse": 0.17712326412834364,
+          "n": 702,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.6829268292682927,
+              "n": 82
+            },
+            "recall1": {
+              "accuracy": 0.7272727272727273,
+              "n": 99
+            },
+            "recall2": {
+              "accuracy": 0.4878048780487805,
+              "n": 82
+            },
+            "xor_mem": {
+              "accuracy": 0.7435897435897436,
+              "n": 78
+            },
+            "and": {
+              "accuracy": 0.91,
+              "n": 100
+            },
+            "or": {
+              "accuracy": 0.9032258064516129,
+              "n": 93
+            },
+            "parity3w": {
+              "accuracy": 0.47619047619047616,
+              "n": 84
+            },
+            "and_mem": {
+              "accuracy": 0.8690476190476191,
+              "n": 84
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7457142857142857,
+            "n": 350
+          },
+          "second_after_switch": {
+            "accuracy": 0.7062146892655368,
+            "n": 177
+          }
+        }
+      }
+    },
+    "validation": {
+      "accuracy": 0.8,
+      "mse": 0.14013521464130416,
+      "levels": {
+        "A": {
+          "accuracy": 0.8406374501992032,
+          "mse": 0.12209273585556393,
+          "n": 251,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.9298245614035088,
+              "n": 57
+            },
+            "recall1": {
+              "accuracy": 0.8695652173913043,
+              "n": 69
+            },
+            "recall2": {
+              "accuracy": 0.6779661016949152,
+              "n": 59
+            },
+            "xor_mem": {
+              "accuracy": 0.8787878787878788,
+              "n": 66
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7948717948717948,
+            "n": 117
+          },
+          "second_after_switch": {
+            "accuracy": 0.859375,
+            "n": 64
+          }
+        },
+        "B": {
+          "accuracy": 0.7554585152838428,
+          "mse": 0.159911032000347,
+          "n": 229,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.6956521739130435,
+              "n": 23
+            },
+            "recall1": {
+              "accuracy": 0.75,
+              "n": 24
+            },
+            "recall2": {
+              "accuracy": 0.6842105263157895,
+              "n": 19
+            },
+            "xor_mem": {
+              "accuracy": 0.8095238095238095,
+              "n": 42
+            },
+            "and": {
+              "accuracy": 1.0,
+              "n": 28
+            },
+            "or": {
+              "accuracy": 1.0,
+              "n": 20
+            },
+            "parity3w": {
+              "accuracy": 0.5,
+              "n": 42
+            },
+            "and_mem": {
+              "accuracy": 0.7419354838709677,
+              "n": 31
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7647058823529411,
+            "n": 119
+          },
+          "second_after_switch": {
+            "accuracy": 0.7586206896551724,
+            "n": 58
+          }
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.765625,
+      "mse": 0.1679515649273346,
+      "levels": {
+        "A": {
+          "accuracy": 0.8065173116089613,
+          "mse": 0.14853413006455013,
+          "n": 982,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.9383259911894273,
+              "n": 227
+            },
+            "recall1": {
+              "accuracy": 0.7952755905511811,
+              "n": 254
+            },
+            "recall2": {
+              "accuracy": 0.6386861313868614,
+              "n": 274
+            },
+            "xor_mem": {
+              "accuracy": 0.8898678414096917,
+              "n": 227
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7800829875518672,
+            "n": 482
+          },
+          "second_after_switch": {
+            "accuracy": 0.8268398268398268,
+            "n": 231
+          }
+        },
+        "B": {
+          "accuracy": 0.7228144989339019,
+          "mse": 0.188279838952126,
+          "n": 938,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.6036036036036037,
+              "n": 111
+            },
+            "recall1": {
+              "accuracy": 0.7086614173228346,
+              "n": 127
+            },
+            "recall2": {
+              "accuracy": 0.509090909090909,
+              "n": 110
+            },
+            "xor_mem": {
+              "accuracy": 0.7570093457943925,
+              "n": 107
+            },
+            "and": {
+              "accuracy": 0.9396551724137931,
+              "n": 116
+            },
+            "or": {
+              "accuracy": 0.9274193548387096,
+              "n": 124
+            },
+            "parity3w": {
+              "accuracy": 0.4796747967479675,
+              "n": 123
+            },
+            "and_mem": {
+              "accuracy": 0.8416666666666667,
+              "n": 120
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7186858316221766,
+            "n": 487
+          },
+          "second_after_switch": {
+            "accuracy": 0.7818181818181819,
+            "n": 220
+          }
+        }
+      }
+    },
+    "confirmation": {
+      "accuracy": 0.7536458333333333,
+      "mse": 0.1741250244440944,
+      "levels": {
+        "A": {
+          "accuracy": 0.7777185501066098,
+          "mse": 0.16307284120601243,
+          "n": 1876,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.911578947368421,
+              "n": 475
+            },
+            "recall1": {
+              "accuracy": 0.7668997668997669,
+              "n": 429
+            },
+            "recall2": {
+              "accuracy": 0.6023622047244095,
+              "n": 508
+            },
+            "xor_mem": {
+              "accuracy": 0.8426724137931034,
+              "n": 464
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7718191377497371,
+            "n": 951
+          },
+          "second_after_switch": {
+            "accuracy": 0.7960954446854663,
+            "n": 461
+          }
+        },
+        "B": {
+          "accuracy": 0.7306517311608961,
+          "mse": 0.18468199784258818,
+          "n": 1964,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.691699604743083,
+              "n": 253
+            },
+            "recall1": {
+              "accuracy": 0.6866952789699571,
+              "n": 233
+            },
+            "recall2": {
+              "accuracy": 0.5064935064935064,
+              "n": 231
+            },
+            "xor_mem": {
+              "accuracy": 0.7398373983739838,
+              "n": 246
+            },
+            "and": {
+              "accuracy": 0.939622641509434,
+              "n": 265
+            },
+            "or": {
+              "accuracy": 0.9274809160305344,
+              "n": 262
+            },
+            "parity3w": {
+              "accuracy": 0.5134099616858238,
+              "n": 261
+            },
+            "and_mem": {
+              "accuracy": 0.8215962441314554,
+              "n": 213
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7243928194297783,
+            "n": 947
+          },
+          "second_after_switch": {
+            "accuracy": 0.7484276729559748,
+            "n": 477
+          }
+        }
+      }
+    }
+  },
+  "baseline": {
+    "test": {
+      "accuracy": 0.6671875,
+      "mse": 0.20981982567160096,
+      "levels": {
+        "A": {
+          "accuracy": 0.6334012219959266,
+          "mse": 0.22904914263826273,
+          "n": 982,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.5198237885462555,
+              "n": 227
+            },
+            "recall1": {
+              "accuracy": 0.7952755905511811,
+              "n": 254
+            },
+            "recall2": {
+              "accuracy": 0.6240875912408759,
+              "n": 274
+            },
+            "xor_mem": {
+              "accuracy": 0.5770925110132159,
+              "n": 227
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.5871369294605809,
+            "n": 482
+          },
+          "second_after_switch": {
+            "accuracy": 0.670995670995671,
+            "n": 231
+          }
+        },
+        "B": {
+          "accuracy": 0.7025586353944563,
+          "mse": 0.18968849383656694,
+          "n": 938,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.8198198198198198,
+              "n": 111
+            },
+            "recall1": {
+              "accuracy": 0.7007874015748031,
+              "n": 127
+            },
+            "recall2": {
+              "accuracy": 0.4909090909090909,
+              "n": 110
+            },
+            "xor_mem": {
+              "accuracy": 0.5794392523364486,
+              "n": 107
+            },
+            "and": {
+              "accuracy": 0.8362068965517241,
+              "n": 116
+            },
+            "or": {
+              "accuracy": 0.9919354838709677,
+              "n": 124
+            },
+            "parity3w": {
+              "accuracy": 0.4959349593495935,
+              "n": 123
+            },
+            "and_mem": {
+              "accuracy": 0.6833333333333333,
+              "n": 120
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7145790554414785,
+            "n": 487
+          },
+          "second_after_switch": {
+            "accuracy": 0.7272727272727273,
+            "n": 220
+          }
+        }
+      }
+    },
+    "confirmation": {
+      "accuracy": 0.6544270833333333,
+      "mse": 0.21114957067968362,
+      "levels": {
+        "A": {
+          "accuracy": 0.5890191897654584,
+          "mse": 0.2419687586896524,
+          "n": 1876,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.4884210526315789,
+              "n": 475
+            },
+            "recall1": {
+              "accuracy": 0.7505827505827506,
+              "n": 429
+            },
+            "recall2": {
+              "accuracy": 0.5590551181102362,
+              "n": 508
+            },
+            "xor_mem": {
+              "accuracy": 0.5754310344827587,
+              "n": 464
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.5930599369085173,
+            "n": 951
+          },
+          "second_after_switch": {
+            "accuracy": 0.6052060737527115,
+            "n": 461
+          }
+        },
+        "B": {
+          "accuracy": 0.7169042769857433,
+          "mse": 0.1817112831508132,
+          "n": 1964,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.7984189723320159,
+              "n": 253
+            },
+            "recall1": {
+              "accuracy": 0.7339055793991416,
+              "n": 233
+            },
+            "recall2": {
+              "accuracy": 0.5324675324675324,
+              "n": 231
+            },
+            "xor_mem": {
+              "accuracy": 0.5528455284552846,
+              "n": 246
+            },
+            "and": {
+              "accuracy": 0.8754716981132076,
+              "n": 265
+            },
+            "or": {
+              "accuracy": 0.9809160305343512,
+              "n": 262
+            },
+            "parity3w": {
+              "accuracy": 0.5363984674329502,
+              "n": 261
+            },
+            "and_mem": {
+              "accuracy": 0.6901408450704225,
+              "n": 213
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.7106652587117213,
+            "n": 947
+          },
+          "second_after_switch": {
+            "accuracy": 0.7190775681341719,
+            "n": 477
+          }
+        }
+      }
+    }
+  },
+  "reset_control": {
+    "test": {
+      "accuracy": 0.7010416666666667,
+      "mse": 0.20219140311938777,
+      "levels": {
+        "A": {
+          "accuracy": 0.7087576374745418,
+          "mse": 0.1947957710994316,
+          "n": 982,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.9515418502202643,
+              "n": 227
+            },
+            "recall1": {
+              "accuracy": 0.6850393700787402,
+              "n": 254
+            },
+            "recall2": {
+              "accuracy": 0.5,
+              "n": 274
+            },
+            "xor_mem": {
+              "accuracy": 0.7444933920704846,
+              "n": 227
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.5871369294605809,
+            "n": 482
+          },
+          "second_after_switch": {
+            "accuracy": 0.8225108225108225,
+            "n": 231
+          }
+        },
+        "B": {
+          "accuracy": 0.6929637526652452,
+          "mse": 0.20993395177993887,
+          "n": 938,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.5585585585585585,
+              "n": 111
+            },
+            "recall1": {
+              "accuracy": 0.5905511811023622,
+              "n": 127
+            },
+            "recall2": {
+              "accuracy": 0.5545454545454546,
+              "n": 110
+            },
+            "xor_mem": {
+              "accuracy": 0.616822429906542,
+              "n": 107
+            },
+            "and": {
+              "accuracy": 0.9224137931034483,
+              "n": 116
+            },
+            "or": {
+              "accuracy": 0.9112903225806451,
+              "n": 124
+            },
+            "parity3w": {
+              "accuracy": 0.5609756097560976,
+              "n": 123
+            },
+            "and_mem": {
+              "accuracy": 0.8083333333333333,
+              "n": 120
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.6878850102669405,
+            "n": 487
+          },
+          "second_after_switch": {
+            "accuracy": 0.7181818181818181,
+            "n": 220
+          }
+        }
+      }
+    },
+    "confirmation": {
+      "accuracy": 0.7018229166666666,
+      "mse": 0.20708836544030815,
+      "levels": {
+        "A": {
+          "accuracy": 0.7100213219616205,
+          "mse": 0.2054956569694134,
+          "n": 1876,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.9431578947368421,
+              "n": 475
+            },
+            "recall1": {
+              "accuracy": 0.6736596736596736,
+              "n": 429
+            },
+            "recall2": {
+              "accuracy": 0.515748031496063,
+              "n": 508
+            },
+            "xor_mem": {
+              "accuracy": 0.7176724137931034,
+              "n": 464
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.6309148264984227,
+            "n": 951
+          },
+          "second_after_switch": {
+            "accuracy": 0.8026030368763557,
+            "n": 461
+          }
+        },
+        "B": {
+          "accuracy": 0.6939918533604889,
+          "mse": 0.2086097101915294,
+          "n": 1964,
+          "per_op": {
+            "xor": {
+              "accuracy": 0.6521739130434783,
+              "n": 253
+            },
+            "recall1": {
+              "accuracy": 0.575107296137339,
+              "n": 233
+            },
+            "recall2": {
+              "accuracy": 0.5194805194805194,
+              "n": 231
+            },
+            "xor_mem": {
+              "accuracy": 0.6219512195121951,
+              "n": 246
+            },
+            "and": {
+              "accuracy": 0.9207547169811321,
+              "n": 265
+            },
+            "or": {
+              "accuracy": 0.9122137404580153,
+              "n": 262
+            },
+            "parity3w": {
+              "accuracy": 0.5593869731800766,
+              "n": 261
+            },
+            "and_mem": {
+              "accuracy": 0.7605633802816901,
+              "n": 213
+            }
+          },
+          "first_after_switch": {
+            "accuracy": 0.6642027455121436,
+            "n": 947
+          },
+          "second_after_switch": {
+            "accuracy": 0.7169811320754716,
+            "n": 477
+          }
+        }
+      }
+    }
+  },
+  "maximum_abs_switching_energy": {
+    "test": 0.19383314422738684,
+    "confirmation": 0.19093956115995248
+  },
+  "confirmation_gate_passed": false
+}
