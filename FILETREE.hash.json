@@ -4,6 +4,7 @@
   "files": {
     ".github/workflows/archive-endophalon.yml": "4f8e81ad6389ca25bad9793f01a317c59157ddcc8a2d704f9445b09e81951645",
     ".github/workflows/endophalon3-independent.yml": "e60dc8e59bbad36ccc785a7994f17fc19f1d0b81c990b0d50713a5472415c7a5",
+    ".github/workflows/endophalon3-io120.yml": "158bacf02f475f3882b2994e8179b809ddd2c8947aeb4758b0e9bf6eea781fbe",
     ".github/workflows/retire-backup-refs.yml": "143bae5fadfb3b96cc0162e4c89b25b5a988cab5509370690788e1f9afaf1274",
     ".github/workflows/tests.yml": "72392818fe5c40d1c5b52dc4e9af32bf5c9c922b956bbdb2d79d0021e2acf622",
     ".gitignore": "e436ed833312608896f5a91cc19db7f5d974abff8af6ac1c3687db7ffc4e0981",
@@ -75,6 +76,7 @@
     "docs/endophalon2_runs/e2_run_xor_k4.log": "69148043cf6d6615a12d946f2c8412ce27e96c59eb79a8f934bde871411981a5",
     "docs/endophalon3_development.md": "ba47c2fa7c459fadd8a4d3114f5251286a63622d9856b707c48025a5694e3d1a",
     "docs/endophalon3_independent_plan.md": "d97227db00e4c40c33793617d72e6020cd82a719b8dda74193cccca6103e2ac2",
+    "docs/endophalon3_io120.md": "a7878584db1281cc6c402732e453793693ca86d23591a22ee928a4769c7d0456",
     "docs/endophalon3_probes/level_a.json": "508f8338d48ab99c759235ce1ea9669e850ff82991cdc117dd494307c7e4d9f7",
     "docs/endophalon3_probes/level_a_onehot.json": "8d9d5e7a776c0d8ead600fe5e3f4c7f76fa0719535317348f5286137e2e6df45",
     "docs/endophalon3_probes/level_b.json": "d26f242455965864ef1f3d042d70dabdb735e844765975f5e31ff3ff55ea856d",
@@ -404,6 +406,7 @@
     "scripts/retire_endophalon3_experiments.py": "0da75573eea24cbc89116dc7f73925f05d84281f6e71ba8e6866827e7fa1e200",
     "scripts/smoke_models.py": "c61cf454e4ef212f1d15fd8bf3d8fc297b422589d52a5913919f725ccbf0d655",
     "scripts/train_endophalon3_independent.py": "9e8bc96007efc96be55cd79adee8e40cb525e78c0876032f978698c8c53bbc1a",
+    "scripts/train_endophalon3_io.py": "510cb5995dc9b847cf724ccd2a7d588892019ac796362dd7b47c8bdd36b79b8e",
     "scripts/verify_backup_consolidation.py": "f86608875561ca56d508a07181105db852f784a6706faac5d4f6fdbd3d8d5d51",
     "src/tele_neuron/__init__.py": "aa51259865ba009102a84f2988f5cc0da3ad710665decfd29f1e0ef0e0f81240",
     "src/tele_neuron/ball.py": "967e3695bde9de37be93d3ed714b273b725252525490eb800a92bda3655e99a5",

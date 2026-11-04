@@ -21,6 +21,7 @@
 
 - `archive-endophalon.yml` — Contains archive-endophalon data.
 - `endophalon3-independent.yml` — Contains endophalon3-independent data.
+- `endophalon3-io120.yml` — Contains endophalon3-io120 data.
 - `retire-backup-refs.yml` — Contains retire-backup-refs data.
 - `tests.yml` — Contains tests data.
 
@@ -99,6 +100,7 @@
 - `endophalon2_promax.md` — Teleneuron-Endophalon-2-ProMax8 / ProMax16.
 - `endophalon3_development.md` — Endophalon 3 버전 개발기록.
 - `endophalon3_independent_plan.md` — Endophalon 3 — independent A/B 120 generations and tree cleanup.
+- `endophalon3_io120.md` — Endophalon 3 A/B I/O-only training.
 - `endophalon3_software.md` — Endophalon 3 — current independent A/B.
 - `endophalon_plus.md` — Plus physics base and Teleneuron-Endophalon-Plus.
 - `endophalon_plus_matrix.json` — Stores structured data for endophalon plus matrix.
@@ -502,6 +504,7 @@
 - `retire_endophalon3_experiments.py` — Contains retire endophalon3 experiments data.
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
 - `train_endophalon3_independent.py` — Contains train endophalon3 independent data.
+- `train_endophalon3_io.py` — Contains train endophalon3 io data.
 - `verify_backup_consolidation.py` — Contains verify backup consolidation data.
 
 ## `src/tele_neuron`

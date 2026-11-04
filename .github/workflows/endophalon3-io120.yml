@@ -1,0 +1,49 @@
+name: Endophalon 3 A/B I/O-only 120
+on:
+  push:
+    branches: [master]
+    paths: [.github/workflows/endophalon3-io120.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: endophalon3-io120-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+jobs:
+  train:
+    strategy:
+      fail-fast: false
+      matrix:
+        level: [A, B]
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e . -r requirements.txt numpy==2.3.5
+      - name: Validate fixed physics and train 120 generations
+        env:
+          LEVEL: ${{ matrix.level }}
+        run: |
+          set -o pipefail
+          dir="${RUNNER_TEMP}/endophalon3-io120-$LEVEL"
+          mkdir -p "$dir"
+          (
+            set -e
+            python scripts/train_endophalon3_io.py --level "$LEVEL" --output-dir "$dir" --preflight
+            python -u scripts/train_endophalon3_io.py --level "$LEVEL" --output-dir "$dir" --workers 4
+          ) 2>&1 | tee "$dir/training.log"
+          tail -n 1 "$dir/training.log" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: endophalon3-io120-${{ matrix.level }}
+          path: ${{ runner.temp }}/endophalon3-io120-${{ matrix.level }}/
+          retention-days: 90
+          if-no-files-found: warn
