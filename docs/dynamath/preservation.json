@@ -1,13 +1,12 @@
 {
   "base_commit": "2d34a9af3bdc47d0c6ef0b2291f7a024e64f2f6a",
   "existing_tracked_files": 515,
-  "unchanged_existing_files": 510,
+  "unchanged_existing_files": 511,
   "allowed_modified_existing_files": [
     "AGENTS.md",
     "FILETREE.hash.json",
     "FileTree.md",
-    "README.md",
-    "pyproject.toml"
+    "README.md"
   ],
   "protected_source_model_config_files": 136,
   "original_remote_refs": {
@@ -36,5 +35,7 @@
     "models": 22,
     "original_heads_reachable": 9
   },
-  "verification_scope": "All original source/models/configs compared byte-for-byte with base; all original remote heads/tags compared to pre-work snapshot. Root changes restricted to approved orientation, optional dependency and index files."
+  "verification_scope": "All original source/models/configs and all 166 pinned reproduction files are byte-identical to the original base. Root changes restricted to agent exception, README pointer and generated indexes. Separate DynaMath requirements file preserves original pyproject.toml.",
+  "pinned_reproduction_worktree_files_unchanged": 166,
+  "snapshot_scope": "Original refs and new feature ref recorded before publication; final branch head is the delivered commit URL."
 }

@@ -27,3 +27,9 @@ the final-runtime benchmark is separate from the retained initial-runtime benchm
 A full smoke run exercised the existing eight model/config combinations using temporary
 small fixtures, as required by the repository. It did not alter saved Endophalon artifacts
 or rerun their production training searches.
+
+Final committed preservation audit found that the original `pyproject.toml` is
+itself a pinned reproduction file. The initial optional-dependency edit therefore
+failed that audit. Restored its exact original bytes and moved torch to the
+separate `docs/dynamath/requirements.txt`. The correction changes packaging/docs,
+not model coefficients, runtime behavior or the original experiment measurements.

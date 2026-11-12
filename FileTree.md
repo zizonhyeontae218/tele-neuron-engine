@@ -132,6 +132,7 @@
 - `logic-events.json` — Contains logic-events data.
 - `logic-results.json` — Contains logic-results data.
 - `preservation.json` — Contains preservation data.
+- `requirements.txt` — Contains requirements data.
 - `results.json` — Contains results data.
 - `tests.log` — Contains tests data.
 - `training-run.log` — Contains training-run data.

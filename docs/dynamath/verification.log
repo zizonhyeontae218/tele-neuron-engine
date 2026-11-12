@@ -41,3 +41,9 @@ PASS: final index paths and SHA-256 hashes synchronized (run again after this lo
 
 $ git diff --check
 PASS
+
+Final preservation correction:
+Initial committed audit rejected the pyproject.toml optional dependency change.
+Restored original pyproject.toml, moved torch to docs/dynamath/requirements.txt.
+PASS: all 166 pinned reproduction files match their audited git blobs in the final worktree.
+The same repository audit is repeated on the final published commit.

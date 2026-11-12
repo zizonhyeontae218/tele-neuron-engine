@@ -12,7 +12,8 @@ From this repository's `feature/dynamath-1` checkout, Python >=3.11:
 ```bash
 python -m venv /tmp/dynamath-venv
 source /tmp/dynamath-venv/bin/activate
-python -m pip install -e '.[dynamath]' -r requirements.txt
+python -m pip install -e . -r requirements.txt
+python -m pip install -r docs/dynamath/requirements.txt
 ```
 
 Exact measured runtime was Python3.12.14, NumPy2.3.5, torch2.15.0+cpu, pytest9.2.0,
@@ -25,7 +26,8 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 ```
 
 The CLI also sets torch CPU threads=1 and deterministic algorithms. Existing
-Endophalon modules do not import torch; the optional dependency affects only DynaMath.
+Endophalon modules do not import torch. The separate DynaMath dependency file keeps
+the original pyproject.toml byte-identical for the legacy reproduction audit.
 
 ## Use saved weights
 

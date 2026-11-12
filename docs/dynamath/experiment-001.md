@@ -139,7 +139,8 @@ snapshots were exercised separately in cli-verification.log.
 - All136 original tracked source/model/config files compare byte-for-byte with the
   base commit. All original remote branches/tags match the pre-work snapshot.
   Only the new feature ref is added. Root changes are limited to agent exception,
-  README pointer, optional torch dependency and generated indexes.
+  README pointer and generated indexes. Torch is declared in a separate DynaMath
+  requirements file; the original pyproject.toml is preserved byte-for-byte.
 - Preservation evidence: preservation.json; generated index lint and final committed
   protected-file checks are recorded in verification.log.
 
