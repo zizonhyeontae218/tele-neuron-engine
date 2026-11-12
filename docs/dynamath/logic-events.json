@@ -1,0 +1,82 @@
+[
+  {
+    "query": "x",
+    "first": 0,
+    "second": 0,
+    "ticks": 35,
+    "events": [
+      "0"
+    ],
+    "state_unchanged_by_output": true
+  },
+  {
+    "query": "x",
+    "first": 0,
+    "second": 1,
+    "ticks": 35,
+    "events": [
+      "1"
+    ],
+    "state_unchanged_by_output": true
+  },
+  {
+    "query": "x",
+    "first": 1,
+    "second": 0,
+    "ticks": 35,
+    "events": [
+      "1"
+    ],
+    "state_unchanged_by_output": true
+  },
+  {
+    "query": "x",
+    "first": 1,
+    "second": 1,
+    "ticks": 35,
+    "events": [
+      "0"
+    ],
+    "state_unchanged_by_output": true
+  },
+  {
+    "query": "r",
+    "first": 0,
+    "second": 0,
+    "ticks": 35,
+    "events": [
+      "0"
+    ],
+    "state_unchanged_by_output": true
+  },
+  {
+    "query": "r",
+    "first": 0,
+    "second": 1,
+    "ticks": 35,
+    "events": [
+      "0"
+    ],
+    "state_unchanged_by_output": true
+  },
+  {
+    "query": "r",
+    "first": 1,
+    "second": 0,
+    "ticks": 35,
+    "events": [
+      "1"
+    ],
+    "state_unchanged_by_output": true
+  },
+  {
+    "query": "r",
+    "first": 1,
+    "second": 1,
+    "ticks": 35,
+    "events": [
+      "1"
+    ],
+    "state_unchanged_by_output": true
+  }
+]

@@ -45,6 +45,10 @@
 - `xor_first_model.json` — Stores structured data for xor first model.
 - `xor_tiny.json` — Stores structured data for xor tiny.
 
+## `configs/dynamath`
+
+- `experiment-001.json` — Contains experiment-001 data.
+
 ## `configs/endophalon`
 
 - `full_adder.json` — Stores structured data for full adder.
@@ -90,6 +94,11 @@
 - `parity3.json` — Stores structured data for parity3.
 - `parity4.json` — Stores structured data for parity4.
 
+## `data/dynamath`
+
+- `train.txt` — Contains train data.
+- `validation.txt` — Contains validation data.
+
 ## `docs`
 
 - `endophalon.md` — Teleneuron-Endophalon.
@@ -109,6 +118,24 @@
 - `experiment_design.md` — Phase 1 Experiment Design.
 - `model_commands.md` — Model entry points.
 - `model_names.md` — Current model names.
+
+## `docs/dynamath`
+
+- `GOAL.md` — DynaMath 1 — experiment 001.
+- `README.md` — DynaMath 1 — run and reproduce.
+- `architecture.md` — DynaMath 1 architecture.
+- `cli-verification.log` — Contains cli-verification data.
+- `decisions.md` — DynaMath 1 decisions.
+- `experiment-001.md` — Experiment 001 — first DynaMath 1.
+- `handoff.md` — Work 실행 지시서 — TeleNeuron-DynaMath / DynaMath 1.
+- `legacy-smoke.log` — Contains legacy-smoke data.
+- `logic-events.json` — Contains logic-events data.
+- `logic-results.json` — Contains logic-results data.
+- `preservation.json` — Contains preservation data.
+- `results.json` — Contains results data.
+- `tests.log` — Contains tests data.
+- `training-run.log` — Contains training-run data.
+- `verification.log` — Contains verification data.
 
 ## `docs/endophalon2_pro_runs`
 
@@ -441,6 +468,13 @@
 
 - `tele_neuron_001.json` — Stores structured data for tele neuron 001.
 
+## `models/dynamath`
+
+- `characters.pt` — Contains characters data.
+- `logic-five.pt` — Contains logic-five data.
+- `logic-single.pt` — Contains logic-single data.
+- `model-card.json` — Contains model-card data.
+
 ## `models/endophalon`
 
 - `teleneuron_endophalon_full_adder.json` — Stores structured data for teleneuron endophalon full adder.
@@ -528,6 +562,15 @@
 ## `src/tele_neuron/config_lab_static`
 
 - `index.html` — Contains index data.
+
+## `src/tele_neuron/dynamath`
+
+- `AGENTS.md` — DynaMath development.
+- `__init__.py` — Contains   init   data.
+- `__main__.py` — Contains   main   data.
+- `core.py` — Contains core data.
+- `runtime.py` — Contains runtime data.
+- `training.py` — Contains training data.
 
 ## `src/tele_neuron/endophalon`
 
@@ -631,6 +674,7 @@
 - `test_config.py` — Provides the test_loads_tiny_configs function.
 - `test_config_lab.py` — Provides the _sample_config function.
 - `test_determinism.py` — Provides the test_same_seed_produces_same_case_results function.
+- `test_dynamath.py` — Contains test dynamath data.
 - `test_endophalon.py` — Provides the _tiny_payload function.
 - `test_endophalon2.py` — Provides the _config function.
 - `test_endophalon2_pro.py` — Provides the _config function.

@@ -1,0 +1,40 @@
+{
+  "base_commit": "2d34a9af3bdc47d0c6ef0b2291f7a024e64f2f6a",
+  "existing_tracked_files": 515,
+  "unchanged_existing_files": 510,
+  "allowed_modified_existing_files": [
+    "AGENTS.md",
+    "FILETREE.hash.json",
+    "FileTree.md",
+    "README.md",
+    "pyproject.toml"
+  ],
+  "protected_source_model_config_files": 136,
+  "original_remote_refs": {
+    "refs/heads/agent/add-ipad-lab": "8641a5c0f4b86920abc223e8af8eba9f6a6502f8",
+    "refs/heads/archive/endophalon-v1": "4e013dae07ccb05875ed513f4a6e12a3162e6fa3",
+    "refs/heads/archive/endophalon-v2": "fd0276f43495c80e5b6a35acbdcf813c6ef35ff7",
+    "refs/heads/claude/eloquent-volta-ylkb47": "25ad1796a1154817e9ea907d0e866768bcd4c175",
+    "refs/heads/endophalon3": "2d34a9af3bdc47d0c6ef0b2291f7a024e64f2f6a",
+    "refs/heads/master": "2d34a9af3bdc47d0c6ef0b2291f7a024e64f2f6a",
+    "refs/tags/backup/2026-10-31/agent/add-ipad-lab": "a40a8c9e06e224628c1e2bb6e33ec37e9d848fc3",
+    "refs/tags/backup/2026-10-31/claude/eloquent-volta-ylkb47": "5efa3eb28261e79f4e5f007f4701fc6b8eb33eca",
+    "refs/tags/backup/2026-10-31/endophalon": "2431f71c693925f0e05749d751a4631f1cebbd16",
+    "refs/tags/backup/2026-10-31/endophalon-plus": "dfc3ecbf309761bc41186f1d3da44205897b30b7",
+    "refs/tags/backup/2026-10-31/endophalon-pro": "ac9cb0e4535610436a6b43c314232af8f37c2e52",
+    "refs/tags/backup/2026-10-31/endophalon2": "cb38e3ddb4dd53065cbed1ed3cbfe91852aeb7da",
+    "refs/tags/backup/2026-10-31/endophalon2-pro": "27de1672a978fa1a1b37081f73d85bab015646f5",
+    "refs/tags/backup/2026-10-31/endophalon2-promax": "5efa3eb28261e79f4e5f007f4701fc6b8eb33eca",
+    "refs/tags/backup/2026-10-31/master": "2c94e3cf4c603cbe4f3e8f7743ed016030e59956"
+  },
+  "original_refs_unchanged": true,
+  "new_remote_refs": {
+    "refs/heads/feature/dynamath-1": "2d34a9af3bdc47d0c6ef0b2291f7a024e64f2f6a"
+  },
+  "backup_consolidation": {
+    "byte_identical_reproduction_files": 166,
+    "models": 22,
+    "original_heads_reachable": 9
+  },
+  "verification_scope": "All original source/models/configs compared byte-for-byte with base; all original remote heads/tags compared to pre-work snapshot. Root changes restricted to approved orientation, optional dependency and index files."
+}

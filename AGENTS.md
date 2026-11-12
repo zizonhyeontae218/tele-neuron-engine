@@ -1,5 +1,10 @@
 # Tele-Neuron Engine agent instructions
 
+DynaMath 1 exception (2026-11-12): the owner explicitly authorized the isolated
+feature/dynamath-1 branch and its new experiments. This overrides the historical
+new-branch prohibition below only for that work; never merge it into master or
+endophalon3. See docs/dynamath/GOAL.md and src/tele_neuron/dynamath/AGENTS.md.
+
 Read GOAL.md, FileTree.md, docs/model_commands.md and docs/endophalon3_software.md.
 Current 3 is ONLY independent A/B, connected by explicit predicted-output registers.
 A/B each own physical state, clock, RNG and local history. Pause the inactive model.

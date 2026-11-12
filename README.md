@@ -2,6 +2,12 @@
 
 > **한국어:** [README.ko.md](README.ko.md)
 
+**DynaMath 1 (independent experimental branch):** five learned mathematical laws,
+one persistent address space, additive inputs and actual character generation.
+See [run instructions and measured limits](docs/dynamath/README.md),
+[architecture](docs/dynamath/architecture.md) and [experiment 001](docs/dynamath/experiment-001.md).
+Existing Endophalon models remain preserved.
+
 Phase 1 single-PC prototype for a physical reservoir computing experiment.
 Input bits inject force into virtual balls in a 3D space, the balls move and
 collide for K steps, and readout zones convert the final distribution into
