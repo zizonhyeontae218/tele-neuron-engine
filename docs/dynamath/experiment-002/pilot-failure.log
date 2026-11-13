@@ -1,0 +1,18 @@
+/workspace/tele-neuron-engine/.venv/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:377: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /__w/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:82.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/tele-neuron-engine/src/dynamath/v002/__main__.py", line 175, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/tele-neuron-engine/src/dynamath/v002/__main__.py", line 154, in main
+    if args.command=='train':run();return
+                             ^^^^^
+  File "/workspace/tele-neuron-engine/src/dynamath/v002/__main__.py", line 139, in run
+    training,restart=train_language(model,x,y,cfg)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tele-neuron-engine/src/dynamath/v002/__main__.py", line 51, in train_language
+    data_sha256=sha(json.dumps([x.tolist(),y.tolist()],separators=(',',':')).encode()))
+                    ^^^^^^^^^
+RuntimeError: Numpy is not available

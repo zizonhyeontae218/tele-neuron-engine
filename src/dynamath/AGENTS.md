@@ -14,3 +14,6 @@ Only law coefficients learn. SILENCE is an ordinary mapped address; expose quest
 emissions and failed outputs. Keep the 5-tick and one-law experimental controls.
 Checkpoint schema dynamath-1/v1 is retained for saved-weight compatibility; it is
 not the current experiment designation. No unbudgeted training or target lookup.
+
+002 is isolated in v002; its nine laws and runtime writable scalars follow the
+new handoff and authorized Model 9/3/1 topology controls. Legacy code stays frozen.

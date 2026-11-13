@@ -1,0 +1,12 @@
+{
+  "models/dynamath/002/model1-recall.pt": "f4039d86eb079e5d2d7ade7be5fac908e9adcb1cdad3eb7c3f507754cac5e6d7",
+  "models/dynamath/002/model1.pt": "8eae5dccaab74b8275f4de4b5b2049e79de96582f098310bf66850cf09bf38cb",
+  "models/dynamath/002/model3-cross-recall.pt": "3be228c3aae12255046fe06d2da3fe7250a0109abf9c9c1e68b8a0331e6b55e8",
+  "models/dynamath/002/model3-cross.pt": "4b3e8556a758917c4e1660db0c3c056e06e8cbc12eff3062c53ddd7745300437",
+  "models/dynamath/002/model3-local-recall.pt": "698f077b1c9aa3c30f3526bf2833c13b22f1f91d7ca5872f00eca3454bf30642",
+  "models/dynamath/002/model3-local.pt": "03ff8daff20a6c8691d40c502b459c32e7587ccfed2bc3167c1e3c4bc69cd0c0",
+  "models/dynamath/002/model9-frozen-recall.pt": "a176e17f5a5f09c5034b26383fea391b879408031004bcb41812e1b8f06c9656",
+  "models/dynamath/002/model9-frozen.pt": "3cf39f2a427517550032848b499f7d2ca639166cf667fee68b5b58b25bfe952c",
+  "models/dynamath/002/model9-recall.pt": "9968597def69f2c222571158377e9e4916fcc727defdb90590d629719167999a",
+  "models/dynamath/002/model9.pt": "3faf63456cbdb1f7c0d944590f35c34b17201d70316b2c80939c2f6f195db21c"
+}

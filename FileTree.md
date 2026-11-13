@@ -20,6 +20,7 @@
 ## `configs/dynamath`
 
 - `experiment-001a.json` — Contains experiment-001a data.
+- `experiment-002.json` — Contains experiment-002 data.
 
 ## `data/dynamath/001a`
 
@@ -54,6 +55,39 @@
 - `stage-a-tests.log` — Contains stage-a-tests data.
 - `training-run.log` — Contains training-run data.
 
+## `docs/dynamath/experiment-002`
+
+- `CODEX_HANDOFF.md` — DynaMath 002 — Codex implementation handoff.
+- `GOAL.md` — DynaMath 002 execution plan.
+- `README.md` — DynaMath 002.
+- `artifact-integrity.json` — Contains artifact-integrity data.
+- `cli-verification.json` — Contains cli-verification data.
+- `comparison.md` — Contains comparison data.
+- `environment.txt` — Contains environment data.
+- `evaluation-plan.json` — Contains evaluation-plan data.
+- `legacy-audit.log` — Contains legacy-audit data.
+- `legacy-replay.json` — Contains legacy-replay data.
+- `legacy-replay.log` — Contains legacy-replay data.
+- `model1-trace.json` — Contains model1-trace data.
+- `model1.json` — Contains model1 data.
+- `model3-cross-trace.json` — Contains model3-cross-trace data.
+- `model3-cross.json` — Contains model3-cross data.
+- `model3-local-trace.json` — Contains model3-local-trace data.
+- `model3-local.json` — Contains model3-local data.
+- `model9-frozen-trace.json` — Contains model9-frozen-trace data.
+- `model9-frozen.json` — Contains model9-frozen data.
+- `model9-trace.json` — Contains model9-trace data.
+- `model9.json` — Contains model9 data.
+- `pilot-failure.log` — Contains pilot-failure data.
+- `report.md` — DynaMath 002 실행·비교 보고서.
+- `results.json` — Contains results data.
+- `sample-review.json` — Contains sample-review data.
+- `saved-checkpoint-verification.json` — Contains saved-checkpoint-verification data.
+- `saved-checkpoint-verification.log` — Contains saved-checkpoint-verification data.
+- `summary.json` — Contains summary data.
+- `tests.log` — Contains tests data.
+- `training-run.log` — Contains training-run data.
+
 ## `models/dynamath/001a`
 
 - `README.md` — DynaMath 001a saved models.
@@ -64,11 +98,28 @@
 - `one-1tick.pt` — Contains one-1tick data.
 - `one-matched-1tick.pt` — Contains one-matched-1tick data.
 
+## `models/dynamath/002`
+
+- `README.md` — DynaMath 002 checkpoints.
+- `model1-recall.pt` — Contains model1-recall data.
+- `model1.pt` — Contains model1 data.
+- `model3-cross-recall.pt` — Contains model3-cross-recall data.
+- `model3-cross.pt` — Contains model3-cross data.
+- `model3-local-recall.pt` — Contains model3-local-recall data.
+- `model3-local.pt` — Contains model3-local data.
+- `model9-frozen-recall.pt` — Contains model9-frozen-recall data.
+- `model9-frozen.pt` — Contains model9-frozen data.
+- `model9-recall.pt` — Contains model9-recall data.
+- `model9.pt` — Contains model9 data.
+
 ## `scripts`
 
 - `audit_dynamath_001a.py` — Contains audit dynamath 001a data.
 - `filetree_index.py` — Contains filetree index data.
+- `report_dynamath_002.py` — Contains report dynamath 002 data.
+- `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
 - `verify_dynamath_001a.py` — Contains verify dynamath 001a data.
+- `verify_dynamath_002.py` — Contains verify dynamath 002 data.
 
 ## `src/dynamath`
 
@@ -81,8 +132,14 @@
 - `runtime.py` — Contains runtime data.
 - `training.py` — Contains training data.
 
+## `src/dynamath/v002`
+
+- `__init__.py` — Contains   init   data.
+- `__main__.py` — Contains   main   data.
+
 ## `tests`
 
 - `test_cli.py` — Contains test cli data.
 - `test_dynamath.py` — Contains test dynamath data.
 - `test_dynamath_001a.py` — Contains test dynamath 001a data.
+- `test_dynamath_002.py` — Contains test dynamath 002 data.

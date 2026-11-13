@@ -28,3 +28,8 @@ CLI generation/chat/tick restore works; index lint passes; other refs unchanged.
 
 Current experiment goal/report: docs/dynamath/experiment-001a/{GOAL,report}.md.
 Scientific limitation remains semantic evaluation 0/6 and no demonstrated recall.
+
+## Current authorized phase: 002
+Implement docs/dynamath/experiment-002/CODEX_HANDOFF.md with additional Model 9,
+Model 3 local/cross-read, Model 1 controls. See experiment-002/GOAL.md and pinned
+config for acceptance/budgets; previous cleanup goal above is historical.

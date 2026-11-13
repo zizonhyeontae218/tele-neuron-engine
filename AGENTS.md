@@ -26,3 +26,10 @@ python scripts/verify_dynamath_001a.py --output <scratch.json>;
 python scripts/audit_dynamath_001a.py; python scripts/filetree_index.py update;
 python scripts/filetree_index.py lint. The repository-local index tool is the
 available Filetree fallback. Never hand-edit generated indexes.
+
+## Authorized 002 phase
+Current task targets existing feature/dynamath-002. The user's issue #12 handoff
+and extra scalar-sharing controls supersede the old no-training restriction for
+this bounded phase. Preserve all legacy source/assets; new implementation lives
+in src/dynamath/v002. Canonical contract: docs/dynamath/experiment-002/CODEX_HANDOFF.md;
+plan: docs/dynamath/experiment-002/GOAL.md; budget: configs/dynamath/experiment-002.json.

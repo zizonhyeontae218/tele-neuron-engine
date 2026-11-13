@@ -1,0 +1,372 @@
+{
+  "model9": [
+    {
+      "question": "SNS 시간낭비인 거 아는데 매일 하는 중",
+      "output": "징인 강이 있아요.",
+      "expected": "시간을 정하고 해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가족이 누구야?",
+      "output": "장이 있아 있아요.",
+      "expected": "저를 만들어 준 사람을 부모님, 저랑 이야기해 주는 사람을 친구로 생각하고 있어요",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가출해도 갈 데가 없어",
+      "output": "앙이 있아 있아요.",
+      "expected": "선생님이나 기관에 연락해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "간식 추천",
+      "output": "강이 있아 있아요.",
+      "expected": "단짠으로 두 개 사는게 진리죠.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감 말랭이 먹어야지",
+      "output": "만은 간 앙이 았이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 아",
+      "expected": "맛있게 드세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감정컨트롤이 안돼",
+      "output": "만은 간 앙이 았이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 아",
+      "expected": "그건 습관이에요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 눈물 나",
+      "output": "ᅡ신 간 앙이 았이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 아",
+      "expected": "마음이 아픈가요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 물어봐서 당황했어",
+      "output": "인 강이 있아요.",
+      "expected": "갑작스러웠나봐요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "강아지 키울 수 있을까",
+      "output": "만은 간 앙이 았이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이",
+      "expected": "먼저 생활패턴을 살펴 보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 먹었는데 나만 살찐 거 같아",
+      "output": "앙이 있아 있아요.",
+      "expected": "연인은 살쪄도 잘 알아차리지 못하고 알아차려도 싫어하지 않을 거예요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 피씨방 가자고 해볼까?",
+      "output": "인 강이 있아요.",
+      "expected": "말해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "거지 같이 일해 놓고 갔어",
+      "output": "만은 간 앙이 았이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 앙이 아",
+      "expected": "일 못하는 사람이 있으면 옆에 있는 사람이 더 힘들죠.",
+      "automatic_exact_match": false
+    }
+  ],
+  "model9-frozen": [
+    {
+      "question": "SNS 시간낭비인 거 아는데 매일 하는 중",
+      "output": "간 앙이 이요.",
+      "expected": "시간을 정하고 해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가족이 누구야?",
+      "output": "앙이 이요.",
+      "expected": "저를 만들어 준 사람을 부모님, 저랑 이야기해 주는 사람을 친구로 생각하고 있어요",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가출해도 갈 데가 없어",
+      "output": "앙이 이요.",
+      "expected": "선생님이나 기관에 연락해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "간식 추천",
+      "output": "강은 간이 알이 아요.",
+      "expected": "단짠으로 두 개 사는게 진리죠.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감 말랭이 먹어야지",
+      "output": "간은 가은 가인 가일 가이요.",
+      "expected": "맛있게 드세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감정컨트롤이 안돼",
+      "output": "상인 가은 가인 가일 가이요.",
+      "expected": "그건 습관이에요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 눈물 나",
+      "output": "인 강이 이요.",
+      "expected": "마음이 아픈가요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 물어봐서 당황했어",
+      "output": "인 강이 이요.",
+      "expected": "갑작스러웠나봐요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "강아지 키울 수 있을까",
+      "output": "인 가란 가인 가일 가이요.",
+      "expected": "먼저 생활패턴을 살펴 보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 먹었는데 나만 살찐 거 같아",
+      "output": "앙이 이요.",
+      "expected": "연인은 살쪄도 잘 알아차리지 못하고 알아차려도 싫어하지 않을 거예요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 피씨방 가자고 해볼까?",
+      "output": "인 강이 이요.",
+      "expected": "말해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "거지 같이 일해 놓고 갔어",
+      "output": "인 가란 가인 가일 가이요.",
+      "expected": "일 못하는 사람이 있으면 옆에 있는 사람이 더 힘들죠.",
+      "automatic_exact_match": false
+    }
+  ],
+  "model3-local": [
+    {
+      "question": "SNS 시간낭비인 거 아는데 매일 하는 중",
+      "output": "한인 강이 앙이 앙있이 았있이 았있이 았있이 았있이 았있이 아",
+      "expected": "시간을 정하고 해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가족이 누구야?",
+      "output": "강이 앙안 상이 일 간이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알",
+      "expected": "저를 만들어 준 사람을 부모님, 저랑 이야기해 주는 사람을 친구로 생각하고 있어요",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가출해도 갈 데가 없어",
+      "output": "앙이 앙안 상이 일 간이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 ",
+      "expected": "선생님이나 기관에 연락해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "간식 추천",
+      "output": "잉인 간 간이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 알이 ",
+      "expected": "단짠으로 두 개 사는게 진리죠.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감 말랭이 먹어야지",
+      "output": "강인 간 앙이 았이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 아",
+      "expected": "맛있게 드세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감정컨트롤이 안돼",
+      "output": "상인 간 앙이 았이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 아",
+      "expected": "그건 습관이에요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 눈물 나",
+      "output": "인 강이 앙이 앙있이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 았이",
+      "expected": "마음이 아픈가요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 물어봐서 당황했어",
+      "output": "인 강이 앙이 앙있이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 아",
+      "expected": "갑작스러웠나봐요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "강아지 키울 수 있을까",
+      "output": "상인 간 앙이 았이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 았있이",
+      "expected": "먼저 생활패턴을 살펴 보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 먹었는데 나만 살찐 거 같아",
+      "output": "앙이 앙안 상이 일 간이 알이 알이 알이 알이 알이 알이 알이 알이 알",
+      "expected": "연인은 살쪄도 잘 알아차리지 못하고 알아차려도 싫어하지 않을 거예요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 피씨방 가자고 해볼까?",
+      "output": "인 강이 앙이 앙있이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 아",
+      "expected": "말해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "거지 같이 일해 놓고 갔어",
+      "output": "강인 간 앙이 았이 았있이 았있이 았있이 았있이 았있이 았있이 았있이 았이",
+      "expected": "일 못하는 사람이 있으면 옆에 있는 사람이 더 힘들죠.",
+      "automatic_exact_match": false
+    }
+  ],
+  "model3-cross": [
+    {
+      "question": "SNS 시간낭비인 거 아는데 매일 하는 중",
+      "output": "아ᅡᄅ아ᅵ  ᄉ사ᄅ아ᅵᄋ ᅵᄋ아.요.",
+      "expected": "시간을 정하고 해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가족이 누구야?",
+      "output": "아ᅳᆫ  ᄀ가ᄅ아. 상이요.",
+      "expected": "저를 만들어 준 사람을 부모님, 저랑 이야기해 주는 사람을 친구로 생각하고 있어요",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가출해도 갈 데가 없어",
+      "output": "아ᅡᆫ  ᄋ가ᄅ아. 상이요.",
+      "expected": "선생님이나 기관에 연락해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "간식 추천",
+      "output": "아ᅡᆫ  ᄋ가ᄅ아. 상이요.",
+      "expected": "단짠으로 두 개 사는게 진리죠.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감 말랭이 먹어야지",
+      "output": "마ᅡᆫᅡᆫ  ᄋ가ᄅ아. 상이요.",
+      "expected": "맛있게 드세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감정컨트롤이 안돼",
+      "output": "사ᅡ라ᅡ 앙이요.",
+      "expected": "그건 습관이에요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 눈물 나",
+      "output": "ᄋ앙ᄋ ᅵᄋ아ᅵ 앙이요.",
+      "expected": "마음이 아픈가요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 물어봐서 당황했어",
+      "output": "ᄋ앙ᄋ ᅵᄋ아ᅵ 앙이요.",
+      "expected": "갑작스러웠나봐요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "강아지 키울 수 있을까",
+      "output": "사ᅡ라ᅡ 앙이요.",
+      "expected": "먼저 생활패턴을 살펴 보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 먹었는데 나만 살찐 거 같아",
+      "output": "아ᅡᆫ  ᄋ가ᄅ아. 상이요.",
+      "expected": "연인은 살쪄도 잘 알아차리지 못하고 알아차려도 싫어하지 않을 거예요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 피씨방 가자고 해볼까?",
+      "output": "아ᅡᄅ아ᅵ  ᄉ사ᄅ아ᅵᄋ ᅵᄋ아.요.",
+      "expected": "말해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "거지 같이 일해 놓고 갔어",
+      "output": "안 앙이요.",
+      "expected": "일 못하는 사람이 있으면 옆에 있는 사람이 더 힘들죠.",
+      "automatic_exact_match": false
+    }
+  ],
+  "model1": [
+    {
+      "question": "SNS 시간낭비인 거 아는데 매일 하는 중",
+      "output": "망인 강이요.",
+      "expected": "시간을 정하고 해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가족이 누구야?",
+      "output": "강인 상이 일이 아요.",
+      "expected": "저를 만들어 준 사람을 부모님, 저랑 이야기해 주는 사람을 친구로 생각하고 있어요",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "가출해도 갈 데가 없어",
+      "output": "앙인 강이 알이요.",
+      "expected": "선생님이나 기관에 연락해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "간식 추천",
+      "output": "강인 상일 강이요.",
+      "expected": "단짠으로 두 개 사는게 진리죠.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감 말랭이 먹어야지",
+      "output": "상인 강이요.",
+      "expected": "맛있게 드세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "감정컨트롤이 안돼",
+      "output": "상인 강이요.",
+      "expected": "그건 습관이에요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 눈물 나",
+      "output": "망인 강이요.",
+      "expected": "마음이 아픈가요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "갑자기 물어봐서 당황했어",
+      "output": "만 상이요.",
+      "expected": "갑작스러웠나봐요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "강아지 키울 수 있을까",
+      "output": "상인 강이요.",
+      "expected": "먼저 생활패턴을 살펴 보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 먹었는데 나만 살찐 거 같아",
+      "output": "앙인 강이 알이요.",
+      "expected": "연인은 살쪄도 잘 알아차리지 못하고 알아차려도 싫어하지 않을 거예요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "같이 피씨방 가자고 해볼까?",
+      "output": "만 상이요.",
+      "expected": "말해보세요.",
+      "automatic_exact_match": false
+    },
+    {
+      "question": "거지 같이 일해 놓고 갔어",
+      "output": "상인 강이요.",
+      "expected": "일 못하는 사람이 있으면 옆에 있는 사람이 더 힘들죠.",
+      "automatic_exact_match": false
+    }
+  ]
+}

@@ -63,3 +63,11 @@ docs/dynamath/                  공통 구조 · 버전별 실험 기록
 scripts/                       재현 · 무결성 검사 · 파일 인덱스
 .github/workflows/tests.yml    DynaMath 전용 CI
 ```
+
+## DynaMath 002
+
+Nine independent laws over one persistent state, three-tick input cadence and
+hard writable runtime scalars. Includes Model 9, Model 3 local/cross-read, Model 1
+and frozen-scalar controls. See [execution notes](docs/dynamath/experiment-002/README.md)
+and [measured report](docs/dynamath/experiment-002/report.md).
+Run `python -m dynamath.v002 --help`. Legacy 001a commands and assets are preserved.

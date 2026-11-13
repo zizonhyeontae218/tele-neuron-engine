@@ -1,0 +1,11 @@
+{
+  "seed": 43, "threads": 2, "batch": 12, "tbptt_slots": 24, "tbptt_ticks": 72,
+  "steps": 1200, "seconds_cap_per_run": 300, "lr": 0.002,
+  "variants": ["model9", "model9-frozen", "model3-local", "model3-cross", "model1"],
+  "rank": 12, "latent": 64, "eval_pairs": 96, "generation_pairs": 12,
+  "generation_ticks": 360, "recall_steps": 600, "recall_delays": [0,5,50],
+  "recall_test_seed": 2026, "selection": "first sorted pinned split IDs; no test tuning",
+  "target_schedule": "first readout: tokenizer.pairs next-token target; second readout: SILENCE",
+  "queue": "one unbounded FIFO; external and feedback append in arrival order; report growth, no drops",
+  "budget": "one smoke then one primary run per variant; separate fixed trained recall per variant"
+}

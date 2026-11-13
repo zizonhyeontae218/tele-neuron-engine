@@ -1,0 +1,2042 @@
+[
+  {
+    "tick": 0,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      0,
+      "external"
+    ],
+    "event": null,
+    "score": 0.1571681648492813,
+    "queue_depth": 13,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 1,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.5011416673660278,
+    "queue_depth": 13,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 2,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.5600497722625732,
+    "queue_depth": 13,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 3,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      54,
+      "external"
+    ],
+    "event": null,
+    "score": 0.6837031841278076,
+    "queue_depth": 12,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 4,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.7773337960243225,
+    "queue_depth": 12,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 5,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.9428556561470032,
+    "queue_depth": 12,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 6,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      62,
+      "external"
+    ],
+    "event": null,
+    "score": 0.8995883464813232,
+    "queue_depth": 11,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 7,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.9170598983764648,
+    "queue_depth": 11,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 8,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.9776533246040344,
+    "queue_depth": 11,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 9,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      86,
+      "external"
+    ],
+    "event": null,
+    "score": 0.8686965107917786,
+    "queue_depth": 10,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 10,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.45677927136421204,
+    "queue_depth": 10,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 11,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.843189537525177,
+    "queue_depth": 10,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 12,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      45,
+      "external"
+    ],
+    "event": null,
+    "score": 0.5718851089477539,
+    "queue_depth": 9,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 13,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.5918271541595459,
+    "queue_depth": 9,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 14,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.89569491147995,
+    "queue_depth": 9,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 15,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      68,
+      "external"
+    ],
+    "event": null,
+    "score": 0.8720424175262451,
+    "queue_depth": 8,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 16,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.3515913784503937,
+    "queue_depth": 8,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 17,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.8264597058296204,
+    "queue_depth": 8,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 18,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      100,
+      "external"
+    ],
+    "event": null,
+    "score": 0.7872416377067566,
+    "queue_depth": 7,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 19,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6037145853042603,
+    "queue_depth": 7,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 20,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.8855271339416504,
+    "queue_depth": 7,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 21,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      61,
+      "external"
+    ],
+    "event": null,
+    "score": 0.6634576916694641,
+    "queue_depth": 6,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 22,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.7499397397041321,
+    "queue_depth": 6,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 23,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.9360247254371643,
+    "queue_depth": 6,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 24,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      62,
+      "external"
+    ],
+    "event": null,
+    "score": 0.9015052914619446,
+    "queue_depth": 5,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 25,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.32146191596984863,
+    "queue_depth": 5,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 26,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.8184153437614441,
+    "queue_depth": 5,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 27,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      52,
+      "external"
+    ],
+    "event": null,
+    "score": 0.7219017148017883,
+    "queue_depth": 4,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 28,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.4605299234390259,
+    "queue_depth": 4,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 29,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.8442409634590149,
+    "queue_depth": 4,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 30,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      67,
+      "external"
+    ],
+    "event": null,
+    "score": 0.7549131512641907,
+    "queue_depth": 3,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 31,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.7074500918388367,
+    "queue_depth": 3,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 32,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.925197184085846,
+    "queue_depth": 3,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 33,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      54,
+      "external"
+    ],
+    "event": null,
+    "score": 0.8012747764587402,
+    "queue_depth": 2,
+    "m": [
+      0.0,
+      1.0,
+      2.7182817459106445
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 34,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.8614873886108398,
+    "queue_depth": 2,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 1.0,
+    "changed": true
+  },
+  {
+    "tick": 35,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.962776243686676,
+    "queue_depth": 2,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 36,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      74,
+      "external"
+    ],
+    "event": null,
+    "score": 0.8032545447349548,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 37,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.8249868750572205,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 38,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.949271023273468,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 39,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      1,
+      "external"
+    ],
+    "event": null,
+    "score": 0.5142497420310974,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 40,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 54,
+    "score": 0.11815661191940308,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 41,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6828684210777283,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 42,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      54,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5195922255516052,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7181296348571777
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 43,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 82,
+    "score": 0.5383421778678894,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718235969543457
+    ],
+    "gate": 1.0,
+    "changed": true
+  },
+  {
+    "tick": 44,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.7037613987922668,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 1.0,
+    "changed": true
+  },
+  {
+    "tick": 45,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      82,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.4062035381793976,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 46,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 86,
+    "score": 0.3441909849643707,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 47,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6417984962463379,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 48,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      86,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.18837960064411163,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 49,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 5,
+    "score": 0.5030872225761414,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 50,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6383177638053894,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 51,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      5,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5078451633453369,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 52,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 43,
+    "score": 0.31038159132003784,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182812690734863
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 53,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.6632654666900635,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 1.0,
+    "changed": true
+  },
+  {
+    "tick": 54,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      43,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5748741030693054,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 55,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 62,
+    "score": 0.6012990474700928,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 56,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6695941090583801,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 57,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      62,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.20272697508335114,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 58,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 86,
+    "score": 0.3725537359714508,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 59,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6418470144271851,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 60,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      86,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.532682478427887,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 61,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 5,
+    "score": 0.4652838706970215,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.7182722091674805
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 62,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.6679561734199524,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 1.0,
+    "changed": true
+  },
+  {
+    "tick": 63,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      5,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.6143969297409058,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 64,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 43,
+    "score": 0.2620472311973572,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 65,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6712403297424316,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 66,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      43,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.1512681543827057,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 67,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 62,
+    "score": 0.6396402716636658,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 68,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6409927010536194,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 69,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      62,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.6265687942504883,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 70,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 86,
+    "score": 0.459917277097702,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 71,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.6780272126197815,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 72,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      86,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5101528167724609,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 73,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 54,
+    "score": 0.3952086269855499,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 74,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6505799889564514,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 75,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      54,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.2797563672065735,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 76,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 82,
+    "score": 0.475396990776062,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 77,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6715677380561829,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 78,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      82,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5629995465278625,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 79,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 5,
+    "score": 0.44891229271888733,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 80,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.6708409190177917,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 81,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      5,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5676337480545044,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 82,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 54,
+    "score": 0.41097238659858704,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 83,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6549264192581177,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 84,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      54,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.2738248407840729,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 85,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 62,
+    "score": 0.5187186002731323,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 86,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6696486473083496,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 87,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      62,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5668338537216187,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 88,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 90,
+    "score": 0.32786932587623596,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 89,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.670968234539032,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 90,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      90,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.537378191947937,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 91,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 54,
+    "score": 0.381904274225235,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 92,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6533316969871521,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 93,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      54,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.3258950710296631,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 94,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 82,
+    "score": 0.41472327709198,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 95,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6907444000244141,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 96,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      82,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5499694347381592,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 97,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 5,
+    "score": 0.3877306282520294,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 98,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.6707513928413391,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 99,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      5,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.589504599571228,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 100,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 54,
+    "score": 0.3898848295211792,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 101,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6585782766342163,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 102,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      54,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.32889899611473083,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 103,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 62,
+    "score": 0.4963423013687134,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 104,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6904998421669006,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 105,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      62,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5917354822158813,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 106,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 90,
+    "score": 0.30535614490509033,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 107,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.6751841902732849,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 108,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      90,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5504915118217468,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 109,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 54,
+    "score": 0.3746677339076996,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 110,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6558972597122192,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 111,
+    "law": 4,
+    "block": 1,
+    "admitted": [
+      54,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.34986117482185364,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 112,
+    "law": 5,
+    "block": 1,
+    "admitted": null,
+    "event": 82,
+    "score": 0.40607771277427673,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 113,
+    "law": 6,
+    "block": 1,
+    "admitted": null,
+    "event": null,
+    "score": 0.6986820101737976,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 114,
+    "law": 7,
+    "block": 2,
+    "admitted": [
+      82,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5583788156509399,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 115,
+    "law": 8,
+    "block": 2,
+    "admitted": null,
+    "event": 5,
+    "score": 0.3761173486709595,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 116,
+    "law": 9,
+    "block": 2,
+    "admitted": null,
+    "event": null,
+    "score": 0.6723983883857727,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 117,
+    "law": 1,
+    "block": 0,
+    "admitted": [
+      5,
+      "feedback"
+    ],
+    "event": null,
+    "score": 0.5944578051567078,
+    "queue_depth": 0,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 118,
+    "law": 2,
+    "block": 0,
+    "admitted": null,
+    "event": 54,
+    "score": 0.38962188363075256,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  },
+  {
+    "tick": 119,
+    "law": 3,
+    "block": 0,
+    "admitted": null,
+    "event": null,
+    "score": 0.6594589948654175,
+    "queue_depth": 1,
+    "m": [
+      0.0,
+      1.0,
+      2.718266725540161
+    ],
+    "gate": 0.0,
+    "changed": false
+  }
+]

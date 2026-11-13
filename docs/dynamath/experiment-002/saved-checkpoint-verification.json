@@ -1,0 +1,62 @@
+{
+  "model9": {
+    "identical_samples": 12,
+    "dataset_disabled": true,
+    "snapshot_resume_exact": true,
+    "cpu_seconds": 0.9295707500000001,
+    "ticks": 2822,
+    "ticks_per_cpu_second": 3035.8098079140286,
+    "emitted_tokens": 624,
+    "emitted_tokens_per_cpu_second": 671.2775762361283,
+    "scalar_bytes": 36,
+    "state_bytes": 1152
+  },
+  "model9-frozen": {
+    "identical_samples": 12,
+    "dataset_disabled": true,
+    "snapshot_resume_exact": true,
+    "cpu_seconds": 0.5416378819999998,
+    "ticks": 1695,
+    "ticks_per_cpu_second": 3129.3970682796526,
+    "emitted_tokens": 251,
+    "emitted_tokens_per_cpu_second": 463.4092413794648,
+    "scalar_bytes": 36,
+    "state_bytes": 1152
+  },
+  "model3-local": {
+    "identical_samples": 12,
+    "dataset_disabled": true,
+    "snapshot_resume_exact": true,
+    "cpu_seconds": 1.46682254,
+    "ticks": 4320,
+    "ticks_per_cpu_second": 2945.14154384347,
+    "emitted_tokens": 1122,
+    "emitted_tokens_per_cpu_second": 764.9187065260124,
+    "scalar_bytes": 12,
+    "state_bytes": 1152
+  },
+  "model3-cross": {
+    "identical_samples": 12,
+    "dataset_disabled": true,
+    "snapshot_resume_exact": true,
+    "cpu_seconds": 0.6040315499999993,
+    "ticks": 1752,
+    "ticks_per_cpu_second": 2900.510743188832,
+    "emitted_tokens": 258,
+    "emitted_tokens_per_cpu_second": 427.130006702465,
+    "scalar_bytes": 12,
+    "state_bytes": 1152
+  },
+  "model1": {
+    "identical_samples": 12,
+    "dataset_disabled": true,
+    "snapshot_resume_exact": true,
+    "cpu_seconds": 0.5098573080000008,
+    "ticks": 1584,
+    "ticks_per_cpu_second": 3106.751585484771,
+    "emitted_tokens": 214,
+    "emitted_tokens_per_cpu_second": 419.72527733190725,
+    "scalar_bytes": 4,
+    "state_bytes": 1152
+  }
+}
