@@ -7,8 +7,8 @@ from .core import DynaMath
 
 
 class Session:
-    def __init__(self, model: DynaMath, threshold=0.10, refractory=5):
-        if not -1 <= threshold <= 1 or refractory < 1:
+    def __init__(self, model: DynaMath, threshold=0.10, refractory=1, io_ticks=1):
+        if not -1 <= threshold <= 1 or refractory < 1 or io_ticks not in (1, 5):
             raise ValueError("invalid event threshold/refractory")
         self.model = model.eval()
         self.state = model.zero()
@@ -16,6 +16,7 @@ class Session:
         self.last_event = -refractory
         self.threshold = threshold
         self.refractory = refractory
+        self.io_ticks = io_ticks
         self.pending = []
         self.ids = {char: i for i, char in enumerate(model.config.vocabulary)}
 
@@ -44,7 +45,7 @@ class Session:
     @torch.no_grad()
     def poll(self):
         """Read output addresses without changing the information state."""
-        if self.ticks == 0 or self.ticks % 5 or self.ticks - self.last_event < self.refractory:
+        if self.ticks == 0 or (self.io_ticks == 5 and self.ticks % 5) or self.ticks - self.last_event < self.refractory:
             return []
         values = self.model.output(self.state)[0]
         winner = int(values.argmax())  # deterministic lowest-index tie
@@ -57,7 +58,7 @@ class Session:
         """Conditioning masks outward events, but advances the same persistent state."""
         for char in text:
             self.enqueue(char)
-            self.tick(5, emit=False)
+            self.tick(self.io_ticks, emit=False)
 
     def generate(self, prompt, max_chars=120, max_ticks=2000, stop="\n"):
         if max_chars < 0 or max_ticks < 0:
@@ -66,7 +67,7 @@ class Session:
             raise ValueError("input contains characters outside the model vocabulary")
         # Align a partially ticked session using genuine idle transitions.
         remaining = max_ticks
-        alignment = (-self.ticks) % 5
+        alignment = (-self.ticks) % self.io_ticks
         if alignment > remaining:
             return ""
         self.tick(alignment, emit=False)
@@ -74,11 +75,11 @@ class Session:
         output = []
         # The last prompt character produces the first prediction, as in training.
         for char in prompt:
-            if remaining < 5:
+            if remaining < self.io_ticks:
                 return ""
             self.enqueue(char)
-            self.tick(5, emit=False)
-            remaining -= 5
+            self.tick(self.io_ticks, emit=False)
+            remaining -= self.io_ticks
         # Read the current output once at this boundary, then continue ticking.
         if prompt and max_chars:
             output.extend(self.poll())
@@ -88,15 +89,15 @@ class Session:
                     break
                 # Exactly once per emitted token, via the normal additive queue.
                 self.enqueue(output[-1])
-            events = self.tick(min(5, remaining))
-            remaining -= min(5, remaining)
+            events = self.tick(min(self.io_ticks, remaining))
+            remaining -= min(self.io_ticks, remaining)
             if events:
                 output.extend(events)
             else:
                 # Avoid refeeding the last token when a later idle cycle is silent.
                 while remaining > 0 and not events:
-                    events = self.tick(min(5, remaining))
-                    remaining -= min(5, remaining)
+                    events = self.tick(min(self.io_ticks, remaining))
+                    remaining -= min(self.io_ticks, remaining)
                 output.extend(events)
         return "".join(output)
 
@@ -113,13 +114,15 @@ class Session:
     def save(self, path):
         self.model.save(path, session={"state": self.state, "ticks": self.ticks,
                         "last_event": self.last_event, "pending": self.pending,
-                        "threshold": self.threshold, "refractory": self.refractory})
+                        "threshold": self.threshold, "refractory": self.refractory,
+                        "io_ticks": self.io_ticks})
 
     @classmethod
     def load(cls, path):
         model, payload = DynaMath.load(path)
         values = payload["session"]
-        session = cls(model, values["threshold"], values["refractory"])
+        session = cls(model, values["threshold"], values["refractory"],
+                      values.get("io_ticks", 5))
         session.state = values["state"]
         session.ticks = values["ticks"]
         session.last_event = values["last_event"]

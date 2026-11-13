@@ -1,0 +1,10 @@
+{
+  "designation": "DynaMath 001a",
+  "seed": 43, "batch": 16, "tbptt": 32, "steps": 2400,
+  "seconds_cap_per_run": 600, "lr": 0.002, "clip": 1.0,
+  "rank": 24, "latent": 128, "gain": 6.0,
+  "threshold": 0.1, "refractory": 1,
+  "eval_seed": 2026, "generation_max_tokens": 120,
+  "generation_max_ticks": 600,
+  "variants": ["five-1tick", "five-5tick", "one-1tick", "one-matched-1tick"]
+}

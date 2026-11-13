@@ -1,0 +1,115 @@
+{
+  "samples": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "test": [
+      8,
+      35,
+      39,
+      44,
+      50,
+      61,
+      64,
+      65
+    ]
+  },
+  "semantic_rubric": [
+    {
+      "Q": "안녕하세요",
+      "accept_any": [
+        "안녕",
+        "반가"
+      ],
+      "meaning": "returns a greeting"
+    },
+    {
+      "Q": "고마워",
+      "accept_any": [
+        "천만",
+        "고마",
+        "감사",
+        "괜찮"
+      ],
+      "meaning": "acknowledges thanks"
+    },
+    {
+      "Q": "오늘 너무 슬퍼",
+      "accept_any": [
+        "힘내",
+        "괜찮",
+        "위로",
+        "슬프",
+        "슬퍼"
+      ],
+      "meaning": "acknowledges sadness or offers comfort"
+    },
+    {
+      "Q": "시험 때문에 걱정돼",
+      "accept_any": [
+        "시험",
+        "공부",
+        "준비",
+        "잘할",
+        "힘내"
+      ],
+      "meaning": "responds to exam worry"
+    },
+    {
+      "Q": "잠이 안 와",
+      "accept_any": [
+        "잠",
+        "쉬",
+        "휴식",
+        "눈"
+      ],
+      "meaning": "responds to sleeplessness"
+    },
+    {
+      "Q": "밥을 못 먹어서 배고파",
+      "accept_any": [
+        "먹",
+        "밥",
+        "식사",
+        "음식"
+      ],
+      "meaning": "responds to hunger"
+    }
+  ],
+  "rubric_limits": "keyword proxy only; fragments can false-pass; not a human semantic rating",
+  "memory": {
+    "bits": [
+      0,
+      1
+    ],
+    "idle_gaps": [
+      0,
+      5,
+      50
+    ],
+    "names": [
+      "민수",
+      "지영"
+    ],
+    "question": "내 이름이 뭐야?"
+  },
+  "max_tokens": 120,
+  "max_ticks": 600,
+  "test_policy": "full frozen test evaluated once per final model; no test-based selection",
+  "quality_metrics": [
+    "exact_NFC_answer",
+    "character_multiset_F1",
+    "keyword_rubric_proxy",
+    "EOS",
+    "unexpected_controls",
+    "uncomposed_Jamo",
+    "timeouts"
+  ]
+}

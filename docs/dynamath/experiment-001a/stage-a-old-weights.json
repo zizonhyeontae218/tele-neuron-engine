@@ -1,0 +1,11 @@
+{
+  "original-5tick": {
+    "output": " hellogogo does the leargings.\n",
+    "ticks": 260
+  },
+  "immediate-1tick": {
+    "output": "uuuuwp  rrtsweeetiaaatttttttt eh.i.\n",
+    "ticks": 48
+  },
+  "interpretation": "Same Experiment 001 weights; timing-only distribution shift, not Korean training failure."
+}

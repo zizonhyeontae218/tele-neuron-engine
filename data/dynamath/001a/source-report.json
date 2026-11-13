@@ -1,0 +1,96 @@
+{
+  "credit": "Song Ys (songys)",
+  "source": "https://github.com/songys/Chatbot_data",
+  "commit": "4cf20d13fc46f5037fd1c531cd566e2dd9f72974",
+  "csv_blob_sha": "4cc2bfa9a124991dc5ca80f5da1786f4162f46e1",
+  "csv_sha256": "287eb129695b577321c80ad397bb3c2279164d4ca577874d129fd3db5b30afe2",
+  "license_sha256": "1d8084ef9ea897ec462ce6c0e538f97967894699aac65c933804062714d3330a",
+  "acquired_utc": "2026-11-13T00:32:41.152734+00:00",
+  "parsed_rows": 11823,
+  "valid_rows": 11823,
+  "documented_approx_rows": 11876,
+  "invalid_ids": [],
+  "label_whitespace_cleaned_ids": [
+    10676
+  ],
+  "duplicate_QA_excess": 73,
+  "duplicate_Q_excess": 161,
+  "normalized_question_groups": 11600,
+  "splits": {
+    "train": {
+      "rows": 9460,
+      "labels": {
+        "0": 4199,
+        "1": 2893,
+        "2": 2368
+      },
+      "text_tokens": 549767,
+      "unknown_tokens": 0,
+      "unknown_rate": 0.0,
+      "roundtrip_failures": 0,
+      "NFC_changes_from_raw": 0,
+      "unknown_codepoints": [],
+      "mean_QA_tokens": 58.11490486257928,
+      "max_text_tokens": 155,
+      "stream_positions": 578147,
+      "normalized_characters": 264889
+    },
+    "validation": {
+      "rows": 1150,
+      "labels": {
+        "0": 538,
+        "1": 337,
+        "2": 275
+      },
+      "text_tokens": 65690,
+      "unknown_tokens": 1,
+      "unknown_rate": 1.5223017202009438e-05,
+      "roundtrip_failures": 1,
+      "NFC_changes_from_raw": 0,
+      "unknown_codepoints": [
+        "U+005F"
+      ],
+      "mean_QA_tokens": 57.12173913043478,
+      "max_text_tokens": 116,
+      "stream_positions": 69140,
+      "normalized_characters": 31632
+    },
+    "test": {
+      "rows": 1213,
+      "labels": {
+        "0": 553,
+        "1": 340,
+        "2": 320
+      },
+      "text_tokens": 69074,
+      "unknown_tokens": 1,
+      "unknown_rate": 1.44772273214234e-05,
+      "roundtrip_failures": 1,
+      "NFC_changes_from_raw": 0,
+      "unknown_codepoints": [
+        "U+314A"
+      ],
+      "mean_QA_tokens": 56.94476504534213,
+      "max_text_tokens": 96,
+      "stream_positions": 72713,
+      "normalized_characters": 33272
+    }
+  },
+  "cross_split_overlap": {
+    "train:validation": {
+      "normalized_Q": 0,
+      "exact_A": 544,
+      "exact_QA": 0
+    },
+    "train:test": {
+      "normalized_Q": 0,
+      "exact_A": 597,
+      "exact_QA": 0
+    },
+    "validation:test": {
+      "normalized_Q": 0,
+      "exact_A": 109,
+      "exact_QA": 0
+    }
+  }
+}

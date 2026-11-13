@@ -1,0 +1,7 @@
+PASS full suite: 112 tests
+PASS focused DynaMath suites: 21 tests
+PASS saved-checkpoint replay: 64 samples
+PASS exact runtime restoration with pending queue
+PASS legacy smoke: 8 model/config combinations
+PASS original artifacts and other remote refs preserved
+Index update/lint and whitespace validation run immediately before delivery commit.

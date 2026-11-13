@@ -1,0 +1,64 @@
+{
+  "reviewer": "coding assistant qualitative review, not independent human annotation",
+  "rubric_source": "evaluation-plan.json: predeclared semantic meanings",
+  "model_passes": 0,
+  "baseline_passes": 1,
+  "count": 6,
+  "keyword_proxy_caveat": "The frozen keyword proxy falsely rejects 맛있게 드세요. for hunger; its zero score is preserved, not retuned.",
+  "rows": [
+    {
+      "question": "안녕하세요",
+      "predeclared_meaning": "returns a greeting",
+      "actual_model_output": "알 어예요.",
+      "model_coherent_relevant_pass": false,
+      "baseline_output": "맛있게 드세요.",
+      "baseline_coherent_relevant_pass": false,
+      "reason": "Model output is malformed/irrelevant to the requested meaning; constant food response is appropriate only to hunger."
+    },
+    {
+      "question": "고마워",
+      "predeclared_meaning": "acknowledges thanks",
+      "actual_model_output": "안 안아은 갓있을 어일 거례요.",
+      "model_coherent_relevant_pass": false,
+      "baseline_output": "맛있게 드세요.",
+      "baseline_coherent_relevant_pass": false,
+      "reason": "Model output is malformed/irrelevant to the requested meaning; constant food response is appropriate only to hunger."
+    },
+    {
+      "question": "오늘 너무 슬퍼",
+      "predeclared_meaning": "acknowledges sadness or offers comfort",
+      "actual_model_output": "안을 가란 할이 었어요.",
+      "model_coherent_relevant_pass": false,
+      "baseline_output": "맛있게 드세요.",
+      "baseline_coherent_relevant_pass": false,
+      "reason": "Model output is malformed/irrelevant to the requested meaning; constant food response is appropriate only to hunger."
+    },
+    {
+      "question": "시험 때문에 걱정돼",
+      "predeclared_meaning": "responds to exam worry",
+      "actual_model_output": "안아 아일 이있을 거예요.",
+      "model_coherent_relevant_pass": false,
+      "baseline_output": "맛있게 드세요.",
+      "baseline_coherent_relevant_pass": false,
+      "reason": "Model output is malformed/irrelevant to the requested meaning; constant food response is appropriate only to hunger."
+    },
+    {
+      "question": "잠이 안 와",
+      "predeclared_meaning": "responds to sleeplessness",
+      "actual_model_output": "아람은 같아요.",
+      "model_coherent_relevant_pass": false,
+      "baseline_output": "맛있게 드세요.",
+      "baseline_coherent_relevant_pass": false,
+      "reason": "Model output is malformed/irrelevant to the requested meaning; constant food response is appropriate only to hunger."
+    },
+    {
+      "question": "밥을 못 먹어서 배고파",
+      "predeclared_meaning": "responds to hunger",
+      "actual_model_output": "안은 알어 이예요.",
+      "model_coherent_relevant_pass": false,
+      "baseline_output": "맛있게 드세요.",
+      "baseline_coherent_relevant_pass": true,
+      "reason": "Model output is malformed/irrelevant to the requested meaning; constant food response is appropriate only to hunger."
+    }
+  ]
+}

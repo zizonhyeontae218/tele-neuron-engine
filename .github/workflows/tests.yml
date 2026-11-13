@@ -17,7 +17,10 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e .
           python -m pip install -r requirements.txt
-      - name: Test
+      - name: DynaMath CPU dependencies
+        if: contains(github.ref, 'dynamath') || contains(github.head_ref, 'dynamath')
+        run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Tests
         run: python -m pytest
       - name: Model CLI smoke
         run: python scripts/smoke_models.py

@@ -1,0 +1,1034 @@
+{
+  "five-1tick": {
+    "training": {
+      "step": 2400,
+      "task": "korean-001a",
+      "data_identity": "dcc1e423d15a2819f42f26020658c3d60a131446c5e38c53653e920bb0b9d107",
+      "ticks": 76800,
+      "phase": 0,
+      "io_ticks": 1,
+      "run_config": {
+        "designation": "DynaMath 001a",
+        "seed": 43,
+        "batch": 16,
+        "tbptt": 32,
+        "steps": 2400,
+        "seconds_cap_per_run": 600,
+        "lr": 0.002,
+        "clip": 1.0,
+        "rank": 24,
+        "latent": 128,
+        "gain": 6.0,
+        "threshold": 0.1,
+        "refractory": 1,
+        "eval_seed": 2026,
+        "generation_max_tokens": 120,
+        "generation_max_ticks": 600,
+        "variants": [
+          "five-1tick",
+          "five-5tick",
+          "one-1tick",
+          "one-matched-1tick"
+        ]
+      },
+      "training_seconds": 39.462360292000085,
+      "history": [
+        {
+          "step": 100,
+          "loss": 2.2081143856048584,
+          "seconds": 1.6332777650000025
+        },
+        {
+          "step": 200,
+          "loss": 1.8921372890472412,
+          "seconds": 3.6048336460000883
+        },
+        {
+          "step": 300,
+          "loss": 2.017303943634033,
+          "seconds": 5.247829776000003
+        },
+        {
+          "step": 400,
+          "loss": 1.7240856885910034,
+          "seconds": 6.789695047000009
+        },
+        {
+          "step": 500,
+          "loss": 2.071347951889038,
+          "seconds": 8.441156408000097
+        },
+        {
+          "step": 600,
+          "loss": 1.8946499824523926,
+          "seconds": 10.090823457000056
+        },
+        {
+          "step": 700,
+          "loss": 1.5316904783248901,
+          "seconds": 11.908086999000034
+        },
+        {
+          "step": 800,
+          "loss": 1.3330681324005127,
+          "seconds": 13.671956967000028
+        },
+        {
+          "step": 900,
+          "loss": 1.2744954824447632,
+          "seconds": 15.419972658999995
+        },
+        {
+          "step": 1000,
+          "loss": 0.9401620030403137,
+          "seconds": 17.283559712000056
+        },
+        {
+          "step": 1100,
+          "loss": 1.0267095565795898,
+          "seconds": 18.96478675900005
+        },
+        {
+          "step": 1200,
+          "loss": 1.072741150856018,
+          "seconds": 20.594885350000027
+        },
+        {
+          "step": 1300,
+          "loss": 1.193211555480957,
+          "seconds": 22.23141230100009
+        },
+        {
+          "step": 1400,
+          "loss": 0.9125736951828003,
+          "seconds": 23.846465160000093
+        },
+        {
+          "step": 1500,
+          "loss": 1.1167324781417847,
+          "seconds": 25.37754178800003
+        },
+        {
+          "step": 1600,
+          "loss": 1.0403070449829102,
+          "seconds": 26.921935520000034
+        },
+        {
+          "step": 1700,
+          "loss": 0.9268431663513184,
+          "seconds": 28.471490014000096
+        },
+        {
+          "step": 1800,
+          "loss": 0.9251613616943359,
+          "seconds": 30.04990034900004
+        },
+        {
+          "step": 1900,
+          "loss": 0.9830915927886963,
+          "seconds": 31.634377249000067
+        },
+        {
+          "step": 2000,
+          "loss": 0.9226807951927185,
+          "seconds": 33.18940081400001
+        },
+        {
+          "step": 2100,
+          "loss": 1.3392069339752197,
+          "seconds": 34.793781316000036
+        },
+        {
+          "step": 2200,
+          "loss": 0.7469499707221985,
+          "seconds": 36.39892363900003
+        },
+        {
+          "step": 2300,
+          "loss": 1.0655558109283447,
+          "seconds": 37.95150384400006
+        },
+        {
+          "step": 2400,
+          "loss": 1.2273101806640625,
+          "seconds": 39.46230311800002
+        }
+      ],
+      "training_positions": 1228800,
+      "training_state_ticks": 1228800,
+      "unique_stream_positions": 578147,
+      "total_stream_positions": 578147,
+      "fully_covered_train_pairs": 9460,
+      "eligible_train_pairs": 9460,
+      "parameters": 89880,
+      "N": 352,
+      "rank": 24,
+      "laws": 5,
+      "active_coefficients_per_tick": 17976,
+      "approx_flops_per_tick": 38064,
+      "peak_training_process_rss_KiB": 385968,
+      "ended_by": "step_cap",
+      "finished_utc": "2026-11-13T00:32:23.434325+00:00"
+    },
+    "teacher_forced": {
+      "train": {
+        "positions": 578147,
+        "response_tokens": 302414,
+        "correct": 397183,
+        "response_correct": 121550,
+        "question_ticks": 266273,
+        "question_false_emits": 82,
+        "response_CE": 1.9842766680839083,
+        "response_perplexity": 7.273784121933496,
+        "all_tick_CE": 1.042304580465902,
+        "response_accuracy": 0.4019324502172518,
+        "silence_false_positive_rate": 0.00030795461800482964,
+        "answer_bits_per_NFC_character_including_EOS": 6.060444704759838,
+        "answer_bits_per_UTF8_byte_including_EOS": 2.4207479466972015,
+        "normalized_answer_characters": 142848,
+        "evaluation_lanes": 16
+      },
+      "validation": {
+        "positions": 69140,
+        "response_tokens": 35918,
+        "correct": 47637,
+        "response_correct": 14511,
+        "question_ticks": 32072,
+        "question_false_emits": 94,
+        "response_CE": 1.9755539521566676,
+        "response_perplexity": 7.210612882246619,
+        "all_tick_CE": 1.0373109793602144,
+        "response_accuracy": 0.4040035636728103,
+        "silence_false_positive_rate": 0.0029309054627089048,
+        "answer_bits_per_NFC_character_including_EOS": 6.041706683032238,
+        "answer_bits_per_UTF8_byte_including_EOS": 2.4140611714686186,
+        "normalized_answer_characters": 16944,
+        "evaluation_lanes": 16
+      },
+      "test": {
+        "positions": 72713,
+        "response_tokens": 37577,
+        "correct": 50421,
+        "response_correct": 15362,
+        "question_ticks": 33923,
+        "question_false_emits": 75,
+        "response_CE": 1.9702340379588528,
+        "response_perplexity": 7.172354895233339,
+        "all_tick_CE": 1.02681875672855,
+        "response_accuracy": 0.40881390212097823,
+        "silence_false_positive_rate": 0.0022108893670960707,
+        "answer_bits_per_NFC_character_including_EOS": 6.023608518932932,
+        "answer_bits_per_UTF8_byte_including_EOS": 2.4038039847350845,
+        "normalized_answer_characters": 17732,
+        "evaluation_lanes": 16
+      }
+    },
+    "generation_summary": {
+      "EOS_rate": 1.0,
+      "timeout_rate": 0.0,
+      "mean_decoded_characters": 10.5625,
+      "valid_response_format_rate": 0.9375,
+      "heldout_sample_exact": 0.0,
+      "keyword_proxy_pass_rate": 0.0
+    },
+    "memory_persistent": 0.0,
+    "memory_reset": 0.0,
+    "benchmark": {
+      "batch1_ticks_per_second": 21289.994852071297,
+      "tick_wall_seconds": 0.1409112600000526,
+      "input_step_detection_latency_seconds_mean": 8.201484000892378e-05,
+      "decoded_characters": 30,
+      "complete_generation_seconds": 0.011601783999935833,
+      "decoded_NFC_characters_per_second": 2585.809216941629,
+      "generated_tokens": 55,
+      "generated_tokens_per_second": 4740.650231059653,
+      "uncomposed_jamo": 0,
+      "approx_flops_per_tick": 38064,
+      "flops_exclusions": "nonlinear functions, parameter transforms, indexing, allocation, event and Python overhead",
+      "parameter_bytes": 359520,
+      "state_bytes": 1408,
+      "peak_process_rss_KiB": 391392,
+      "cpu": "AMD EPYC 9V74 80-Core Processor",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "python": "3.12.14",
+      "torch": "2.15.0+cpu",
+      "threads": 1,
+      "source_environment": "managed Codex Cloud, CPU only",
+      "old_Endophalon_comparison": "not matched: different hardware/task; no speedup claim"
+    }
+  },
+  "five-5tick": {
+    "training": {
+      "step": 2400,
+      "task": "korean-001a",
+      "data_identity": "dcc1e423d15a2819f42f26020658c3d60a131446c5e38c53653e920bb0b9d107",
+      "ticks": 384000,
+      "phase": 0,
+      "io_ticks": 5,
+      "run_config": {
+        "designation": "DynaMath 001a",
+        "seed": 43,
+        "batch": 16,
+        "tbptt": 32,
+        "steps": 2400,
+        "seconds_cap_per_run": 600,
+        "lr": 0.002,
+        "clip": 1.0,
+        "rank": 24,
+        "latent": 128,
+        "gain": 6.0,
+        "threshold": 0.1,
+        "refractory": 1,
+        "eval_seed": 2026,
+        "generation_max_tokens": 120,
+        "generation_max_ticks": 600,
+        "variants": [
+          "five-1tick",
+          "five-5tick",
+          "one-1tick",
+          "one-matched-1tick"
+        ]
+      },
+      "training_seconds": 126.56557627900008,
+      "history": [
+        {
+          "step": 100,
+          "loss": 2.483901023864746,
+          "seconds": 5.5477818860000525
+        },
+        {
+          "step": 200,
+          "loss": 1.7835865020751953,
+          "seconds": 10.591884407000066
+        },
+        {
+          "step": 300,
+          "loss": 1.968054175376892,
+          "seconds": 15.887275063000061
+        },
+        {
+          "step": 400,
+          "loss": 1.0879305601119995,
+          "seconds": 21.256417738000096
+        },
+        {
+          "step": 500,
+          "loss": 1.3734543323516846,
+          "seconds": 26.426986478000003
+        },
+        {
+          "step": 600,
+          "loss": 1.395613670349121,
+          "seconds": 31.587449168000035
+        },
+        {
+          "step": 700,
+          "loss": 1.1072337627410889,
+          "seconds": 37.04966574100001
+        },
+        {
+          "step": 800,
+          "loss": 1.0168062448501587,
+          "seconds": 42.08631452000009
+        },
+        {
+          "step": 900,
+          "loss": 1.000193476676941,
+          "seconds": 47.158362937000106
+        },
+        {
+          "step": 1000,
+          "loss": 0.7431623935699463,
+          "seconds": 52.356439211000065
+        },
+        {
+          "step": 1100,
+          "loss": 0.786928117275238,
+          "seconds": 57.55240420900009
+        },
+        {
+          "step": 1200,
+          "loss": 0.8825490474700928,
+          "seconds": 62.57570199600002
+        },
+        {
+          "step": 1300,
+          "loss": 0.9840108752250671,
+          "seconds": 67.62297701
+        },
+        {
+          "step": 1400,
+          "loss": 0.7142014503479004,
+          "seconds": 72.81067831300004
+        },
+        {
+          "step": 1500,
+          "loss": 0.9199464321136475,
+          "seconds": 78.51891037100006
+        },
+        {
+          "step": 1600,
+          "loss": 0.8470053672790527,
+          "seconds": 84.30314640400002
+        },
+        {
+          "step": 1700,
+          "loss": 0.7368332147598267,
+          "seconds": 89.53673587100002
+        },
+        {
+          "step": 1800,
+          "loss": 0.7231665849685669,
+          "seconds": 94.82064072100002
+        },
+        {
+          "step": 1900,
+          "loss": 0.765563428401947,
+          "seconds": 100.02506481400007
+        },
+        {
+          "step": 2000,
+          "loss": 0.7343013882637024,
+          "seconds": 105.56557324700009
+        },
+        {
+          "step": 2100,
+          "loss": 1.1024056673049927,
+          "seconds": 110.97555683900009
+        },
+        {
+          "step": 2200,
+          "loss": 0.5520641207695007,
+          "seconds": 116.11899320400005
+        },
+        {
+          "step": 2300,
+          "loss": 0.8416765928268433,
+          "seconds": 121.36188445700009
+        },
+        {
+          "step": 2400,
+          "loss": 1.0446715354919434,
+          "seconds": 126.56551440800001
+        }
+      ],
+      "training_positions": 1228800,
+      "training_state_ticks": 6144000,
+      "unique_stream_positions": 578147,
+      "total_stream_positions": 578147,
+      "fully_covered_train_pairs": 9460,
+      "eligible_train_pairs": 9460,
+      "parameters": 89880,
+      "N": 352,
+      "rank": 24,
+      "laws": 5,
+      "active_coefficients_per_tick": 17976,
+      "approx_flops_per_tick": 38064,
+      "peak_training_process_rss_KiB": 398908,
+      "ended_by": "step_cap",
+      "finished_utc": "2026-11-13T00:34:44.461535+00:00"
+    },
+    "teacher_forced": {
+      "train": {
+        "positions": 578147,
+        "response_tokens": 302414,
+        "correct": 418867,
+        "response_correct": 147021,
+        "question_ticks": 266273,
+        "question_false_emits": 3718,
+        "response_CE": 1.637058912422158,
+        "response_perplexity": 5.140029981476573,
+        "all_tick_CE": 0.9201646349799513,
+        "response_accuracy": 0.4861580482385075,
+        "silence_false_positive_rate": 0.013963113045633616,
+        "answer_bits_per_NFC_character_including_EOS": 4.999960528059401,
+        "answer_bits_per_UTF8_byte_including_EOS": 1.9971544616784833,
+        "normalized_answer_characters": 142848,
+        "evaluation_lanes": 16
+      },
+      "validation": {
+        "positions": 69140,
+        "response_tokens": 35918,
+        "correct": 50350,
+        "response_correct": 17618,
+        "question_ticks": 32072,
+        "question_false_emits": 469,
+        "response_CE": 1.636186401413877,
+        "response_perplexity": 5.135547204655288,
+        "all_tick_CE": 0.9169417774801929,
+        "response_accuracy": 0.49050615290383653,
+        "silence_false_positive_rate": 0.014623347468196558,
+        "answer_bits_per_NFC_character_including_EOS": 5.0038412290978265,
+        "answer_bits_per_UTF8_byte_including_EOS": 1.9993653206110826,
+        "normalized_answer_characters": 16944,
+        "evaluation_lanes": 16
+      },
+      "test": {
+        "positions": 72713,
+        "response_tokens": 37577,
+        "correct": 53197,
+        "response_correct": 18512,
+        "question_ticks": 33923,
+        "question_false_emits": 432,
+        "response_CE": 1.6283344031262572,
+        "response_perplexity": 5.095380796450255,
+        "all_tick_CE": 0.9007522338457488,
+        "response_accuracy": 0.49264177555419536,
+        "silence_false_positive_rate": 0.012734722754473366,
+        "answer_bits_per_NFC_character_including_EOS": 4.97831668389222,
+        "answer_bits_per_UTF8_byte_including_EOS": 1.9866658738528344,
+        "normalized_answer_characters": 17732,
+        "evaluation_lanes": 16
+      }
+    },
+    "generation_summary": {
+      "EOS_rate": 1.0,
+      "timeout_rate": 0.0,
+      "mean_decoded_characters": 7.0625,
+      "valid_response_format_rate": 1.0,
+      "heldout_sample_exact": 0.0,
+      "keyword_proxy_pass_rate": 0.0
+    },
+    "memory_persistent": 0.0,
+    "memory_reset": 0.0,
+    "benchmark": {
+      "batch1_ticks_per_second": 20543.68492363769,
+      "tick_wall_seconds": 0.14603027700002258,
+      "input_step_detection_latency_seconds_mean": 0.00023499123999499717,
+      "decoded_characters": 40,
+      "complete_generation_seconds": 0.04083321199993861,
+      "decoded_NFC_characters_per_second": 979.5947475319878,
+      "generated_tokens": 80,
+      "generated_tokens_per_second": 1959.1894950639755,
+      "uncomposed_jamo": 0,
+      "approx_flops_per_tick": 38064,
+      "flops_exclusions": "nonlinear functions, parameter transforms, indexing, allocation, event and Python overhead",
+      "parameter_bytes": 359520,
+      "state_bytes": 1408,
+      "peak_process_rss_KiB": 398908,
+      "cpu": "AMD EPYC 9V74 80-Core Processor",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "python": "3.12.14",
+      "torch": "2.15.0+cpu",
+      "threads": 1,
+      "source_environment": "managed Codex Cloud, CPU only",
+      "old_Endophalon_comparison": "not matched: different hardware/task; no speedup claim"
+    }
+  },
+  "one-1tick": {
+    "training": {
+      "step": 2400,
+      "task": "korean-001a",
+      "data_identity": "dcc1e423d15a2819f42f26020658c3d60a131446c5e38c53653e920bb0b9d107",
+      "ticks": 76800,
+      "phase": 0,
+      "io_ticks": 1,
+      "run_config": {
+        "designation": "DynaMath 001a",
+        "seed": 43,
+        "batch": 16,
+        "tbptt": 32,
+        "steps": 2400,
+        "seconds_cap_per_run": 600,
+        "lr": 0.002,
+        "clip": 1.0,
+        "rank": 24,
+        "latent": 128,
+        "gain": 6.0,
+        "threshold": 0.1,
+        "refractory": 1,
+        "eval_seed": 2026,
+        "generation_max_tokens": 120,
+        "generation_max_ticks": 600,
+        "variants": [
+          "five-1tick",
+          "five-5tick",
+          "one-1tick",
+          "one-matched-1tick"
+        ]
+      },
+      "training_seconds": 35.40551082600007,
+      "history": [
+        {
+          "step": 100,
+          "loss": 2.1445181369781494,
+          "seconds": 1.5094414789999746
+        },
+        {
+          "step": 200,
+          "loss": 1.7882174253463745,
+          "seconds": 3.160077362000038
+        },
+        {
+          "step": 300,
+          "loss": 1.6251747608184814,
+          "seconds": 4.85121790900007
+        },
+        {
+          "step": 400,
+          "loss": 1.269140601158142,
+          "seconds": 6.458400288000007
+        },
+        {
+          "step": 500,
+          "loss": 1.5404540300369263,
+          "seconds": 8.059851201000015
+        },
+        {
+          "step": 600,
+          "loss": 1.4714405536651611,
+          "seconds": 9.513506980999978
+        },
+        {
+          "step": 700,
+          "loss": 1.2281053066253662,
+          "seconds": 11.025500597000018
+        },
+        {
+          "step": 800,
+          "loss": 1.0503968000411987,
+          "seconds": 12.721439286000077
+        },
+        {
+          "step": 900,
+          "loss": 1.2318909168243408,
+          "seconds": 14.182421744000067
+        },
+        {
+          "step": 1000,
+          "loss": 0.786125898361206,
+          "seconds": 15.578028319000055
+        },
+        {
+          "step": 1100,
+          "loss": 0.8511093854904175,
+          "seconds": 17.000530261999984
+        },
+        {
+          "step": 1200,
+          "loss": 0.9632934331893921,
+          "seconds": 18.408509762999984
+        },
+        {
+          "step": 1300,
+          "loss": 1.0507420301437378,
+          "seconds": 19.785453802999996
+        },
+        {
+          "step": 1400,
+          "loss": 0.7551183104515076,
+          "seconds": 21.15064026699997
+        },
+        {
+          "step": 1500,
+          "loss": 0.9912239909172058,
+          "seconds": 22.518371075999994
+        },
+        {
+          "step": 1600,
+          "loss": 0.9528378844261169,
+          "seconds": 23.86942392499998
+        },
+        {
+          "step": 1700,
+          "loss": 0.8056580424308777,
+          "seconds": 25.29356744400002
+        },
+        {
+          "step": 1800,
+          "loss": 0.7899360656738281,
+          "seconds": 26.76495193599999
+        },
+        {
+          "step": 1900,
+          "loss": 0.8789234161376953,
+          "seconds": 28.216145205999965
+        },
+        {
+          "step": 2000,
+          "loss": 0.8018103837966919,
+          "seconds": 29.66622811700006
+        },
+        {
+          "step": 2100,
+          "loss": 1.1944996118545532,
+          "seconds": 31.112175987
+        },
+        {
+          "step": 2200,
+          "loss": 0.6652088165283203,
+          "seconds": 32.559715600000004
+        },
+        {
+          "step": 2300,
+          "loss": 0.9737523794174194,
+          "seconds": 33.983431386999996
+        },
+        {
+          "step": 2400,
+          "loss": 1.2752164602279663,
+          "seconds": 35.405454522000014
+        }
+      ],
+      "training_positions": 1228800,
+      "training_state_ticks": 1228800,
+      "unique_stream_positions": 578147,
+      "total_stream_positions": 578147,
+      "fully_covered_train_pairs": 9460,
+      "eligible_train_pairs": 9460,
+      "parameters": 17976,
+      "N": 352,
+      "rank": 24,
+      "laws": 1,
+      "active_coefficients_per_tick": 17976,
+      "approx_flops_per_tick": 38064,
+      "peak_training_process_rss_KiB": 406080,
+      "ended_by": "step_cap",
+      "finished_utc": "2026-11-13T00:35:47.013284+00:00"
+    },
+    "teacher_forced": {
+      "train": {
+        "positions": 578147,
+        "response_tokens": 302414,
+        "correct": 408465,
+        "response_correct": 133046,
+        "question_ticks": 266273,
+        "question_false_emits": 298,
+        "response_CE": 1.79876227234576,
+        "response_perplexity": 6.042164280475024,
+        "all_tick_CE": 0.9466419907835482,
+        "response_accuracy": 0.4399465633204812,
+        "silence_false_positive_rate": 0.001119152148359015,
+        "answer_bits_per_NFC_character_including_EOS": 5.493840382191429,
+        "answer_bits_per_UTF8_byte_including_EOS": 2.1944268898661767,
+        "normalized_answer_characters": 142848,
+        "evaluation_lanes": 16
+      },
+      "validation": {
+        "positions": 69140,
+        "response_tokens": 35918,
+        "correct": 48741,
+        "response_correct": 15843,
+        "question_ticks": 32072,
+        "question_false_emits": 310,
+        "response_CE": 1.7962277520229541,
+        "response_perplexity": 6.026869682734274,
+        "all_tick_CE": 0.9725211661136646,
+        "response_accuracy": 0.4410880338548917,
+        "silence_false_positive_rate": 0.009665752057869794,
+        "answer_bits_per_NFC_character_including_EOS": 5.493285162775669,
+        "answer_bits_per_UTF8_byte_including_EOS": 2.1949305239369648,
+        "normalized_answer_characters": 16944,
+        "evaluation_lanes": 16
+      },
+      "test": {
+        "positions": 72713,
+        "response_tokens": 37577,
+        "correct": 51443,
+        "response_correct": 16654,
+        "question_ticks": 33923,
+        "question_false_emits": 333,
+        "response_CE": 1.7912458399646338,
+        "response_perplexity": 5.9969190157290475,
+        "all_tick_CE": 0.9677041962194307,
+        "response_accuracy": 0.44319663624025335,
+        "silence_false_positive_rate": 0.009816348789906552,
+        "answer_bits_per_NFC_character_including_EOS": 5.476386811534459,
+        "answer_bits_per_UTF8_byte_including_EOS": 2.185427621689,
+        "normalized_answer_characters": 17732,
+        "evaluation_lanes": 16
+      }
+    },
+    "generation_summary": {
+      "EOS_rate": 0.9375,
+      "timeout_rate": 0.0625,
+      "mean_decoded_characters": 7.1875,
+      "valid_response_format_rate": 0.8125,
+      "heldout_sample_exact": 0.0,
+      "keyword_proxy_pass_rate": 0.0
+    },
+    "memory_persistent": 0.0,
+    "memory_reset": 0.0,
+    "benchmark": {
+      "batch1_ticks_per_second": 22399.939693388453,
+      "tick_wall_seconds": 0.13392893200000344,
+      "input_step_detection_latency_seconds_mean": 7.503996000195911e-05,
+      "decoded_characters": 35,
+      "complete_generation_seconds": 0.011922948999995242,
+      "decoded_NFC_characters_per_second": 2935.5153662079715,
+      "generated_tokens": 70,
+      "generated_tokens_per_second": 5871.030732415943,
+      "uncomposed_jamo": 0,
+      "approx_flops_per_tick": 38064,
+      "flops_exclusions": "nonlinear functions, parameter transforms, indexing, allocation, event and Python overhead",
+      "parameter_bytes": 71904,
+      "state_bytes": 1408,
+      "peak_process_rss_KiB": 406080,
+      "cpu": "AMD EPYC 9V74 80-Core Processor",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "python": "3.12.14",
+      "torch": "2.15.0+cpu",
+      "threads": 1,
+      "source_environment": "managed Codex Cloud, CPU only",
+      "old_Endophalon_comparison": "not matched: different hardware/task; no speedup claim"
+    }
+  },
+  "one-matched-1tick": {
+    "training": {
+      "step": 2400,
+      "task": "korean-001a",
+      "data_identity": "dcc1e423d15a2819f42f26020658c3d60a131446c5e38c53653e920bb0b9d107",
+      "ticks": 76800,
+      "phase": 0,
+      "io_ticks": 1,
+      "run_config": {
+        "designation": "DynaMath 001a",
+        "seed": 43,
+        "batch": 16,
+        "tbptt": 32,
+        "steps": 2400,
+        "seconds_cap_per_run": 600,
+        "lr": 0.002,
+        "clip": 1.0,
+        "rank": 24,
+        "latent": 128,
+        "gain": 6.0,
+        "threshold": 0.1,
+        "refractory": 1,
+        "eval_seed": 2026,
+        "generation_max_tokens": 120,
+        "generation_max_ticks": 600,
+        "variants": [
+          "five-1tick",
+          "five-5tick",
+          "one-1tick",
+          "one-matched-1tick"
+        ]
+      },
+      "training_seconds": 45.19867797000006,
+      "history": [
+        {
+          "step": 100,
+          "loss": 3.13702654838562,
+          "seconds": 1.8830677090001018
+        },
+        {
+          "step": 200,
+          "loss": 2.6732752323150635,
+          "seconds": 3.7671320100000685
+        },
+        {
+          "step": 300,
+          "loss": 2.9346976280212402,
+          "seconds": 5.663045020000027
+        },
+        {
+          "step": 400,
+          "loss": 2.722660541534424,
+          "seconds": 7.5681369720000475
+        },
+        {
+          "step": 500,
+          "loss": 2.998181104660034,
+          "seconds": 9.445720817000051
+        },
+        {
+          "step": 600,
+          "loss": 2.7809855937957764,
+          "seconds": 11.274906933000011
+        },
+        {
+          "step": 700,
+          "loss": 2.367241621017456,
+          "seconds": 13.092065925000043
+        },
+        {
+          "step": 800,
+          "loss": 3.0553641319274902,
+          "seconds": 14.950881466000055
+        },
+        {
+          "step": 900,
+          "loss": 2.0106656551361084,
+          "seconds": 16.80178713700002
+        },
+        {
+          "step": 1000,
+          "loss": 1.7191224098205566,
+          "seconds": 18.642295253000043
+        },
+        {
+          "step": 1100,
+          "loss": 1.9525740146636963,
+          "seconds": 20.4824122120001
+        },
+        {
+          "step": 1200,
+          "loss": 1.969982624053955,
+          "seconds": 22.298786135
+        },
+        {
+          "step": 1300,
+          "loss": 2.0358827114105225,
+          "seconds": 24.115542562000087
+        },
+        {
+          "step": 1400,
+          "loss": 1.6367568969726562,
+          "seconds": 25.94431699000006
+        },
+        {
+          "step": 1500,
+          "loss": 1.9739824533462524,
+          "seconds": 27.76825494000002
+        },
+        {
+          "step": 1600,
+          "loss": 1.760404109954834,
+          "seconds": 29.6530439820001
+        },
+        {
+          "step": 1700,
+          "loss": 1.7629669904708862,
+          "seconds": 31.574547542999994
+        },
+        {
+          "step": 1800,
+          "loss": 1.5616906881332397,
+          "seconds": 33.434316021000086
+        },
+        {
+          "step": 1900,
+          "loss": 1.6339025497436523,
+          "seconds": 35.32308069800001
+        },
+        {
+          "step": 2000,
+          "loss": 2.397002696990967,
+          "seconds": 37.18860850600004
+        },
+        {
+          "step": 2100,
+          "loss": 2.238612174987793,
+          "seconds": 39.11871793800003
+        },
+        {
+          "step": 2200,
+          "loss": 1.3336023092269897,
+          "seconds": 41.033896832000096
+        },
+        {
+          "step": 2300,
+          "loss": 2.004315137863159,
+          "seconds": 43.11935022400007
+        },
+        {
+          "step": 2400,
+          "loss": 1.8718268871307373,
+          "seconds": 45.198556901000075
+        }
+      ],
+      "training_positions": 1228800,
+      "training_state_ticks": 1228800,
+      "unique_stream_positions": 578147,
+      "total_stream_positions": 578147,
+      "fully_covered_train_pairs": 9460,
+      "eligible_train_pairs": 9460,
+      "parameters": 89886,
+      "N": 352,
+      "rank": 126,
+      "laws": 1,
+      "active_coefficients_per_tick": 89886,
+      "approx_flops_per_tick": 181884,
+      "peak_training_process_rss_KiB": 406464,
+      "ended_by": "step_cap",
+      "finished_utc": "2026-11-13T00:36:44.596679+00:00"
+    },
+    "teacher_forced": {
+      "train": {
+        "positions": 578147,
+        "response_tokens": 302414,
+        "correct": 275733,
+        "response_correct": 0,
+        "question_ticks": 266273,
+        "question_false_emits": 0,
+        "response_CE": 3.16948801169719,
+        "response_perplexity": 23.7952983227384,
+        "all_tick_CE": 1.6611747200260278,
+        "response_accuracy": 0.0,
+        "silence_false_positive_rate": 0.0,
+        "answer_bits_per_NFC_character_including_EOS": 9.680357152935976,
+        "answer_bits_per_UTF8_byte_including_EOS": 3.866664220673548,
+        "normalized_answer_characters": 142848,
+        "evaluation_lanes": 16
+      },
+      "validation": {
+        "positions": 69140,
+        "response_tokens": 35918,
+        "correct": 33222,
+        "response_correct": 0,
+        "question_ticks": 32072,
+        "question_false_emits": 0,
+        "response_CE": 3.146177035864534,
+        "response_perplexity": 23.247021954816827,
+        "all_tick_CE": 1.6385689114569046,
+        "response_accuracy": 0.0,
+        "silence_false_positive_rate": 0.0,
+        "answer_bits_per_NFC_character_including_EOS": 9.621746246329744,
+        "answer_bits_per_UTF8_byte_including_EOS": 3.8445236145312265,
+        "normalized_answer_characters": 16944,
+        "evaluation_lanes": 16
+      },
+      "test": {
+        "positions": 72713,
+        "response_tokens": 37577,
+        "correct": 35136,
+        "response_correct": 0,
+        "question_ticks": 33923,
+        "question_false_emits": 0,
+        "response_CE": 3.1354556090690204,
+        "response_perplexity": 22.999112059357437,
+        "all_tick_CE": 1.6244087176558288,
+        "response_accuracy": 0.0,
+        "silence_false_positive_rate": 0.0,
+        "answer_bits_per_NFC_character_including_EOS": 9.586047522095766,
+        "answer_bits_per_UTF8_byte_including_EOS": 3.8254443593149867,
+        "normalized_answer_characters": 17732,
+        "evaluation_lanes": 16
+      }
+    },
+    "generation_summary": {
+      "EOS_rate": 0.0,
+      "timeout_rate": 1.0,
+      "mean_decoded_characters": 0.0,
+      "valid_response_format_rate": 0.0,
+      "heldout_sample_exact": 0.0,
+      "keyword_proxy_pass_rate": 0.0
+    },
+    "memory_persistent": 0.0,
+    "memory_reset": 0.0,
+    "benchmark": {
+      "batch1_ticks_per_second": 18295.707965967722,
+      "tick_wall_seconds": 0.16397288399991794,
+      "input_step_detection_latency_seconds_mean": 8.901277999029845e-05,
+      "decoded_characters": 0,
+      "complete_generation_seconds": 0.17206839799996487,
+      "decoded_NFC_characters_per_second": 0.0,
+      "generated_tokens": 0,
+      "generated_tokens_per_second": 0.0,
+      "uncomposed_jamo": 0,
+      "approx_flops_per_tick": 181884,
+      "flops_exclusions": "nonlinear functions, parameter transforms, indexing, allocation, event and Python overhead",
+      "parameter_bytes": 359544,
+      "state_bytes": 1408,
+      "peak_process_rss_KiB": 406464,
+      "cpu": "AMD EPYC 9V74 80-Core Processor",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "python": "3.12.14",
+      "torch": "2.15.0+cpu",
+      "threads": 1,
+      "source_environment": "managed Codex Cloud, CPU only",
+      "old_Endophalon_comparison": "not matched: different hardware/task; no speedup claim"
+    }
+  }
+}

@@ -1,5 +1,12 @@
 # Tele-Neuron Engine
 
+**DynaMath 001a 데이터 출처**
+
+한국어 학습 데이터: Song Ys (`songys`)의
+[원본 Chatbot_data](https://github.com/songys/Chatbot_data), MIT LICENSE.
+데이터 제공자와 DynaMath 모델 개발 주체는 별개입니다.
+[001a 실행·결과 문서](docs/dynamath/experiment-001a/README.md).
+
 "ai 연산의 민주화"를 목표로 하는 개인 ai 프로젝트의
 물리학 기반 컴퓨팅을 실험하기 위한 첫번쨰 단일 PC 프로토타입입니다.
 

@@ -1,5 +1,10 @@
 # Tele-Neuron Engine
 
+**DynaMath 001a data credit:** Song Ys (`songys`),
+[original Chatbot_data](https://github.com/songys/Chatbot_data), MIT.
+The data author and DynaMath model developer are distinct.
+See [DynaMath 001a reproduction and results](docs/dynamath/experiment-001a/README.md).
+
 > **한국어:** [README.ko.md](README.ko.md)
 
 **DynaMath 1 (independent experimental branch):** five learned mathematical laws,

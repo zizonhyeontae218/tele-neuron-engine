@@ -1,0 +1,56 @@
+[
+  {
+    "args": [
+      "generate",
+      "--question",
+      "안녕하세요",
+      "--state-out",
+      "/workspace/work/cli-state.pt"
+    ],
+    "input": null,
+    "returncode": 0,
+    "stdout": "{\"question\": \"안녕하세요\", \"text\": \"알 어예요.\", \"token_ids\": [54, 62, 90, 5, 54, 66, 54, 69, 54, 74, 11], \"raw_symbols\": \"알 어예요.\", \"eos\": true, \"timeout\": false, \"token_limit\": false, \"ticks\": 26, \"question_events\": [\" \", \"ᅡ\", \"ᆫ\", \"ᄋ\"], \"unexpected_controls\": 0, \"uncomposed_jamo\": 0, \"replacement_characters\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "tick",
+      "--state-in",
+      "/workspace/work/cli-state.pt",
+      "--count",
+      "1",
+      "--state-out",
+      "/workspace/work/cli-next.pt"
+    ],
+    "input": null,
+    "returncode": 0,
+    "stdout": "{\"ticks_before\": 26, \"events\": [], \"ticks_after\": 27, \"phase\": 2}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "chat",
+      "--state-in",
+      "/workspace/work/cli-next.pt",
+      "--state-out",
+      "/workspace/work/cli-chat.pt"
+    ],
+    "input": "안녕하세요\n고마워\n/quit\n",
+    "returncode": 0,
+    "stdout": "DynaMath 001a experimental Korean demo; /quit exits.\nyou> {\"question\": \"안녕하세요\", \"text\": \"ᅥᆫ각 같아요.\", \"token_ids\": [66, 86, 43, 62, 83, 5, 43, 62, 104, 54, 62, 54, 74, 11], \"raw_symbols\": \"ᅥᆫ각 같아요.\", \"eos\": true, \"timeout\": false, \"token_limit\": false, \"ticks\": 30, \"question_events\": [], \"unexpected_controls\": 0, \"uncomposed_jamo\": 2, \"replacement_characters\": 0}\nyou> {\"question\": \"고마워\", \"text\": \"장안 얼 어일 거례요.\", \"token_ids\": [55, 62, 100, 54, 62, 86, 5, 54, 66, 90, 5, 54, 66, 54, 82, 90, 5, 43, 66, 48, 69, 54, 74, 11], \"raw_symbols\": \"장안 얼 어일 거례요.\", \"eos\": true, \"timeout\": false, \"token_limit\": false, \"ticks\": 33, \"question_events\": [], \"unexpected_controls\": 0, \"uncomposed_jamo\": 0, \"replacement_characters\": 0}\nyou> ",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "tick",
+      "--state-in",
+      "/workspace/work/cli-chat.pt",
+      "--count",
+      "7"
+    ],
+    "input": null,
+    "returncode": 0,
+    "stdout": "{\"ticks_before\": 90, \"events\": [], \"ticks_after\": 97, \"phase\": 2}\n",
+    "stderr": ""
+  }
+]

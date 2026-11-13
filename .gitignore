@@ -8,3 +8,4 @@ outputs/*
 !outputs/.gitkeep
 models/lab/*
 !models/lab/.gitkeep
+data/dynamath/001a/ChatbotData.csv

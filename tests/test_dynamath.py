@@ -30,7 +30,7 @@ def test_additive_signed_duplicate_addresses_and_phase_order():
 
 
 def test_event_does_not_mutate_state_tie_and_refractory():
-    s = Session(model(), threshold=0.1)
+    s = Session(model(), threshold=0.1, refractory=5, io_ticks=5)
     s.ticks = 5
     s.state[0, 2:4] = 0.5
     before = s.state.clone()
@@ -44,7 +44,7 @@ def test_event_does_not_mutate_state_tie_and_refractory():
 
 
 def test_idle_progress_and_snapshot_pending_queue_phase(tmp_path):
-    s = Session(model(), threshold=-1)
+    s = Session(model(), threshold=-1, refractory=5, io_ticks=5)
     s.consume("ab")
     before = s.state.clone()
     s.tick(2)
@@ -61,8 +61,8 @@ def test_idle_progress_and_snapshot_pending_queue_phase(tmp_path):
 
 def test_generation_uses_learned_state_and_additive_feedback():
     m = model()
-    actual = Session(m, threshold=-1)
-    manual = Session(m, threshold=-1)
+    actual = Session(m, threshold=-1, refractory=5, io_ticks=5)
+    manual = Session(m, threshold=-1, refractory=5, io_ticks=5)
     result = actual.generate("ab", max_chars=5, max_ticks=100, stop="")
     manual.consume("ab")
     expected = manual.poll()

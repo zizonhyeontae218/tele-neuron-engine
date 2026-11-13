@@ -1,5 +1,10 @@
 # Tele-Neuron Engine agent instructions
 
+DynaMath 001a (2026-11-13): the owner authorized continuing the existing
+feature/dynamath-001a copy of feature/dynamath-1. Canonical phase goal and budget:
+docs/dynamath/experiment-001a/GOAL.md. Preserve Experiment 001 and all legacy
+artifacts. No merge or changes to other branches.
+
 DynaMath 1 exception (2026-11-12): the owner explicitly authorized the isolated
 feature/dynamath-1 branch and its new experiments. This overrides the historical
 new-branch prohibition below only for that work; never merge it into master or

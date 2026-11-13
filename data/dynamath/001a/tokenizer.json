@@ -1,0 +1,13 @@
+{
+  "vocabulary": " !%',-.0123456789;?ABCDLNOPSXacgjknos~ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑ하ᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲᅳᅴᅵᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂ…ㅋㅎㅜㅠ",
+  "size": 112,
+  "normalization": "NFC ingest then NFD; decode NFC; unknown codepoints -> UNK",
+  "controls": {
+    "USER": 0,
+    "BOT": 1,
+    "EOS": 2,
+    "SILENCE": 3,
+    "UNK": 4
+  },
+  "learned": false
+}
