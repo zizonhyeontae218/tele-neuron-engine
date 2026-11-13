@@ -1,0 +1,11 @@
+{
+  "seed": 43, "threads": 2, "batch": 8, "tbptt_slots": 8,
+  "steps": 20, "seconds_cap_per_run": 120, "lr": 0.0002,
+  "candidate_laws": [0, 1, 2], "confirm_steps": 20,
+  "train_pairs": 512, "validation_pairs": 32, "test_pairs": 32,
+  "generation_pairs": 3, "generation_ticks": 180,
+  "selection": "lowest response CE on first 32 sorted validation IDs, including matched no-edit control; test only after selection",
+  "grammar": ["input", "tanh", "sin", "scale", "add", "clip"],
+  "target_schedule": "002 schedule: first check next-token target; second SILENCE",
+  "budget_note": "small CPU feasibility run: 3 candidates and 20+20 updates; alpha parameters allocated equally to all arms"
+}

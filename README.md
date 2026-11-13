@@ -71,3 +71,7 @@ hard writable runtime scalars. Includes Model 9, Model 3 local/cross-read, Model
 and frozen-scalar controls. See [execution notes](docs/dynamath/experiment-002/README.md)
 and [measured report](docs/dynamath/experiment-002/report.md).
 Run `python -m dynamath.v002 --help`. Legacy 001a commands and assets are preserved.
+
+## DynaMath 003
+
+The bounded structural-law search prototype, checkpoints, reproduction steps, and experimental limitations are documented in [experiment 003](docs/dynamath/experiment-003/README.md).

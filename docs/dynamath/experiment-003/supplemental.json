@@ -1,0 +1,169 @@
+{
+  "ablation": {
+    "selected": {
+      "response_CE": 1.618453464175576,
+      "response_perplexity": 5.0452815711738905,
+      "response_accuracy": 0.49310872894333846,
+      "response_omission_rate": 0.0,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 653,
+      "law_gate_counts": [
+        329,
+        37,
+        448,
+        179,
+        11,
+        6,
+        317,
+        5,
+        349
+      ],
+      "final_m": [
+        [
+          0.2831195592880249
+        ],
+        [
+          -1.4164470434188843
+        ],
+        [
+          -2.20369291305542
+        ],
+        [
+          0.8067107200622559
+        ],
+        [
+          -2.290386915206909
+        ],
+        [
+          0.22521723806858063
+        ],
+        [
+          -2.2655723094940186
+        ],
+        [
+          0.8869487643241882
+        ]
+      ]
+    },
+    "restore_parent_ast": {
+      "response_CE": 1.618453916436087,
+      "response_perplexity": 5.045283852956029,
+      "response_accuracy": 0.49310872894333846,
+      "response_omission_rate": 0.0,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 653,
+      "law_gate_counts": [
+        329,
+        37,
+        448,
+        179,
+        11,
+        6,
+        317,
+        5,
+        349
+      ],
+      "final_m": [
+        [
+          0.2831258177757263
+        ],
+        [
+          -1.4164475202560425
+        ],
+        [
+          -2.2037131786346436
+        ],
+        [
+          0.8067224025726318
+        ],
+        [
+          -2.2903993129730225
+        ],
+        [
+          0.2251894623041153
+        ],
+        [
+          -2.2655751705169678
+        ],
+        [
+          0.8868898749351501
+        ]
+      ]
+    },
+    "selected_alpha": -3.322591510368511e-05,
+    "one_tick_max_abs_difference": 2.7477741241455078e-05
+  },
+  "synthetic_recurrence": {
+    "target": "clip(tanh(x)+0.3*sin(x))",
+    "training_points": 51,
+    "heldout_interleaved_points": 50,
+    "updates_per_arm": 100,
+    "results": {
+      "parent": {
+        "alpha": 0.0,
+        "heldout_one_step_mse": 0.02449139580130577,
+        "nine_step_abs_error": 0.7150804996490479
+      },
+      "mutation": {
+        "alpha": 0.31122398376464844,
+        "heldout_one_step_mse": 5.888096552553179e-07,
+        "nine_step_abs_error": 0.0
+      }
+    }
+  },
+  "recall": {
+    "training_steps": 80,
+    "seed": 72,
+    "test_seed": 2026,
+    "results": {
+      "control": {
+        "accuracy": {
+          "0": {
+            "none": 1.0,
+            "state": 0.5546875,
+            "memory": 1.0,
+            "both": 0.5546875
+          },
+          "5": {
+            "none": 1.0,
+            "state": 0.5546875,
+            "memory": 1.0,
+            "both": 0.5546875
+          },
+          "20": {
+            "none": 1.0,
+            "state": 0.4453125,
+            "memory": 1.0,
+            "both": 0.4453125
+          }
+        },
+        "seconds": 0.4947393430000204,
+        "alpha": 0.0
+      },
+      "law1": {
+        "accuracy": {
+          "0": {
+            "none": 1.0,
+            "state": 0.5546875,
+            "memory": 1.0,
+            "both": 0.5546875
+          },
+          "5": {
+            "none": 1.0,
+            "state": 0.5546875,
+            "memory": 1.0,
+            "both": 0.5546875
+          },
+          "20": {
+            "none": 1.0,
+            "state": 0.4453125,
+            "memory": 1.0,
+            "both": 0.4453125
+          }
+        },
+        "seconds": 0.5334383460000254,
+        "alpha": 0.12870194017887115
+      }
+    }
+  }
+}

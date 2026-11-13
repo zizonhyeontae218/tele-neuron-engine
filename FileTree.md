@@ -23,6 +23,7 @@
 
 - `experiment-001a.json` — Contains experiment-001a data.
 - `experiment-002.json` — Contains experiment-002 data.
+- `experiment-003.json` — Contains experiment-003 data.
 
 ## `data/dynamath/001a`
 
@@ -113,7 +114,13 @@
 
 ## `docs/dynamath/experiment-003`
 
+- `CODEX_CLOUD_HANDOFF.md` — DynaMath 003 — Codex Cloud full implementation and initial experiment handoff.
 - `PLAN.md` — DynaMath 003 — defer: evolve mathematical laws rather than only their coefficients.
+- `README.md` — DynaMath 003: structural law search.
+- `evaluation-plan.json` — Contains evaluation-plan data.
+- `results-003.json` — Contains results-003 data.
+- `supplemental.json` — Contains supplemental data.
+- `verification.txt` — Contains verification data.
 
 ## `models/dynamath/001a`
 
@@ -165,12 +172,24 @@
 - `model3-cross-step60000.pt` — Contains model3-cross-step60000 data.
 - `model3-cross-step72000.pt` — Contains model3-cross-step72000 data.
 
+## `models/dynamath/003`
+
+- `README.md` — DynaMath 003 checkpoints.
+- `control-final.pt` — Contains control-final data.
+- `control-search.pt` — Contains control-search data.
+- `law1-final.pt` — Contains law1-final data.
+- `law1-search.pt` — Contains law1-search data.
+- `law2-search.pt` — Contains law2-search data.
+- `law3-search.pt` — Contains law3-search data.
+
 ## `scripts`
 
 - `audit_dynamath_001a.py` — Contains audit dynamath 001a data.
+- `check_dynamath_003.py` — Contains check dynamath 003 data.
 - `filetree_index.py` — Contains filetree index data.
 - `report_dynamath_002.py` — Contains report dynamath 002 data.
 - `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
+- `run_dynamath_003.py` — Contains run dynamath 003 data.
 - `train_dynamath_002a.py` — Contains train dynamath 002a data.
 - `train_dynamath_002b.py` — Contains train dynamath 002b data.
 - `verify_dynamath_001a.py` — Contains verify dynamath 001a data.
@@ -192,9 +211,16 @@
 - `__init__.py` — Contains   init   data.
 - `__main__.py` — Contains   main   data.
 
+## `src/dynamath/v003`
+
+- `README.md` — DynaMath 003 implementation.
+- `__init__.py` — Contains   init   data.
+- `__main__.py` — Contains   main   data.
+
 ## `tests`
 
 - `test_cli.py` — Contains test cli data.
 - `test_dynamath.py` — Contains test dynamath data.
 - `test_dynamath_001a.py` — Contains test dynamath 001a data.
 - `test_dynamath_002.py` — Contains test dynamath 002 data.
+- `test_dynamath_003.py` — Contains test dynamath 003 data.
