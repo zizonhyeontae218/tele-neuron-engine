@@ -16,6 +16,7 @@
 ## `.github/workflows`
 
 - `dynamath-002a-train.yml` — Contains dynamath-002a-train data.
+- `dynamath-002b-train.yml` — Contains dynamath-002b-train data.
 - `tests.yml` — Contains tests data.
 
 ## `configs/dynamath`
@@ -100,6 +101,20 @@
 - `summary.json` — Contains summary data.
 - `workflow-run.log` — Contains workflow-run data.
 
+## `docs/dynamath/experiment-002b`
+
+- `GOAL.md` — DynaMath 002b — final fixed-formula continuation.
+- `model1-progress.json` — Contains model1-progress data.
+- `model3-cross-progress.json` — Contains model3-cross-progress data.
+- `plan-and-environment.json` — Contains plan-and-environment data.
+- `report.md` — DynaMath 002b — final measured continuation.
+- `summary.json` — Contains summary data.
+- `workflow-run.log` — Contains workflow-run data.
+
+## `docs/dynamath/experiment-003`
+
+- `PLAN.md` — DynaMath 003 — defer: evolve mathematical laws rather than only their coefficients.
+
 ## `models/dynamath/001a`
 
 - `README.md` — DynaMath 001a saved models.
@@ -139,6 +154,17 @@
 - `model9-frozen-step3600.pt` — Contains model9-frozen-step3600 data.
 - `model9-frozen-step7200.pt` — Contains model9-frozen-step7200 data.
 
+## `models/dynamath/002b`
+
+- `model1-step30000.pt` — Contains model1-step30000 data.
+- `model1-step45000.pt` — Contains model1-step45000 data.
+- `model1-step60000.pt` — Contains model1-step60000 data.
+- `model1-step72000.pt` — Contains model1-step72000 data.
+- `model3-cross-step30000.pt` — Contains model3-cross-step30000 data.
+- `model3-cross-step45000.pt` — Contains model3-cross-step45000 data.
+- `model3-cross-step60000.pt` — Contains model3-cross-step60000 data.
+- `model3-cross-step72000.pt` — Contains model3-cross-step72000 data.
+
 ## `scripts`
 
 - `audit_dynamath_001a.py` — Contains audit dynamath 001a data.
@@ -146,6 +172,7 @@
 - `report_dynamath_002.py` — Contains report dynamath 002 data.
 - `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
 - `train_dynamath_002a.py` — Contains train dynamath 002a data.
+- `train_dynamath_002b.py` — Contains train dynamath 002b data.
 - `verify_dynamath_001a.py` — Contains verify dynamath 001a data.
 - `verify_dynamath_002.py` — Contains verify dynamath 002 data.
 

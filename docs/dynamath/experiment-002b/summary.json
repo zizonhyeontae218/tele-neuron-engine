@@ -1,0 +1,18 @@
+{
+  "model1": {
+    "steps": 72000,
+    "complete": true,
+    "validation_CE": 1.5116398606029806,
+    "final_test_CE": 1.508317716862098,
+    "final_test_PPL": 4.519121953336061,
+    "eos_count": 17
+  },
+  "model3-cross": {
+    "steps": 72000,
+    "complete": true,
+    "validation_CE": 1.519231032154666,
+    "final_test_CE": 1.505358852174901,
+    "final_test_PPL": 4.5057702456604245,
+    "eos_count": 13
+  }
+}

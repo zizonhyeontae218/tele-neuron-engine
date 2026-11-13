@@ -1,0 +1,11 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/_subclasses/functional_tensor.py:377: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /__w/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:82.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+{"model": "model1", "step": 30000, "validation_CE": 1.594306210081293}
+{"model": "model1", "step": 45000, "validation_CE": 1.5357101712524726}
+{"model": "model1", "step": 60000, "validation_CE": 1.5548169496046684}
+{"model": "model1", "step": 72000, "validation_CE": 1.5116398606029806}
+{"model": "model3-cross", "step": 30000, "validation_CE": 1.603862357086889}
+{"model": "model3-cross", "step": 45000, "validation_CE": 1.5460643819501914}
+{"model": "model3-cross", "step": 60000, "validation_CE": 1.5342524491573954}
+{"model": "model3-cross", "step": 72000, "validation_CE": 1.519231032154666}
+002b completed all variants: True
