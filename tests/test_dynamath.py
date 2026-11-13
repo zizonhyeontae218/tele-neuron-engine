@@ -3,8 +3,7 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from tele_neuron.dynamath import Config, DynaMath, Session
-from tele_neuron.dynamath.training import train_text
+from dynamath import Config, DynaMath, Session
 
 
 def model():
@@ -99,23 +98,3 @@ def test_bounded_idle_after_large_signed_input():
         state = m.transition(state, phase)
     assert torch.isfinite(state).all()
     assert float(state.detach().abs().max()) <= 1.00001
-
-
-def test_character_training_resume_is_exact(tmp_path):
-    train = tmp_path / "train.txt"
-    val = tmp_path / "val.txt"
-    train.write_text("ab a ba ab a ba\n" * 3)
-    val.write_text("ba ab a\n")
-    partial = tmp_path / "partial.pt"
-    resumed = tmp_path / "resumed.pt"
-    full = tmp_path / "full.pt"
-    train_text(train, val, partial, steps=2)
-    train_text(train, val, resumed, steps=4, resume=partial)
-    train_text(train, val, full, steps=4)
-    a, pa = DynaMath.load(resumed)
-    b, pb = DynaMath.load(full)
-    for name in a.state_dict():
-        assert torch.equal(a.state_dict()[name], b.state_dict()[name])
-    assert torch.equal(pa["state"], pb["state"])
-    assert torch.equal(pa["offsets"], pb["offsets"])
-    assert pa["ticks"] == pb["ticks"] and pa["phase"] == 0

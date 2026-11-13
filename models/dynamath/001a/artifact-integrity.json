@@ -1,0 +1,31 @@
+{
+  "designation": "DynaMath 001a",
+  "baseline_commit": "d5127ab7ee1a4a0e1001e534c6e5048c7ef3cd72",
+  "purpose": "Frozen checkpoint, source and experiment evidence hashes before DynaMath-only cleanup.",
+  "files": {
+    "configs/dynamath/experiment-001a.json": "2abd7bbb5c165682836c1de4839ae86dac5536efe804e5dd0d62e02e10450d8b",
+    "data/dynamath/001a/songys-LICENSE.txt": "1d8084ef9ea897ec462ce6c0e538f97967894699aac65c933804062714d3330a",
+    "data/dynamath/001a/source-report.json": "1110e6608f0a1e784b7e14f8cc9bdf201178019aed351f571a60b57c5765a89c",
+    "data/dynamath/001a/split-manifest.json": "171479dfb689484a1da104156ad6a812ccbfcb8d706f6a2cd639ac4feefd8922",
+    "data/dynamath/001a/tokenizer.json": "c7e22ff0070c4464c1e6fe606729b6e1aa94610302dd7cc65c93a303d63df915",
+    "docs/dynamath/experiment-001a/GOAL.md": "40f202f42d5c6209c67a88adcb824c814b38c59b70d9690bab899622cc6eec37",
+    "docs/dynamath/experiment-001a/cli-verification.json": "ae627757d9126db3f145669734e2bad083876c70d4566b6c37018721cff0e51a",
+    "docs/dynamath/experiment-001a/evaluation-plan.json": "f06b40f711ea965893dbe9147a65c4f18d90ef94a871a07fda5ed6cbb3549a83",
+    "docs/dynamath/experiment-001a/five-1tick.json": "70bb1f3b680e3d6e8cad129d23165b5993acfbf64d5c154a47ecab9137e0bb97",
+    "docs/dynamath/experiment-001a/five-5tick.json": "1cd6cb73293fd5c410a8507285159a36482055939b109677c26ce77b7915c02e",
+    "docs/dynamath/experiment-001a/handoff.md": "03c17f8f0c27cea27b43628fbd4c2aa4b6102c6eac41ee886f72e165992db293",
+    "docs/dynamath/experiment-001a/one-1tick.json": "474bb40d204c8f22684d7775a8ee8f115219d6a761d016906fae0c59c75c7f8c",
+    "docs/dynamath/experiment-001a/one-matched-1tick.json": "8d1b9d152e5c5a0b35595c2c8e98a70796170b4f8511be365fede1f41ba949d6",
+    "docs/dynamath/experiment-001a/results.json": "7b76f958bbbc5ce7ab87c405b2e0e756d19bf52112592f8f486eb008c7abd20d",
+    "docs/dynamath/experiment-001a/saved-checkpoint-verification.json": "90a9b16865dc86d16076046918ea59b4f475c8434a10a75e6b81099daa57ff47",
+    "docs/dynamath/experiment-001a/semantic-review.json": "a912ab86ebba2d7b0f6ec598f57a66bbb3b4f500a8bf402963f7d2f966a3fb30",
+    "docs/dynamath/experiment-001a/stage-a-old-weights.json": "d2b3595b1a7d972e9e2c1105413f359b4581022398401b37a655c519851a81e3",
+    "docs/dynamath/experiment-001a/stage-a-tests.log": "fec261cf45cee288bd6b46a9d89bc41a10c3bfb103cb29f1eb3489813a4669d7",
+    "docs/dynamath/experiment-001a/training-run.log": "1d3e50274e5790676b765b4229b0a7e01cfbd89abae87b65bbee4593c05112b7",
+    "models/dynamath/001a/five-1tick.pt": "b800ea2576cf0463f3ac18cfa809ace11fd5a4866b7638e848b70f93d24fc4e2",
+    "models/dynamath/001a/five-5tick.pt": "d0e04c657b89fe4ce840cf52e4e16929222b701c52fe309244e9ea8141543bba",
+    "models/dynamath/001a/model-card.json": "ceef1f18b455c0c85c1c15ac63c527ab84c36ca27e2365326ce6b14d6a2960fc",
+    "models/dynamath/001a/one-1tick.pt": "d469b129a20c9e81ebf090f61e2b26715498f56db0ab43faac70699a8cf3fb36",
+    "models/dynamath/001a/one-matched-1tick.pt": "f51bfcaae49c9d89486473f46e136a8ef125953d33d0b550f9516685b175f4c6"
+  }
+}

@@ -1,26 +1,28 @@
-name: tests
+name: DynaMath checks
 
 on:
   push:
   pull_request:
 
 jobs:
-  pytest:
+  dynamath:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      - name: Install
+          python-version: '3.11'
+      - name: Install DynaMath
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install -e .
-          python -m pip install -r requirements.txt
-      - name: DynaMath CPU dependencies
-        if: contains(github.ref, 'dynamath') || contains(github.head_ref, 'dynamath')
-        run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
-      - name: Tests
-        run: python -m pytest
-      - name: Model CLI smoke
-        run: python scripts/smoke_models.py
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[dev]'
+      - name: DynaMath tests
+        run: python -m pytest -q
+      - name: Saved model and snapshot replay
+        run: python scripts/verify_dynamath_001a.py --output /tmp/dynamath-replay.json
+      - name: Check frozen experiment artifacts
+        run: python scripts/audit_dynamath_001a.py
+      - name: Check file index
+        run: python scripts/filetree_index.py lint
+      - name: CLI entry point
+        run: dynamath generate --question '안녕하세요'

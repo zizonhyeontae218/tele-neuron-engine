@@ -1,0 +1,13 @@
+{
+  "phase": "DynaMath-only branch cleanup",
+  "baseline_commit": "d5127ab7ee1a4a0e1001e534c6e5048c7ef3cd72",
+  "removed_unrelated_or_superseded_files": 531,
+  "current_tests_passed": 22,
+  "frozen_artifacts_unchanged": 24,
+  "other_remote_refs_unchanged": true,
+  "recorded_generations_replayed_identically": 64,
+  "runtime_snapshots_restore_exactly": true,
+  "wheel_isolated_import_and_generation": "passed; legacy namespace absent",
+  "local_markdown_links": "passed",
+  "new_training_runs": 0
+}

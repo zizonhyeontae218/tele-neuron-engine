@@ -2,10 +2,10 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .pytest_cache/
+.venv/
+build/
+dist/
 .coverage
 htmlcov/
-outputs/*
-!outputs/.gitkeep
-models/lab/*
-!models/lab/.gitkeep
+work/
 data/dynamath/001a/ChatbotData.csv

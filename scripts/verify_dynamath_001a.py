@@ -1,4 +1,5 @@
 """Replay saved-checkpoint samples without corpus access and measure decoded Korean."""
+import argparse
 import json
 from pathlib import Path
 import time
@@ -6,12 +7,15 @@ import tempfile
 
 import torch
 
-from tele_neuron.dynamath.core import DynaMath
-import tele_neuron.dynamath.korean as korean
-from tele_neuron.dynamath.training import dump, setup
+from dynamath.core import DynaMath
+import dynamath.korean as korean
+from dynamath.training import dump, setup
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", help="optional replay JSON; original experiment evidence is never overwritten")
+    args = parser.parse_args()
     setup(43)
     def forbidden(*args, **kwargs):
         raise AssertionError('generation must not load corpus/answers')
@@ -51,7 +55,11 @@ def main():
           'generated_tokens': sum(len(s['token_ids']) for s in samples),
           'uncomposed_Jamo': sum(s['uncomposed_jamo'] for s in samples),
           'benchmark_question': '안녕하세요', 'first_output': samples[0]}
-    dump(evidence / 'saved-checkpoint-verification.json', results)
+    if args.output:
+        output = Path(args.output).resolve()
+        if output.is_relative_to(evidence.resolve()):
+            raise ValueError("write replay output outside frozen experiment evidence")
+        dump(output, results)
     print(json.dumps(results, ensure_ascii=False, indent=2))
 
 

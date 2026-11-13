@@ -1,31 +1,28 @@
-# Tele-Neuron Engine agent instructions
+# DynaMath series development
 
-DynaMath 001a (2026-11-13): the owner authorized continuing the existing
-feature/dynamath-001a copy of feature/dynamath-1. Canonical phase goal and budget:
-docs/dynamath/experiment-001a/GOAL.md. Preserve Experiment 001 and all legacy
-artifacts. No merge or changes to other branches.
+This branch is the DynaMath series home. The owner explicitly authorized removing
+unrelated models and superseded experiments from this branch on 2026-11-13.
+This supersedes historical keep-all instructions in archived experiment briefs.
+Do not modify other branches, tags or the repository default branch; never force
+push or rewrite history. Current branch: feature/dynamath-001a.
 
-DynaMath 1 exception (2026-11-12): the owner explicitly authorized the isolated
-feature/dynamath-1 branch and its new experiments. This overrides the historical
-new-branch prohibition below only for that work; never merge it into master or
-endophalon3. See docs/dynamath/GOAL.md and src/tele_neuron/dynamath/AGENTS.md.
+Read GOAL.md, FileTree.md, docs/dynamath/architecture.md and the versioned goal/report.
+Current baseline is DynaMath 001a, not a useful conversational model. Preserve its
+checkpoint bytes, frozen split/tokenizer, raw training/evaluation results and credits.
+No new training or quality-driven reruns without a separately budgeted task.
 
-Read GOAL.md, FileTree.md, docs/model_commands.md and docs/endophalon3_software.md.
-Current 3 is ONLY independent A/B, connected by explicit predicted-output registers.
-A/B each own physical state, clock, RNG and local history. Pause the inactive model.
-144 nodes, 2 substeps, gap16, delay12, 16 zones per active model. No oracle input.
+One persistent numeric information state, additive input, exactly one cyclic law
+per tick and immediate output inspection. Only law coefficients learn. No trained
+encoder/head, answer lookup, output reset or private state per law. SILENCE is an
+ordinary fixed output address. Keep 5-tick and single-law controls reproducible.
 
-The owner authorized deletion of obsolete 3T/shared-state/old model artifacts;
-experimental history is consolidated in docs/endophalon3_development.md.
-Do not restore discarded versions or launch new searches without a new task.
-Current A/B training is 120 generations each; report failures and accuracy gates plainly.
-Preserve current models/configs/seeds, current reproducibility evidence and all v1/v2.
+Code: src/dynamath; tests: tests/test_dynamath*.py and tests/test_cli.py; assets remain
+versioned under */dynamath/001a or configs/dynamath. Future versions get their own
+goal, configuration and evidence directory. The root README indexes the series.
 
-master and endophalon3 must stay aligned. No new remote work branch, force push,
-history rewriting or unrelated branch deletion. Leave Claude, generation archives
-and iPad Lab branches intact; retain ipad_lab.html and v1/v2 backup consolidation.
-
-Commands: python -m pytest -q; python scripts/smoke_models.py;
-python scripts/verify_backup_consolidation.py; python scripts/filetree_index.py update;
-python scripts/filetree_index.py lint. Install: python -m pip install -e . -r requirements.txt.
-Model training/audit commands are in docs/model_commands.md.
+Install: pip install torch --index-url https://download.pytorch.org/whl/cpu;
+pip install -e '.[dev]'. Commands: python -m dynamath --help; python -m pytest -q;
+python scripts/verify_dynamath_001a.py --output <scratch.json>;
+python scripts/audit_dynamath_001a.py; python scripts/filetree_index.py update;
+python scripts/filetree_index.py lint. The repository-local index tool is the
+available Filetree fallback. Never hand-edit generated indexes.

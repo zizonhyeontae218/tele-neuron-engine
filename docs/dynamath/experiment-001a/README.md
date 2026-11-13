@@ -4,6 +4,10 @@ Data credit: **Song Ys (`songys`)**, [original Chatbot_data](https://github.com/
 MIT; license and source pin in `data/dynamath/001a/`. This is a DynaMath experiment,
 not a model developed by the dataset author.
 
+Current package/CLI: `dynamath` (`python -m dynamath` also routes to the Korean CLI).
+Historical logs retain the original package name; the cleanup changes no model
+coefficients or recorded experimental results. See [cleanup record](../branch-cleanup.md).
+
 Frozen goal/budget: [GOAL.md](GOAL.md). Final results: [report.md](report.md).
 Raw outputs, including broken text and silence errors, are in the variant JSON
 files. No pretrained language model, learned tokenizer, answer lookup, embedding
@@ -14,16 +18,15 @@ From the repository root (CPU only):
 ```bash
 python -m venv .venv
 . .venv/bin/activate
-pip install -e . -r requirements.txt
 pip install torch --index-url https://download.pytorch.org/whl/cpu
-python -m tele_neuron.dynamath.korean_data
-python -m tele_neuron.dynamath.korean generate --question '안녕하세요'
-python -m tele_neuron.dynamath.korean chat --state-out /tmp/001a-session.pt
-python -m tele_neuron.dynamath.korean tick --state-in /tmp/001a-session.pt --count 1 --state-out /tmp/001a-next.pt
+pip install -e '.[dev]'
+python -m dynamath.korean_data
+python -m dynamath.korean generate --question '안녕하세요'
+python -m dynamath.korean chat --state-out /tmp/001a-session.pt
+python -m dynamath.korean tick --state-in /tmp/001a-session.pt --count 1 --state-out /tmp/001a-next.pt
 python -m pytest -q
-python scripts/smoke_models.py
-python scripts/verify_backup_consolidation.py
 python scripts/audit_dynamath_001a.py
+python scripts/verify_dynamath_001a.py --output /tmp/dynamath-replay.json
 python scripts/filetree_index.py lint
 ```
 
@@ -39,7 +42,7 @@ To reproduce training, use a clean copy with `models/dynamath/001a/*.pt` and the
 generated variant JSONs moved aside, then run:
 
 ```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m tele_neuron.dynamath.korean experiment
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m dynamath.korean experiment
 ```
 
 Existing experiment outputs refuse overwrite. Acquisition verifies the pinned
@@ -50,8 +53,8 @@ does not read the dataset, evaluation targets or frequent-answer baseline.
 Individual bounded training/resume is also supported, into new paths:
 
 ```bash
-python -m tele_neuron.dynamath.korean train --output /tmp/001a-partial.pt --steps 100
-python -m tele_neuron.dynamath.korean train --resume /tmp/001a-partial.pt --output /tmp/001a-resumed.pt --steps 2400
+python -m dynamath.korean train --output /tmp/001a-partial.pt --steps 100
+python -m dynamath.korean train --resume /tmp/001a-partial.pt --output /tmp/001a-resumed.pt --steps 2400
 ```
 
 `--steps` is total, not additional updates. Resume validates data, vocabulary,
@@ -87,7 +90,8 @@ begin at whole-pair boundaries and persist across their assigned conversations.
 Independent splits/probes start from zero. One-law controls use modulo 1 by design.
 
 The 5-tick control uses explicit `io_ticks=5` and original eligibility boundaries.
-Original Experiment 001 weights remain available: use
-`Session(model, io_ticks=5, refractory=5)` to reproduce their trained schedule.
+The 001a timing control retains explicit 5-tick behavior. Original Experiment 001
+weights/code are available in Git history and feature/dynamath-1, outside this
+dedicated current tree; use its historical instructions for reproduction.
 The default `Session` now uses one-tick input/generation and refractory=1.
 Old session snapshots without `io_ticks` restore the legacy schedule.

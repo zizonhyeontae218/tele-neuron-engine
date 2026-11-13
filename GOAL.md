@@ -1,7 +1,30 @@
-# Endophalon 3 — independent A/B release
+# DynaMath series — dedicated branch
 
-A/B each completed 120 generations and passed saved-model audits. Current models are models/endophalon3_software/A.json, B.json and current.json. Separate states/clocks/RNG and local histories, explicit predicted-bit software registers. Old 3 variants/artifacts removed from active tree; experiment results only in docs/endophalon3_development.md. No history rewrite or unrelated branch changes.
+Make feature/dynamath-001a the DynaMath series home and retain only DynaMath 001a
+and files needed for its reproduction and future work. This is repository cleanup,
+not a new training phase. Original experiment evidence remains historical.
 
-Confirmation: A 89.17% (gate False), B 76.61% (gate False). Budget completion is separate from accuracy success. No further training was started.
+Keep: one independent src/dynamath package, current Korean CLI/training/data tools,
+core/runtime tests, 001a configuration, source pins/license/split/tokenizer,
+four 001a checkpoints and raw metrics/samples, shared architecture, development
+instructions, focused CI and generated file index. Keep 5-tick/single-law controls.
 
-Both overall user targets (A >=90%, B >=80%) and the strict overall90/all-ops85 gates were missed. A recall2 and B parity3w/xor_mem remain weak. Original Actions postprocessing failed; unchanged trained artifacts were verified and recovered without retraining. Details: docs/endophalon3_development.md.
+Remove: unrelated model families/apps, training archives, workflows and tests;
+superseded Experiment 001 toy English training assets/code/checkpoints; old
+preservation inventories and duplicate logs that refer to the removed tree.
+Prior history remains reachable through the parent commit and other existing refs.
+
+Plan: remove dependencies on the old package initializer; move the DynaMath package
+to src/dynamath; retain only shared training helpers used by 001a; route
+python -m dynamath and the dynamath console command to the Korean CLI; update
+packaging, imports, docs and CI. Replace the old whole-tree audit with a focused
+001a checkpoint/source/evidence integrity check. Keep architecture and checkpoint
+schema/coefficients unchanged. No new remote branch, merge or history rewrite.
+
+Acceptance: DynaMath-only README/branch tree; clean install without removed model
+dependencies; full surviving tests pass; all 64 recorded sample replays match;
+001a checkpoints/frozen data/raw experiment results byte-identical to d5127ab;
+CLI generation/chat/tick restore works; index lint passes; other refs unchanged.
+
+Current experiment goal/report: docs/dynamath/experiment-001a/{GOAL,report}.md.
+Scientific limitation remains semantic evaluation 0/6 and no demonstrated recall.

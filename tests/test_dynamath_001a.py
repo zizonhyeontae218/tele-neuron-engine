@@ -3,9 +3,9 @@ import pytest
 
 torch = pytest.importorskip('torch')
 
-from tele_neuron.dynamath import Config, DynaMath, Session
-from tele_neuron.dynamath.korean import KoreanSession, advance, train
-from tele_neuron.dynamath.korean_data import BOT, EOS, SILENCE, USER, UNK, Tokenizer, grouped_split
+from dynamath import Config, DynaMath, Session
+from dynamath.korean import KoreanSession, advance, train
+from dynamath.korean_data import BOT, EOS, SILENCE, USER, UNK, Tokenizer, grouped_split
 
 
 def constant_model():

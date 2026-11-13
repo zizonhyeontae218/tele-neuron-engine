@@ -240,7 +240,13 @@ pytest9.2.0; Linux-6.18.57-x86_64-with-glibc2.41; torch/OMP/BLAS threads1.
 Training times exclude acquisition, installation, evaluation and serialization.
 The old Endophalon comparison is not matched in task or hardware; no speedup claim.
 
-## Verification and delivery
+## Original experiment verification and delivery
+
+These original counts refer to experiment commit `d5127ab`, before the later
+user-authorized DynaMath-only branch cleanup. Removed families and old scripts
+remain available in that commit. Current install/CLI and focused verification
+commands are in the root README and [cleanup record](../branch-cleanup.md). The
+recorded metrics, samples and checkpoint bytes below were not changed by cleanup.
 
 - `python -m pytest -q`: **112 passed**, including14 new invariant/protocol/resume
   cases (21 combined with the7 original DynaMath tests).
