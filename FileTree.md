@@ -15,6 +15,7 @@
 
 ## `.github/workflows`
 
+- `dynamath-002a-train.yml` — Contains dynamath-002a-train data.
 - `tests.yml` — Contains tests data.
 
 ## `configs/dynamath`
@@ -88,6 +89,17 @@
 - `tests.log` — Contains tests data.
 - `training-run.log` — Contains training-run data.
 
+## `docs/dynamath/experiment-002a`
+
+- `GOAL.md` — DynaMath 002a — intensive continuation on the EXISTING 002 branch.
+- `model1-progress.json` — Contains model1-progress data.
+- `model3-cross-progress.json` — Contains model3-cross-progress data.
+- `model9-frozen-progress.json` — Contains model9-frozen-progress data.
+- `plan-and-environment.json` — Contains plan-and-environment data.
+- `report.md` — DynaMath 002a — measured continuation.
+- `summary.json` — Contains summary data.
+- `workflow-run.log` — Contains workflow-run data.
+
 ## `models/dynamath/001a`
 
 - `README.md` — DynaMath 001a saved models.
@@ -112,12 +124,28 @@
 - `model9-recall.pt` — Contains model9-recall data.
 - `model9.pt` — Contains model9 data.
 
+## `models/dynamath/002a`
+
+- `model1-step12000.pt` — Contains model1-step12000 data.
+- `model1-step18000.pt` — Contains model1-step18000 data.
+- `model1-step3600.pt` — Contains model1-step3600 data.
+- `model1-step7200.pt` — Contains model1-step7200 data.
+- `model3-cross-step12000.pt` — Contains model3-cross-step12000 data.
+- `model3-cross-step18000.pt` — Contains model3-cross-step18000 data.
+- `model3-cross-step3600.pt` — Contains model3-cross-step3600 data.
+- `model3-cross-step7200.pt` — Contains model3-cross-step7200 data.
+- `model9-frozen-step12000.pt` — Contains model9-frozen-step12000 data.
+- `model9-frozen-step18000.pt` — Contains model9-frozen-step18000 data.
+- `model9-frozen-step3600.pt` — Contains model9-frozen-step3600 data.
+- `model9-frozen-step7200.pt` — Contains model9-frozen-step7200 data.
+
 ## `scripts`
 
 - `audit_dynamath_001a.py` — Contains audit dynamath 001a data.
 - `filetree_index.py` — Contains filetree index data.
 - `report_dynamath_002.py` — Contains report dynamath 002 data.
 - `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
+- `train_dynamath_002a.py` — Contains train dynamath 002a data.
 - `verify_dynamath_001a.py` — Contains verify dynamath 001a data.
 - `verify_dynamath_002.py` — Contains verify dynamath 002 data.
 

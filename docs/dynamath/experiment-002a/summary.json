@@ -1,0 +1,26 @@
+{
+  "model1": {
+    "steps": 18000,
+    "complete": true,
+    "validation_CE": 1.6657980700757318,
+    "final_test_CE": 1.6648470333599887,
+    "final_test_PPL": 5.284864779919584,
+    "eos_count": 17
+  },
+  "model3-cross": {
+    "steps": 18000,
+    "complete": true,
+    "validation_CE": 1.669354862362948,
+    "final_test_CE": 1.6572144233599129,
+    "final_test_PPL": 5.244681016728755,
+    "eos_count": 17
+  },
+  "model9-frozen": {
+    "steps": 18000,
+    "complete": true,
+    "validation_CE": 1.6942219800365375,
+    "final_test_CE": 1.6792606569302018,
+    "final_test_PPL": 5.361590450619801,
+    "eos_count": 16
+  }
+}

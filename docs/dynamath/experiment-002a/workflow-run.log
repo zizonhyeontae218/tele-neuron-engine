@@ -1,0 +1,15 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/_subclasses/functional_tensor.py:377: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /__w/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:82.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+{"model": "model1", "step": 3600, "validation_CE": 1.931918067444624}
+{"model": "model1", "step": 7200, "validation_CE": 1.7986088618787557}
+{"model": "model1", "step": 12000, "validation_CE": 1.7488481641219245}
+{"model": "model1", "step": 18000, "validation_CE": 1.6657980700757318}
+{"model": "model3-cross", "step": 3600, "validation_CE": 1.9693389220760218}
+{"model": "model3-cross", "step": 7200, "validation_CE": 1.8036369374882735}
+{"model": "model3-cross", "step": 12000, "validation_CE": 1.765286063437447}
+{"model": "model3-cross", "step": 18000, "validation_CE": 1.669354862362948}
+{"model": "model9-frozen", "step": 3600, "validation_CE": 1.9207353386445092}
+{"model": "model9-frozen", "step": 7200, "validation_CE": 1.816961916406753}
+{"model": "model9-frozen", "step": 12000, "validation_CE": 1.7414809863145528}
+{"model": "model9-frozen", "step": 18000, "validation_CE": 1.6942219800365375}
+002a completed all variants: True
