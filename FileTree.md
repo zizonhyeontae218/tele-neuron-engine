@@ -24,6 +24,7 @@
 - `experiment-001a.json` — Contains experiment-001a data.
 - `experiment-002.json` — Contains experiment-002 data.
 - `experiment-003.json` — Contains experiment-003 data.
+- `experiment-003a.json` — Contains experiment-003a data.
 
 ## `data/dynamath/001a`
 
@@ -122,6 +123,18 @@
 - `supplemental.json` — Contains supplemental data.
 - `verification.txt` — Contains verification data.
 
+## `docs/dynamath/experiment-003a`
+
+- `README.md` — DynaMath 003a — executable CPU pilot.
+- `ablation.json` — Contains ablation data.
+- `architecture.md` — 003a architecture and boundaries.
+- `data-audit.json` — Contains data-audit data.
+- `english-results.json` — Contains english-results data.
+- `english-search.json` — Contains english-search data.
+- `formula-library.json` — Contains formula-library data.
+- `korean-search.json` — Contains korean-search data.
+- `verification.txt` — Contains verification data.
+
 ## `models/dynamath/001a`
 
 - `README.md` — DynaMath 001a saved models.
@@ -182,16 +195,41 @@
 - `law2-search.pt` — Contains law2-search data.
 - `law3-search.pt` — Contains law3-search data.
 
+## `models/dynamath/003a/english`
+
+- `candidate1-search.pt` — Contains candidate1-search data.
+- `candidate2-search.pt` — Contains candidate2-search data.
+- `candidate3-search.pt` — Contains candidate3-search data.
+- `control-final.pt` — Contains control-final data.
+- `control-search.pt` — Contains control-search data.
+- `control.pt` — Contains control data.
+- `leader-final.pt` — Contains leader-final data.
+- `offspring-final.pt` — Contains offspring-final data.
+
+## `models/dynamath/003a/korean`
+
+- `candidate1-search.pt` — Contains candidate1-search data.
+- `candidate2-search.pt` — Contains candidate2-search data.
+- `candidate3-search.pt` — Contains candidate3-search data.
+- `control-final.pt` — Contains control-final data.
+- `control-search.pt` — Contains control-search data.
+- `leader-final.pt` — Contains leader-final data.
+- `offspring-final.pt` — Contains offspring-final data.
+
 ## `scripts`
 
 - `audit_dynamath_001a.py` — Contains audit dynamath 001a data.
 - `check_dynamath_003.py` — Contains check dynamath 003 data.
+- `check_dynamath_003a_catalog.py` — Contains check dynamath 003a catalog data.
+- `evaluate_dynamath_003a.py` — Contains evaluate dynamath 003a data.
 - `filetree_index.py` — Contains filetree index data.
 - `report_dynamath_002.py` — Contains report dynamath 002 data.
 - `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
 - `run_dynamath_003.py` — Contains run dynamath 003 data.
+- `run_dynamath_003a.py` — Contains run dynamath 003a data.
 - `train_dynamath_002a.py` — Contains train dynamath 002a data.
 - `train_dynamath_002b.py` — Contains train dynamath 002b data.
+- `train_dynamath_003a_english.py` — Contains train dynamath 003a english data.
 - `verify_dynamath_001a.py` — Contains verify dynamath 001a data.
 - `verify_dynamath_002.py` — Contains verify dynamath 002 data.
 
@@ -217,6 +255,17 @@
 - `__init__.py` — Contains   init   data.
 - `__main__.py` — Contains   main   data.
 
+## `src/dynamath/v003a`
+
+- `__init__.py` — Contains   init   data.
+- `__main__.py` — Contains   main   data.
+- `ast.py` — Contains ast data.
+- `english_data.py` — Contains english data data.
+- `formula_forge.py` — Contains formula forge data.
+- `mutation.py` — Contains mutation data.
+- `search.py` — Contains search data.
+- `training.py` — Contains training data.
+
 ## `tests`
 
 - `test_cli.py` — Contains test cli data.
@@ -224,3 +273,4 @@
 - `test_dynamath_001a.py` — Contains test dynamath 001a data.
 - `test_dynamath_002.py` — Contains test dynamath 002 data.
 - `test_dynamath_003.py` — Contains test dynamath 003 data.
+- `test_dynamath_003a.py` — Contains test dynamath 003a data.

@@ -1,0 +1,242 @@
+{
+  "english": {
+    "leader": {
+      "expression": "((tanh(sin(atan(tanh(z))))+(tanh(sin(atan(tanh(z)))))³)/2+atan(tanh(z)))/2",
+      "nodes": 8,
+      "alpha": 0.0,
+      "validation": {
+        "response_CE": 3.2974058597997074,
+        "response_perplexity": 27.042396083373745,
+        "response_accuracy": 0.10608598548297041,
+        "response_omission_rate": 0.6085985482970407,
+        "silence_false_emission_rate": 0.012745618693574084,
+        "response_tokens": 1791
+      },
+      "restored_validation": {
+        "response_CE": 3.5295438015680616,
+        "response_perplexity": 34.10840386458613,
+        "response_accuracy": 0.08598548297040759,
+        "response_omission_rate": 0.5734226689000559,
+        "silence_false_emission_rate": 0.002301292264117543,
+        "response_tokens": 1791
+      },
+      "restored_minus_changed_CE": 0.23213794176835423
+    },
+    "offspring": {
+      "expression": "clip(((tanh(sin(atan(tanh(z))))+(tanh(sin(atan(tanh(z)))))³)/2+atan(tanh(z)))/2+tanh(α)·(tanh(S)),−1,1)",
+      "nodes": 10,
+      "alpha": 0.0027705731336027384,
+      "validation": {
+        "response_CE": 3.297401027663469,
+        "response_perplexity": 27.042265411147373,
+        "response_accuracy": 0.10608598548297041,
+        "response_omission_rate": 0.6074818537130094,
+        "silence_false_emission_rate": 0.012745618693574084,
+        "response_tokens": 1791
+      },
+      "restored_validation": {
+        "response_CE": 3.529795562601968,
+        "response_perplexity": 34.11699211265572,
+        "response_accuracy": 0.08598548297040759,
+        "response_omission_rate": 0.5739810161920714,
+        "silence_false_emission_rate": 0.002301292264117543,
+        "response_tokens": 1791
+      },
+      "restored_minus_changed_CE": 0.23239453493849904
+    }
+  },
+  "korean": {
+    "leader": {
+      "expression": "tanh(z)",
+      "nodes": 1,
+      "alpha": 0.0,
+      "validation": {
+        "response_CE": 1.6184596702581981,
+        "response_perplexity": 5.045312882705335,
+        "response_accuracy": 0.49310872894333846,
+        "response_omission_rate": 0.0,
+        "silence_false_emission_rate": 0.0,
+        "response_tokens": 653,
+        "law_gate_counts": [
+          329,
+          37,
+          448,
+          179,
+          11,
+          6,
+          317,
+          5,
+          349
+        ],
+        "final_m": [
+          [
+            0.28312692046165466
+          ],
+          [
+            -1.4164178371429443
+          ],
+          [
+            -2.2036139965057373
+          ],
+          [
+            0.8067618608474731
+          ],
+          [
+            -2.2903189659118652
+          ],
+          [
+            0.22521789371967316
+          ],
+          [
+            -2.265577554702759
+          ],
+          [
+            0.8870531916618347
+          ]
+        ]
+      },
+      "restored_validation": {
+        "response_CE": 1.6184596702581981,
+        "response_perplexity": 5.045312882705335,
+        "response_accuracy": 0.49310872894333846,
+        "response_omission_rate": 0.0,
+        "silence_false_emission_rate": 0.0,
+        "response_tokens": 653,
+        "law_gate_counts": [
+          329,
+          37,
+          448,
+          179,
+          11,
+          6,
+          317,
+          5,
+          349
+        ],
+        "final_m": [
+          [
+            0.28312692046165466
+          ],
+          [
+            -1.4164178371429443
+          ],
+          [
+            -2.2036139965057373
+          ],
+          [
+            0.8067618608474731
+          ],
+          [
+            -2.2903189659118652
+          ],
+          [
+            0.22521789371967316
+          ],
+          [
+            -2.265577554702759
+          ],
+          [
+            0.8870531916618347
+          ]
+        ]
+      },
+      "restored_minus_changed_CE": 0.0
+    },
+    "offspring": {
+      "expression": "clip(tanh(z)+tanh(α)·(tanh(S)),−1,1)",
+      "nodes": 3,
+      "alpha": 0.0012401776621118188,
+      "validation": {
+        "response_CE": 1.6184750044259142,
+        "response_perplexity": 5.0453902489724305,
+        "response_accuracy": 0.49310872894333846,
+        "response_omission_rate": 0.0,
+        "silence_false_emission_rate": 0.0,
+        "response_tokens": 653,
+        "law_gate_counts": [
+          329,
+          37,
+          448,
+          179,
+          11,
+          6,
+          317,
+          5,
+          349
+        ],
+        "final_m": [
+          [
+            0.2831648886203766
+          ],
+          [
+            -1.4164562225341797
+          ],
+          [
+            -2.2036843299865723
+          ],
+          [
+            0.8063700199127197
+          ],
+          [
+            -2.2902984619140625
+          ],
+          [
+            0.2254110872745514
+          ],
+          [
+            -2.265798330307007
+          ],
+          [
+            0.8863341808319092
+          ]
+        ]
+      },
+      "restored_validation": {
+        "response_CE": 1.6184591114418339,
+        "response_perplexity": 5.045310063302721,
+        "response_accuracy": 0.49310872894333846,
+        "response_omission_rate": 0.0,
+        "silence_false_emission_rate": 0.0,
+        "response_tokens": 653,
+        "law_gate_counts": [
+          329,
+          37,
+          448,
+          179,
+          11,
+          6,
+          317,
+          5,
+          349
+        ],
+        "final_m": [
+          [
+            0.2830791771411896
+          ],
+          [
+            -1.4163895845413208
+          ],
+          [
+            -2.203616142272949
+          ],
+          [
+            0.8067472577095032
+          ],
+          [
+            -2.2903318405151367
+          ],
+          [
+            0.22522547841072083
+          ],
+          [
+            -2.265568256378174
+          ],
+          [
+            0.8870218396186829
+          ]
+        ]
+      },
+      "restored_minus_changed_CE": -1.589298408033457e-05
+    }
+  }
+}

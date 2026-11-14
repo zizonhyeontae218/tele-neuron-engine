@@ -1,0 +1,1 @@
+{"seed":43,"threads":2,"batch":8,"tbptt_slots":8,"lr":0.0002,"steps":5000,"seconds_cap_per_run":1200,"catalog_count":20000,"target_search_stages":[[96,64],[16,400],[4,2000]],"pilot_search_candidates":3,"pilot_search_steps":20,"train_dialogues":512,"validation_dialogues":16,"test_dialogues":16,"generation_ticks":180}
