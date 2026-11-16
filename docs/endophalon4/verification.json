@@ -1,0 +1,35 @@
+{
+  "pytest": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m pytest -q",
+    "exit_code": 0,
+    "passed": 94,
+    "output": "........................................................................ [ 76%]\n......................                                                   [100%]\n=============================== warnings summary ===============================\n../../../opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14\n  /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14: PytestRemovedIn10Warning: _pytest.python.CallSpec2 has been renamed to CallSpec.\n  The CallSpec2 alias will be removed in pytest 10.\n  Update imports to use CallSpec instead.\n  See https://docs.pytest.org/en/stable/deprecations.html#callspec2-renamed\n    from _pytest.python import CallSpec2\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n94 passed, 1 warning in 12.30s\n"
+  },
+  "smoke": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/smoke_models.py",
+    "exit_code": 0,
+    "combinations": 8,
+    "output": "PASS endophalon/xor: import, CLI training/evaluation, model-card save\nPASS endophalon_plus/full_adder: import, CLI training/evaluation, model-card save\nPASS endophalon_pro/full_adder: import, CLI training/evaluation, model-card save\nPASS endophalon2/base: import, CLI training/evaluation, model-card save\nPASS endophalon2_pro/regular: import, CLI training/evaluation, model-card save\nPASS endophalon2_promax/promax8: import, CLI training/evaluation, model-card save\nPASS endophalon2_promax/promax16: import, CLI training/evaluation, model-card save\nPASS endophalon3_software: independent models, output registers and checkpoint\n8 model/config combinations passed\n"
+  },
+  "backup": {
+    "command": "python scripts/verify_backup_consolidation.py",
+    "exit_code": 0,
+    "output": "PASS: 166 byte-identical reproduction files, 22 models, 9 original heads reachable.\nDocument archive: https://drive.google.com/file/d/1QADLkOoVDZg0RYW6YvUq7Snf2CObzptY/view?usp=drivesdk\nDrive archive SHA-256 was verified by download during consolidation; this offline check does not recheck Drive or remote tags.\n"
+  },
+  "confirmation_reuse_guard": {
+    "command": "python scripts/evaluate_endophalon4.py (second invocation)",
+    "exit_code": 1,
+    "expected_refusal": true,
+    "message": "Evaluation already complete; inspect saved evidence without rerunning confirmation"
+  },
+  "completed_resume_guard": {
+    "command": "python scripts/train_endophalon4.py --segment-generations 5 --resume auto",
+    "exit_code": 0,
+    "output": "A_to_B already complete; no evaluations repeated\nB_to_A already complete; no evaluations repeated\n"
+  },
+  "research_audit": {
+    "command": "python scripts/audit_endophalon4.py",
+    "exit_code": 0,
+    "output": "{\n  \"A_to_B\": {\n    \"generations\": 40,\n    \"evaluations\": 961,\n    \"segments\": 8,\n    \"all_checkpoint_transitions_replayed\": true,\n    \"saved_model_evidence_reproduced\": true,\n    \"train_only_head_refit_bitwise\": true,\n    \"protected_historical_files\": 299,\n    \"checkpoint_archive_verified\": true,\n    \"models_unchanged\": {\n      \"A\": \"7556a9ef7b99cb79c9190f32b4474738f09a99f305772d6dd7b1348394b32d70\",\n      \"B\": \"c62ab11e9ade7f4a6b38f3c352fc224efa9c3dbdc22cd05623437b1a3d911f02\",\n      \"current\": \"7269a460d4d4b5254a3697607676a02a9789fbe996017f0ae2c9fdd9a2437b7c\"\n    },\n    \"failed_candidates\": 0\n  },\n  \"B_to_A\": {\n    \"generations\": 40,\n    \"evaluations\": 961,\n    \"segments\": 8,\n    \"all_checkpoint_transitions_replayed\": true,\n    \"saved_model_evidence_reproduced\": true,\n    \"train_only_head_refit_bitwise\": true,\n    \"protected_historical_files\": 299,\n    \"checkpoint_archive_verified\": true,\n    \"models_unchanged\": {\n      \"A\": \"7556a9ef7b99cb79c9190f32b4474738f09a99f305772d6dd7b1348394b32d70\",\n      \"B\": \"c62ab11e9ade7f4a6b38f3c352fc224efa9c3dbdc22cd05623437b1a3d911f02\",\n      \"current\": \"7269a460d4d4b5254a3697607676a02a9789fbe996017f0ae2c9fdd9a2437b7c\"\n    },\n    \"failed_candidates\": 0\n  }\n}\nPASS: budgets, transitions, split isolation, models and saved evidence\n"
+  }
+}

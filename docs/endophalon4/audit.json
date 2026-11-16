@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "directions": {
+    "A_to_B": {
+      "generations": 40,
+      "evaluations": 961,
+      "segments": 8,
+      "all_checkpoint_transitions_replayed": true,
+      "saved_model_evidence_reproduced": true,
+      "train_only_head_refit_bitwise": true,
+      "protected_historical_files": 299,
+      "checkpoint_archive_verified": true,
+      "models_unchanged": {
+        "A": "7556a9ef7b99cb79c9190f32b4474738f09a99f305772d6dd7b1348394b32d70",
+        "B": "c62ab11e9ade7f4a6b38f3c352fc224efa9c3dbdc22cd05623437b1a3d911f02",
+        "current": "7269a460d4d4b5254a3697607676a02a9789fbe996017f0ae2c9fdd9a2437b7c"
+      },
+      "failed_candidates": 0
+    },
+    "B_to_A": {
+      "generations": 40,
+      "evaluations": 961,
+      "segments": 8,
+      "all_checkpoint_transitions_replayed": true,
+      "saved_model_evidence_reproduced": true,
+      "train_only_head_refit_bitwise": true,
+      "protected_historical_files": 299,
+      "checkpoint_archive_verified": true,
+      "models_unchanged": {
+        "A": "7556a9ef7b99cb79c9190f32b4474738f09a99f305772d6dd7b1348394b32d70",
+        "B": "c62ab11e9ade7f4a6b38f3c352fc224efa9c3dbdc22cd05623437b1a3d911f02",
+        "current": "7269a460d4d4b5254a3697607676a02a9789fbe996017f0ae2c9fdd9a2437b7c"
+      },
+      "failed_candidates": 0
+    }
+  },
+  "total_evaluations": 1922
+}

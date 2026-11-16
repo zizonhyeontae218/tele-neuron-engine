@@ -230,3 +230,13 @@ A/B 각각 120세대를 완료했다. theta·readout·물리 상태·RNG는 독�
 ```bash
 python -m tele_neuron.endophalon3_software --model models/endophalon3_software/current.json --program configs/endophalon3_software/example_program.txt
 ```
+
+## Endophalon 4 물리적 상태 결합 실험
+
+기존 Endophalon 3 A/B 모델을 보존하고, 동기화된 두 물리계 사이에 송신
+상태의 16개 관측값에서 계산한 제한된 외력을 주입합니다. 두 방향의 고정
+탐색 예산을 Cloud 컴퓨터의 NumPy로 실행하고, 5세대마다 저장 상태에서
+재개합니다. 기존 1~3 모델과 기록은 변경하지 않습니다.
+[설계](docs/endophalon4/design.md), [실행·체크포인트 복원](docs/endophalon4/reproduce.md),
+최종 측정 보고서 `docs/endophalon4/report.md`를 참조하세요.
+학습 예산 완료와 기억 전달 가설의 성공 여부는 별도로 판정합니다.

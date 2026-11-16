@@ -19,3 +19,10 @@ Commands: python -m pytest -q; python scripts/smoke_models.py;
 python scripts/verify_backup_consolidation.py; python scripts/filetree_index.py update;
 python scripts/filetree_index.py lint. Install: python -m pip install -e . -r requirements.txt.
 Model training/audit commands are in docs/model_commands.md.
+
+## Endophalon 4 authorized phase (supersedes conflicting 3-only rules)
+The current user authorizes the frozen 40x24+1 search per direction. See GOAL.md
+and docs/endophalon4/design.md. Version3 stays unchanged; version4 synchronizes
+both clocks. Work only on existing endophalon3; do not align or modify master.
+Train locally, no Actions; upload only after final completion and audit.
+Use scripts/filetree_index.py update/lint (external skill CLI unavailable).

@@ -9,7 +9,7 @@
 - `CLAUDE.md` — Current context.
 - `CODE_OF_CONDUCT.md` — Code of Conduct.
 - `CONTRIBUTING.md` — Contributing.
-- `GOAL.md` — Endophalon 3 — independent A/B release.
+- `GOAL.md` — Endophalon 4 — cloud-native resumable physical memory coupling.
 - `LICENSE` — Contains LICENSE data.
 - `README.ko.md` — Tele-Neuron Engine.
 - `README.md` — Tele-Neuron Engine.
@@ -73,6 +73,10 @@
 - `B.json` — Contains B data.
 - `current.json` — Contains current data.
 - `example_program.txt` — Contains example program data.
+
+## `configs/endophalon4`
+
+- `experiment.json` — Contains experiment data.
 
 ## `configs/endophalon_plus`
 
@@ -428,6 +432,30 @@
 - `generation_119.json` — Contains generation 119 data.
 - `generation_120.json` — Contains generation 120 data.
 
+## `docs/endophalon4`
+
+- `A_to_B_confirmation.json` — Contains A to B confirmation data.
+- `A_to_B_confirmation_observations.npz` — Contains A to B confirmation observations data.
+- `A_to_B_history.json` — Contains A to B history data.
+- `A_to_B_test.json` — Contains A to B test data.
+- `A_to_B_test_observations.npz` — Contains A to B test observations data.
+- `B_to_A_confirmation.json` — Contains B to A confirmation data.
+- `B_to_A_confirmation_observations.npz` — Contains B to A confirmation observations data.
+- `B_to_A_history.json` — Contains B to A history data.
+- `B_to_A_test.json` — Contains B to A test data.
+- `B_to_A_test_observations.npz` — Contains B to A test observations data.
+- `audit.json` — Contains audit data.
+- `checkpoint_manifest.json` — Contains checkpoint manifest data.
+- `confirmation.started.json` — Contains confirmation.started data.
+- `design.md` — Endophalon 4 preregistered protocol.
+- `evaluation.json` — Contains evaluation data.
+- `preservation_baseline.json` — Contains preservation baseline data.
+- `previous_goal.md` — Endophalon 3 — independent A/B release.
+- `report.md` — Endophalon 4 — 최종 연구 보고서.
+- `reproduce.md` — Run and inspect Endophalon 4.
+- `results.png` — Contains results data.
+- `verification.json` — Contains verification data.
+
 ## `docs/integration`
 
 - `2026-10-31.md` — Endophalon consolidation audit — 2026-10-31.
@@ -475,6 +503,21 @@
 - `B.json` — Contains B data.
 - `current.json` — Contains current data.
 
+## `models/endophalon4`
+
+- `.gitignore` — Contains .gitignore data.
+
+## `models/endophalon4/A_to_B`
+
+- `checkpoints.tar.gz` — Contains checkpoints.tar data.
+- `model.json` — Contains model data.
+- `preflight_generation0.json` — Contains preflight generation0 data.
+
+## `models/endophalon4/B_to_A`
+
+- `checkpoints.tar.gz` — Contains checkpoints.tar data.
+- `model.json` — Contains model data.
+
 ## `models/endophalon_plus`
 
 - `teleneuron_endophalon_plus_full_adder.json` — Stores structured data for teleneuron endophalon plus full adder.
@@ -497,6 +540,8 @@
 
 - `archive_endophalon.py` — Back up and retire only the six audited Endophalon model branches.
 - `audit_endophalon3_independent.py` — Contains audit endophalon3 independent data.
+- `audit_endophalon4.py` — Contains audit endophalon4 data.
+- `evaluate_endophalon4.py` — Contains evaluate endophalon4 data.
 - `filetree_index.py` — Contains filetree index data.
 - `finalize_endophalon3_independent.py` — Contains finalize endophalon3 independent data.
 - `replay_promax.py` — Re-evaluate published ProMax readouts on their original held-out streams.
@@ -505,6 +550,7 @@
 - `smoke_models.py` — Execute each available model CLI using bounded, temporary smoke configs.
 - `train_endophalon3_independent.py` — Contains train endophalon3 independent data.
 - `train_endophalon3_io.py` — Contains train endophalon3 io data.
+- `train_endophalon4.py` — Contains train endophalon4 data.
 - `verify_backup_consolidation.py` — Contains verify backup consolidation data.
 
 ## `src/tele_neuron`
@@ -586,6 +632,14 @@
 - `theta.py` — Contains theta data.
 - `training.py` — Contains training data.
 
+## `src/tele_neuron/endophalon4`
+
+- `__init__.py` — Contains   init   data.
+- `evaluation.py` — Contains evaluation data.
+- `experiment.py` — Contains experiment data.
+- `runtime.py` — Contains runtime data.
+- `training.py` — Contains training data.
+
 ## `src/tele_neuron/endophalon_plus`
 
 - `__init__.py` — Teleneuron-Endophalon-Plus: preset-routed reservoir on the Plus physics base.
@@ -638,6 +692,7 @@
 - `test_endophalon3_independent.py` — Contains test endophalon3 independent data.
 - `test_endophalon3_retirement.py` — Contains test endophalon3 retirement data.
 - `test_endophalon3_software.py` — Contains test endophalon3 software data.
+- `test_endophalon4.py` — Contains test endophalon4 data.
 - `test_endophalon_plus.py` — Provides the _tiny_payload function.
 - `test_endophalon_pro.py` — Provides the _tiny_payload function.
 - `test_learner.py` — Provides the test_algorithm_files_are_discoverable function.

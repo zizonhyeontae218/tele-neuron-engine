@@ -1,0 +1,210 @@
+{
+  "schema": "endophalon4-coupling/v1",
+  "direction": "B_to_A",
+  "parameters": [
+    0.2997220564210864,
+    0.537046560450132,
+    -0.8760127304873052,
+    -0.2279296792475224,
+    2.2774167864561767,
+    0.23711291826055764,
+    -0.4897455505689085,
+    0.7098134549747166,
+    0.25915011986163616,
+    -0.2617195391849917,
+    1.0433907314822732,
+    -0.42514189074651465,
+    0.42591372578576175,
+    0.21568024826114252,
+    -0.5612207134571431,
+    0.7347015311266759,
+    -2.0334415581597756,
+    0.013627045345855234,
+    1.0257722219999048,
+    0.07781757804457133,
+    1.1758567521837946
+  ],
+  "readout": {
+    "alpha": 1.0,
+    "mean": [
+      0.006599719631135169,
+      0.007011904821756231,
+      0.007220611417250173,
+      0.008315453356483449,
+      0.007991979787485263,
+      0.013130089861288516,
+      0.00983644394444404,
+      0.012864198605061283,
+      0.005843780999533011,
+      0.006964149000750452,
+      0.012640711129959037,
+      0.007555202975179602,
+      0.0074825034088045125,
+      0.006589792844471496,
+      0.005084018741638306,
+      0.007668097485854499
+    ],
+    "scale": [
+      0.004233363956387837,
+      0.004943741826225993,
+      0.0034107920628088277,
+      0.003696357513282947,
+      0.003470438776361103,
+      0.0029511729200265052,
+      0.003208305898658329,
+      0.0047492127841333425,
+      0.003873225312520498,
+      0.0037309802116062296,
+      0.0019466441678611499,
+      0.0033672863627678727,
+      0.003894221762314577,
+      0.004932377961437386,
+      0.004718805824210382,
+      0.004592407633764761
+    ],
+    "weights": [
+      [
+        0.006203598649577821,
+        0.12787946891076085,
+        0.06473168086030961,
+        0.06977874281593215
+      ],
+      [
+        -0.06214020433532176,
+        -0.14693435621414458,
+        0.14027958848739938,
+        0.05231621719476131
+      ],
+      [
+        0.037583798124183054,
+        0.03944213094618991,
+        0.01919908802106155,
+        0.05191486540869866
+      ],
+      [
+        0.061405152586174634,
+        0.07186694822602302,
+        -0.2800162200540789,
+        -0.17973656790669576
+      ],
+      [
+        -0.15101153032672035,
+        -0.08633625630300654,
+        -0.01850822138712535,
+        0.043938406847573816
+      ],
+      [
+        -0.10966580465057611,
+        -0.041867959306051805,
+        0.01471134110089501,
+        -0.003793198079453701
+      ],
+      [
+        0.010680681140505759,
+        -0.04956935708432255,
+        0.09159484105155553,
+        0.022150452884607836
+      ],
+      [
+        0.18140211464104355,
+        0.06389389101590051,
+        0.009596056530061601,
+        -0.11905789883944617
+      ],
+      [
+        0.10717006264920785,
+        0.09067227192007896,
+        -0.1248749138558352,
+        -0.12121944879660827
+      ],
+      [
+        0.06450338263798104,
+        -0.02673856759609935,
+        0.053418714057549846,
+        0.03397345603851388
+      ],
+      [
+        0.37158763582309334,
+        0.05500404211319041,
+        -0.10412771664357698,
+        -0.007990690905014577
+      ],
+      [
+        -0.04082747259980518,
+        0.06399015648753231,
+        0.011803921705961149,
+        -0.11387648893413567
+      ],
+      [
+        0.06055052701870259,
+        -0.154963616217091,
+        0.004208089301334939,
+        0.12506431850975094
+      ],
+      [
+        -0.11638431524625252,
+        -0.10590890298352594,
+        0.062459877079969126,
+        0.24995450955390172
+      ],
+      [
+        -0.11634335543130644,
+        0.012755036913995203,
+        0.08520488676245003,
+        0.11153854827405416
+      ],
+      [
+        0.052658997672084124,
+        0.07744188678326355,
+        0.07789855300540391,
+        -0.2482157716649725
+      ],
+      [
+        0.47656249999999967,
+        0.5156249999999998,
+        0.53125,
+        0.48437500000000017
+      ]
+    ]
+  },
+  "provenance": {
+    "models": {
+      "A": "7556a9ef7b99cb79c9190f32b4474738f09a99f305772d6dd7b1348394b32d70",
+      "B": "c62ab11e9ade7f4a6b38f3c352fc224efa9c3dbdc22cd05623437b1a3d911f02",
+      "current": "7269a460d4d4b5254a3697607676a02a9789fbe996017f0ae2c9fdd9a2437b7c"
+    },
+    "sources": {
+      "configs/endophalon4/experiment.json": "2da3d4cc6a10123cc3ed03d57b3900bf5db458b6b8fa58370c0176a75bbbdbe9",
+      "src/tele_neuron/endophalon4/__init__.py": "dd6f410c17268c23591c68fd1409e0b6f045c389c00a3d6b2f9d98db3fb0e6cf",
+      "src/tele_neuron/endophalon4/evaluation.py": "0715b68f6d1987007e3eee014fee9c4a505a079476d9164e324b1bb8bdf394d7",
+      "src/tele_neuron/endophalon4/experiment.py": "909ec44b720e81b1ba8e02d31bfe5d8f37fbe4c4e6da73ebf003c91fe3c8248f",
+      "src/tele_neuron/endophalon4/runtime.py": "a000feb45ea3de5ea28528b4e1e519570b01fa28d923a7b9492aae21c5728d53",
+      "src/tele_neuron/endophalon4/training.py": "f50c7c6da33fb35cf6d1c8f67429551e5334e86294cb313b13b61d9de911ef23",
+      "src/tele_neuron/endophalon3_software/__init__.py": "d8eef1d3f451c4c934e8581ca2ff3406ed275e7dbb60d27fbecf3a8b9592fe22",
+      "src/tele_neuron/endophalon3_software/__main__.py": "9b91940e46f7f2bba40251051215a948a0f136dbf45871e56e3c28d43e75af7e",
+      "src/tele_neuron/endophalon3_software/config.py": "e379c6dc4b0aebd9b5a730370fd3faed577d19f67e06bdccb24af6f38ae043fc",
+      "src/tele_neuron/endophalon3_software/isa.py": "43d8d12e3a829eca505610ff37bf167e2805eb6078fdcd451ba799e07f01c20c",
+      "src/tele_neuron/endophalon3_software/model.py": "4b3ca1dbe0453f18de42ddd99daa9a59d94f71e7f78c078f430f84547a493025",
+      "src/tele_neuron/endophalon3_software/physics.py": "d20a2a31c71c771b8b350e52560758fbe7a20d2e9468dd6509f584bc797cb5e4",
+      "src/tele_neuron/endophalon3_software/router.py": "8f594686d81df8623f993e76b04afda9df0a432b48769d37f8767ee0f10f51a5",
+      "src/tele_neuron/endophalon3_software/session.py": "5721c922a2119702663e8adb2499268064f94fd9cec65a346424effbbf833001",
+      "src/tele_neuron/endophalon3_software/theta.py": "5584f5ca188652bcdda8ae00cd1ba44cf77d9cc49baf93d12261dd2e0b6cdded",
+      "src/tele_neuron/endophalon3_software/training.py": "ea116cb21f53d77ffc0bb574e8748331f45b37a844fbbac9f134bf1e79a3449e",
+      "src/tele_neuron/endophalon2_pro/__init__.py": "8bd5bee5b40ea40f51a4932ec39667dfb838a70d376c0f0350d2d4f999c9a8e2",
+      "src/tele_neuron/endophalon2_pro/__main__.py": "6a7ae3ae4ac2783ac16eacb3d13d69bd3fad4388618c1f2d0a314abb3f99eb5d",
+      "src/tele_neuron/endophalon2_pro/ablation.py": "82fbaed876b3aec729e1ee1005752063876436f02238a33dc66d1faa9427abae",
+      "src/tele_neuron/endophalon2_pro/config.py": "dff629e732faf33cb4d68195be86d3bb10e30a59fedc0ab1c300e4561c79b459",
+      "src/tele_neuron/endophalon2_pro/core.py": "734502c5a3563afc4760d29bbff4667e455ac4c1a51e4f24107359bd3bbe753d",
+      "src/tele_neuron/endophalon2_pro/engine.py": "e28d807be887fb8a3dbcf974ea55f59f7934f5de696b1529921f9187ba5a0809",
+      "src/tele_neuron/endophalon2_pro/network.py": "148811bc4f96ebe043b82fb6975ae4c6fef0210e74b7dd47a150407ef00601db",
+      "src/tele_neuron/endophalon2_pro/theta.py": "b01b080ddcea2f2ee441fa5e1b7e783225db82a81ab8b7dd72980924b19ae44e",
+      "src/tele_neuron/endophalon2/engine.py": "9234a1b52b3465af2a1a76c251ba32d19572fc0a516975a6552c064c3eba827c",
+      "src/tele_neuron/endophalon/readout.py": "6ebc1ba121620b2e36db542024dd83dac7cbdf2d72cd5df737aab59f96ebc9a8",
+      "scripts/train_endophalon4.py": "c16be3c224bc79210542c5f34160981fc70a35726e89bd62514b1accb11d3c46"
+    },
+    "dataset_and_config": "2da3d4cc6a10123cc3ed03d57b3900bf5db458b6b8fa58370c0176a75bbbdbe9"
+  },
+  "generations": 40,
+  "evaluations": 961,
+  "selection": "mean four-lag validation MSE only; train-only Ridge"
+}

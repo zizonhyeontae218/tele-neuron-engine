@@ -295,3 +295,13 @@ A/B each completed 120 generations with independent theta/readout/state/RNG. Sof
 ```bash
 python -m tele_neuron.endophalon3_software --model models/endophalon3_software/current.json --program configs/endophalon3_software/example_program.txt
 ```
+
+## Endophalon 4 physical coupling experiment
+
+A separate runtime synchronizes the frozen Endophalon 3 A/B reservoirs and injects
+a bounded force computed only from the sender's actual 16-zone state. Two
+independent fixed-budget coupling searches run locally in NumPy with atomic
+five-generation resume segments. Existing v1/v2/v3 models remain unchanged.
+Protocol: [design](docs/endophalon4/design.md); [commands and checkpoint restoration](docs/endophalon4/reproduce.md).
+Final measured outcomes are recorded in `docs/endophalon4/report.md`; completing
+the training budget alone does not establish the memory-transfer hypothesis.
