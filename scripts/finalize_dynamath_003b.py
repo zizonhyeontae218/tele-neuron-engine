@@ -36,7 +36,7 @@ def main():
         saved_path = root/f"closed-loop-{split}-{step:05d}.json.gz"
         identity = {"checkpoint_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
                     "split_sha256": audit["splits"][split]["sha256"], "tokenizer_sha256": tok.sha256,
-                    "response_slots": 96, "step": step}
+                    "response_slots": 96, "step": step, "protocol": "independent-QA-Session/v1"}
         if saved_path.exists():
             with gzip.open(saved_path, "rt") as f:
                 saved = json.load(f)
@@ -72,7 +72,7 @@ def main():
     result["finalization"] = {"complete": True,
         "validation_generation_pairs_per_checkpoint": audit["splits"]["validation"]["pairs"],
         "test_generation_pairs": audit["splits"]["test"]["pairs"],
-        "method": "entire filtered splits, actual Session/FIFO with state retained within dialogues; teacher-forced test not rerun"}
+        "method": "entire filtered splits, fresh actual Session/FIFO per Q/A pair; multi-turn memory assessed separately; teacher-forced test not rerun"}
     write_reports(root, result)
     goal = root/"GOAL.md"
     goal.write_text(goal.read_text().replace("- [ ]", "- [x]"))

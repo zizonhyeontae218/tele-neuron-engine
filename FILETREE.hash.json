@@ -107,8 +107,8 @@
     "docs/dynamath/experiment-003a/korean-search.json": "9c8b664ea9637a8229369c2b0bc3b53a8ff89904eae96fefde9e7c14e6c57610",
     "docs/dynamath/experiment-003a/verification.txt": "b3fc869dcf846b922a124e33b084e74c8d0ab200bf058d1a1d4c0645ba0dcda6",
     "docs/dynamath/experiment-003b/GOAL.md": "1fcb03d96e4c0be1ab1434ca3fa40c988fdbd50ec137b44986399a05024e7e3a",
-    "docs/dynamath/experiment-003b/README.md": "406d0cfc4b0fcb2a2369fe513ed16333879ca1596b717670fa35b503dc023a9a",
-    "docs/dynamath/experiment-003b/architecture.md": "0d275b0c3ceb5cdefadd3d8e6de594507b902f2448d39ba16705fe8f8b46195b",
+    "docs/dynamath/experiment-003b/README.md": "f465c7cc1f82ef18b5c5917f7795593baf1bb428e6c676d055e325d60eff119b",
+    "docs/dynamath/experiment-003b/architecture.md": "6937808981be0bf8a9c609356cab481906c748368bed80c1d60d6a21366d75e2",
     "docs/dynamath/experiment-003b/comparison.md": "65adebaf2b19b5ffcca390dac01947a5bd6be1e759856716e8bd48d4091d09b4",
     "docs/dynamath/experiment-003b/cost-profile.json": "9ada85d123f2d309c39336b21627a942224b7c679230008b170a82f3c08cf1f1",
     "docs/dynamath/experiment-003b/execution.json": "c748bd30fdacd90f63bfd3e2539423b7e59dac3c6c2fd1e2921775f7c0e82b73",
@@ -193,7 +193,7 @@
     "scripts/evaluate_dynamath_003a.py": "2192a6e87ec18dcaa105c1789bce7967a9740dae051d78865155e4e473ddd36a",
     "scripts/evaluate_dynamath_003b.py": "3bbefa895a2ac4432ded8dd2168b3240614a886616b5a4911b5494d83c482622",
     "scripts/filetree_index.py": "cf8e22fcbf7603479975901c2eca05e0e935ae0bfd3f24ae3b75f2a7957fc469",
-    "scripts/finalize_dynamath_003b.py": "4378f267e28e643a87aecc58b9c937fd799a438dd2ee50de7093a8b9b53cbe7d",
+    "scripts/finalize_dynamath_003b.py": "fed72be2e21e86d8b47dce811e643fd88efea6c220cf0e633d7cbcc3e2982150",
     "scripts/report_dynamath_002.py": "3df5efbbc4607b3977d8d3880cdff24d912e6395290fcc9c8e744c4f970a25c8",
     "scripts/reproduce_dynamath_002.py": "83f48f0bb5a3e2980a7fdf109c8be3e6f2d34fcc2786991c2e68d70a5cb9576f",
     "scripts/run_dynamath_003.py": "d8171f43fe750e0216b48d8e9f26ff2aa01d3df4fcc79624253683d8974166f7",
@@ -228,7 +228,7 @@
     "src/dynamath/v003b/AGENTS.md": "ec857f264236f090095c1ec878cb039797c51ede84a59121fa97952f90316ba6",
     "src/dynamath/v003b/__init__.py": "ebec11d623b717fa9c9ba3da174829149a6e36c4e7b5229f4a694ad9b09697bf",
     "src/dynamath/v003b/data.py": "1b6d3ca664772fe289b39b1966be28e16f58c83eccaa1b5bee6bd542d24ef6b3",
-    "src/dynamath/v003b/evaluation.py": "cda7d39c2525a2498ac7aed9154767b27e1eca8d8d52f3506493eff8dbde0c30",
+    "src/dynamath/v003b/evaluation.py": "4990cfc9a935acb4ef63563f7facff13671e04b7d9be2c6f1639c2388ddb1639",
     "src/dynamath/v003b/model.py": "3fe29cfbd65a3d0b6c01ee1eeb24fb1f5e794e689d5f8b55d374d7363fd04096",
     "src/dynamath/v003b/reporting.py": "90c5b3615ea7409eff1f772c65adb56f591ab86d0fb9b9c4c5656c93d2faa4a6",
     "src/dynamath/v003b/tokenizer.py": "b817fa5dc1ad9b454aa87bdcb4b83bd11cd3f60ed890e37b99ab386674964ae3",
@@ -239,6 +239,6 @@
     "tests/test_dynamath_002.py": "706e38c44d3311d50588f64a2297a3272cf4a5f0862819dccae86f13fa4741ed",
     "tests/test_dynamath_003.py": "54be5f140187da12f7fbca10709a6b799c87e5178b82bdc271c90b26d95cee03",
     "tests/test_dynamath_003a.py": "476e441e760378a8fb9b4ec1ca2419b4349ed07b50fdda8c540a43b0db96454b",
-    "tests/test_dynamath_003b.py": "f1a314864f84f3f7388ca0ce49aaf8efc85c26ec8c62212f3e5053c8735be456"
+    "tests/test_dynamath_003b.py": "8492c1e754b28d070fdf054eef00a6002323b3aa0086097428c95d9dc5ab21fb"
   }
 }

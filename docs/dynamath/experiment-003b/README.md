@@ -87,7 +87,11 @@ refuses to overwrite it with a different selected checkpoint.
 run and downloads its last cumulative checkpoint artifact. It adds actual FIFO
 generation for **every** Q/A pair in the complete validation split at all four
 milestones and every test pair for the frozen final model. This supplements the
-22 fixed English prompt samples and the full teacher-forced metrics. Corpus
+22 fixed English prompt samples and the full teacher-forced metrics. This bulk
+generation protocol uses a fresh Session per Q/A pair, so a runaway feedback
+queue from one failed answer cannot consume later prompts' compute budget.
+It measures independent-prompt behavior; teacher-forced dialogue context and
+the explicit multi-turn/follow-up memory probes retain their session state. Corpus
 results preserve IDs, text, controls, premature emissions, EOS failure and queues
 in `closed-loop-<split>-<step>.json.gz`; only these corpus files omit the very
 large per-tick trace. Fixed-prompt samples retain that trace. The test model is

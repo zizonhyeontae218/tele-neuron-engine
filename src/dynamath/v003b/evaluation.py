@@ -175,22 +175,24 @@ def free_generation(model, tokenizer, slots=96):
 
 @torch.no_grad()
 def corpus_generation(model, tokenizer, dialogues, slots=96):
-    """All paired validation/test turns; one persistent FIFO session/dialogue.
+    """All paired validation/test prompts; one fresh FIFO session per Q/A pair.
 
     Retain raw IDs/text/events/queue; omit only the very large tick-by-tick trace
     from this corpus-level artifact. Fixed-prompt samples retain their full trace.
-    Gold answers never enter the FIFO or select generation parameters.
+    Gold answers never enter the FIFO or select generation parameters. Explicit
+    multi-turn state retention is tested by free_generation/memory_experiment.
+    Independent prompts prevent one runaway feedback queue from consuming the
+    rest of a corpus; they do not measure contextual dialogue competence.
     """
     samples = []
     for dialogue in dialogues:
-        session = Session(model)
         for turn, pair in enumerate(pairs(dialogue)):
-            sample, session = generate(model, tokenizer, pair["Q"], slots, session, turn=turn)
+            sample, _ = generate(model, tokenizer, pair["Q"], slots, turn=0)
             sample.pop("trace")
             sample.update(dialogue_id=dialogue["id"], pair_index=turn)
             samples.append(sample)
     return {"summary": {**generation_summary(samples), "dialogues": len(dialogues),
-                        "coverage": "every nonoverlapping Q/A pair in the complete filtered split; no gold-answer injection"},
+                        "coverage": "every nonoverlapping Q/A pair in the complete filtered split; fresh Session per pair; no gold-answer injection"},
             "samples": samples}
 
 

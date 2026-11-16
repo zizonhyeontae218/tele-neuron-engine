@@ -81,6 +81,12 @@ both, and retain clock/FIFO. They also swap the stated fact. Pending FIFO is an
 additional information channel, so these probes cannot isolate semantic memory
 in S/m. Five exact-word probes alone do not establish natural-language memory.
 
+The additional whole-split closed-loop evaluation starts a fresh Session per
+Q/A pair. This keeps an exponentially growing failure queue in one conversation
+from exhausting the evaluation budget for later prompts. It covers every pair
+but measures independent-prompt performance. The teacher-forced dialogue stream
+and explicit multi-turn/follow-up memory probes retain state within sessions.
+
 ## Failure and continuation
 
 Checkpoint writes use atomic rename. Every 500 completed updates and on a clean

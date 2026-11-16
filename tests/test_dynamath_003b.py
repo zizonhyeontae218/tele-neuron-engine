@@ -188,6 +188,7 @@ def test_full_finite_evaluation_counts_all_unequal_lanes():
     assert actual["summary"]["dialogues"] == 2
     assert [s["pair_index"] for s in actual["samples"]] == [0, 1, 0, 1]
     assert all(s["input_tokens_admitted"] == s["input_token_count"] for s in actual["samples"])
+    assert all(s["final_clock"] == s["input_processing_ticks"] + s["response_generation_ticks"] for s in actual["samples"])
     assert "trace" not in actual["samples"][0]
 
 
