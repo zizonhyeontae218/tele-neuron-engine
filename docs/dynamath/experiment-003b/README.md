@@ -100,3 +100,8 @@ gh workflow run dynamath-003b-finalize.yml --ref feature/dynamath-003b \
 
 The waiting job has a five-hour bound plus evaluation time; if training takes
 longer, dispatch that final-evaluation workflow after training completes.
+After successful final evaluation, checkpoint assets are archived without an
+expiry in the owner-visible release draft `dynamath-003b-checkpoints`. The draft
+is not published automatically; the previous branches and public releases stay
+untouched. Repeating finalization reuses cached corpus measurements and preserves
+the fixed checkpoint/test selection.

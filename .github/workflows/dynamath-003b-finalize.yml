@@ -112,10 +112,43 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/dynamath/experiment-003b/
-          git commit -m 'Complete DynaMath 003b full-corpus FIFO evaluation and raw evidence'
-          git pull --rebase origin feature/dynamath-003b
+          if ! git diff --cached --quiet; then
+            git commit -m 'Complete DynaMath 003b full-corpus FIFO evaluation and raw evidence'
+            git pull --rebase origin feature/dynamath-003b
+          fi
           python scripts/filetree_index.py update
           git add FileTree.md FILETREE.hash.json
-          git commit -m 'Synchronize final DynaMath 003b file index'
+          if ! git diff --cached --quiet; then
+            git commit -m 'Synchronize final DynaMath 003b file index'
+          fi
           python scripts/filetree_index.py lint
           git push origin HEAD:feature/dynamath-003b
+      - name: Archive checkpoints without expiry in an owner-visible release draft
+        if: success()
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          result=json.loads(Path('docs/dynamath/experiment-003b/results.json').read_text())
+          if result['training']['completed_steps']!=50000 or not result.get('finalization',{}).get('complete'):
+              raise SystemExit('Cannot archive incomplete results as final checkpoints')
+          tag='dynamath-003b-checkpoints'
+          files=[str(p) for p in sorted(Path('models/dynamath/003b').glob('*.pt'))]
+          files+=['docs/dynamath/experiment-003b/checkpoint-manifest.json','docs/dynamath/experiment-003b/tokenizer.json']
+          notes=Path('work/003b-archive-notes.md')
+          notes.write_text('DynaMath 003b research archive: 50,000 actual optimizer updates.\n\n'
+              'Contains 5k/20k/35k/50k and latest checkpoints, tokenizer, and hashes. '
+              'This is a draft archive; no public release or existing tag is changed. '
+              'Full metrics, raw generation, memory controls and limitations are on feature/dynamath-003b. '
+              'These results alone do not establish understanding or semantic memory.\n\n'
+              'Tokenizer SHA-256: '+result['tokenizer_sha256']+'\n\n'
+              'Dataset SHA-256: '+result['data_sha256']+'\n')
+          existing=subprocess.run(['gh','release','view',tag,'--json','isDraft'],capture_output=True,text=True)
+          if existing.returncode==0:
+              if not json.loads(existing.stdout)['isDraft']:
+                  raise SystemExit('Existing public release is left unchanged; archive preserved Actions artifacts separately')
+              subprocess.run(['gh','release','upload',tag,*files,'--clobber'],check=True)
+          else:
+              subprocess.run(['gh','release','create',tag,*files,'--draft','--target','feature/dynamath-003b',
+                  '--title','DynaMath 003b research checkpoints — 50,000 updates','--notes-file',str(notes)],check=True)
+          PY

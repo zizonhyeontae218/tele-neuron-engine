@@ -4,8 +4,14 @@ The production runner creates `latest.pt` atomically and milestone checkpoints
 `step-05000.pt`, `step-20000.pt`, `step-35000.pt`, `step-50000.pt`.
 These large binaries are ignored by Git; source history contains no repeated
 model blobs. Actions artifacts `dynamath-003b-checkpoints-<segment>` retain them
-for 90 days. Download and archive them before expiry. Evidence artifacts include
-the checkpoint hashes and tokenizer/data hashes needed to check identity.
+for 90 days. Evidence artifacts include the checkpoint hashes and tokenizer/data
+hashes needed to check identity. After complete corpus evaluation, the final
+workflow archives the five checkpoint files plus tokenizer and manifest as
+owner-visible assets in the release draft `dynamath-003b-checkpoints`, without
+an expiry. It does not publish the draft or change an existing public tag/release.
+The owner can download it with `gh release download dynamath-003b-checkpoints
+--dir models/dynamath/003b`. If archiving fails, preserve the Actions artifacts
+before their expiry and retry the final-evaluation workflow.
 
 Every checkpoint holds weights/config/ASTs plus optimizer, LR schedule, Python,
 NumPy, Torch and CUDA RNG (when applicable), completed update, lane positions and
