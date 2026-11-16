@@ -146,9 +146,15 @@
 - `GOAL.md` — DynaMath 003b — word-level English training.
 - `README.md` — DynaMath 003b — reproduction and status.
 - `architecture.md` — DynaMath 003b architecture.
+- `checkpoint-manifest.json` — Contains checkpoint-manifest data.
 - `comparison.md` — DynaMath 003a / 003b comparison boundaries.
 - `cost-profile.json` — Contains cost-profile data.
 - `execution.json` — Contains execution data.
+- `evaluation-plan.json` — Contains evaluation-plan data.
+- `generation-05000.json` — Contains generation-05000 data.
+- `generation-20000.json` — Contains generation-20000 data.
+- `generation-35000.json` — Contains generation-35000 data.
+- `generation-50000.json` — Contains generation-50000 data.
 - `generation-samples.json` — Contains generation-samples data.
 - `memory-results.json` — Contains memory-results data.
 - `preflight-generation-samples.json.gz` — Contains preflight-generation-samples.json data.
@@ -156,10 +162,16 @@
 - `preflight-validation.json` — Contains preflight-validation data.
 - `preflight.json` — Contains preflight data.
 - `results.json` — Contains results data.
+- `selected-checkpoint.json` — Contains selected-checkpoint data.
+- `test-final.json` — Contains test-final data.
 - `tokenizer-report.json` — Contains tokenizer-report data.
 - `tokenizer.json` — Contains tokenizer data.
 - `training-progress.png` — Contains training-progress data.
 - `training-report.md` — DynaMath 003b — actual training status.
+- `validation-05000.json` — Contains validation-05000 data.
+- `validation-20000.json` — Contains validation-20000 data.
+- `validation-35000.json` — Contains validation-35000 data.
+- `validation-50000.json` — Contains validation-50000 data.
 - `verification.json` — Contains verification data.
 
 ## `models/dynamath/001a`

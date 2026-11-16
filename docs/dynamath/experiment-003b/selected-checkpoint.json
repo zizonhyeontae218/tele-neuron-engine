@@ -1,0 +1,7 @@
+{
+  "step": 50000,
+  "criterion": "precommitted final step 50000; no test-driven selection",
+  "checkpoint_sha256": "3a2a00b8d7209ecf91dc336a4a6ae0d78fc1e9291b2598e3ce062432884d1612",
+  "tokenizer_sha256": "81d3677d4de4dc3df3f9c26c8fc331a41da174202323f19b9e517eb1e7b049a3",
+  "data_sha256": "d86c20723ace49a08743d0686e4ee96a118cc0515881fab33b3fade664a21ab5"
+}

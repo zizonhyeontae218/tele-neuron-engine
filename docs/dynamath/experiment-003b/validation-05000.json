@@ -1,0 +1,18 @@
+{
+  "mode": "teacher_forced; no predicted-token feedback",
+  "response_CE": 6.03336094076997,
+  "response_perplexity": 417.11457354802053,
+  "response_accuracy": 0.0,
+  "response_omission_rate": 1.0,
+  "silence_false_emission_rate": 0.0,
+  "teacher_forced_EOS_accuracy": 0.0,
+  "response_tokens": 55156,
+  "silence_checks": 169804,
+  "input_slots": 112480,
+  "expected_input_slots": 112480,
+  "seconds": 94.09993469300002,
+  "input_slots_per_second": 1195.324952848955,
+  "response_tokens_per_second": 586.1428084933941,
+  "max_rss_kib": 863824,
+  "cuda_peak_bytes": 0
+}

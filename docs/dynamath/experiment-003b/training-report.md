@@ -1,9 +1,9 @@
 # DynaMath 003b — actual training status
 
-Status: **INCOMPLETE**.
-Actual completed updates: **0 / 50,000**;
-remaining: **50,000**. Last preserved segment training time:
-0.000 seconds (optimizer work, excludes evaluation).
+Status: **50,000 updates completed**.
+Actual completed updates: **50,000 / 50,000**;
+remaining: **0**. Last preserved segment training time:
+13550.503 seconds (optimizer work, excludes evaluation).
 
 Vocabulary: 8,192; parameters:
 4,441,203; S addresses: 16,448;
@@ -13,11 +13,14 @@ one runtime scalar m. All nine ASTs are the 003a baseline tanh(z).
 
 | Step | Validation response CE | Word PPL | Token accuracy | FIFO EOS rate |
 |---:|---:|---:|---:|---:|
-| No milestone evaluated yet | — | — | — | — |
+| 5000 | 6.033361 | 417.114574 | 0.000000 | 0.000000 |
+| 20000 | 5.997793 | 402.539334 | 0.000000 | 0.000000 |
+| 35000 | 5.990084 | 399.448239 | 0.000000 | 0.000000 |
+| 50000 | 5.984509 | 397.227288 | 0.000000 | 0.000000 |
 
 `results.json` retains every measured rate, timing, memory and provenance field.
 `training-progress.png` shows logged training CE/LR and available validation CE.
-No milestone is filled from estimates. Test status: **not run: final checkpoint not reached**.
+No milestone is filled from estimates. Test status: **full frozen test evaluated after final selection**.
 The fixed final step 50,000 was selected before looking at test metrics.
 
 ## Objective and execution
