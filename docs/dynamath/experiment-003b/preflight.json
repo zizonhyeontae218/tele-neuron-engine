@@ -155,5 +155,45 @@
   "test_status": "not run: final checkpoint not reached",
   "test": null,
   "run_role": "preflight only; not the production 50000-step run",
-  "note": "90-second contract execution and checkpoint smoke test; production begins fresh from seed 43 in Actions"
+  "note": "90-second contract execution and checkpoint smoke test; production begins fresh from seed 43 in Actions",
+  "teacher_forced_validation": {
+    "checkpoint_step": 359,
+    "mode": "teacher_forced; no predicted-token feedback",
+    "response_CE": 7.939910874424511,
+    "response_perplexity": 2807.110311829304,
+    "response_accuracy": 0.0,
+    "response_omission_rate": 1.0,
+    "silence_false_emission_rate": 0.005736025064191656,
+    "teacher_forced_EOS_accuracy": 0.0,
+    "response_tokens": 55156,
+    "silence_checks": 169804,
+    "input_slots": 112480,
+    "expected_input_slots": 112480,
+    "seconds": 75.41911511299998,
+    "input_slots_per_second": 1491.3990946654828,
+    "response_tokens_per_second": 731.3265332980918,
+    "max_rss_kib": 481500,
+    "cuda_peak_bytes": 0
+  },
+  "actual_FIFO": {
+    "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
+    "prompts": 22,
+    "eos_success_rate": 0.0,
+    "response_omission_rate": 1.0,
+    "adjacent_repeated_token_rate": 0.0,
+    "mean_generated_length_including_controls": 0.0,
+    "tokens_per_second_including_input_processing": 0.0,
+    "question_time_emissions": 21,
+    "unexpected_controls": 0,
+    "seconds": 2.608876424000073
+  },
+  "memory": {
+    "expected_word_rates": {
+      "none": 0.0,
+      "state_only": 0.0,
+      "memory_only": 0.0,
+      "both": 0.0
+    },
+    "limitation": "Five lexical probes, no retraining. Pending FIFO may carry earlier tokens; reset effects alone do not isolate semantic memory or prove understanding. Raw setup and counterfactual outputs retained."
+  }
 }

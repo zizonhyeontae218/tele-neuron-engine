@@ -5,6 +5,7 @@ import time
 import torch
 from torch.nn import functional as F
 from .data import LaneStream
+from dynamath.v003a.english_data import pairs
 from .model import Session, block
 
 PROMPTS = [
@@ -170,6 +171,27 @@ def free_generation(model, tokenizer, slots=96):
     first["category"], second["category"] = "follow_up_context", "follow_up_question"
     samples.extend((first, second))
     return {"summary": generation_summary(samples), "samples": samples}
+
+
+@torch.no_grad()
+def corpus_generation(model, tokenizer, dialogues, slots=96):
+    """All paired validation/test turns; one persistent FIFO session/dialogue.
+
+    Retain raw IDs/text/events/queue; omit only the very large tick-by-tick trace
+    from this corpus-level artifact. Fixed-prompt samples retain their full trace.
+    Gold answers never enter the FIFO or select generation parameters.
+    """
+    samples = []
+    for dialogue in dialogues:
+        session = Session(model)
+        for turn, pair in enumerate(pairs(dialogue)):
+            sample, session = generate(model, tokenizer, pair["Q"], slots, session, turn=turn)
+            sample.pop("trace")
+            sample.update(dialogue_id=dialogue["id"], pair_index=turn)
+            samples.append(sample)
+    return {"summary": {**generation_summary(samples), "dialogues": len(dialogues),
+                        "coverage": "every nonoverlapping Q/A pair in the complete filtered split; no gold-answer injection"},
+            "samples": samples}
 
 
 @torch.no_grad()

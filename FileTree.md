@@ -17,6 +17,7 @@
 
 - `dynamath-002a-train.yml` — Contains dynamath-002a-train data.
 - `dynamath-002b-train.yml` — Contains dynamath-002b-train data.
+- `dynamath-003b-finalize.yml` — Contains dynamath-003b-finalize data.
 - `dynamath-003b-segment.yml` — Contains dynamath-003b-segment data.
 - `dynamath-003b-train.yml` — Contains dynamath-003b-train data.
 - `tests.yml` — Contains tests data.
@@ -145,8 +146,12 @@
 - `README.md` — DynaMath 003b — reproduction and status.
 - `architecture.md` — DynaMath 003b architecture.
 - `comparison.md` — DynaMath 003a / 003b comparison boundaries.
+- `execution.json` — Contains execution data.
 - `generation-samples.json` — Contains generation-samples data.
 - `memory-results.json` — Contains memory-results data.
+- `preflight-generation-samples.json.gz` — Contains preflight-generation-samples.json data.
+- `preflight-memory-results.json.gz` — Contains preflight-memory-results.json data.
+- `preflight-validation.json` — Contains preflight-validation data.
 - `preflight.json` — Contains preflight data.
 - `results.json` — Contains results data.
 - `tokenizer-report.json` — Contains tokenizer-report data.
@@ -248,6 +253,7 @@
 - `evaluate_dynamath_003a.py` — Contains evaluate dynamath 003a data.
 - `evaluate_dynamath_003b.py` — Contains evaluate dynamath 003b data.
 - `filetree_index.py` — Contains filetree index data.
+- `finalize_dynamath_003b.py` — Contains finalize dynamath 003b data.
 - `report_dynamath_002.py` — Contains report dynamath 002 data.
 - `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
 - `run_dynamath_003.py` — Contains run dynamath 003 data.

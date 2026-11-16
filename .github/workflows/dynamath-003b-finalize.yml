@@ -1,0 +1,121 @@
+name: DynaMath 003b full-corpus final evaluation
+on:
+  push:
+    branches: [feature/dynamath-003b]
+    paths: [.github/workflows/dynamath-003b-finalize.yml]
+  workflow_dispatch:
+    inputs:
+      training_run_id:
+        description: Completed or running DynaMath 003b word training Actions run ID
+        type: string
+        required: true
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: dynamath-003b-final-evaluation
+  cancel-in-progress: false
+jobs:
+  final-evaluation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REQUESTED_RUN_ID: ${{ inputs.training_run_id || '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/dynamath-003b
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Wait for the specified training run without starting another model
+        id: monitor
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, time
+          from pathlib import Path
+          run=os.environ['REQUESTED_RUN_ID'] or str(json.loads(Path('docs/dynamath/experiment-003b/execution.json').read_text())['training_run_id'])
+          if not run.isdigit():
+              raise SystemExit('Invalid run ID')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('run_id='+run+'\n')
+          start=time.monotonic()
+          while time.monotonic()-start < 18000:
+              info=json.loads(subprocess.check_output(['gh','run','view',run,'--json','status,conclusion,headBranch,workflowName'],text=True))
+              if info['headBranch']!='feature/dynamath-003b' or info['workflowName']!='DynaMath 003b word training':
+                  raise SystemExit('Unexpected source run/branch')
+              print(json.dumps(info),flush=True)
+              if info['status']=='completed':
+                  break
+              time.sleep(45)
+          else:
+              raise SystemExit('Training still running after this bounded wait; resume final evaluation later. No completion claim.')
+          PY
+      - name: Pull preserved training reports and download its last checkpoint artifact
+        env:
+          TRAINING_RUN_ID: ${{ steps.monitor.outputs.run_id }}
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin feature/dynamath-003b
+          python - <<'PY'
+          import json, os, re, subprocess
+          run=os.environ['TRAINING_RUN_ID']
+          artifacts=json.loads(subprocess.check_output(['gh','api',f'repos/{os.environ["GITHUB_REPOSITORY"]}/actions/runs/{run}/artifacts'],text=True))['artifacts']
+          choices=[a for a in artifacts if re.fullmatch(r'dynamath-003b-checkpoints-\d+',a['name']) and not a['expired']]
+          if not choices:
+              raise SystemExit('No preserved checkpoint artifact')
+          last=max(choices,key=lambda a:int(a['name'].rsplit('-',1)[-1]))
+          subprocess.run(['gh','run','download',run,'-n',last['name'],'-D','models/dynamath/003b'],check=True)
+          suffix=last['name'].rsplit('-',1)[-1]
+          subprocess.run(['gh','run','download',run,'-n','dynamath-003b-evidence-'+suffix,'-D','work/003b-training-evidence'],check=True)
+          # Small-report publication can fail independently of training. Recover
+          # generated evidence directly and let the finalizer verify actual 50k.
+          from pathlib import Path
+          import shutil
+          base=Path('work/003b-training-evidence/docs/dynamath/experiment-003b')
+          if not base.exists():
+              raise SystemExit('Unexpected training evidence layout')
+          target=Path('docs/dynamath/experiment-003b')
+          patterns=['results.json','training-report.md','training-progress.png','generation-*.json','memory-results.json','checkpoint-manifest.json','evaluation-plan.json','selected-checkpoint.json','test-final.json','validation-*.json']
+          for pattern in patterns:
+              for path in base.glob(pattern):
+                  shutil.copy2(path,target/path.name)
+          info=json.loads(subprocess.check_output(['gh','run','view',run,'--json','status,conclusion,url'],text=True))
+          (target/'training-workflow-status.json').write_text(json.dumps(info,indent=2)+'\n')
+          PY
+      - name: Install frozen CPU environment
+        run: |
+          python -m pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[dev]' -c configs/dynamath/environment-003b.txt
+      - name: Final verification and all-split closed-loop metrics
+        run: |
+          set -euo pipefail
+          mkdir -p work
+          python -m pytest -q
+          python -u scripts/finalize_dynamath_003b.py 2>&1 | tee work/003b-finalization.log
+      - name: Upload complete evidence even after evaluation failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dynamath-003b-final-evaluation
+          path: |
+            docs/dynamath/experiment-003b/
+            work/003b-finalization.log
+          retention-days: 90
+          if-no-files-found: warn
+      - name: Commit measured final evaluation on 003b
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/dynamath/experiment-003b/
+          git commit -m 'Complete DynaMath 003b full-corpus FIFO evaluation and raw evidence'
+          git pull --rebase origin feature/dynamath-003b
+          python scripts/filetree_index.py update
+          git add FileTree.md FILETREE.hash.json
+          git commit -m 'Synchronize final DynaMath 003b file index'
+          python scripts/filetree_index.py lint
+          git push origin HEAD:feature/dynamath-003b

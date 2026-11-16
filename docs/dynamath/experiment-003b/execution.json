@@ -1,0 +1,12 @@
+{
+  "training_run_id": 43787925276,
+  "training_url": "https://github.com/zizonhyeontae218/tele-neuron-engine/actions/runs/43787925276",
+  "production_status": "running; completed step is confirmed only from preserved checkpoint/evidence",
+  "initial_code_sha": "025b7cb4f2bcff5ca70b8b1fc1e456cb3edd0a08",
+  "initial_CI": {
+    "run_id": 43787925219,
+    "conclusion": "success"
+  },
+  "preflight_steps": 359,
+  "preflight_is_production": false
+}

@@ -96,11 +96,12 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/dynamath/experiment-003b/
-          python scripts/filetree_index.py update
-          git add FileTree.md FILETREE.hash.json
-          python scripts/filetree_index.py lint
           if ! git diff --cached --quiet; then
             git commit -m 'Record actual DynaMath 003b training segment and checkpoint hashes'
             git pull --rebase origin feature/dynamath-003b
+            python scripts/filetree_index.py update
+            git add FileTree.md FILETREE.hash.json
+            git commit -m 'Synchronize DynaMath 003b evidence index'
+            python scripts/filetree_index.py lint
             git push origin HEAD:feature/dynamath-003b
           fi

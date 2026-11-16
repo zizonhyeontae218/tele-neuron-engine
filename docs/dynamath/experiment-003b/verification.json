@@ -8,11 +8,21 @@
     "command": "actionlint",
     "exit_code": 0
   },
-  "CI_status": "pending first branch push",
+  "CI_status": {
+    "run_id": 43787925219,
+    "commit": "025b7cb4f2bcff5ca70b8b1fc1e456cb3edd0a08",
+    "conclusion": "success"
+  },
   "preflight": {
     "completed_steps": 359,
     "production_steps": 0,
     "status": "incomplete; distinct 90-second smoke run"
   },
-  "device_tested": "cpu; CUDA not executed"
+  "device_tested": "cpu; CUDA not executed",
+  "legacy_artifact_audit": {
+    "verified_frozen_files": 24,
+    "byte_identical": true,
+    "sample_replays_identical": 64,
+    "snapshot_resumes_exact": true
+  }
 }

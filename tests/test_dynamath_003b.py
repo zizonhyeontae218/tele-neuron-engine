@@ -7,7 +7,7 @@ import torch
 from dynamath.v003a import Model as Parent
 from dynamath.v003b import Config, Model, WordTokenizer
 from dynamath.v003b.data import LaneStream, remove_leakage, overlap
-from dynamath.v003b.evaluation import generate, teacher_forced
+from dynamath.v003b.evaluation import generate, teacher_forced, corpus_generation
 from dynamath.v003b.model import block
 from dynamath.v003b.training import lr_at_update, run_training, seed_all
 
@@ -175,6 +175,12 @@ def test_full_finite_evaluation_counts_all_unequal_lanes():
     metrics = teacher_forced(model, ds, tok, batch=2)
     assert metrics["input_slots"] == LaneStream(ds, tok, 2).total_slots
     assert metrics["response_tokens"] > 0
+    actual = corpus_generation(model, tok, ds[:2], slots=2)
+    assert actual["summary"]["prompts"] == 4
+    assert actual["summary"]["dialogues"] == 2
+    assert [s["pair_index"] for s in actual["samples"]] == [0, 1, 0, 1]
+    assert all(s["input_tokens_admitted"] == s["input_token_count"] for s in actual["samples"])
+    assert "trace" not in actual["samples"][0]
 
 
 def test_old_character_checkpoint_still_loads():

@@ -41,6 +41,9 @@ one runtime scalar m. All nine ASTs are the 003a baseline tanh(z).
 `training-progress.png` shows logged training CE/LR and available validation CE.
 No milestone is filled from estimates. Test status: **{result['test_status']}**.
 The fixed final step 50,000 was selected before looking at test metrics.
+Before corpus finalization, FIFO columns describe the fixed 22-prompt set.
+After finalization they cover every paired turn in the complete validation
+split; the fixed-prompt summary is retained separately as fixed_prompt_FIFO.
 
 ## Objective and execution
 

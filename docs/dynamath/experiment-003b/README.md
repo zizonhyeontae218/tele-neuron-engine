@@ -82,3 +82,21 @@ The final step was preselected. Full validation is performed at 5k/20k/35k/50k;
 full test is only run after saving immutable final selection. The evaluator CLI
 does not expose interim test scoring. The final runner preserves test JSON and
 refuses to overwrite it with a different selected checkpoint.
+
+`DynaMath 003b full-corpus final evaluation` waits for the recorded production
+run and downloads its last cumulative checkpoint artifact. It adds actual FIFO
+generation for **every** Q/A pair in the complete validation split at all four
+milestones and every test pair for the frozen final model. This supplements the
+22 fixed English prompt samples and the full teacher-forced metrics. Corpus
+results preserve IDs, text, controls, premature emissions, EOS failure and queues
+in `closed-loop-<split>-<step>.json.gz`; only these corpus files omit the very
+large per-tick trace. Fixed-prompt samples retain that trace. The test model is
+never reselected or retrained. To recover this stage without any training:
+
+```sh
+gh workflow run dynamath-003b-finalize.yml --ref feature/dynamath-003b \
+  -f training_run_id=RUN_ID
+```
+
+The waiting job has a five-hour bound plus evaluation time; if training takes
+longer, dispatch that final-evaluation workflow after training completes.
