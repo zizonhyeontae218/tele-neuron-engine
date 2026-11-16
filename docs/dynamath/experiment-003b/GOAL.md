@@ -35,12 +35,12 @@ Shared Config only gains ordered-list typing; old strings remain supported.
 
 - [x] Tokenizer metadata, frequencies, split IDs/removals/hashes and full OOV.
 - [x] Focused and historical tests; exact same-environment restart test; CI.
-- [ ] Actual 50,000 updates, resumable checkpoints at 5k/20k/35k/50k.
-- [ ] Full validation metrics at milestones, table and graph; fixed last-step
+- [x] Actual 50,000 updates, resumable checkpoints at 5k/20k/35k/50k.
+- [x] Full validation metrics at milestones, table and graph; fixed last-step
       final selection, then full test once (never tune against test).
-- [ ] >=20 fixed English FIFO prompts including multi-turn follow-up;
+- [x] >=20 fixed English FIFO prompts including multi-turn follow-up;
       raw outputs, failures and S-only/m-only/both reset memory comparisons.
-- [ ] Parameter/state/cost/time/memory measurements and reproducible reports.
+- [x] Parameter/state/cost/time/memory measurements and reproducible reports.
 
 If bounded execution stops, preserve actual completed step and remaining work;
 implementation alone does not satisfy completion. No automatic claim of language

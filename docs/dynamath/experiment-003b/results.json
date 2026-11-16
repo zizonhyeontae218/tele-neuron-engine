@@ -5545,6 +5545,20 @@
         },
         "actual_FIFO": {
           "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
+          "prompts": 3742,
+          "eos_success_rate": 0.0,
+          "response_omission_rate": 1.0,
+          "adjacent_repeated_token_rate": 0.0,
+          "mean_generated_length_including_controls": 0.0,
+          "tokens_per_second_including_input_processing": 0.0,
+          "question_time_emissions": 0,
+          "unexpected_controls": 0,
+          "seconds": 230.74524712707898,
+          "dialogues": 974,
+          "coverage": "every nonoverlapping Q/A pair in the complete filtered split; fresh Session per pair; no gold-answer injection"
+        },
+        "fixed_prompt_FIFO": {
+          "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
           "prompts": 22,
           "eos_success_rate": 0.0,
           "response_omission_rate": 1.0,
@@ -5577,6 +5591,20 @@
           "cuda_peak_bytes": 0
         },
         "actual_FIFO": {
+          "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
+          "prompts": 3742,
+          "eos_success_rate": 0.0,
+          "response_omission_rate": 1.0,
+          "adjacent_repeated_token_rate": 0.0,
+          "mean_generated_length_including_controls": 0.0,
+          "tokens_per_second_including_input_processing": 0.0,
+          "question_time_emissions": 0,
+          "unexpected_controls": 0,
+          "seconds": 219.91430016605045,
+          "dialogues": 974,
+          "coverage": "every nonoverlapping Q/A pair in the complete filtered split; fresh Session per pair; no gold-answer injection"
+        },
+        "fixed_prompt_FIFO": {
           "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
           "prompts": 22,
           "eos_success_rate": 0.0,
@@ -5611,6 +5639,20 @@
         },
         "actual_FIFO": {
           "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
+          "prompts": 3742,
+          "eos_success_rate": 0.0,
+          "response_omission_rate": 1.0,
+          "adjacent_repeated_token_rate": 0.0,
+          "mean_generated_length_including_controls": 0.0,
+          "tokens_per_second_including_input_processing": 0.0,
+          "question_time_emissions": 0,
+          "unexpected_controls": 0,
+          "seconds": 218.30960284994217,
+          "dialogues": 974,
+          "coverage": "every nonoverlapping Q/A pair in the complete filtered split; fresh Session per pair; no gold-answer injection"
+        },
+        "fixed_prompt_FIFO": {
+          "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
           "prompts": 22,
           "eos_success_rate": 0.0,
           "response_omission_rate": 1.0,
@@ -5643,6 +5685,20 @@
           "cuda_peak_bytes": 0
         },
         "actual_FIFO": {
+          "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
+          "prompts": 3742,
+          "eos_success_rate": 0.0,
+          "response_omission_rate": 1.0,
+          "adjacent_repeated_token_rate": 0.0,
+          "mean_generated_length_including_controls": 0.0,
+          "tokens_per_second_including_input_processing": 0.0,
+          "question_time_emissions": 0,
+          "unexpected_controls": 0,
+          "seconds": 220.33039560700126,
+          "dialogues": 974,
+          "coverage": "every nonoverlapping Q/A pair in the complete filtered split; fresh Session per pair; no gold-answer injection"
+        },
+        "fixed_prompt_FIFO": {
           "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
           "prompts": 22,
           "eos_success_rate": 0.0,
@@ -5769,6 +5825,26 @@
     "input_slots_per_second": 1224.6368715062063,
     "response_tokens_per_second": 607.3340570486026,
     "max_rss_kib": 888308,
-    "cuda_peak_bytes": 0
+    "cuda_peak_bytes": 0,
+    "actual_FIFO": {
+      "mode": "actual Session/FIFO; threshold .1; both eligible output checks",
+      "prompts": 3688,
+      "eos_success_rate": 0.0,
+      "response_omission_rate": 1.0,
+      "adjacent_repeated_token_rate": 0.0,
+      "mean_generated_length_including_controls": 0.0,
+      "tokens_per_second_including_input_processing": 0.0,
+      "question_time_emissions": 0,
+      "unexpected_controls": 0,
+      "seconds": 214.78079660600815,
+      "dialogues": 996,
+      "coverage": "every nonoverlapping Q/A pair in the complete filtered split; fresh Session per pair; no gold-answer injection"
+    }
+  },
+  "finalization": {
+    "complete": true,
+    "validation_generation_pairs_per_checkpoint": 3742,
+    "test_generation_pairs": 3688,
+    "method": "entire filtered splits, fresh actual Session/FIFO per Q/A pair; multi-turn memory assessed separately; teacher-forced test not rerun"
   }
 }
