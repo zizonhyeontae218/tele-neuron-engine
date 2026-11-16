@@ -260,6 +260,7 @@
 - `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
 - `run_dynamath_003.py` — Contains run dynamath 003 data.
 - `run_dynamath_003a.py` — Contains run dynamath 003a data.
+- `summarize_dynamath_003b.py` — Contains summarize dynamath 003b data.
 - `train_dynamath_002a.py` — Contains train dynamath 002a data.
 - `train_dynamath_002b.py` — Contains train dynamath 002b data.
 - `train_dynamath_003a_english.py` — Contains train dynamath 003a english data.

@@ -109,3 +109,7 @@ expiry in the owner-visible release draft `dynamath-003b-checkpoints`. The draft
 is not published automatically; the previous branches and public releases stay
 untouched. Repeating finalization reuses cached corpus measurements and preserves
 the fixed checkpoint/test selection.
+The workflow then generates `003b-final-summary.md` with all ten requested report
+items and the actual committed evidence SHA. It appears in the Actions job
+summary, the final-summary artifact, and the checkpoint release draft; it is
+never generated for an incomplete run.
