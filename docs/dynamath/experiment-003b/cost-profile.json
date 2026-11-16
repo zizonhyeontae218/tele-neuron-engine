@@ -1,0 +1,38 @@
+{
+  "role": "CPU forward cost probe of fixed 003b equations; not additional optimizer updates",
+  "checkpoint_step": 359,
+  "batch": 8,
+  "state_addresses": 16448,
+  "memory_scalars": 1,
+  "stored_parameters": 4441203,
+  "threads": 2,
+  "warmup_ticks": 9,
+  "benchmark_ticks_per_lane": 90,
+  "benchmark_lane_ticks": 720,
+  "forward_seconds": 0.06178429100009453,
+  "lane_ticks_per_second": 11653.44763766729,
+  "profiled_ticks_per_lane": 18,
+  "profiler_recorded_flops": 129683808,
+  "profiler_recorded_flops_per_lane_tick": 900582.0,
+  "analytical_low_rank_matrix_flops_per_lane_tick": 789504,
+  "profiler_ops_with_flops": [
+    {
+      "op": "aten::mm",
+      "flops": 118429056,
+      "calls": 72
+    },
+    {
+      "op": "aten::add",
+      "flops": 9774000,
+      "calls": 180
+    },
+    {
+      "op": "aten::mul",
+      "flops": 1480752,
+      "calls": 144
+    }
+  ],
+  "limitations": "PyTorch profiler counts supported CPU operators only; not all nonlinear, indexing, backward or optimizer operations have FLOP estimates. No GPU was measured. Timing excludes tokenization, FIFO and output checks.",
+  "torch": "2.15.0+cpu",
+  "max_rss_kib": 418308
+}

@@ -27,6 +27,12 @@ The low-rank matrix paths cost 4*N*rank = 789,504 multiply/add FLOPs per lane
 tick, excluding all other arithmetic/backward/optimizer costs. This analytical
 quantity is not a profiler measurement.
 
+The separate CPU probe in `cost-profile.json` recorded 900,582 supported-operator
+FLOPs per lane tick over 18 profiled ticks at batch 8. A 90-tick forward-only
+timing probe measured 11,653 lane-ticks/second on the local CPU. The profiler does
+not assign FLOPs to every nonlinear/indexing operation, and this timing excludes
+FIFO, output checks, backward and optimizer work. It is not training throughput.
+
 Parameter storage is split into nine modules to avoid constructing full-nine-law
 slice gradients for every tick. A focused test verifies bitwise agreement with
 003a equations for all nine laws across 18 ticks at identical initial RNG.

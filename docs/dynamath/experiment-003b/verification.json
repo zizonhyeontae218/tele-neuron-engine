@@ -9,9 +9,10 @@
     "exit_code": 0
   },
   "CI_status": {
-    "run_id": 43787925219,
-    "commit": "025b7cb4f2bcff5ca70b8b1fc1e456cb3edd0a08",
-    "conclusion": "success"
+    "run_id": 43788649930,
+    "commit": "aec86a78f11c50ff41db0cecb09099843d3a38b0",
+    "conclusion": "success",
+    "url": "https://github.com/zizonhyeontae218/tele-neuron-engine/actions/runs/43788649930"
   },
   "preflight": {
     "completed_steps": 359,
@@ -24,5 +25,10 @@
     "byte_identical": true,
     "sample_replays_identical": 64,
     "snapshot_resumes_exact": true
+  },
+  "completed_checkpoint_resume": {
+    "byte_hash_unchanged": true,
+    "new_optimizer_updates": 0,
+    "test": "test_exact_restart_weights_optimizer_schedule_rng_sessions"
   }
 }

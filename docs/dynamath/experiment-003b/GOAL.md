@@ -33,8 +33,8 @@ Shared Config only gains ordered-list typing; old strings remain supported.
 
 ## Acceptance
 
-- [ ] Tokenizer metadata, frequencies, split IDs/removals/hashes and full OOV.
-- [ ] Focused and historical tests; exact same-environment restart test; CI.
+- [x] Tokenizer metadata, frequencies, split IDs/removals/hashes and full OOV.
+- [x] Focused and historical tests; exact same-environment restart test; CI.
 - [ ] Actual 50,000 updates, resumable checkpoints at 5k/20k/35k/50k.
 - [ ] Full validation metrics at milestones, table and graph; fixed last-step
       final selection, then full test once (never tune against test).

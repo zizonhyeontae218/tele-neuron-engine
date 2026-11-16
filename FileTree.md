@@ -146,6 +146,7 @@
 - `README.md` — DynaMath 003b — reproduction and status.
 - `architecture.md` — DynaMath 003b architecture.
 - `comparison.md` — DynaMath 003a / 003b comparison boundaries.
+- `cost-profile.json` — Contains cost-profile data.
 - `execution.json` — Contains execution data.
 - `generation-samples.json` — Contains generation-samples data.
 - `memory-results.json` — Contains memory-results data.
