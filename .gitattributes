@@ -1,0 +1,5 @@
+# Generated indexes can receive disjoint additions from the training evidence
+# job and source changes. Regenerate and lint after every merge; source files
+# retain Git's default conflict behavior.
+FileTree.md merge=union
+FILETREE.hash.json merge=union

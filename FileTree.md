@@ -4,6 +4,7 @@
 
 ## ``
 
+- `.gitattributes` — Contains .gitattributes data.
 - `.gitignore` — Contains .gitignore data.
 - `AGENTS.md` — DynaMath series development.
 - `CONTRIBUTING.md` — Contributing to DynaMath.

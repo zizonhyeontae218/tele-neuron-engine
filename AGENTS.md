@@ -42,3 +42,6 @@ Canonical goal: docs/dynamath/experiment-003b/GOAL.md. Historical no-training
 restrictions do not apply to this fixed budget. Preserve previous experiment
 bytes and other refs. New code is isolated in v003b; Config accepts legacy
 strings and ordered token lists. See v003b/AGENTS.md and the versioned README.
+Generated index files use union merging for concurrent evidence/source additions;
+always regenerate and lint their actual hashes after a merge. This does not
+change merge behavior for source, configurations, experiment results or models.

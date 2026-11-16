@@ -2,6 +2,7 @@
   "version": 1,
   "manifest_path": "FileTree.md",
   "files": {
+    ".gitattributes": "60b60cc49963ac4464811da875f8f89261e790f1786a62e9885099abde29c088",
     ".github/workflows/dynamath-002a-train.yml": "a188d82b8031de05f2978290183fc016b3dd9536fd71098ddfe98171c487c1da",
     ".github/workflows/dynamath-002b-train.yml": "582988f368852f7c7821da0bd44b34a2bb383c8f355a66a1218f7890b1772269",
     ".github/workflows/dynamath-003b-finalize.yml": "1d435f95ceb36a89fc12f609442db788df3a76dd29da6b27246ec45f43ec83b8",
@@ -9,7 +10,7 @@
     ".github/workflows/dynamath-003b-train.yml": "3e6f42c3657e4cdc70a162232f6a251b948a25831dd015930c833ceef7b3fdf4",
     ".github/workflows/tests.yml": "12d3d7d64f9c7cd315a2d73fb0937ba4d481a61aa97fc1954785cf4ea2411c5e",
     ".gitignore": "ac0b17e9d3e30ed6e229fa28f688a91959ebb4e789aa9b749d4b4250e16a7ef5",
-    "AGENTS.md": "0ccd2d307f4daec026f47b4238ecefe82b36e2753f89712fbe2d4660a8d4aa23",
+    "AGENTS.md": "7545bd8d6aa89d2d42958eb518ae75486281d83ac540918e31d336a9b0a0a678",
     "CONTRIBUTING.md": "78a8d09d6b5583be1aaafa2758990296b795a81e5a2793942b5270355c217ee7",
     "GOAL.md": "e3bd916f759d6d70a2b573cc6380ed307b5ed7ba535d7bed10a27d256de53c87",
     "LICENSE": "2cc1fdfb858a8703de4905087cda0bc35bdad7e69b5a8db2e4e0933ec07066cd",
