@@ -1,0 +1,23 @@
+{
+  "seed": 43,
+  "threads": 2,
+  "batch": 8,
+  "tbptt_slots": 16,
+  "steps": 50000,
+  "lr": 0.0002,
+  "minimum_lr": 0.00002,
+  "warmup": 1000,
+  "gradient_clip": 1.0,
+  "latent": 64,
+  "rank": 12,
+  "formulas": 9,
+  "memories": 1,
+  "vocabulary_limit": 8192,
+  "response_weight": 0.75,
+  "silence_weight": 0.25,
+  "milestones": [5000, 20000, 35000, 50000],
+  "selection": "precommitted final step 50000; no test-driven selection",
+  "response_slots": 96,
+  "seconds_per_segment": 14400,
+  "checkpoint_interval": 500
+}

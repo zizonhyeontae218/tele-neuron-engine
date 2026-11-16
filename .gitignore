@@ -9,3 +9,5 @@ dist/
 htmlcov/
 work/
 data/dynamath/001a/ChatbotData.csv
+models/dynamath/003b/*.pt
+models/dynamath/003b/*.tmp

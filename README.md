@@ -1,5 +1,9 @@
 # DynaMath
 
+Current word-level experiment: [DynaMath 003b](docs/dynamath/experiment-003b/README.md).
+Its 50,000-update target, actual progress and limitations are recorded separately
+from historical experiments; see [training status](docs/dynamath/experiment-003b/training-report.md).
+
 하나의 지속되는 정보 상태에 다섯 개의 학습된 수학 법칙을 순환 적용하는 실험 프로젝트입니다. 매 틱 입력을 더하고, 법칙 하나를 적용한 직후 출력 조건을 검사합니다.
 
 이 브랜치는 **DynaMath 시리즈의 메인 페이지이자 후속 개발 기준점**입니다. 현재 버전은 **DynaMath 001a**입니다.

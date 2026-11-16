@@ -7,7 +7,7 @@ from torch import nn
 
 @dataclass
 class Config:
-    vocabulary: str
+    vocabulary: str | list[str]
     memories: int = 9
     cross: bool = False
     frozen: bool = False

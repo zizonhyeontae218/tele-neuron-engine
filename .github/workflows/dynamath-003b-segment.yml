@@ -1,0 +1,106 @@
+name: DynaMath 003b bounded segment
+on:
+  workflow_call:
+    inputs:
+      segment:
+        type: string
+        required: true
+      previous_segment:
+        type: string
+        default: ''
+      resume_run_id:
+        type: string
+        default: ''
+    outputs:
+      complete:
+        value: ${{ jobs.segment.outputs.complete }}
+permissions:
+  contents: write
+  actions: read
+jobs:
+  segment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    outputs:
+      complete: ${{ steps.train.outputs.complete }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/dynamath-003b
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deterministic CPU environment
+        run: |
+          python -m pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[dev]' -c configs/dynamath/environment-003b.txt
+      - name: Restore immediately preceding checkpoint artifact
+        if: inputs.previous_segment != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: dynamath-003b-checkpoints-${{ inputs.previous_segment }}
+          path: models/dynamath/003b
+          run-id: ${{ inputs.resume_run_id || github.run_id }}
+          github-token: ${{ github.token }}
+      - name: Check training invariants before continuing
+        run: python -m pytest -q tests/test_dynamath_003b.py
+      - name: Fixed 50000 target with bounded segment and full milestone evaluation
+        id: train
+        env:
+          PREVIOUS_SEGMENT: ${{ inputs.previous_segment }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work
+          args=()
+          if [ -n "$PREVIOUS_SEGMENT" ]; then
+            test -f models/dynamath/003b/latest.pt
+            args+=(--resume models/dynamath/003b/latest.pt)
+          fi
+          python -u scripts/train_dynamath_003b.py --device cpu --seconds 14400 "${args[@]}" 2>&1 | tee work/003b-segment.log
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          result=json.loads(Path('docs/dynamath/experiment-003b/results.json').read_text())
+          training=result['training']
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('complete='+str(training['complete']).lower()+'\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write(Path('docs/dynamath/experiment-003b/training-report.md').read_text())
+          PY
+      - name: Upload resumable binaries even after a failed train
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dynamath-003b-checkpoints-${{ inputs.segment }}
+          path: models/dynamath/003b/*.pt
+          retention-days: 90
+          compression-level: 0
+          if-no-files-found: warn
+      - name: Upload raw evidence and segment log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dynamath-003b-evidence-${{ inputs.segment }}
+          path: |
+            docs/dynamath/experiment-003b/
+            work/003b-segment.log
+          retention-days: 90
+          if-no-files-found: warn
+      - name: Commit small reports to 003b only
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/dynamath/experiment-003b/
+          python scripts/filetree_index.py update
+          git add FileTree.md FILETREE.hash.json
+          python scripts/filetree_index.py lint
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record actual DynaMath 003b training segment and checkpoint hashes'
+            git pull --rebase origin feature/dynamath-003b
+            git push origin HEAD:feature/dynamath-003b
+          fi

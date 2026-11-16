@@ -1,0 +1,5 @@
+# CPU PyTorch is installed separately from https://download.pytorch.org/whl/cpu
+torch==2.15.0
+numpy==2.3.5
+matplotlib==3.10.8
+pytest==9.2.0

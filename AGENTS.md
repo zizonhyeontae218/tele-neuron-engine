@@ -33,3 +33,12 @@ and extra scalar-sharing controls supersede the old no-training restriction for
 this bounded phase. Preserve all legacy source/assets; new implementation lives
 in src/dynamath/v002. Canonical contract: docs/dynamath/experiment-002/CODEX_HANDOFF.md;
 plan: docs/dynamath/experiment-002/GOAL.md; budget: configs/dynamath/experiment-002.json.
+
+## Authorized 003b phase
+Current branch is feature/dynamath-003b, based on feature/dynamath-003 at ca8141c.
+The explicit user request authorizes word-level Model1 implementation, 50,000
+updates, full-split evaluation, bounded Actions continuation, and commits here.
+Canonical goal: docs/dynamath/experiment-003b/GOAL.md. Historical no-training
+restrictions do not apply to this fixed budget. Preserve previous experiment
+bytes and other refs. New code is isolated in v003b; Config accepts legacy
+strings and ordered token lists. See v003b/AGENTS.md and the versioned README.

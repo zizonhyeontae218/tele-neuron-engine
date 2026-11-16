@@ -17,14 +17,18 @@
 
 - `dynamath-002a-train.yml` — Contains dynamath-002a-train data.
 - `dynamath-002b-train.yml` — Contains dynamath-002b-train data.
+- `dynamath-003b-segment.yml` — Contains dynamath-003b-segment data.
+- `dynamath-003b-train.yml` — Contains dynamath-003b-train data.
 - `tests.yml` — Contains tests data.
 
 ## `configs/dynamath`
 
+- `environment-003b.txt` — Contains environment-003b data.
 - `experiment-001a.json` — Contains experiment-001a data.
 - `experiment-002.json` — Contains experiment-002 data.
 - `experiment-003.json` — Contains experiment-003 data.
 - `experiment-003a.json` — Contains experiment-003a data.
+- `experiment-003b.json` — Contains experiment-003b data.
 
 ## `data/dynamath/001a`
 
@@ -135,6 +139,22 @@
 - `korean-search.json` — Contains korean-search data.
 - `verification.txt` — Contains verification data.
 
+## `docs/dynamath/experiment-003b`
+
+- `GOAL.md` — DynaMath 003b — word-level English training.
+- `README.md` — DynaMath 003b — reproduction and status.
+- `architecture.md` — DynaMath 003b architecture.
+- `comparison.md` — DynaMath 003a / 003b comparison boundaries.
+- `generation-samples.json` — Contains generation-samples data.
+- `memory-results.json` — Contains memory-results data.
+- `preflight.json` — Contains preflight data.
+- `results.json` — Contains results data.
+- `tokenizer-report.json` — Contains tokenizer-report data.
+- `tokenizer.json` — Contains tokenizer data.
+- `training-progress.png` — Contains training-progress data.
+- `training-report.md` — DynaMath 003b — actual training status.
+- `verification.json` — Contains verification data.
+
 ## `models/dynamath/001a`
 
 - `README.md` — DynaMath 001a saved models.
@@ -216,12 +236,17 @@
 - `leader-final.pt` — Contains leader-final data.
 - `offspring-final.pt` — Contains offspring-final data.
 
+## `models/dynamath/003b`
+
+- `README.md` — DynaMath 003b checkpoint storage.
+
 ## `scripts`
 
 - `audit_dynamath_001a.py` — Contains audit dynamath 001a data.
 - `check_dynamath_003.py` — Contains check dynamath 003 data.
 - `check_dynamath_003a_catalog.py` — Contains check dynamath 003a catalog data.
 - `evaluate_dynamath_003a.py` — Contains evaluate dynamath 003a data.
+- `evaluate_dynamath_003b.py` — Contains evaluate dynamath 003b data.
 - `filetree_index.py` — Contains filetree index data.
 - `report_dynamath_002.py` — Contains report dynamath 002 data.
 - `reproduce_dynamath_002.py` — Contains reproduce dynamath 002 data.
@@ -230,6 +255,7 @@
 - `train_dynamath_002a.py` — Contains train dynamath 002a data.
 - `train_dynamath_002b.py` — Contains train dynamath 002b data.
 - `train_dynamath_003a_english.py` — Contains train dynamath 003a english data.
+- `train_dynamath_003b.py` — Contains train dynamath 003b data.
 - `verify_dynamath_001a.py` — Contains verify dynamath 001a data.
 - `verify_dynamath_002.py` — Contains verify dynamath 002 data.
 
@@ -266,6 +292,17 @@
 - `search.py` — Contains search data.
 - `training.py` — Contains training data.
 
+## `src/dynamath/v003b`
+
+- `AGENTS.md` — DynaMath 003b.
+- `__init__.py` — Contains   init   data.
+- `data.py` — Contains data data.
+- `evaluation.py` — Contains evaluation data.
+- `model.py` — Contains model data.
+- `reporting.py` — Contains reporting data.
+- `tokenizer.py` — Contains tokenizer data.
+- `training.py` — Contains training data.
+
 ## `tests`
 
 - `test_cli.py` — Contains test cli data.
@@ -274,3 +311,4 @@
 - `test_dynamath_002.py` — Contains test dynamath 002 data.
 - `test_dynamath_003.py` — Contains test dynamath 003 data.
 - `test_dynamath_003a.py` — Contains test dynamath 003a data.
+- `test_dynamath_003b.py` — Contains test dynamath 003b data.

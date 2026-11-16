@@ -1,0 +1,18 @@
+{
+  "local_tests": {
+    "command": "python -m pytest -q",
+    "passed": 54,
+    "log": "......................................................                   [100%]\n=============================== warnings summary ===============================\n../../../opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14\n  /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14: PytestRemovedIn10Warning: _pytest.python.CallSpec2 has been renamed to CallSpec.\n  The CallSpec2 alias will be removed in pytest 10.\n  Update imports to use CallSpec instead.\n  See https://docs.pytest.org/en/stable/deprecations.html#callspec2-renamed\n    from _pytest.python import CallSpec2\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n54 passed, 1 warning in 15.59s\n"
+  },
+  "workflow_lint": {
+    "command": "actionlint",
+    "exit_code": 0
+  },
+  "CI_status": "pending first branch push",
+  "preflight": {
+    "completed_steps": 359,
+    "production_steps": 0,
+    "status": "incomplete; distinct 90-second smoke run"
+  },
+  "device_tested": "cpu; CUDA not executed"
+}

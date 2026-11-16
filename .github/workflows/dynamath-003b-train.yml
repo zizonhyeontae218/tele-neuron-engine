@@ -1,0 +1,49 @@
+name: DynaMath 003b word training
+on:
+  push:
+    branches: [feature/dynamath-003b]
+    paths: [.github/workflows/dynamath-003b-train.yml]
+  workflow_dispatch:
+    inputs:
+      resume_run_id:
+        description: Previous Actions run ID (blank for a fresh seed-43 run)
+        type: string
+        default: ''
+      resume_segment:
+        description: Previous checkpoint artifact segment suffix (required with run ID)
+        type: string
+        default: ''
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: dynamath-003b-word-training
+  cancel-in-progress: false
+jobs:
+  segment0:
+    uses: ./.github/workflows/dynamath-003b-segment.yml
+    with:
+      segment: '0'
+      previous_segment: ${{ inputs.resume_segment || '' }}
+      resume_run_id: ${{ inputs.resume_run_id || '' }}
+  segment1:
+    needs: segment0
+    if: needs.segment0.outputs.complete != 'true'
+    uses: ./.github/workflows/dynamath-003b-segment.yml
+    with:
+      segment: '1'
+      previous_segment: '0'
+  segment2:
+    needs: segment1
+    if: needs.segment1.outputs.complete != 'true'
+    uses: ./.github/workflows/dynamath-003b-segment.yml
+    with:
+      segment: '2'
+      previous_segment: '1'
+  segment3:
+    needs: segment2
+    if: needs.segment2.outputs.complete != 'true'
+    uses: ./.github/workflows/dynamath-003b-segment.yml
+    with:
+      segment: '3'
+      previous_segment: '2'

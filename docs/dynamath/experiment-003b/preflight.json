@@ -1,0 +1,159 @@
+{
+  "schema": "dynamath-003b-results/v1",
+  "training": {
+    "completed_steps": 359,
+    "target_steps": 50000,
+    "remaining_steps": 49641,
+    "complete": false,
+    "training_seconds": 90.11615710900037,
+    "segment_seconds": 90.17526090599995,
+    "segment_updates": 359,
+    "trained_lane_slots": 45952,
+    "history": [
+      {
+        "step": 1,
+        "loss": 9.011258125305176,
+        "response_CE": 9.008931159973145,
+        "silence_CE": 9.01823902130127,
+        "response_checks": 52,
+        "silence_checks": 204,
+        "lr": 2.0000000000000002e-07,
+        "gradient_norm_before_clip": 2.813459873199463,
+        "training_seconds": 0.2445456230000218
+      },
+      {
+        "step": 100,
+        "loss": 8.035107612609863,
+        "response_CE": 8.858427047729492,
+        "silence_CE": 5.565150260925293,
+        "response_checks": 49,
+        "silence_checks": 207,
+        "lr": 2e-05,
+        "gradient_norm_before_clip": 8.246867179870605,
+        "training_seconds": 23.646726738000552
+      },
+      {
+        "step": 200,
+        "loss": 9.978303909301758,
+        "response_CE": 9.493415832519531,
+        "silence_CE": 11.432968139648438,
+        "response_checks": 45,
+        "silence_checks": 211,
+        "lr": 4e-05,
+        "gradient_norm_before_clip": 27.874523162841797,
+        "training_seconds": 50.34993987199982
+      },
+      {
+        "step": 300,
+        "loss": 7.632386207580566,
+        "response_CE": 8.472834587097168,
+        "silence_CE": 5.111042499542236,
+        "response_checks": 54,
+        "silence_checks": 202,
+        "lr": 6e-05,
+        "gradient_norm_before_clip": 6.4974493980407715,
+        "training_seconds": 75.38980770499961
+      }
+    ],
+    "validation": [],
+    "positions": [
+      5744,
+      5744,
+      5744,
+      5744,
+      5744,
+      5744,
+      5744,
+      5744
+    ],
+    "lane_epochs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lane_lengths": [
+      141639,
+      139982,
+      140134,
+      138653,
+      144024,
+      138877,
+      137318,
+      135933
+    ],
+    "clocks": [
+      57,
+      48,
+      189,
+      555,
+      135,
+      468,
+      564,
+      18
+    ],
+    "max_rss_kib": 796024,
+    "cuda_peak_bytes": 0,
+    "environment": {
+      "python": "3.12.14",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.3.5",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "device": "cpu",
+      "threads": 2,
+      "cuda": null,
+      "source_commit": "ca8141c160d03c05ceecf313994658ec7631e87c"
+    },
+    "training_input_slots_per_second": 509.91965785246003
+  },
+  "data_sha256": "d86c20723ace49a08743d0686e4ee96a118cc0515881fab33b3fade664a21ab5",
+  "tokenizer_sha256": "81d3677d4de4dc3df3f9c26c8fc331a41da174202323f19b9e517eb1e7b049a3",
+  "model": {
+    "vocabulary_size": 8192,
+    "parameters": 4441203,
+    "state_addresses": 16448,
+    "memory_scalars": 1,
+    "parameter_fp32_bytes": 17764812,
+    "session_S_m_fp32_bytes": 65796,
+    "batch_S_m_fp32_bytes": 526368,
+    "low_rank_matrix_forward_flops_per_lane_tick": 789504,
+    "cost_note": "Analytical low-rank matrix multiply/add only; excludes nonlinearities, backward, Adam and grouping overhead.",
+    "asts": [
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      },
+      {
+        "op": "z"
+      }
+    ]
+  },
+  "test_status": "not run: final checkpoint not reached",
+  "test": null,
+  "run_role": "preflight only; not the production 50000-step run",
+  "note": "90-second contract execution and checkpoint smoke test; production begins fresh from seed 43 in Actions"
+}

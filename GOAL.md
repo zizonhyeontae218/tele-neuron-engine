@@ -33,3 +33,9 @@ Scientific limitation remains semantic evaluation 0/6 and no demonstrated recall
 Implement docs/dynamath/experiment-002/CODEX_HANDOFF.md with additional Model 9,
 Model 3 local/cross-read, Model 1 controls. See experiment-002/GOAL.md and pinned
 config for acceptance/budgets; previous cleanup goal above is historical.
+
+## Current authorized phase: 003b
+The active goal is docs/dynamath/experiment-003b/GOAL.md: full pinned DailyDialog,
+train-only word tokenizer, unchanged nine-law Model1, independent session clocks,
+exactly 50,000 target updates and raw FIFO/memory evaluation. Older sections are
+historical. Partial execution is explicitly incomplete, with restart artifacts.
