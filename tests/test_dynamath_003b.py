@@ -1,5 +1,6 @@
 """Focused word/address, session, FIFO and exact restart invariants."""
 import copy
+import hashlib
 import json
 from pathlib import Path
 import pytest
@@ -139,6 +140,13 @@ def test_exact_restart_weights_optimizer_schedule_rng_sessions(tmp_path):
     assert fa["python_rng"] == fb["python_rng"]
     assert (fa["numpy_rng"][1] == fb["numpy_rng"][1]).all()
     assert full["completed_steps"] == resumed["completed_steps"] == 8
+    final_path = tmp_path/"split/latest.pt"
+    before_hash = hashlib.sha256(final_path.read_bytes()).hexdigest()
+    b, final = Model.load(final_path)
+    done, _ = run_training(b, LaneStream(ds, tok, 2, shuffle=True), *args,
+                           tmp_path/"split", resume=final["restart"])
+    assert done["segment_updates"] == 0
+    assert hashlib.sha256(final_path.read_bytes()).hexdigest() == before_hash
     bad = copy.copy(p["restart"])
     bad["tokenizer_sha256"] = "bad"
     with pytest.raises(ValueError, match="tokenizer"):

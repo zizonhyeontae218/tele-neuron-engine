@@ -93,7 +93,7 @@ def run_training(model, stream, cfg, tokenizer_sha256, data_sha256, output,
     target = cfg["steps"] if stop_at is None else min(stop_at, cfg["steps"])
     cap = cfg["seconds_per_segment"] if seconds is None else seconds
     env = environment(device)
-    latest = None
+    latest = resume
 
     def checkpoint(path):
         nonlocal latest
@@ -168,7 +168,10 @@ def run_training(model, stream, cfg, tokenizer_sha256, data_sha256, output,
                     checkpoint(output/f"step-{step:05d}.pt")
             if step % cfg["checkpoint_interval"] == 0:
                 checkpoint(output/"latest.pt")
-        checkpoint(output/"latest.pt")
+        # A completed checkpoint is immutable: resuming at the target must not
+        # rewrite its byte hash after it has been selected for final test.
+        if step != measured_steps_before or resume is None:
+            checkpoint(output/"latest.pt")
     finally:
         for signum, handler in previous_handlers.items():
             signal.signal(signum, handler)

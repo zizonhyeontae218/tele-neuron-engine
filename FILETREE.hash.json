@@ -230,13 +230,13 @@
     "src/dynamath/v003b/model.py": "3fe29cfbd65a3d0b6c01ee1eeb24fb1f5e794e689d5f8b55d374d7363fd04096",
     "src/dynamath/v003b/reporting.py": "90c5b3615ea7409eff1f772c65adb56f591ab86d0fb9b9c4c5656c93d2faa4a6",
     "src/dynamath/v003b/tokenizer.py": "b817fa5dc1ad9b454aa87bdcb4b83bd11cd3f60ed890e37b99ab386674964ae3",
-    "src/dynamath/v003b/training.py": "c961facbf895823bac8ffac50dc1786fa23e4df9aa83e947420116eee30cfb82",
+    "src/dynamath/v003b/training.py": "057df51a43a32ee38d8492b5d2fb88072dbf2df06cfbe0e8eef427445c0b65d1",
     "tests/test_cli.py": "8cf51155582f55542f881d786977749fb98ae87a3614db3ae76ad3af988df784",
     "tests/test_dynamath.py": "e55a555c88304920677c6e10c543a044659179b24c3fce2e5a4be3b8e8aa13d8",
     "tests/test_dynamath_001a.py": "fc0ce1b72bef4f8dbb7999135c43f296057f5b8d0e614cc6ea21337cbbaa220c",
     "tests/test_dynamath_002.py": "706e38c44d3311d50588f64a2297a3272cf4a5f0862819dccae86f13fa4741ed",
     "tests/test_dynamath_003.py": "54be5f140187da12f7fbca10709a6b799c87e5178b82bdc271c90b26d95cee03",
     "tests/test_dynamath_003a.py": "476e441e760378a8fb9b4ec1ca2419b4349ed07b50fdda8c540a43b0db96454b",
-    "tests/test_dynamath_003b.py": "704d54c2552f8dd4bd88b92134550d69105ff96108cfceb760d0db2a3aa8530e"
+    "tests/test_dynamath_003b.py": "f1a314864f84f3f7388ca0ce49aaf8efc85c26ec8c62212f3e5053c8735be456"
   }
 }
