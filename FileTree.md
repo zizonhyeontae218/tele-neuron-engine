@@ -147,10 +147,15 @@
 - `README.md` — DynaMath 003b — reproduction and status.
 - `architecture.md` — DynaMath 003b architecture.
 - `checkpoint-manifest.json` — Contains checkpoint-manifest data.
+- `closed-loop-test-50000.json.gz` — Contains closed-loop-test-50000.json data.
+- `closed-loop-validation-05000.json.gz` — Contains closed-loop-validation-05000.json data.
+- `closed-loop-validation-20000.json.gz` — Contains closed-loop-validation-20000.json data.
+- `closed-loop-validation-35000.json.gz` — Contains closed-loop-validation-35000.json data.
+- `closed-loop-validation-50000.json.gz` — Contains closed-loop-validation-50000.json data.
 - `comparison.md` — DynaMath 003a / 003b comparison boundaries.
 - `cost-profile.json` — Contains cost-profile data.
-- `execution.json` — Contains execution data.
 - `evaluation-plan.json` — Contains evaluation-plan data.
+- `execution.json` — Contains execution data.
 - `generation-05000.json` — Contains generation-05000 data.
 - `generation-20000.json` — Contains generation-20000 data.
 - `generation-35000.json` — Contains generation-35000 data.
@@ -168,6 +173,7 @@
 - `tokenizer.json` — Contains tokenizer data.
 - `training-progress.png` — Contains training-progress data.
 - `training-report.md` — DynaMath 003b — actual training status.
+- `training-workflow-status.json` — Contains training-workflow-status data.
 - `validation-05000.json` — Contains validation-05000 data.
 - `validation-20000.json` — Contains validation-20000 data.
 - `validation-35000.json` — Contains validation-35000 data.
