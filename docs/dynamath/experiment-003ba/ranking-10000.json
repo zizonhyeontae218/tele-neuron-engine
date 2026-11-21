@@ -1,0 +1,2807 @@
+{
+  "completed": 50,
+  "total_formulas": 50,
+  "completed_candidate_updates": 500000,
+  "ranking": [
+    {
+      "candidate": "F1-19",
+      "expression": "σ(sin(tanh(z)))·((tanh(z)+(tanh(z))³)/2)+(1−σ(sin(tanh(z))))·(sin(tanh(z)))",
+      "response_CE": 1.6090007806017064,
+      "response_perplexity": 4.997814818479028,
+      "response_accuracy": 0.5050789412584166,
+      "response_omission_rate": 0.004962851172509867,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20400,
+        1545,
+        22080,
+        21362,
+        0,
+        233,
+        17979,
+        257,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.8999037742614746
+        ],
+        [
+          -0.02212338149547577
+        ],
+        [
+          -2.2735185623168945
+        ],
+        [
+          -2.422762870788574
+        ],
+        [
+          -1.510035514831543
+        ],
+        [
+          2.2943003177642822
+        ],
+        [
+          -1.8488438129425049
+        ],
+        [
+          -1.57390558719635
+        ]
+      ],
+      "teacher_forced_seconds": 9.0,
+      "fifo_seconds": 1.077999999979511,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-29",
+      "expression": "clip(sin(tanh(z))+tanh(α)·(2σ(tanh(m))−1),−1,1)",
+      "response_CE": 1.6093643358320977,
+      "response_perplexity": 4.9996321305234455,
+      "response_accuracy": 0.5042082656141166,
+      "response_omission_rate": 0.004614580914789877,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20720,
+        1412,
+        22080,
+        21334,
+        0,
+        488,
+        18782,
+        376,
+        22012
+      ],
+      "final_m": [
+        [
+          -1.8286292552947998
+        ],
+        [
+          0.10059189051389694
+        ],
+        [
+          -2.2576184272766113
+        ],
+        [
+          -2.438297748565674
+        ],
+        [
+          -1.6706067323684692
+        ],
+        [
+          2.257185697555542
+        ],
+        [
+          -1.766200304031372
+        ],
+        [
+          -1.550884485244751
+        ]
+      ],
+      "teacher_forced_seconds": 8.797000000020489,
+      "fifo_seconds": 1.1099999999860302,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-13",
+      "expression": "((tanh(z)+(tanh(z))³)/2+sin(tanh(z)))/2",
+      "response_CE": 1.6093832162313837,
+      "response_perplexity": 4.999726526465467,
+      "response_accuracy": 0.5049918736939866,
+      "response_omission_rate": 0.0050499187369398655,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20416,
+        1370,
+        22080,
+        21333,
+        0,
+        277,
+        18151,
+        305,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.9044666290283203
+        ],
+        [
+          -0.030293650925159454
+        ],
+        [
+          -2.2767248153686523
+        ],
+        [
+          -2.4370076656341553
+        ],
+        [
+          -1.5254656076431274
+        ],
+        [
+          2.2893848419189453
+        ],
+        [
+          -1.8738528490066528
+        ],
+        [
+          -1.6094672679901123
+        ]
+      ],
+      "teacher_forced_seconds": 8.797000000020489,
+      "fifo_seconds": 1.077999999979511,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-02",
+      "expression": "sin(tanh(z))",
+      "response_CE": 1.6094585884523176,
+      "response_perplexity": 5.000103381159838,
+      "response_accuracy": 0.5050208962154632,
+      "response_omission_rate": 0.004788716043649872,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20678,
+        1308,
+        22080,
+        21275,
+        160,
+        425,
+        18778,
+        431,
+        22008
+      ],
+      "final_m": [
+        [
+          -1.8287299871444702
+        ],
+        [
+          0.07914689183235168
+        ],
+        [
+          -2.2541542053222656
+        ],
+        [
+          -2.3990588188171387
+        ],
+        [
+          -1.6778435707092285
+        ],
+        [
+          2.24332857131958
+        ],
+        [
+          -1.792648434638977
+        ],
+        [
+          -1.5374069213867188
+        ]
+      ],
+      "teacher_forced_seconds": 9.047000000020489,
+      "fifo_seconds": 1.1099999999860302,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 2
+    },
+    {
+      "candidate": "F1-37",
+      "expression": "clip(tanh(tanh(z))+tanh(α)·(softsign(tanh(S))),−1,1)",
+      "response_CE": 1.609996159562546,
+      "response_perplexity": 5.002792014886866,
+      "response_accuracy": 0.5053401439517066,
+      "response_omission_rate": 0.00487578360807987,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20643,
+        1469,
+        22080,
+        21343,
+        0,
+        481,
+        18736,
+        387,
+        22025
+      ],
+      "final_m": [
+        [
+          -1.7492504119873047
+        ],
+        [
+          0.01793604902923107
+        ],
+        [
+          -2.2403879165649414
+        ],
+        [
+          -2.4071571826934814
+        ],
+        [
+          -1.741695523262024
+        ],
+        [
+          2.287914991378784
+        ],
+        [
+          -1.7127412557601929
+        ],
+        [
+          -1.5491480827331543
+        ]
+      ],
+      "teacher_forced_seconds": 8.75,
+      "fifo_seconds": 1.125,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.016548463356973995,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-01",
+      "expression": "tanh(tanh(z))",
+      "response_CE": 1.610381991316375,
+      "response_perplexity": 5.004722623325081,
+      "response_accuracy": 0.5047887160436498,
+      "response_omission_rate": 0.0045275133503598795,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20867,
+        1371,
+        22080,
+        21389,
+        0,
+        474,
+        18862,
+        358,
+        22009
+      ],
+      "final_m": [
+        [
+          -1.7396169900894165
+        ],
+        [
+          0.11844752728939056
+        ],
+        [
+          -2.229079008102417
+        ],
+        [
+          -2.377807140350342
+        ],
+        [
+          -1.6065547466278076
+        ],
+        [
+          2.2731568813323975
+        ],
+        [
+          -1.6628777980804443
+        ],
+        [
+          -1.4979795217514038
+        ]
+      ],
+      "teacher_forced_seconds": 9.077999999979511,
+      "fifo_seconds": 1.125,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 2
+    },
+    {
+      "candidate": "F1-33",
+      "expression": "(sin(tanh(z))+softsign(tanh(z)))/2",
+      "response_CE": 1.61055880792908,
+      "response_perplexity": 5.005607619665588,
+      "response_accuracy": 0.5041211980496866,
+      "response_omission_rate": 0.004266310657069886,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21177,
+        1415,
+        22080,
+        21388,
+        0,
+        413,
+        18599,
+        268,
+        22059
+      ],
+      "final_m": [
+        [
+          -1.6913554668426514
+        ],
+        [
+          -0.02710726112127304
+        ],
+        [
+          -2.1958835124969482
+        ],
+        [
+          -2.3811182975769043
+        ],
+        [
+          -1.6351937055587769
+        ],
+        [
+          2.2834830284118652
+        ],
+        [
+          -1.6275655031204224
+        ],
+        [
+          -1.4746760129928589
+        ]
+      ],
+      "teacher_forced_seconds": 8.98399999999674,
+      "fifo_seconds": 1.0630000000237487,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-35",
+      "expression": "((tanh(m)+(tanh(m))³)/2)·(tanh(tanh(z)))",
+      "response_CE": 1.6113944257966495,
+      "response_perplexity": 5.009792142918331,
+      "response_accuracy": 0.5048757836080798,
+      "response_omission_rate": 0.004962851172509867,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21094,
+        874,
+        22080,
+        21402,
+        0,
+        671,
+        18730,
+        9,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.586183786392212
+        ],
+        [
+          0.30666252970695496
+        ],
+        [
+          -1.9859756231307983
+        ],
+        [
+          -2.3190340995788574
+        ],
+        [
+          -1.6777852773666382
+        ],
+        [
+          2.2186977863311768
+        ],
+        [
+          -1.3160685300827026
+        ],
+        [
+          -1.3467421531677246
+        ]
+      ],
+      "teacher_forced_seconds": 8.811999999976251,
+      "fifo_seconds": 1.0630000000237487,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-28",
+      "expression": "clip((tanh(z)+(tanh(z))³)/2+tanh(α)·(2σ(tanh(z))−1),−1,1)",
+      "response_CE": 1.611687244776573,
+      "response_perplexity": 5.011259319941407,
+      "response_accuracy": 0.5044694683074066,
+      "response_omission_rate": 0.005340143951706525,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        19516,
+        1941,
+        22080,
+        21332,
+        0,
+        227,
+        17878,
+        336,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.892825961112976
+        ],
+        [
+          -0.10467437654733658
+        ],
+        [
+          -2.24800181388855
+        ],
+        [
+          -2.4014151096343994
+        ],
+        [
+          -1.5409334897994995
+        ],
+        [
+          2.371490240097046
+        ],
+        [
+          -1.8438786268234253
+        ],
+        [
+          -1.4441535472869873
+        ]
+      ],
+      "teacher_forced_seconds": 9.0,
+      "fifo_seconds": 1.0929999999934807,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 1,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-40",
+      "expression": "clip(softsign(tanh(z))+tanh(α)·(sin(tanh(z))),−1,1)",
+      "response_CE": 1.6126569188623487,
+      "response_perplexity": 5.016120964965715,
+      "response_accuracy": 0.5054852565590898,
+      "response_omission_rate": 0.0050499187369398655,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20899,
+        1457,
+        22080,
+        21242,
+        0,
+        510,
+        18986,
+        219,
+        22035
+      ],
+      "final_m": [
+        [
+          -1.753854751586914
+        ],
+        [
+          -0.07355714589357376
+        ],
+        [
+          -2.2430405616760254
+        ],
+        [
+          -2.4288887977600098
+        ],
+        [
+          -1.6977850198745728
+        ],
+        [
+          2.2017149925231934
+        ],
+        [
+          -1.6674654483795166
+        ],
+        [
+          -1.522221565246582
+        ]
+      ],
+      "teacher_forced_seconds": 8.797000000020489,
+      "fifo_seconds": 1.125,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.015625,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-14",
+      "expression": "σ((tanh(m)+(tanh(m))³)/2)·(tanh(tanh(z)))+(1−σ((tanh(m)+(tanh(m))³)/2))·((tanh(m)+(tanh(m))³)/2)",
+      "response_CE": 1.6142649187030056,
+      "response_perplexity": 5.024193375155867,
+      "response_accuracy": 0.5027571395402832,
+      "response_omission_rate": 0.0033085674483399117,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21168,
+        933,
+        22080,
+        21269,
+        0,
+        488,
+        18505,
+        71,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.3644273281097412
+        ],
+        [
+          0.09887915104627609
+        ],
+        [
+          -1.9559437036514282
+        ],
+        [
+          -2.2562904357910156
+        ],
+        [
+          -1.5708000659942627
+        ],
+        [
+          2.249799966812134
+        ],
+        [
+          -1.1130269765853882
+        ],
+        [
+          -1.2093003988265991
+        ]
+      ],
+      "teacher_forced_seconds": 8.954000000027008,
+      "fifo_seconds": 1.0929999999934807,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-39",
+      "expression": "clip((tanh(z)+(tanh(z))³)/2+tanh(α)·(softsign(tanh(S))),−1,1)",
+      "response_CE": 1.6143121580152548,
+      "response_perplexity": 5.024430720201481,
+      "response_accuracy": 0.50243789180404,
+      "response_omission_rate": 0.005195031344323195,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        20515,
+        1674,
+        22080,
+        21235,
+        0,
+        173,
+        17693,
+        285,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.9397802352905273
+        ],
+        [
+          -0.2862236797809601
+        ],
+        [
+          -2.2947399616241455
+        ],
+        [
+          -2.50117826461792
+        ],
+        [
+          -1.4534969329833984
+        ],
+        [
+          2.311736822128296
+        ],
+        [
+          -1.8979120254516602
+        ],
+        [
+          -1.6022579669952393
+        ]
+      ],
+      "teacher_forced_seconds": 9.047000000020489,
+      "fifo_seconds": 1.172000000020489,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-08",
+      "expression": "sin((sin(tanh(z))+(sin(tanh(z)))³)/2)",
+      "response_CE": 1.614913579960658,
+      "response_perplexity": 5.027453431971253,
+      "response_accuracy": 0.5014511260738332,
+      "response_omission_rate": 0.004208265614116555,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21103,
+        2020,
+        22080,
+        21486,
+        0,
+        279,
+        18161,
+        341,
+        22056
+      ],
+      "final_m": [
+        [
+          -1.698017954826355
+        ],
+        [
+          -0.09952794760465622
+        ],
+        [
+          -2.1706719398498535
+        ],
+        [
+          -2.400434970855713
+        ],
+        [
+          -1.4041712284088135
+        ],
+        [
+          2.2836215496063232
+        ],
+        [
+          -1.6471303701400757
+        ],
+        [
+          -1.4697850942611694
+        ]
+      ],
+      "teacher_forced_seconds": 8.75,
+      "fifo_seconds": 1.1400000000139698,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 4
+    },
+    {
+      "candidate": "F1-03",
+      "expression": "softsign(tanh(z))",
+      "response_CE": 1.6152629067857698,
+      "response_perplexity": 5.029209963100899,
+      "response_accuracy": 0.5026700719758532,
+      "response_omission_rate": 0.0045275133503598795,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21333,
+        1580,
+        22080,
+        21413,
+        0,
+        462,
+        18441,
+        265,
+        22069
+      ],
+      "final_m": [
+        [
+          -1.4952329397201538
+        ],
+        [
+          -0.062436293810606
+        ],
+        [
+          -2.0773746967315674
+        ],
+        [
+          -2.3464081287384033
+        ],
+        [
+          -1.4157763719558716
+        ],
+        [
+          2.23256254196167
+        ],
+        [
+          -1.4417773485183716
+        ],
+        [
+          -1.413271188735962
+        ]
+      ],
+      "teacher_forced_seconds": 9.14100000000326,
+      "fifo_seconds": 1.0459999999729916,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 2
+    },
+    {
+      "candidate": "F1-04",
+      "expression": "atan(tanh(z))",
+      "response_CE": 1.6169414047131208,
+      "response_perplexity": 5.037658570101287,
+      "response_accuracy": 0.5008416531228234,
+      "response_omission_rate": 0.004324355700023218,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21301,
+        1188,
+        22080,
+        21459,
+        0,
+        270,
+        18494,
+        290,
+        22063
+      ],
+      "final_m": [
+        [
+          -1.5600475072860718
+        ],
+        [
+          0.001914788386784494
+        ],
+        [
+          -2.1149983406066895
+        ],
+        [
+          -2.344557523727417
+        ],
+        [
+          -1.3459421396255493
+        ],
+        [
+          2.260464906692505
+        ],
+        [
+          -1.5190784931182861
+        ],
+        [
+          -1.4507931470870972
+        ]
+      ],
+      "teacher_forced_seconds": 9.187999999965541,
+      "fifo_seconds": 1.062000000034459,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 2
+    },
+    {
+      "candidate": "F1-36",
+      "expression": "σ(2σ(tanh(z))−1)·(atan(tanh(z)))+(1−σ(2σ(tanh(z))−1))·(2σ(tanh(z))−1)",
+      "response_CE": 1.6185039985234062,
+      "response_perplexity": 5.045536537629938,
+      "response_accuracy": 0.50121894590202,
+      "response_omission_rate": 0.004208265614116555,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21316,
+        1364,
+        22080,
+        21487,
+        0,
+        270,
+        18399,
+        367,
+        22068
+      ],
+      "final_m": [
+        [
+          -1.5149093866348267
+        ],
+        [
+          -0.01312639843672514
+        ],
+        [
+          -2.0974035263061523
+        ],
+        [
+          -2.3176093101501465
+        ],
+        [
+          -1.2690165042877197
+        ],
+        [
+          2.239617109298706
+        ],
+        [
+          -1.4687232971191406
+        ],
+        [
+          -1.419376015663147
+        ]
+      ],
+      "teacher_forced_seconds": 8.89000000001397,
+      "fifo_seconds": 1.0630000000237487,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 1,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-20",
+      "expression": "((tanh(m)+(tanh(m))³)/2)·(atan(tanh(z)))",
+      "response_CE": 1.6185694012169731,
+      "response_perplexity": 5.045866540101397,
+      "response_accuracy": 0.5008996981657766,
+      "response_omission_rate": 0.00438240074297655,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21248,
+        1206,
+        22080,
+        21493,
+        0,
+        297,
+        18322,
+        30,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.5861889123916626
+        ],
+        [
+          -0.000508716853801161
+        ],
+        [
+          -2.0567731857299805
+        ],
+        [
+          -2.367581605911255
+        ],
+        [
+          -1.456518530845642
+        ],
+        [
+          2.1782138347625732
+        ],
+        [
+          -1.4199191331863403
+        ],
+        [
+          -1.389097809791565
+        ]
+      ],
+      "teacher_forced_seconds": 8.875,
+      "fifo_seconds": 1.125,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-21",
+      "expression": "clip(2σ(tanh(z))−1+tanh(α)·(softsign(tanh(m))),−1,1)",
+      "response_CE": 1.620959027269479,
+      "response_perplexity": 5.057938692463341,
+      "response_accuracy": 0.5001451126073834,
+      "response_omission_rate": 0.0040051079637798935,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21343,
+        1206,
+        22080,
+        21497,
+        0,
+        238,
+        18402,
+        448,
+        22070
+      ],
+      "final_m": [
+        [
+          -1.5777170658111572
+        ],
+        [
+          -0.057936571538448334
+        ],
+        [
+          -2.132309675216675
+        ],
+        [
+          -2.325160503387451
+        ],
+        [
+          -1.207049012184143
+        ],
+        [
+          2.2429251670837402
+        ],
+        [
+          -1.567664384841919
+        ],
+        [
+          -1.4819449186325073
+        ]
+      ],
+      "teacher_forced_seconds": 8.84299999999348,
+      "fifo_seconds": 1.077999999979511,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-05",
+      "expression": "2σ(tanh(z))−1",
+      "response_CE": 1.6212558749545325,
+      "response_perplexity": 5.059440352726501,
+      "response_accuracy": 0.5002902252147666,
+      "response_omission_rate": 0.004208265614116555,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21415,
+        1334,
+        22080,
+        21500,
+        0,
+        226,
+        18461,
+        433,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.6292974948883057
+        ],
+        [
+          -0.06708589941263199
+        ],
+        [
+          -2.1592254638671875
+        ],
+        [
+          -2.344456434249878
+        ],
+        [
+          -1.2234464883804321
+        ],
+        [
+          2.2302491664886475
+        ],
+        [
+          -1.6281838417053223
+        ],
+        [
+          -1.5372531414031982
+        ]
+      ],
+      "teacher_forced_seconds": 9.046999999962281,
+      "fifo_seconds": 1.0780000000377186,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 3,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 2
+    },
+    {
+      "candidate": "F1-24",
+      "expression": "σ(abs(tanh(S)))·((tanh(z)+(tanh(z))³)/2)+(1−σ(abs(tanh(S))))·(abs(tanh(S)))",
+      "response_CE": 1.6235059452912557,
+      "response_perplexity": 5.07083726650503,
+      "response_accuracy": 0.50008706756443,
+      "response_omission_rate": 0.0033666124912932437,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21286,
+        1467,
+        22080,
+        21392,
+        0,
+        130,
+        18240,
+        438,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.6407760381698608
+        ],
+        [
+          -0.3441677689552307
+        ],
+        [
+          -2.1781368255615234
+        ],
+        [
+          -2.4020023345947266
+        ],
+        [
+          -1.2880219221115112
+        ],
+        [
+          2.283963441848755
+        ],
+        [
+          -1.5753439664840698
+        ],
+        [
+          -1.5121790170669556
+        ]
+      ],
+      "teacher_forced_seconds": 8.702999999979511,
+      "fifo_seconds": 1.0160000000032596,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-12",
+      "expression": "σ(atan(tanh(m)))·((tanh(z)+(tanh(z))³)/2)+(1−σ(atan(tanh(m))))·(atan(tanh(m)))",
+      "response_CE": 1.6246544782831207,
+      "response_perplexity": 5.076664636224591,
+      "response_accuracy": 0.4979684234966334,
+      "response_omission_rate": 0.003511725098676573,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21165,
+        1701,
+        22080,
+        21122,
+        0,
+        678,
+        17999,
+        51,
+        22071
+      ],
+      "final_m": [
+        [
+          -1.725054383277893
+        ],
+        [
+          -0.3831503093242645
+        ],
+        [
+          -2.180516242980957
+        ],
+        [
+          -2.4130799770355225
+        ],
+        [
+          -1.2657068967819214
+        ],
+        [
+          2.220573902130127
+        ],
+        [
+          -1.6600619554519653
+        ],
+        [
+          -1.487342357635498
+        ]
+      ],
+      "teacher_forced_seconds": 9.0,
+      "fifo_seconds": 1.077999999979511,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.022443890274314215,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-43",
+      "expression": "((abs(tanh(z))+(abs(tanh(z)))³)/2+sin(tanh(tanh(z))))/2",
+      "response_CE": 1.6265299590081501,
+      "response_perplexity": 5.086194756882611,
+      "response_accuracy": 0.5002031576503366,
+      "response_omission_rate": 0.0026700719758532623,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21719,
+        1117,
+        22080,
+        21560,
+        0,
+        350,
+        19173,
+        2581,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.7420836687088013
+        ],
+        [
+          -0.074583999812603
+        ],
+        [
+          -2.1124823093414307
+        ],
+        [
+          -2.3590574264526367
+        ],
+        [
+          -1.0226242542266846
+        ],
+        [
+          1.886985421180725
+        ],
+        [
+          -1.7343796491622925
+        ],
+        [
+          -1.5564531087875366
+        ]
+      ],
+      "teacher_forced_seconds": 8.71899999998277,
+      "fifo_seconds": 1.0310000000172295,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 7
+    },
+    {
+      "candidate": "F1-34",
+      "expression": "(tanh(tanh(m)))·(atan(tanh(z)))",
+      "response_CE": 1.6277279071332527,
+      "response_perplexity": 5.092291405360733,
+      "response_accuracy": 0.4978813559322034,
+      "response_omission_rate": 0.004266310657069886,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21234,
+        1220,
+        22080,
+        21450,
+        0,
+        257,
+        18262,
+        0,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.591800570487976
+        ],
+        [
+          -0.06677238643169403
+        ],
+        [
+          -2.0818963050842285
+        ],
+        [
+          -2.3463780879974365
+        ],
+        [
+          -1.1911975145339966
+        ],
+        [
+          2.127371072769165
+        ],
+        [
+          -1.5293471813201904
+        ],
+        [
+          -1.4691623449325562
+        ]
+      ],
+      "teacher_forced_seconds": 8.84399999998277,
+      "fifo_seconds": 1.0150000000139698,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-15",
+      "expression": "(softsign(tanh(S))+tanh(tanh(z)))/2",
+      "response_CE": 1.6279998389413826,
+      "response_perplexity": 5.093676349666787,
+      "response_accuracy": 0.49930345948456,
+      "response_omission_rate": 0.005166008822846529,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21371,
+        2053,
+        22080,
+        21351,
+        0,
+        228,
+        18338,
+        272,
+        21964
+      ],
+      "final_m": [
+        [
+          -1.708622932434082
+        ],
+        [
+          -0.27037501335144043
+        ],
+        [
+          -2.190474271774292
+        ],
+        [
+          -2.462819814682007
+        ],
+        [
+          -1.2590998411178589
+        ],
+        [
+          2.281198263168335
+        ],
+        [
+          -1.7193377017974854
+        ],
+        [
+          -1.72104012966156
+        ]
+      ],
+      "teacher_forced_seconds": 8.875,
+      "fifo_seconds": 1.0310000000172295,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 3,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-45",
+      "expression": "(sin(tanh(tanh(m))))·((tanh(tanh(z))+(tanh(tanh(z)))³)/2)",
+      "response_CE": 1.62912086580448,
+      "response_perplexity": 5.099389699497676,
+      "response_accuracy": 0.4979103784536801,
+      "response_omission_rate": 0.004034130485256559,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21227,
+        1300,
+        22080,
+        21374,
+        0,
+        280,
+        18131,
+        16,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.5749328136444092
+        ],
+        [
+          -0.20801015198230743
+        ],
+        [
+          -2.0743954181671143
+        ],
+        [
+          -2.34037709236145
+        ],
+        [
+          -1.144649624824524
+        ],
+        [
+          2.1427392959594727
+        ],
+        [
+          -1.526680588722229
+        ],
+        [
+          -1.4384267330169678
+        ]
+      ],
+      "teacher_forced_seconds": 8.969000000040978,
+      "fifo_seconds": 1.1719999999622814,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 4,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 7
+    },
+    {
+      "candidate": "F1-31",
+      "expression": "(abs(tanh(z)))·(softsign(tanh(z)))",
+      "response_CE": 1.6292328065710364,
+      "response_perplexity": 5.099960561040351,
+      "response_accuracy": 0.49834571627583,
+      "response_omission_rate": 0.00438240074297655,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21411,
+        1400,
+        22080,
+        21449,
+        0,
+        116,
+        17909,
+        610,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.8813717365264893
+        ],
+        [
+          -0.6095396876335144
+        ],
+        [
+          -2.2725160121917725
+        ],
+        [
+          -2.4616384506225586
+        ],
+        [
+          -1.1088885068893433
+        ],
+        [
+          2.163257122039795
+        ],
+        [
+          -1.89706552028656
+        ],
+        [
+          -1.7312121391296387
+        ]
+      ],
+      "teacher_forced_seconds": 8.655999999959022,
+      "fifo_seconds": 1.0780000000377186,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-30",
+      "expression": "(sin(tanh(S))+tanh(tanh(z)))/2",
+      "response_CE": 1.6293685544113103,
+      "response_perplexity": 5.1006529166638215,
+      "response_accuracy": 0.4997097747852333,
+      "response_omission_rate": 0.006384954724866497,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21293,
+        2268,
+        22080,
+        21293,
+        0,
+        199,
+        18369,
+        501,
+        21561
+      ],
+      "final_m": [
+        [
+          -1.8188670873641968
+        ],
+        [
+          -0.44006872177124023
+        ],
+        [
+          -2.2458839416503906
+        ],
+        [
+          -2.5019078254699707
+        ],
+        [
+          -1.362423300743103
+        ],
+        [
+          2.273214101791382
+        ],
+        [
+          -1.818680763244629
+        ],
+        [
+          -1.8048335313796997
+        ]
+      ],
+      "teacher_forced_seconds": 8.71799999999348,
+      "fifo_seconds": 0.9380000000237487,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-25",
+      "expression": "(sin(tanh(m))+tanh(tanh(z)))/2",
+      "response_CE": 1.630150142567958,
+      "response_perplexity": 5.104641084924173,
+      "response_accuracy": 0.4983166937543534,
+      "response_omission_rate": 0.008996981657766428,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21923,
+        1752,
+        22080,
+        21776,
+        0,
+        15,
+        18153,
+        7413,
+        21773
+      ],
+      "final_m": [
+        [
+          -2.0398294925689697
+        ],
+        [
+          -0.32574617862701416
+        ],
+        [
+          -2.275113582611084
+        ],
+        [
+          -2.565868377685547
+        ],
+        [
+          -1.1463427543640137
+        ],
+        [
+          2.027496814727783
+        ],
+        [
+          -2.0468645095825195
+        ],
+        [
+          -1.9163869619369507
+        ]
+      ],
+      "teacher_forced_seconds": 8.936999999976251,
+      "fifo_seconds": 1.0160000000032596,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 3,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.008595988538681949,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-07",
+      "expression": "softsign(tanh(atan(tanh(z))))",
+      "response_CE": 1.6310405811593696,
+      "response_perplexity": 5.109188478628454,
+      "response_accuracy": 0.4975621081959601,
+      "response_omission_rate": 0.004469468307406547,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21671,
+        1008,
+        22080,
+        21641,
+        0,
+        286,
+        18438,
+        257,
+        22021
+      ],
+      "final_m": [
+        [
+          -1.6781435012817383
+        ],
+        [
+          -0.035043418407440186
+        ],
+        [
+          -2.169234037399292
+        ],
+        [
+          -2.395651340484619
+        ],
+        [
+          -0.9523659348487854
+        ],
+        [
+          2.1490213871002197
+        ],
+        [
+          -1.7241348028182983
+        ],
+        [
+          -1.6572518348693848
+        ]
+      ],
+      "teacher_forced_seconds": 8.844000000040978,
+      "fifo_seconds": 1.062999999965541,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 4
+    },
+    {
+      "candidate": "F1-49",
+      "expression": "clip(2σ((tanh(z)+(tanh(z))³)/2)−1+tanh(α)·((abs(tanh(z)))·(abs(tanh(z)))),−1,1)",
+      "response_CE": 1.6312158551684708,
+      "response_perplexity": 5.110084065060576,
+      "response_accuracy": 0.4974460181100534,
+      "response_omission_rate": 0.004904806129556536,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21673,
+        876,
+        22080,
+        21618,
+        0,
+        149,
+        18170,
+        849,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.819461703300476
+        ],
+        [
+          -0.35677260160446167
+        ],
+        [
+          -2.265141487121582
+        ],
+        [
+          -2.480166435241699
+        ],
+        [
+          -1.1270413398742676
+        ],
+        [
+          2.2696375846862793
+        ],
+        [
+          -1.941836953163147
+        ],
+        [
+          -1.7907161712646484
+        ]
+      ],
+      "teacher_forced_seconds": 9.01600000000326,
+      "fifo_seconds": 0.9839999999967404,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 5,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 9
+    },
+    {
+      "candidate": "F1-50",
+      "expression": "(sin(tanh(tanh(z))))·(clip(abs(tanh(m))+tanh(α)·(2σ(tanh(z))−1),−1,1))",
+      "response_CE": 1.6324298156907615,
+      "response_perplexity": 5.116291272271104,
+      "response_accuracy": 0.49869398653355,
+      "response_omission_rate": 0.004730671000696541,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21916,
+        1766,
+        22080,
+        20581,
+        405,
+        0,
+        19790,
+        0,
+        0
+      ],
+      "final_m": [
+        [
+          -1.6499983072280884
+        ],
+        [
+          0.6871681213378906
+        ],
+        [
+          -2.1662909984588623
+        ],
+        [
+          -2.2381479740142822
+        ],
+        [
+          -1.2087068557739258
+        ],
+        [
+          2.2065298557281494
+        ],
+        [
+          -1.6014695167541504
+        ],
+        [
+          -1.4389827251434326
+        ]
+      ],
+      "teacher_forced_seconds": 8.905999999959022,
+      "fifo_seconds": 1.1100000000442378,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 4,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 9
+    },
+    {
+      "candidate": "F1-32",
+      "expression": "σ(abs(tanh(S)))·(atan(tanh(z)))+(1−σ(abs(tanh(S))))·(abs(tanh(S)))",
+      "response_CE": 1.6357946681110753,
+      "response_perplexity": 5.1335358337733155,
+      "response_accuracy": 0.4954434641281635,
+      "response_omission_rate": 0.0029312746691432553,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21635,
+        1062,
+        22080,
+        21427,
+        0,
+        241,
+        18176,
+        3407,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.7309597730636597
+        ],
+        [
+          -0.200970858335495
+        ],
+        [
+          -2.1901776790618896
+        ],
+        [
+          -2.3735837936401367
+        ],
+        [
+          -1.0224478244781494
+        ],
+        [
+          2.1713688373565674
+        ],
+        [
+          -1.80293869972229
+        ],
+        [
+          -1.7800074815750122
+        ]
+      ],
+      "teacher_forced_seconds": 8.71899999998277,
+      "fifo_seconds": 1.047000000020489,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 5,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-42",
+      "expression": "(sin(abs(tanh(S))))·((tanh(tanh(z))+(tanh(tanh(z)))³)/2)",
+      "response_CE": 1.6429928722957334,
+      "response_perplexity": 5.170621387458393,
+      "response_accuracy": 0.4926863245878802,
+      "response_omission_rate": 0.003918040399349895,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21843,
+        2023,
+        22080,
+        21454,
+        0,
+        2,
+        18376,
+        618,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.769281268119812
+        ],
+        [
+          -0.4567326009273529
+        ],
+        [
+          -2.130568742752075
+        ],
+        [
+          -2.4791042804718018
+        ],
+        [
+          -0.937736451625824
+        ],
+        [
+          2.2287814617156982
+        ],
+        [
+          -1.9178599119186401
+        ],
+        [
+          -1.8327220678329468
+        ]
+      ],
+      "teacher_forced_seconds": 8.85999999998603,
+      "fifo_seconds": 1.047000000020489,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 6,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 7
+    },
+    {
+      "candidate": "F1-27",
+      "expression": "(softsign(tanh(m)))·(softsign(tanh(z)))",
+      "response_CE": 1.6449601158433036,
+      "response_perplexity": 5.180803270858312,
+      "response_accuracy": 0.4937891804039935,
+      "response_omission_rate": 0.0038890178778732297,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21464,
+        1295,
+        22080,
+        21572,
+        0,
+        233,
+        17949,
+        0,
+        22066
+      ],
+      "final_m": [
+        [
+          -1.7430120706558228
+        ],
+        [
+          -0.08786339312791824
+        ],
+        [
+          -2.166231632232666
+        ],
+        [
+          -2.4387457370758057
+        ],
+        [
+          -0.8783212900161743
+        ],
+        [
+          2.0092849731445312
+        ],
+        [
+          -1.7832531929016113
+        ],
+        [
+          -1.7346445322036743
+        ]
+      ],
+      "teacher_forced_seconds": 8.84399999998277,
+      "fifo_seconds": 1.1089999999967404,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-44",
+      "expression": "(sin(abs(tanh(m)))+(tanh(tanh(z))+(tanh(tanh(z)))³)/2)/2",
+      "response_CE": 1.6452870786014937,
+      "response_perplexity": 5.182497477541544,
+      "response_accuracy": 0.4930926398885535,
+      "response_omission_rate": 0.002989319712096587,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21877,
+        1514,
+        22080,
+        21856,
+        0,
+        289,
+        17251,
+        11388,
+        19700
+      ],
+      "final_m": [
+        [
+          -1.9719229936599731
+        ],
+        [
+          -0.11010264605283737
+        ],
+        [
+          -2.3011972904205322
+        ],
+        [
+          -2.5163543224334717
+        ],
+        [
+          -0.6619719862937927
+        ],
+        [
+          2.02392578125
+        ],
+        [
+          -1.9853347539901733
+        ],
+        [
+          -1.9119230508804321
+        ]
+      ],
+      "teacher_forced_seconds": 9.14100000000326,
+      "fifo_seconds": 1.047000000020489,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 5,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 7
+    },
+    {
+      "candidate": "F1-17",
+      "expression": "(sin(tanh(S))+softsign(tanh(z)))/2",
+      "response_CE": 1.6453258470715495,
+      "response_perplexity": 5.182698398934498,
+      "response_accuracy": 0.4932087299744602,
+      "response_omission_rate": 0.005717436730903181,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21478,
+        2134,
+        22080,
+        21377,
+        0,
+        181,
+        18121,
+        495,
+        21892
+      ],
+      "final_m": [
+        [
+          -1.9828013181686401
+        ],
+        [
+          -0.664393961429596
+        ],
+        [
+          -2.29943585395813
+        ],
+        [
+          -2.5265395641326904
+        ],
+        [
+          -1.1384832859039307
+        ],
+        [
+          2.2109200954437256
+        ],
+        [
+          -1.991835355758667
+        ],
+        [
+          -1.9920296669006348
+        ]
+      ],
+      "teacher_forced_seconds": 8.813000000023749,
+      "fifo_seconds": 1.0939999999827705,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 4,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-26",
+      "expression": "(softsign(tanh(m))+atan(tanh(z)))/2",
+      "response_CE": 1.6486525089471307,
+      "response_perplexity": 5.199968193567969,
+      "response_accuracy": 0.4892616670536336,
+      "response_omission_rate": 0.00551427908056652,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21929,
+        1670,
+        22080,
+        21727,
+        0,
+        0,
+        17766,
+        10453,
+        21995
+      ],
+      "final_m": [
+        [
+          -2.0826797485351562
+        ],
+        [
+          -0.5101402997970581
+        ],
+        [
+          -2.320568799972534
+        ],
+        [
+          -2.5525460243225098
+        ],
+        [
+          -0.8776514530181885
+        ],
+        [
+          1.992599606513977
+        ],
+        [
+          -2.1155166625976562
+        ],
+        [
+          -2.048419952392578
+        ]
+      ],
+      "teacher_forced_seconds": 8.827999999979511,
+      "fifo_seconds": 1.0,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 5,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0033783783783783786,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-06",
+      "expression": "atan(2σ(tanh(tanh(z)))−1)",
+      "response_CE": 1.648961972345214,
+      "response_perplexity": 5.201577642414986,
+      "response_accuracy": 0.4905676805200836,
+      "response_omission_rate": 0.003976085442303227,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21850,
+        1593,
+        22080,
+        21707,
+        0,
+        106,
+        18177,
+        659,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.9669978618621826
+        ],
+        [
+          -0.370703786611557
+        ],
+        [
+          -2.2895405292510986
+        ],
+        [
+          -2.49806547164917
+        ],
+        [
+          -0.7186279892921448
+        ],
+        [
+          2.0356316566467285
+        ],
+        [
+          -2.0204918384552
+        ],
+        [
+          -1.959983229637146
+        ]
+      ],
+      "teacher_forced_seconds": 8.827999999979511,
+      "fifo_seconds": 1.0160000000032596,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 4,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 4
+    },
+    {
+      "candidate": "F1-22",
+      "expression": "(tanh(tanh(m))+atan(tanh(z)))/2",
+      "response_CE": 1.6494347205108677,
+      "response_perplexity": 5.204037260047997,
+      "response_accuracy": 0.4899001625261203,
+      "response_omission_rate": 0.0075458555839331325,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21937,
+        1832,
+        22080,
+        21758,
+        0,
+        3,
+        18105,
+        14536,
+        21840
+      ],
+      "final_m": [
+        [
+          -2.088778495788574
+        ],
+        [
+          -0.6172370314598083
+        ],
+        [
+          -2.3102409839630127
+        ],
+        [
+          -2.5670979022979736
+        ],
+        [
+          -0.9361840486526489
+        ],
+        [
+          1.9154012203216553
+        ],
+        [
+          -2.11834454536438
+        ],
+        [
+          -2.0455069541931152
+        ]
+      ],
+      "teacher_forced_seconds": 8.702999999979511,
+      "fifo_seconds": 0.9690000000409782,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 5,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.003389830508474576,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-18",
+      "expression": "(atan(tanh(z))−abs(tanh(m)))/2",
+      "response_CE": 1.650122081075671,
+      "response_perplexity": 5.2076155396815915,
+      "response_accuracy": 0.4905096354771303,
+      "response_omission_rate": 0.009374274436963084,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21825,
+        1479,
+        22080,
+        21758,
+        0,
+        2,
+        18425,
+        3287,
+        17846
+      ],
+      "final_m": [
+        [
+          -1.9579232931137085
+        ],
+        [
+          -0.4902656674385071
+        ],
+        [
+          -2.1922085285186768
+        ],
+        [
+          -2.5160648822784424
+        ],
+        [
+          -1.153502345085144
+        ],
+        [
+          1.9954869747161865
+        ],
+        [
+          -1.9947632551193237
+        ],
+        [
+          -1.88935124874115
+        ]
+      ],
+      "teacher_forced_seconds": 8.686999999976251,
+      "fifo_seconds": 0.9380000000237487,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 4,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-38",
+      "expression": "(2σ(tanh(m))−1)·(atan(tanh(z)))",
+      "response_CE": 1.6509562848180266,
+      "response_perplexity": 5.211961564536611,
+      "response_accuracy": 0.4900742976549803,
+      "response_omission_rate": 0.0037729277919665663,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21465,
+        1333,
+        22080,
+        21381,
+        0,
+        302,
+        18239,
+        133,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.8645907640457153
+        ],
+        [
+          -0.3454168140888214
+        ],
+        [
+          -2.2245826721191406
+        ],
+        [
+          -2.477263927459717
+        ],
+        [
+          -0.9023231267929077
+        ],
+        [
+          1.9532310962677002
+        ],
+        [
+          -1.9089579582214355
+        ],
+        [
+          -1.8434876203536987
+        ]
+      ],
+      "teacher_forced_seconds": 8.89100000000326,
+      "fifo_seconds": 1.0940000000409782,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0026954177897574125,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-16",
+      "expression": "σ(tanh(tanh(S)))·(softsign(tanh(z)))+(1−σ(tanh(tanh(S))))·(tanh(tanh(S)))",
+      "response_CE": 1.655300424886648,
+      "response_perplexity": 5.234652305800268,
+      "response_accuracy": 0.489145576967727,
+      "response_omission_rate": 0.0066171348966798235,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21513,
+        2231,
+        22080,
+        21315,
+        0,
+        224,
+        18277,
+        1555,
+        20593
+      ],
+      "final_m": [
+        [
+          -1.978284478187561
+        ],
+        [
+          -0.6645099520683289
+        ],
+        [
+          -2.294205904006958
+        ],
+        [
+          -2.525650978088379
+        ],
+        [
+          -1.245915174484253
+        ],
+        [
+          2.1711180210113525
+        ],
+        [
+          -1.9962939023971558
+        ],
+        [
+          -1.953320860862732
+        ]
+      ],
+      "teacher_forced_seconds": 8.827999999979511,
+      "fifo_seconds": 1.0929999999934807,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 3,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.002352941176470588,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-47",
+      "expression": "σ((2σ(tanh(S))−1)·(2σ(tanh(z))−1))·(softsign(sin(tanh(z))))+(1−σ((2σ(tanh(S))−1)·(2σ(tanh(z))−1)))·((2σ(tanh(S))−1)·(2σ(tanh(z))−1))",
+      "response_CE": 1.6564489507524602,
+      "response_perplexity": 5.24066789323963,
+      "response_accuracy": 0.4876073833294637,
+      "response_omission_rate": 0.004353378221499884,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21793,
+        1661,
+        22080,
+        21638,
+        0,
+        193,
+        18047,
+        3327,
+        15393
+      ],
+      "final_m": [
+        [
+          -1.8977570533752441
+        ],
+        [
+          -0.18528234958648682
+        ],
+        [
+          -2.242683172225952
+        ],
+        [
+          -2.44339656829834
+        ],
+        [
+          -0.8528546690940857
+        ],
+        [
+          1.9555385112762451
+        ],
+        [
+          -1.9288887977600098
+        ],
+        [
+          -1.8876444101333618
+        ]
+      ],
+      "teacher_forced_seconds": 9.077999999979511,
+      "fifo_seconds": 1.0939999999827705,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 1,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0023923444976076554,
+      "nodes": 9
+    },
+    {
+      "candidate": "F1-09",
+      "expression": "((softsign(tanh(z))+(softsign(tanh(z)))³)/2+((softsign(tanh(z))+(softsign(tanh(z)))³)/2)³)/2",
+      "response_CE": 1.6646308121764175,
+      "response_perplexity": 5.283722203730895,
+      "response_accuracy": 0.4841537032737404,
+      "response_omission_rate": 0.0038890178778732297,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21905,
+        1996,
+        22080,
+        21626,
+        0,
+        56,
+        18049,
+        7812,
+        22072
+      ],
+      "final_m": [
+        [
+          -2.045551300048828
+        ],
+        [
+          -0.5373570322990417
+        ],
+        [
+          -2.3342504501342773
+        ],
+        [
+          -2.528611421585083
+        ],
+        [
+          -0.5781419277191162
+        ],
+        [
+          1.972749948501587
+        ],
+        [
+          -2.0986528396606445
+        ],
+        [
+          -2.0753278732299805
+        ]
+      ],
+      "teacher_forced_seconds": 8.797000000020489,
+      "fifo_seconds": 1.125,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 2,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 4
+    },
+    {
+      "candidate": "F1-10",
+      "expression": "(atan(atan(tanh(z)))+(atan(atan(tanh(z))))³)/2",
+      "response_CE": 1.6666222464238696,
+      "response_perplexity": 5.294254873159856,
+      "response_accuracy": 0.4834571627583004,
+      "response_omission_rate": 0.003859995356396564,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21871,
+        2271,
+        22080,
+        21666,
+        0,
+        53,
+        18058,
+        1098,
+        22072
+      ],
+      "final_m": [
+        [
+          -2.0401864051818848
+        ],
+        [
+          -0.6343461275100708
+        ],
+        [
+          -2.315014600753784
+        ],
+        [
+          -2.5318713188171387
+        ],
+        [
+          -0.5904579758644104
+        ],
+        [
+          1.9817308187484741
+        ],
+        [
+          -2.0860939025878906
+        ],
+        [
+          -2.066052198410034
+        ]
+      ],
+      "teacher_forced_seconds": 8.811999999976251,
+      "fifo_seconds": 1.1100000000442378,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 2,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 4
+    },
+    {
+      "candidate": "F1-41",
+      "expression": "(sin(2σ(tanh(m))−1)+(2σ(tanh(z))−1+(2σ(tanh(z))−1)³)/2)/2",
+      "response_CE": 1.6807547410776968,
+      "response_perplexity": 5.369607105204408,
+      "response_accuracy": 0.4802066403529139,
+      "response_omission_rate": 0.004295333178546552,
+      "silence_false_emission_rate": 0.0,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21604,
+        3077,
+        22080,
+        21552,
+        41,
+        1,
+        17487,
+        11270,
+        21993
+      ],
+      "final_m": [
+        [
+          -2.1111464500427246
+        ],
+        [
+          -0.7926788926124573
+        ],
+        [
+          -2.3439159393310547
+        ],
+        [
+          -2.5657966136932373
+        ],
+        [
+          -0.5793952345848083
+        ],
+        [
+          1.9334957599639893
+        ],
+        [
+          -2.173649311065674
+        ],
+        [
+          -2.1636877059936523
+        ]
+      ],
+      "teacher_forced_seconds": 9.01600000000326,
+      "fifo_seconds": 1.125,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 1,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 7
+    },
+    {
+      "candidate": "F1-46",
+      "expression": "(2σ(atan(tanh(z)))−1−((tanh(m)+(tanh(m))³)/2+softsign(tanh(m)))/2)/2",
+      "response_CE": 1.6862044366835465,
+      "response_perplexity": 5.398949710964704,
+      "response_accuracy": 0.4789006268864639,
+      "response_omission_rate": 0.006239842117483167,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21925,
+        4037,
+        22080,
+        21388,
+        0,
+        281,
+        18006,
+        385,
+        20670
+      ],
+      "final_m": [
+        [
+          -2.2317559719085693
+        ],
+        [
+          -0.8197826147079468
+        ],
+        [
+          -2.3562276363372803
+        ],
+        [
+          -2.565574884414673
+        ],
+        [
+          -0.6314085125923157
+        ],
+        [
+          1.7596685886383057
+        ],
+        [
+          -2.2546167373657227
+        ],
+        [
+          -2.188791275024414
+        ]
+      ],
+      "teacher_forced_seconds": 9.079000000027008,
+      "fifo_seconds": 1.1400000000139698,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 1,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 9
+    },
+    {
+      "candidate": "F1-48",
+      "expression": "(softsign(2σ(tanh(z))−1))·((abs(tanh(S)))·(2σ(tanh(m))−1))",
+      "response_CE": 1.7040331947283638,
+      "response_perplexity": 5.496069468825538,
+      "response_accuracy": 0.4769561179475273,
+      "response_omission_rate": 0.004034130485256559,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21715,
+        2305,
+        22080,
+        21727,
+        0,
+        0,
+        17944,
+        46,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.8847954273223877
+        ],
+        [
+          -1.2426409721374512
+        ],
+        [
+          -2.2313318252563477
+        ],
+        [
+          -2.474025249481201
+        ],
+        [
+          -0.5729952454566956
+        ],
+        [
+          1.8553972244262695
+        ],
+        [
+          -1.986884593963623
+        ],
+        [
+          -2.0067882537841797
+        ]
+      ],
+      "teacher_forced_seconds": 8.952999999979511,
+      "fifo_seconds": 1.202999999979511,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 0,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0019646365422396855,
+      "nodes": 9
+    },
+    {
+      "candidate": "F1-23",
+      "expression": "(atan(tanh(S)))·(2σ(tanh(z))−1)",
+      "response_CE": 1.7340922666102625,
+      "response_perplexity": 5.6637842635882345,
+      "response_accuracy": 0.4646215463199443,
+      "response_omission_rate": 0.003163454840956582,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21906,
+        4566,
+        22080,
+        21811,
+        0,
+        0,
+        17935,
+        12099,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.9495139122009277
+        ],
+        [
+          -1.4733197689056396
+        ],
+        [
+          -2.256643056869507
+        ],
+        [
+          -2.4047927856445312
+        ],
+        [
+          -0.4794343411922455
+        ],
+        [
+          1.9821984767913818
+        ],
+        [
+          -2.0506370067596436
+        ],
+        [
+          -1.9969675540924072
+        ]
+      ],
+      "teacher_forced_seconds": 8.813000000023749,
+      "fifo_seconds": 1.0619999999762513,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 1,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    },
+    {
+      "candidate": "F1-11",
+      "expression": "(tanh(tanh(S)))·(sin(tanh(z)))",
+      "response_CE": 1.7393040397129425,
+      "response_perplexity": 5.693379677372731,
+      "response_accuracy": 0.4631123752031577,
+      "response_omission_rate": 0.002641049454376596,
+      "silence_false_emission_rate": 1.0204914686913218e-05,
+      "response_tokens": 34456,
+      "law_gate_counts": [
+        21543,
+        4667,
+        22080,
+        21487,
+        92,
+        74,
+        18034,
+        290,
+        22072
+      ],
+      "final_m": [
+        [
+          -1.5402213335037231
+        ],
+        [
+          -1.0928164720535278
+        ],
+        [
+          -1.904683232307434
+        ],
+        [
+          -2.1273303031921387
+        ],
+        [
+          -0.739065408706665
+        ],
+        [
+          1.894356369972229
+        ],
+        [
+          -1.5255275964736938
+        ],
+        [
+          -1.646058440208435
+        ]
+      ],
+      "teacher_forced_seconds": 8.73399999999674,
+      "fifo_seconds": 1.0310000000172295,
+      "fifo_omission": 0.0,
+      "fifo_eos_failure": 0.0,
+      "fifo_question_emissions": 0,
+      "fifo_uncomposed_jamo": 6,
+      "fifo_mean_final_queue": 1.0,
+      "fifo_repeat_4gram": 0.0,
+      "nodes": 5
+    }
+  ]
+}

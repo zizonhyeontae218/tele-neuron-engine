@@ -141,6 +141,14 @@
 - `korean-search.json` — Contains korean-search data.
 - `verification.txt` — Contains verification data.
 
+## `docs/dynamath/experiment-003aa`
+
+- `README.md` — DynaMath 003aa — 한국어 장기 학습.
+- `artifact-manifest.json` — Contains artifact-manifest data.
+- `evidence.tar.gz` — Contains evidence.tar data.
+- `research-summary.json` — Contains research-summary data.
+- `training-summary.json` — Contains training-summary data.
+
 ## `docs/dynamath/experiment-003b`
 
 - `GOAL.md` — DynaMath 003b — word-level English training.
@@ -179,6 +187,15 @@
 - `validation-35000.json` — Contains validation-35000 data.
 - `validation-50000.json` — Contains validation-50000 data.
 - `verification.json` — Contains verification data.
+
+## `docs/dynamath/experiment-003ba`
+
+- `README.md` — DynaMath 003ba — 한국어 수식 50개 비교.
+- `artifact-manifest.json` — Contains artifact-manifest data.
+- `evidence.tar.gz` — Contains evidence.tar data.
+- `question-and-data-summary.json` — Contains question-and-data-summary data.
+- `ranking-10000.json` — Contains ranking-10000 data.
+- `research-summary.json` — Contains research-summary data.
 
 ## `models/dynamath/001a`
 
@@ -261,9 +278,21 @@
 - `leader-final.pt` — Contains leader-final data.
 - `offspring-final.pt` — Contains offspring-final data.
 
+## `models/dynamath/003aa`
+
+- `checkpoints-01.tar.gz` — Contains checkpoints-01.tar data.
+- `checkpoints-02.tar.gz` — Contains checkpoints-02.tar data.
+
 ## `models/dynamath/003b`
 
 - `README.md` — DynaMath 003b checkpoint storage.
+
+## `models/dynamath/003ba`
+
+- `checkpoints-01.tar.gz` — Contains checkpoints-01.tar data.
+- `checkpoints-02.tar.gz` — Contains checkpoints-02.tar data.
+- `checkpoints-03.tar.gz` — Contains checkpoints-03.tar data.
+- `checkpoints-04.tar.gz` — Contains checkpoints-04.tar data.
 
 ## `scripts`
 

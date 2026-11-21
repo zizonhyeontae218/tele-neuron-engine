@@ -1,20 +1,22 @@
 # DynaMath
 
-Current word-level experiment: [DynaMath 003b](docs/dynamath/experiment-003b/README.md).
-Its 50,000-update target, actual progress and limitations are recorded separately
-from historical experiments; see [training status](docs/dynamath/experiment-003b/training-report.md).
-
-하나의 지속되는 정보 상태에 다섯 개의 학습된 수학 법칙을 순환 적용하는 실험 프로젝트입니다. 매 틱 입력을 더하고, 법칙 하나를 적용한 직후 출력 조건을 검사합니다.
-
-이 브랜치는 **DynaMath 시리즈의 메인 페이지이자 후속 개발 기준점**입니다. 현재 버전은 **DynaMath 001a**입니다.
+**DynaMath**는 TeleNeuron의 수식 기반 순환 모델 실험을 모은 브랜치입니다.
+여기에서 초기 001부터 003aa·003ba까지의 Git 이력과 최신 실험 결과를 찾을 수 있습니다.
 
 > 한국어 데이터 출처: **Song Ys (`songys`)**의 [원본 Chatbot_data](https://github.com/songys/Chatbot_data), MIT License. 데이터 제공자와 DynaMath 모델 개발 주체는 별개입니다.
 
-## 현재 버전
+## 실험 기록
 
 | 버전 | 실험 | 상태 | 기록 |
 |---|---|---|---|
 | **001a** | 매 1틱 출력 검사 · 한국어 Q/A 학습 · 지속 상태 | 구현·제한된 학습 완료, 대화 품질 미달 | [보고서](docs/dynamath/experiment-001a/report.md) · [실행 안내](docs/dynamath/experiment-001a/README.md) · [모델 카드](models/dynamath/001a/model-card.json) |
+| **002–002b** | 9개 수식과 공유 스칼라 비교·계속 학습 | 기록 완료 | [002](docs/dynamath/experiment-002/report.md) · [002a](docs/dynamath/experiment-002a/report.md) · [002b](docs/dynamath/experiment-002b/report.md) |
+| **003·003a** | 수식 구조 탐색과 한국어·영어 파일럿 | 유효한 대화 개선 미확인 | [003](docs/dynamath/experiment-003/README.md) · [003a](docs/dynamath/experiment-003a/README.md) |
+| **003b** | 영어 단어 모델 50,000 업데이트 | 학습 완료, 최종 테스트 실제 응답 0/3,688 | [실험 기록](docs/dynamath/experiment-003b/README.md) |
+| **003aa** | 한국어 고정 수식 500,000 업데이트와 후속 수식 탐색 | 검증 최저 손실은 추가 3,000스텝 | [결과·아카이브](docs/dynamath/experiment-003aa/README.md) |
+| **003ba** | 한국어 수식 50개 × 10,000 업데이트와 질문 교체 검사 | 고정 수식 대비 개선 미확인 | [결과·아카이브](docs/dynamath/experiment-003ba/README.md) |
+
+아래 실행 예제는 001a 모델을 사용합니다.
 
 - **구조:** 하나의 공유 상태, 다섯 법칙의 순환, 가산 입력·피드백, 출력 후 상태 유지.
 - **출력:** 매 틱 검사하며 조건을 충족할 때만 출력합니다. 침묵도 고정 주소에서 학습합니다.
@@ -53,7 +55,7 @@ python scripts/filetree_index.py lint
 - [001a 고정 목표·예산](docs/dynamath/experiment-001a/GOAL.md) · [평가 계획](docs/dynamath/experiment-001a/evaluation-plan.json)
 - [브랜치 정리 기록](docs/dynamath/branch-cleanup.md)
 
-후속 버전은 별도 목표·예산·평가 계획과 버전별 설정/모델/실험 기록을 추가합니다. 001a의 동결된 가중치와 평가 자료는 기준선으로 유지합니다. 초기 DynaMath 001 자료는 [기존 시리즈 브랜치](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/feature/dynamath-1/docs/dynamath)에서 확인할 수 있습니다.
+후속 버전은 별도 목표·예산·평가 계획과 버전별 설정/모델/실험 기록을 추가합니다. 001a의 동결된 가중치와 평가 자료는 기준선으로 유지합니다. 초기 DynaMath 001 자료는 [통합 이력의 001 스냅샷](https://github.com/zizonhyeontae218/tele-neuron-engine/tree/15d897b111ced59fd881c01201c5a530fa36e9c1/docs/dynamath)에서 볼 수 있습니다.
 
 ## 파일 구성
 

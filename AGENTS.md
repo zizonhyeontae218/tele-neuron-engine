@@ -4,7 +4,7 @@ This branch is the DynaMath series home. The owner explicitly authorized removin
 unrelated models and superseded experiments from this branch on 2026-11-13.
 This supersedes historical keep-all instructions in archived experiment briefs.
 Do not modify other branches, tags or the repository default branch; never force
-push or rewrite history. Current branch: feature/dynamath-001a.
+push or rewrite history. Historical branch at the time: feature/dynamath-001a.
 
 Read GOAL.md, FileTree.md, docs/dynamath/architecture.md and the versioned goal/report.
 Current baseline is DynaMath 001a, not a useful conversational model. Preserve its
@@ -28,14 +28,14 @@ python scripts/filetree_index.py lint. The repository-local index tool is the
 available Filetree fallback. Never hand-edit generated indexes.
 
 ## Authorized 002 phase
-Current task targets existing feature/dynamath-002. The user's issue #12 handoff
+This historical phase targeted feature/dynamath-002. The user's issue #12 handoff
 and extra scalar-sharing controls supersede the old no-training restriction for
 this bounded phase. Preserve all legacy source/assets; new implementation lives
 in src/dynamath/v002. Canonical contract: docs/dynamath/experiment-002/CODEX_HANDOFF.md;
 plan: docs/dynamath/experiment-002/GOAL.md; budget: configs/dynamath/experiment-002.json.
 
 ## Authorized 003b phase
-Current branch is feature/dynamath-003b, based on feature/dynamath-003 at ca8141c.
+This historical phase used feature/dynamath-003b, based on feature/dynamath-003 at ca8141c.
 The explicit user request authorizes word-level Model1 implementation, 50,000
 updates, full-split evaluation, bounded Actions continuation, and commits here.
 Canonical goal: docs/dynamath/experiment-003b/GOAL.md. Historical no-training
@@ -45,3 +45,11 @@ strings and ordered token lists. See v003b/AGENTS.md and the versioned README.
 Generated index files use union merging for concurrent evidence/source additions;
 always regenerate and lint their actual hashes after a merge. This does not
 change merge behavior for source, configurations, experiment results or models.
+
+## Consolidated DynaMath research branch
+
+The existing DynaMath branch is the base for subsequent DynaMath work. Its
+history reaches each of the earlier DynaMath branch tips. The 003aa and 003ba
+results have versioned evidence, checkpoint archives and reproduction notes in
+docs/dynamath and models/dynamath. Use the new experiment's user-approved
+protocol when starting any further training.

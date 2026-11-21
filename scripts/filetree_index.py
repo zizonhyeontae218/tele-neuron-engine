@@ -19,26 +19,26 @@ def scan(root, config):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('command',choices=['update','lint']);ap.add_argument('--root',type=Path,default=Path('.'));args=ap.parse_args();root=args.root
-    cfg=json.loads((root/'.filetree.json').read_text());manifest=root/cfg['manifest_path'];ledger=root/cfg['hash_path'];paths=scan(root,cfg)
+    cfg=json.loads((root/'.filetree.json').read_text(encoding="utf-8"));manifest=root/cfg['manifest_path'];ledger=root/cfg['hash_path'];paths=scan(root,cfg)
     hashes={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in paths}
     descriptions={};parent=''
-    for line in manifest.read_text().splitlines():
+    for line in manifest.read_text(encoding="utf-8").splitlines():
         group=re.match(r'^## `(.*)`$',line)
         if group:parent=group[1]
         entry=re.match(r'^- `([^`]+)` — (.*)$',line)
         if entry:descriptions[(parent+'/' if parent else '')+entry[1]]=entry[2]
     if args.command=='lint':
-        previous=json.loads(ledger.read_text())['files']
+        previous=json.loads(ledger.read_text(encoding="utf-8"))['files']
         drift=sorted({p for p in set(previous)|set(hashes) if previous.get(p)!=hashes.get(p)})
         if set(descriptions)!=set(paths):drift.append('manifest path set')
         if drift:raise SystemExit('Index drift: '+', '.join(drift))
         print(f'PASS: {len(paths)} indexed paths and SHA-256 hashes');return
     groups=defaultdict(list)
     for p in paths:
-        path=Path(p);parent='' if path.parent==Path('.') else str(path.parent)
+        path=Path(p);parent='' if path.parent==Path('.') else path.parent.as_posix()
         desc=descriptions.get(p)
         if path.suffix=='.md':
-            first=next((s[2:].strip() for s in (root/p).read_text(errors='replace').splitlines() if s.startswith('# ')),None)
+            first=next((s[2:].strip() for s in (root/p).read_text(encoding='utf-8', errors='replace').splitlines() if s.startswith('# ')),None)
             if first:desc=first.rstrip('.')+'.'
         if not desc:
             desc='Contains '+path.stem.replace('_',' ')+' data.'
@@ -46,8 +46,8 @@ def main():
     text='# FILETREE\n\n> Generated repository index. Open the real files before editing.\n'
     for parent,entries in sorted(groups.items()):
         text+=f'\n## `{parent}`\n\n'+''.join(f'- `{name}` — {desc}\n' for name,desc in entries)
-    manifest.write_text(text)
-    ledger.write_text(json.dumps({'version':1,'manifest_path':cfg['manifest_path'],'files':hashes},indent=2,ensure_ascii=False)+'\n')
+    manifest.write_text(text, encoding='utf-8', newline='\n')
+    ledger.write_text(json.dumps({'version':1,'manifest_path':cfg['manifest_path'],'files':hashes},indent=2,ensure_ascii=False)+'\n', encoding='utf-8', newline='\n')
     print(f'Updated {len(paths)} indexed paths and actual SHA-256 hashes')
 
 if __name__=='__main__':main()
